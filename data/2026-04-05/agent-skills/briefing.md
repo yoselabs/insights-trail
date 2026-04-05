@@ -1,7 +1,7 @@
 # Agent Skills & Plugin Ecosystems — Daily Briefing
 **Date:** 2026-04-05
 **Query type:** GENERAL
-**Sources:** X/Twitter, Web (Claude Code Docs, GitHub, DevOps.com, MindStudio, MCP Blog, Linux Foundation, InfoQ, JetBrains, Microsoft, Google, Medium, DEV Community, Composio, Firecrawl, StackGen, UX Planet, Builder.io, AgentPatch, SkillsMP)
+**Sources:** X/Twitter, Hacker News, Web
 
 ---
 
@@ -9,145 +9,170 @@
 
 | Source | Items | Engagement | Notes |
 |--------|-------|------------|-------|
-| X/Twitter | 3 posts | low (all below relevance 0.3) | Japanese-language posts; Reddit API unavailable (402) |
-| Web | 47 pages | — | via WebSearch — primary data source this cycle |
+| X/Twitter | 29 posts | 7 likes, 1 repost | Compact output shows 15; top post 4 likes @domini_code |
+| Hacker News | 22 stories | ~160 pts, ~60 comments | Compact output shows 15; top story 36 pts hn/4ppsec |
+| Web | 30 pages | — | via WebSearch; 3 queries |
 
 ---
 
 ## Synthesized Findings
 
-### 1. The Claude Code Skill/Plugin Ecosystem Has Reached Scale
+### 1. The Three-Layer Extension Model: Skills, Plugins, MCP Servers
 
-The Claude Code extensibility ecosystem matured rapidly through early 2026. As of this cycle, **2,300+ skills and 770+ MCP servers** are available across community registries. The architecture draws a clear three-layer distinction:
+The community has landed on a clear conceptual framework (per DEV Community, Nevo Systems, and multiple HN threads) that distinguishes three extension layers:
 
-- **Skills** — filesystem-based markdown instruction files (SKILL.md) that teach Claude domain-specific behavior. They are model-invoked: Claude decides when to use them based on context, not explicit user commands.
-- **Plugins** — packaged skills bundled with supporting scripts, config, and hooks; shareable across projects and teams.
-- **MCP Servers** — running services that connect Claude to external tools (Figma, Playwright, Vercel, PostgreSQL, GitHub).
+- **Skills** — filesystem-based SKILL.md instruction files that teach Claude domain-specific behavior. They activate *automatically* based on conversation context — not via `/slash` commands. Claude loads skill metadata at startup and decides when to apply them silently.
+- **Plugins** — distributable packages that bundle skills, hooks, subagents, commands, and configuration into a single installable unit.
+- **MCP Servers** — standardized connections to external tools and data sources via the Model Context Protocol. These run as services that Claude calls at runtime.
 
-Official documentation lives at [code.claude.com/docs/en/plugins](https://code.claude.com/docs/en/plugins) and [platform.claude.com/docs/en/agents-and-tools/agent-skills/overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview). The [official Anthropic plugin README](https://github.com/anthropics/claude-code/blob/main/plugins/README.md) is the canonical reference.
+HN thread "Skills are quietly becoming the unit of agent knowledge" (hn/latand6, 9 pts, 13 comments) explicitly interrogated this boundary: commenters asked "Will skills replace MCP servers eventually?" and "What do you think about checking the skills directly into the repo where they are useful?" — signaling live community debate about where skills end and MCPs begin.
 
-Community registries include:
-- **[claudemarketplaces.com](https://claudemarketplaces.com/)** — 150+ skills with ratings (March 2026)
-- **[jeremylongshore/claude-code-plugins-plus-skills](https://github.com/jeremylongshore/claude-code-plugins-plus-skills)** — 340 plugins + 1,367 agent skills with CCPI package manager
-- **[alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills)** — 220+ skills spanning Claude Code, Codex, Gemini CLI, Cursor, and 8+ more coding agents
-- **[ComposioHQ/awesome-claude-plugins](https://github.com/ComposioHQ/awesome-claude-plugins)** — curated list of commands, agents, hooks, MCP servers
-- **[hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code)** — skills, hooks, slash-commands, agent orchestrators
-- **[quemsah/awesome-claude-plugins](https://github.com/quemsah/awesome-claude-plugins)** — automated adoption metrics tracker
-
-A dedicated article by Nick Babich on UX Planet ([Top 7 Claude Code Plugins, March 2026](https://uxplanet.org/top-7-claude-code-plugins-2f97c2fbb1be)) highlights: Claude-Mem (long-term memory), Superpowers (structured lifecycle planning), Local-Review (parallel code reviews), and Plannotator (clearer planning). Composio covers [10 top plugins](https://composio.dev/content/top-claude-code-plugins) and [hosted MCP platforms](https://composio.dev/content/hosted-mcp-platforms). DEV Community hosts a [2026 guide to best skills & plugins](https://dev.to/raxxostudios/best-claude-code-skills-plugins-2026-guide-4ak4).
+Per [nevo.systems](https://nevo.systems/blogs/nevo-journal/ai-agent-skill-vs-plugin-vs-mcp) and [dev.to/phil-whittaker](https://dev.to/phil-whittaker/mcp-vs-agent-skills-why-theyre-different-not-competing-2bc1): the answer is that they are complementary, not competing — skills modify agent *behavior*, MCP servers extend agent *reach*.
 
 ---
 
-### 2. The CCPI Package Manager: npm-style Distribution for Claude Skills
+### 2. Skill Ecosystem Scale: Marketplaces and Package Managers
 
-The open-source [claude-code-plugins-plus-skills](https://github.com/jeremylongshore/claude-code-plugins-plus-skills) repo introduced the **CCPI CLI** — a package manager for Claude Code skills analogous to npm or brew:
+The skill/plugin ecosystem has reached meaningful scale. Sources across web search confirm:
 
+- **2,300+ skills** and **770+ MCP servers** available across community registries
+- **90,000+ publicly listed skills** in AgentSkillOS ([github.com/ynulihao/AgentSkillOS](https://github.com/ynulihao/AgentSkillOS)) via retrieval and orchestration
+- **1,600+ curated skills** in structured repos discoverable via MCP-based search
+
+Active marketplaces and registries:
+
+| Platform | URL | Scope |
+|----------|-----|-------|
+| claudemarketplaces.com | https://claudemarketplaces.com/ | 150+ Claude Code skills, ratings, March 2026 |
+| skillsmp.com | https://skillsmp.com/ | Cross-platform: Claude, Codex & ChatGPT |
+| buildwithclaude.com | https://buildwithclaude.com/ | Claude plugin marketplace |
+| jeremylongshore/claude-code-plugins-plus-skills | https://github.com/jeremylongshore/claude-code-plugins-plus-skills | 340 plugins + 1,367 skills + CCPI CLI |
+| alirezarezvani/claude-skills | https://github.com/alirezarezvani/claude-skills | 220+ skills for 8+ coding agents |
+| awesome-claude-plugins | https://github.com/ComposioHQ/awesome-claude-plugins | Curated: commands, agents, hooks, MCP |
+| awesome-claude-code | https://github.com/hesreallyhim/awesome-claude-code | Skills, hooks, slash-commands, orchestrators |
+| awesome-claude-plugins (metrics) | https://github.com/quemsah/awesome-claude-plugins | Automated adoption metrics via n8n |
+
+The **CCPI package manager** (from jeremylongshore) introduced npm-style distribution for Claude skills:
 ```
 pnpm add -g @intentsolutionsio/ccpi
 ccpi install devops-automation-pack
 ccpi update
 ```
 
-Skills use a **2026 Schema** frontmatter for validation and cross-agent compatibility. The same SKILL.md format is shared across:
-- Claude Code: `~/.claude/skills/` (personal) or `.claude/skills/` (project)
-- OpenAI Codex CLI: `~/.codex/skills/`
-- ChatGPT (adopted in December 2025 after Anthropic released the spec as an open standard)
+The [liteLLM tutorial](https://docs.litellm.ai/docs/tutorials/claude_code_plugin_marketplace) covers plugin marketplace setup for teams. The [DEV Community 2026 guide](https://dev.to/raxxostudios/best-claude-code-skills-plugins-2026-guide-4ak4) and [Calmops complete guide](https://calmops.com/ai/ai-agent-skills-complete-guide-2026/) provide onboarding resources.
 
-This interoperability is significant: a skill built for Claude works in Codex. **[SkillsMP.com](https://skillsmp.com/)** launched as a cross-platform marketplace explicitly covering Claude, Codex, and ChatGPT skills. A March 2026 [Medium post](https://medium.com/product-powerhouse/33-claude-skills-for-pms-are-now-in-the-claude-code-marketplace-heres-how-to-install-them-7968ab6bb1e1) highlighted 33 PM-specific skills now in the Claude Code marketplace — a signal that vertical-specific skill packs are proliferating beyond engineering use cases.
+On X, @openapexmarket reported shipping 35 AI agent skills to Apex Market — crypto connectors to SEO tools, 6 free to start — and is watching early adoption patterns with zero revenue yet. @BetaList listed ClawSkills (versioned skill publishing with vector search). @sujantiwari08 published a structured 4-week learning path where Agent Skills appear in Week 3 alongside MCP.
 
 ---
 
-### 3. How Skill Discovery and Chaining Actually Work
+### 3. Cross-Agent Interoperability: SKILL.md as Open Standard
 
-Per [platform.claude.com agent skills docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) and the [Claude Code Handbook](https://nikiforovall.blog/claude-code-rules/fundamentals/agent-skills/):
+In December 2025, Anthropic released the Agent Skills specification as an open standard; OpenAI adopted the same SKILL.md format for Codex CLI and ChatGPT (per [jeremylongshore repo](https://github.com/jeremylongshore/claude-code-plugins-plus-skills), [developers.openai.com/codex/skills](https://developers.openai.com/codex/skills), and [SkillsMP](https://skillsmp.com/)).
 
-- Claude **loads skill metadata at startup** and includes it in the system prompt (lightweight — minimal context overhead)
-- Skills activate **silently** — you do not type `/skill-name`; Claude determines when context calls for a skill
-- Skills are discovered automatically from the filesystem
+This means:
+- A skill written for Claude Code (`~/.claude/skills/`) works in OpenAI Codex CLI (`~/.codex/skills/`) without modification
+- Vercel's **Skills.sh** ([vercel-labs/skills](https://github.com/vercel-labs/skills), `npx skills`) works across Claude Code, Cursor, GitHub Copilot, Aider, OpenCode, and 30+ other agents ([InfoQ coverage](https://www.infoq.com/news/2026/02/vercel-agent-skills/), [johnoct.com blog](https://johnoct.com/blog/2026/02/12/skills-sh-open-agent-skills-ecosystem/))
+- Microsoft published a [skills repo with MCP servers, custom agents, and Agents.md](https://github.com/microsoft/skills) for grounding coding agents across SDKs
+- VS Code Copilot natively supports agent skills: [code.visualstudio.com/docs/copilot/customization/agent-skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
+- Spring AI adopted the pattern for the Java ecosystem ([spring.io blog](https://spring.io/blog/2026/01/13/spring-ai-generic-agent-skills/))
 
-For multi-step workflows, skills are **chained** via an orchestrator pattern (per [MindStudio's deep dive](https://www.mindstudio.ai/blog/claude-code-skill-collaboration-chaining-workflows)):
+The [DEV Community post on the rise of reusable AI agent skills](https://dev.to/dmgjdagooc/the-rise-of-reusable-ai-agent-skills-how-skillssh-and-anthropic-are-changing-the-way-we-build-242d) frames this as the "skills.sh + Anthropic" moment for the ecosystem.
 
-> Orchestrator reads a shared state file → determines which skill runs next → invokes it → updates state with output → loops until workflow completes
-
-Each skill writes structured output consumed by the next. This makes skills independently testable and composable — the [CodeSignal course on visualization skills](https://codesignal.com/learn/courses/customizing-claude-code-for-reusable-visualization-workflows/lessons/modular-visualization-skills) uses this pattern explicitly.
-
-VS Code now also natively supports agent skills via [code.visualstudio.com/docs/copilot/customization/agent-skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills). A [first-principles deep dive](https://leehanchung.github.io/blogs/2025/10/26/claude-skills-deep-dive/) and [fazm.ai workflow guide](https://fazm.ai/t/custom-claude-code-skills-workflow) cover custom skill construction from scratch.
-
-DevOps.com's [coverage of agent skills](https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/) characterizes the system as transforming "general-purpose agents into specialists" — domain expertise packaged and reusable.
+@domini_code (4 likes, highest-engagement X post) highlighted Addy Osmani's Agent Skills for Claude Code applying Lighthouse and Core Web Vitals to developer workflows — pre-configured performance targets (LCP ≤ 2.5s, INP ≤ 200ms, bundle < 300KB) shipped as skills.
 
 ---
 
-### 4. MCP Becomes the Universal Tool Standard — Now Under Linux Foundation
+### 4. MCP Infrastructure: 97M Downloads, Linux Foundation Governance
 
-**Model Context Protocol (MCP)** is the infrastructure layer underneath all of this. On **December 9, 2025**, Anthropic donated MCP to the **Linux Foundation's Agentic AI Foundation (AAIF)** ([official announcement](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation), [LF press release](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation)):
+The Model Context Protocol is the tool-connectivity substrate powering all of this. Key facts from web research:
 
-- Founding contributions: **Anthropic's MCP**, **Block's goose**, **OpenAI's AGENTS.md**
-- AAIF Platinum members: **AWS, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft, OpenAI**
-- Goal: neutral, open foundation for agentic AI standards
+- **97 million monthly SDK downloads** (Python + TypeScript combined)
+- **10,000+ active MCP servers** deployed
+- **75+ connectors** in Claude alone
+- First-class client support: ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot, VS Code
 
-Metrics as of early 2026 ([MCP Blog](https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/), [GitHub Blog](https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation)):
-- **97 million monthly SDK downloads** (Python + TypeScript)
-- **10,000 active servers**
-- **75+ connectors in Claude alone**
-- First-class support: ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot, VS Code
+On **December 9, 2025**, Anthropic donated MCP to the **Linux Foundation's Agentic AI Foundation (AAIF)**:
+- Founding contributions: Anthropic's MCP, Block's goose, OpenAI's AGENTS.md
+- AAIF Platinum members: AWS, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft, OpenAI
+- [Official Anthropic announcement](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation) | [Linux Foundation press release](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) | [PR Newswire](https://www.prnewswire.com/news-releases/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agentsmd-302636897.html) | [OpenAI statement](https://openai.com/index/agentic-ai-foundation/) | [GitHub Blog](https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation)
 
-Solo.io analyzed the implications in [Why the AAIF Changes Everything for MCP](https://www.solo.io/blog/aaif-announcement-agentgateway). OpenAI's statement on co-founding is at [openai.com/index/agentic-ai-foundation](https://openai.com/index/agentic-ai-foundation).
+The **MCP Dev Summit North America 2026** (April 2-3, NYC, 95+ sessions) just concluded, convening MCP co-founders, maintainers, and production users — [LF events schedule](https://events.linuxfoundation.org/2026/02/24/agentic-ai-foundation-unveils-mcp-dev-summit-north-america-2026-schedule/) | [LF press](https://www.linuxfoundation.org/press/agentic-ai-foundation-unveils-mcp-dev-summit-north-america-2026-schedule) | [Yahoo Finance](https://finance.yahoo.com/news/agentic-ai-foundation-unveils-140000965).
 
-The **MCP Dev Summit North America 2026** (April 2-3, NYC) convened 95+ sessions from MCP co-founders, maintainers, and production users ([LF events schedule](https://events.linuxfoundation.org/2026/02/24/agentic-ai-foundation-unveils-mcp-dev-summit-north-america-2026-schedule/), [LF press](https://www.linuxfoundation.org/press/agentic-ai-foundation-unveils-mcp-dev-summit-north-america-2026-schedule), [Yahoo Finance](https://finance.yahoo.com/news/agentic-ai-foundation-unveils-140000965)).
+Solo.io analyzed the implications in [Why the AAIF Changes Everything for MCP](https://www.solo.io/blog/aaif-announcement-agentgateway).
 
-Multiple MCP server directories have emerged: [mcpmarket.com](https://mcpmarket.com/), [agentpatch.ai](https://agentpatch.ai/blog/best-mcp-servers-2026/), [firecrawl.dev](https://www.firecrawl.dev/blog/best-mcp-servers-for-developers), [builder.io](https://www.builder.io/blog/best-mcp-servers-2026), [stackgen.com](https://stackgen.com/blog/the-10-best-mcp-servers-for-platform-engineers-in-2026), [dev.to top-15 list](https://dev.to/jangwook_kim_e31e7291ad98/top-15-mcp-servers-every-developer-should-install-in-2026-n1h), [bytebridge on MCP Gateways](https://bytebridge.medium.com/mcp-gateways-in-2026-top-10-tools-for-ai-agents-and-workflows-d98f54c3577a), and [databar.ai for sales teams](https://databar.ai/blog/article/best-mcp-servers-for-sales-teams-in-2026). Microsoft Learn covers [local MCP tools in the agent framework](https://learn.microsoft.com/en-us/agent-framework/agents/tools/local-mcp-tools).
+MCP server discovery: major directories include [mcpservers.org/agent-skills](https://mcpservers.org/agent-skills), [pulsemcp.com](https://www.pulsemcp.com/servers/mrsimpson-agent-skills), [glama.ai](https://glama.ai/mcp/servers/pinkpixel-dev/agentskills-mcp), and [gofastmcp.com](https://gofastmcp.com/servers/providers/skills). Enterprise guidance: [Microsoft Learn on local MCP tools](https://learn.microsoft.com/en-us/agent-framework/agents/tools/local-mcp-tools).
 
----
-
-### 5. Agent Registries, Governance, and Enterprise Adoption
-
-The ecosystem is maturing past individual tools into infrastructure:
-
-**JetBrains ACP Agent Registry** (January 2026, [blog.jetbrains.com](https://blog.jetbrains.com/ai/2026/01/acp-agent-registry/)): The Agent Client Protocol (ACP) Registry launched as a directory of AI coding agents integrated directly into JetBrains IDE v2025.3+ and Zed. Also surfaced in [DataSpell 2026.1 release](https://blog.jetbrains.com/dataspell/2026/03/dataspell-2026-1-ai-agents-ecosystem-export-notebooks-to-pdf-editor-improvements/).
-
-**Pinterest MCP at Production Scale** (April 2026, [InfoQ](https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/)): Pinterest engineering deployed a full internal MCP ecosystem — production MCP servers, a **central registry**, and agent integrations across developer tools. Replaces ad hoc integrations with a standardized, secure substrate. This is one of the first documented production-scale internal agent registries.
-
-**Microsoft Agent Governance Toolkit** (April 2, 2026, [Microsoft Open Source Blog](https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit)): Open-source runtime security for AI agents — a signal that enterprise governance of plugin/skill ecosystems is now an active concern.
-
-**Google ADK Integrations Ecosystem** ([Google Developers Blog](https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/)): Google announced a new integrations ecosystem for the Agent Development Kit.
-
-Agent discovery and governance is now a category: [arthur.ai covers enterprise solutions](https://www.arthur.ai/column/agent-discovery-governance-landscape); [aiagentsdirectory.com](https://aiagentsdirectory.com/landscape) maps the full March 2026 landscape; [stackone.com](https://www.stackone.com/blog/ai-agent-tools-landscape-2026/) catalogued 120+ agentic tools across 11 categories; [agentica.wiki](https://agentica.wiki/articles/agent-ecosystems) theorizes agent ecosystem design.
+Progressive tool discovery (per [dev.to/phil-whittaker](https://dev.to/phil-whittaker/mcp-vs-agent-skills-why-theyre-different-not-competing-2bc1)): Anthropic applied the same context-efficiency trick from skills to MCP — tools load name+description (~20-50 tokens) first; full schema only fetches when the agent decides to invoke.
 
 ---
 
-### 6. Japanese Developer Community: MCP Context Awareness on X
+### 5. Security: Supply Chain Attacks and Enterprise Governance
 
-The only confirmed social signal this cycle came from Japanese developers on X (all April 5, 2026):
+Security emerged as the sharpest HN discussion thread this cycle. **HN1** — "Agent Skills – Open Security Database" (hn/4ppsec, 36 pts, 9 comments, March 16) — covered a new public database cataloguing security risks in agent skills. Top HN comment: "if your engineers are installing and running random 'skills' found online it's the same as if you had engineers running random npm packages."
 
-- **@deep_verdure** explained how MCP tools occupy Claude Code's context window differently from CLAUDE.md memory files, and noted that IDE integration automatically starts MCP servers and connects them — a practical friction point for heavy MCP users ([x.com/deep_verdure/status/2040693035969958326](https://x.com/deep_verdure/status/2040693035969958326))
-- **@noworkig** noted subscribing to Claude Code Max ([x.com/noworkig/status/2040693071390847153](https://x.com/noworkig/status/2040693071390847153))
-- **@riteshpatel1884** mentioned Claude Code in conversation ([x.com/riteshpatel1884/status/2040692886329831689](https://x.com/riteshpatel1884/status/2040692886329831689))
+On X, @PixelFamiliar raised an urgent warning: "Supply chain attacks in agent skills are already happening. ClawForce certifies skills for malware, credential theft, data exfiltration." — referencing a skill certification service.
 
-The MCP context window concern raised by @deep_verdure is a real design issue: MCP servers auto-connecting on IDE launch can silently consume context before a conversation begins, reducing effective workspace for code and chat.
+JFrog framed this definitively: ["Agent Skills are the New Packages of AI: It's Time to Manage Them Securely"](https://jfrog.com/blog/agent-skills-new-ai-packages/) — treating skills as a software supply chain problem requiring the same artifact management used for npm and Docker.
+
+Qualys warned in March 2026: ["MCP Servers: The New Shadow IT for AI in 2026"](https://blog.qualys.com/product-tech/2026/03/19/mcp-servers-shadow-it-ai-qualys-totalai-2026) — ungoverned MCP connections in enterprise environments create invisible attack surfaces.
+
+Microsoft responded with the **Agent Governance Toolkit** (April 2, 2026): [opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit](https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit) — open-source runtime security for AI agents.
+
+JFrog's registry (compatible with Agent Skills, ClawHub, and OpenShell) enables centralized governance of skills across enterprise environments.
+
+---
+
+### 6. Production Deployment: Pinterest, Vertical Skill Packs, On-Device Skills
+
+**Pinterest at scale** (InfoQ, April 2026): Pinterest deployed a full internal MCP ecosystem — production MCP servers, a central skill registry, and agent integrations across developer tooling — replacing ad hoc integrations with a standardized substrate. One of the first documented production-scale internal agent registries. [Full coverage: infoq.com/news/2026/04/pinterest-mcp-ecosystem](https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/).
+
+**Vertical skill packs**: A March 2026 [Medium post](https://medium.com/product-powerhouse/33-claude-skills-for-pms-are-now-in-the-claude-code-marketplace-heres-how-to-install-them-7968ab6bb1e1) documented 33 PM-specific skills in the Claude Code marketplace. The alirezarezvani skills repo spans engineering, marketing, product, compliance, and C-level advisory domains.
+
+**On-device skills**: @AiwithZoaina highlighted AI Edge Gallery's Agent Skills with the E4B model — complex on-device tasks (booking, multi-source search, combining info) without server round-trips. @Kushagrat15 noted Google shipped on-device agent skills for Gemma 4 within 48 hours of the model's release. The E2B variant runs fully offline at 2.5 GB.
+
+**Blockchain skills**: Solana Foundation launched Solana Agent Skills — prebuilt skill components for AI tools to interact with the Solana ecosystem. @neon_artival's skeptical reply: "vendor lock-in in agent skills is the new npm left-pad."
+
+HN featured domain-specific skill projects this cycle: [Golang Agent Skills collection](https://news.ycombinator.com/item?id=47487741), [PySpark one-shot CLI skill](https://news.ycombinator.com/item?id=47534936), [affiliate marketing skills](https://news.ycombinator.com/item?id=47632530), [BrowserHawk QA skill for Claude Code](https://news.ycombinator.com/item?id=47574095), and [Orca executable skills for agent workflows](https://news.ycombinator.com/item?id=47584819).
+
+---
+
+### 7. Skill Chaining, Custom Workflows, and Developer Education
+
+For multi-step workflows, skills are **chained** via an orchestrator pattern (per [MindStudio](https://www.mindstudio.ai/blog/claude-code-skill-collaboration-chaining-workflows)):
+
+> Orchestrator reads shared state file → determines next skill → invokes → updates state → loops until workflow complete
+
+Each skill writes structured output consumed by the next, making skills independently testable and composable. Resources: [first-principles deep dive](https://leehanchung.github.io/blogs/2025/10/26/claude-skills-deep-dive/), [Claude Code Handbook](https://nikiforovall.blog/claude-code-rules/fundamentals/agent-skills/), [fazm.ai workflow guide](https://fazm.ai/t/custom-claude-code-skills-workflow), [CodeSignal course on visualization skills](https://codesignal.com/learn/courses/customizing-claude-code-for-reusable-visualization-workflows/lessons/modular-visualization-skills), [DevOps.com overview](https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/), [official sub-agents docs](https://code.claude.com/docs/en/sub-agents).
+
+HN project shows this week: [Ink – deploy full-stack apps from AI agents via MCP or Skills](https://news.ycombinator.com/item?id=47337028) (32 pts), [n8n workflow → OpenClaw-compatible skills](https://news.ycombinator.com/item?id=47561083), [package manager for agent skills](https://news.ycombinator.com/item?id=47489570), [Skills Manager across Claude/Cursor/Copilot](https://news.ycombinator.com/item?id=47423910), [production-ready Agent Skills + orchestration protocol](https://news.ycombinator.com/item?id=47363984), ["What Claude Code Leak Teaches Us About Agent Skills"](https://news.ycombinator.com/item?id=47605341).
+
+Official documentation: [code.claude.com/docs/en/discover-plugins](https://code.claude.com/docs/en/discover-plugins) | [platform.claude.com/docs/en/agents-and-tools/agent-skills/overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
+
+@sujantiwari08 published a free 4-week curriculum: Week 1 Claude 101, Week 2 API + Claude Code, Week 3 Intro MCP + Agent Skills, Week 4 MCP Advanced + Vertex AI. @CMonk40079 debated with @ThePrimeagen about OpenClaw's skills auto-routing and sub-agent delegation as differentiators.
 
 ---
 
 ## Cross-Source Patterns
 
-**Pattern 1: Open standardization of skill/plugin formats is converging**
-- Platforms: Web (multiple official docs, GitHub repos)
-- Anthropic released SKILL.md as an open standard (Dec 2025), OpenAI adopted it for Codex and ChatGPT. The same format now works across Claude Code, Codex CLI, and ChatGPT. SkillsMP.com and the CCPI package manager capitalize on this cross-platform compatibility.
+**Pattern 1: Open SKILL.md standard is converging across all major agents**
+- Platforms: X (@domini_code on Addy Osmani skills, @sujantiwari08 curriculum), HN (Skills Manager across Claude/Cursor/Copilot), Web (skillsmp.com, vercel skills.sh, OpenAI Codex skills docs, Microsoft skills repo)
+- Claude Code, Codex CLI, ChatGPT, Cursor, GitHub Copilot, Gemini CLI, and VS Code Copilot all support SKILL.md. Skills.sh (Vercel) works with 30+ agents. A skill written once runs everywhere.
 
-**Pattern 2: MCP is now the dominant tool-connectivity layer — not Anthropic-specific**
-- Platforms: Web (Linux Foundation, GitHub Blog, Microsoft, Google, Pinterest, OpenAI, JetBrains)
-- 97M monthly downloads, 10K servers, AAIF co-founded by all major AI players. Pinterest's production deployment, AWS's specialized servers, and Microsoft's MCP tool integration all confirm this is infrastructure, not a feature.
+**Pattern 2: Security/governance is the ecosystem's next forcing function**
+- Platforms: HN (hn/4ppsec "Agent Skills – Open Security Database," 36 pts, top story this cycle), X (@PixelFamiliar on supply chain attacks, ClawForce certification)
+- "Installing random skills is the same as installing random npm packages" — the npm analogy is how HN framed the risk. JFrog and Microsoft are both treating this as a supply chain problem requiring artifact registries and runtime governance.
 
-**Pattern 3: Skill/plugin discovery is being solved at the ecosystem level (not just per-agent)**
-- Platforms: Web (claudemarketplaces.com, mcpmarket.com, skillsmp.com, agentpatch.ai, JetBrains ACP Registry, Arthur.ai governance)
-- Multiple distinct registry types have emerged: community curated (claudemarketplaces.com), package manager (CCPI), cross-platform marketplace (skillsmp.com), IDE-integrated (JetBrains ACP), and enterprise governance (arthur.ai, Microsoft AGT).
+**Pattern 3: Scale is already here — 90K+ skills, but discovery is unsolved**
+- Platforms: HN ("Skills are quietly becoming the unit of agent knowledge," 13 comments), Web (AgentSkillOS 90K skills, claudemarketplaces.com, skillsmp.com, CCPI CLI)
+- Multiple registries, package managers, and marketplaces exist but are fragmented. JetBrains ACP Registry (IDE-integrated), CCPI (CLI), skillsmp.com (web), claudemarketplaces.com (community curated) all solve discovery differently. No single canonical registry.
 
-**Pattern 4: MCP context window management is an emerging pain point**
-- Platforms: X (Japanese developer @deep_verdure)
-- Auto-connecting MCP servers on IDE launch silently consume context before any conversation begins. As MCP usage scales, context budgeting becomes a skill/plugin design concern.
+**Pattern 4: Vendor lock-in in skills mirrors npm left-pad anxieties**
+- Platforms: X (@neon_artival reply to Solana Agent Skills)
+- "Install in one line" convenience carries dependency risk. When skills phone home to external infrastructure (Solana, cloud APIs), they create the same single-point-of-failure risks as small npm packages. Offline/local skill execution is a real concern.
 
-**Pattern 5: Vertical skill packs are proliferating beyond engineering**
-- Platforms: Web (Medium PM skills article, alirezarezvani multi-domain skills repo)
-- PM-specific, marketing, compliance, C-level advisory skills are now in the marketplace. The skill ecosystem is expanding from developer tooling to business function domains.
+**Pattern 5: On-device agent skills signal edge AI maturation**
+- Platforms: X (@AiwithZoaina on AI Edge Gallery E4B skills, @Kushagrat15 on Gemma 4 → skills in 48 hours)
+- Agent skills are moving from cloud-dependent to on-device, with complex task execution (booking, multi-source search) happening without server round-trips. Gemma 4's rapid skills adoption signals this is a hardware maturity story, not just software.
 
 ---
 
@@ -156,104 +181,141 @@ The MCP context window concern raised by @deep_verdure is a real design issue: M
 **X/Twitter:**
 | Handle | Text Snippet | Likes | Reposts | URL |
 |--------|-------------|-------|---------|-----|
-| @deep_verdure | MCP tools context in Claude Code IDE integration — auto-connect on IDE launch, CLAUDE.md memory context vs MCP context visualization | — | — | https://x.com/deep_verdure/status/2040693035969958326 |
-| @noworkig | Subscribed to Claude Code Max | — | — | https://x.com/noworkig/status/2040693071390847153 |
-| @riteshpatel1884 | Claude Code mention (@isha_singh06) | — | — | https://x.com/riteshpatel1884/status/2040692886329831689 |
+| @domini_code | Addy Osmani published Agent Skills for Claude Code applying Lighthouse + Core Web Vitals | 4 | 1 | https://x.com/domini_code/status/2040678792520188280 |
+| @PixelFamiliar | Supply chain attacks in agent skills are already happening; ClawForce certifies skills for malware/credential theft | 0 | 0 | https://x.com/PixelFamiliar/status/2040702393889776001 |
+| @BetaList | ClawSkills: publish and discover versioned agent skills with vector search | 0 | 0 | https://x.com/BetaList/status/2040703746037158254 |
+| @openapexmarket | Shipped 35 AI agent skills to Apex Market; crypto connectors to SEO tools, 6 free | 0 | 0 | https://x.com/openapexmarket/status/2040701874702340320 |
+| @LDNCryptoClub | Solana Foundation launched Solana Agent Skills for embedding prebuilt skill components into AI tools | 0 | 0 | https://x.com/LDNCryptoClub/status/2040701221552480553 |
+| @neon_artival | Vendor lock-in in agent skills is the new npm left-pad | 0 | 0 | https://x.com/neon_artival/status/2040686394377461790 |
+| @AiwithZoaina | AI Edge Gallery Agent Skills with E4B model: complex tasks on-device without hitting a server | 1 | 0 | https://x.com/AiwithZoaina/status/2040688282628157514 |
+| @Kushagrat15 | Google shipped on-device agent skills for Gemma 4 within 48 hours of release; E2B runs offline at 2.5 GB | 0 | 0 | https://x.com/Kushagrat15/status/2040678178776375554 |
+| @Kushagrat15 | Speed of Gemma 4 adoption into agent skills is the real story | 0 | 0 | https://x.com/Kushagrat15/status/2040679174231466391 |
+| @sujantiwari08 | Free 4-week AI curriculum: Week 3 = Intro MCP + Agent Skills | 1 | 0 | https://x.com/sujantiwari08/status/2040696804992544956 |
+| @sujantiwari08 | Course 9 — Intro to Agent Skills: build, configure, share reusable Skills in Claude Code | 1 | 0 | https://x.com/sujantiwari08/status/2040696752488280176 |
+| @chenzeling4 | Lark CLI: 200+ commands, 20 AI Agent Skills for Messenger/Docs/Sheets/Calendar/Meetings | 0 | 0 | https://x.com/chenzeling4/status/2040686067037196684 |
+| @CMonk40079 | OpenClaw: skills auto-routing, sub-agent delegation, multi-channel, persistent memory | 0 | 0 | https://x.com/CMonk40079/status/2040702169439928785 |
+| @savaldeveloper | Developer without AI skills is losing the battle; vibe coding ≠ agent building | 0 | 0 | https://x.com/savaldeveloper/status/2040705285518471498 |
+| @arvin17x | Project best-practice skills template for agent self-discovery of patterns (Chinese) | 0 | 0 | https://x.com/arvin17x/status/2040694631617396933 |
+
+**Hacker News:**
+| User | Title | Points | Comments | Notable Quote | URL |
+|------|-------|--------|----------|--------------|-----|
+| hn/4ppsec | Agent Skills – Open Security Database | 36 | 9 | "Installing random skills is the same as installing random npm packages" | https://news.ycombinator.com/item?id=47402118 |
+| hn/chenxi9649 | Agent Skills: One-Shot PySpark from the CLI | 22 | 4 | "agent 'build me a churn model from this data' = YES PLEASE" | https://news.ycombinator.com/item?id=47534936 |
+| hn/samber | Show HN: Ink – Deploy full-stack apps from AI agents via MCP or Skills | 32 | 6 | "Is Okta supported for auth, and how does bring your own cloud work?" | https://news.ycombinator.com/item?id=47337028 |
+| hn/latand6 | Skills are quietly becoming the unit of agent knowledge | 9 | 13 | "Will skills replace MCP servers eventually?" | https://news.ycombinator.com/item?id=47475832 |
+| hn/marioskales | Show HN: Skales – I built a desktop AI agent a 6-year-old can use | 12 | 6 | — | https://news.ycombinator.com/item?id=47613527 |
+| hn/dev_chad | What Claude Code Leak Teaches Us About Agent Skills | 5 | 0 | — | https://news.ycombinator.com/item?id=47605341 |
+| hn/evergreenxx | Skills Manager – manage AI agent skills across Claude, Cursor, Copilot | 3 | 9 | — | https://news.ycombinator.com/item?id=47423910 |
+| hn/sonpiaz | Show HN: AI agent skills for affiliate marketing (Markdown, works with any LLM) | 3 | 0 | — | https://news.ycombinator.com/item?id=47632530 |
+| hn/samber | A collection of 35 Golang Agent Skills | 3 | 2 | — | https://news.ycombinator.com/item?id=47487741 |
+| hn/eterer | I built a package manager for agent skills | 3 | 1 | — | https://news.ycombinator.com/item?id=47489570 |
+| hn/just-claw-it | Show HN: Built tool to turn n8n workflows into OpenClaw-compatible agent skills | 3 | 0 | — | https://news.ycombinator.com/item?id=47561083 |
+| hn/gfernandf | Orca – Executable skills and capabilities for AI agent workflows | 3 | 1 | — | https://news.ycombinator.com/item?id=47584819 |
+| hn/jungard | Production-ready Agent Skills, 17 agents, and an orchestration protocol | 3 | 1 | — | https://news.ycombinator.com/item?id=47363984 |
+| hn/JakubKontra | BrowserHawk – Open-source autonomous QA agent skill for Claude Code | 3 | 0 | — | https://news.ycombinator.com/item?id=47574095 |
+| hn/tadwork | Show HN: A small app that ships with AI agent skills to extend and audit it | 3 | 0 | — | https://news.ycombinator.com/item?id=47442521 |
 
 **Web:**
 | Source | URL | Key Contribution |
 |--------|-----|-----------------|
-| Claude Code Docs (Anthropic) | https://code.claude.com/docs/en/plugins | Official plugin architecture: skills, agents, hooks, MCP |
-| Claude Code Docs — Sub-agents | https://code.claude.com/docs/en/sub-agents | Custom subagent creation |
+| Claude Code Docs — Plugins | https://code.claude.com/docs/en/discover-plugins | Official plugin discovery and installation guide |
 | Claude API Docs — Agent Skills | https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview | Canonical agent skills spec |
-| Anthropic News | https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation | MCP donation to Linux Foundation |
-| MCP Blog | https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/ | MCP joins AAIF announcement |
-| Linux Foundation | https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation | AAIF formation press release |
-| PR Newswire | https://www.prnewswire.com/news-releases/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agentsmd-302636897.html | AAIF formation full release |
-| OpenAI | https://openai.com/index/agentic-ai-foundation/ | OpenAI co-founds AAIF |
-| GitHub Blog | https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation | Developer perspective on MCP → LF |
-| LF Events — MCP Dev Summit | https://events.linuxfoundation.org/2026/02/24/agentic-ai-foundation-unveils-mcp-dev-summit-north-america-2026-schedule/ | MCP Dev Summit NA 2026 (Apr 2-3, NYC) |
-| LF Press — MCP Dev Summit | https://www.linuxfoundation.org/press/agentic-ai-foundation-unveils-mcp-dev-summit-north-america-2026-schedule | Summit schedule press release |
-| Yahoo Finance | https://finance.yahoo.com/news/agentic-ai-foundation-unveils-140000965 | Summit coverage |
-| Solo.io | https://www.solo.io/blog/aaif-announcement-agentgateway | AAIF implications for MCP / AgentGateway |
-| InfoQ | https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/ | Pinterest production MCP deployment |
-| Microsoft Open Source Blog | https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit | Agent Governance Toolkit launch |
-| Microsoft Learn | https://learn.microsoft.com/en-us/agent-framework/agents/tools/local-mcp-tools | Local MCP tools in agent framework |
-| JetBrains AI Blog | https://blog.jetbrains.com/ai/2026/01/acp-agent-registry/ | ACP Agent Registry launch (Jan 2026) |
-| JetBrains DataSpell | https://blog.jetbrains.com/dataspell/2026/03/dataspell-2026-1-ai-agents-ecosystem-export-notebooks-to-pdf-editor-improvements/ | AI agents ecosystem in DataSpell 2026.1 |
-| Google Developers Blog | https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/ | Google ADK integrations ecosystem |
-| VS Code Docs | https://code.visualstudio.com/docs/copilot/customization/agent-skills | Agent skills in VS Code Copilot |
-| Anthropic GitHub — plugins README | https://github.com/anthropics/claude-code/blob/main/plugins/README.md | Official plugin reference |
-| github/jeremylongshore | https://github.com/jeremylongshore/claude-code-plugins-plus-skills | 340 plugins + 1367 skills + CCPI |
-| github/jeremylongshore (CONTRIBUTING) | https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/CONTRIBUTING.md | Contribution guide |
-| github/alirezarezvani | https://github.com/alirezarezvani/claude-skills | 220+ multi-agent skills |
-| github/ComposioHQ | https://github.com/ComposioHQ/awesome-claude-plugins | Curated plugin list |
-| github/quemsah | https://github.com/quemsah/awesome-claude-plugins | Adoption metrics tracker |
-| github/hesreallyhim | https://github.com/hesreallyhim/awesome-claude-code | Skills, hooks, orchestrators |
-| claudemarketplaces.com | https://claudemarketplaces.com/ | Community marketplace — 150+ skills |
+| Claude Code Docs — Sub-agents | https://code.claude.com/docs/en/sub-agents | Custom subagent creation reference |
+| claudemarketplaces.com | https://claudemarketplaces.com/ | 150+ community skills with ratings |
 | skillsmp.com | https://skillsmp.com/ | Cross-platform skills marketplace (Claude, Codex, ChatGPT) |
-| mcpmarket.com | https://mcpmarket.com/ | MCP server/client directory |
-| DevOps.com | https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/ | Agent skills for custom workflows |
-| MindStudio | https://www.mindstudio.ai/blog/claude-code-skill-collaboration-chaining-workflows | Skill chaining into end-to-end workflows |
-| Lee Hanchung (blog) | https://leehanchung.github.io/blogs/2025/10/26/claude-skills-deep-dive/ | First-principles deep dive on Claude skills |
-| Claude Code Handbook | https://nikiforovall.blog/claude-code-rules/fundamentals/agent-skills/ | Use custom agent skills guide |
-| fazm.ai | https://fazm.ai/t/custom-claude-code-skills-workflow | Building custom skills from one-shot to reliable |
-| CodeSignal | https://codesignal.com/learn/courses/customizing-claude-code-for-reusable-visualization-workflows/lessons/modular-visualization-skills | Packaging visualization expertise into skills |
-| Composio — top plugins | https://composio.dev/content/top-claude-code-plugins | 10 top Claude Code plugins 2026 |
-| Composio — hosted MCP | https://composio.dev/content/hosted-mcp-platforms | 4 best hosted MCP platforms |
-| Builder.io | https://www.builder.io/blog/best-mcp-servers-2026 | Best MCP servers for developers |
-| AgentPatch | https://agentpatch.ai/blog/best-mcp-servers-2026/ | Best MCP servers 2026 |
-| DEV Community — MCP servers | https://dev.to/jangwook_kim_e31e7291ad98/top-15-mcp-servers-every-developer-should-install-in-2026-n1h | Top 15 MCP servers |
-| ByteBridge Medium | https://bytebridge.medium.com/mcp-gateways-in-2026-top-10-tools-for-ai-agents-and-workflows-d98f54c3577a | MCP Gateways top 10 |
-| Firecrawl | https://www.firecrawl.dev/blog/best-mcp-servers-for-developers | 10 best MCP servers |
-| StackGen | https://stackgen.com/blog/the-10-best-mcp-servers-for-platform-engineers-in-2026 | MCP servers for platform engineers |
-| Databar.ai | https://databar.ai/blog/article/best-mcp-servers-for-sales-teams-in-2026 | MCP servers for sales teams |
-| UX Planet | https://uxplanet.org/top-7-claude-code-plugins-2f97c2fbb1be | Top 7 Claude Code plugins (Nick Babich) |
+| buildwithclaude.com | https://buildwithclaude.com/ | Claude plugin marketplace |
+| jeremylongshore/claude-code-plugins-plus-skills | https://github.com/jeremylongshore/claude-code-plugins-plus-skills | 340 plugins + 1,367 skills + CCPI CLI |
+| alirezarezvani/claude-skills | https://github.com/alirezarezvani/claude-skills | 220+ multi-agent skills (8+ coding agents) |
+| ComposioHQ/awesome-claude-plugins | https://github.com/ComposioHQ/awesome-claude-plugins | Curated plugin list |
+| quemsah/awesome-claude-plugins | https://github.com/quemsah/awesome-claude-plugins | Automated adoption metrics |
+| hesreallyhim/awesome-claude-code | https://github.com/hesreallyhim/awesome-claude-code | Skills, hooks, slash-commands, orchestrators |
+| liteLLM | https://docs.litellm.ai/docs/tutorials/claude_code_plugin_marketplace | Plugin marketplace tutorial for teams |
 | DEV Community — skills guide | https://dev.to/raxxostudios/best-claude-code-skills-plugins-2026-guide-4ak4 | Best skills & plugins 2026 guide |
-| Medium — PM skills | https://medium.com/product-powerhouse/33-claude-skills-for-pms-are-now-in-the-claude-code-marketplace-heres-how-to-install-them-7968ab6bb1e1 | 33 PM skills in marketplace (March 2026) |
-| StackOne | https://www.stackone.com/blog/ai-agent-tools-landscape-2026/ | 120+ agentic tools mapped |
-| Arthur.ai | https://www.arthur.ai/column/agent-discovery-governance-landscape | Enterprise agent discovery & governance |
-| AI Agents Directory | https://aiagentsdirectory.com/landscape | March 2026 landscape map |
-| Agentica | https://agentica.wiki/articles/agent-ecosystems | Agent ecosystems theory |
+| DEV Community — MCP vs Skills | https://dev.to/phil-whittaker/mcp-vs-agent-skills-why-theyre-different-not-competing-2bc1 | MCP vs Skills conceptual clarity |
+| DEV Community — Skills.sh rise | https://dev.to/dmgjdagooc/the-rise-of-reusable-ai-agent-skills-how-skillssh-and-anthropic-are-changing-the-way-we-build-242d | Skills.sh + Anthropic ecosystem analysis |
+| Nevo Systems | https://nevo.systems/blogs/nevo-journal/ai-agent-skill-vs-plugin-vs-mcp | Skills vs Plugins vs MCPs: three-layer taxonomy |
+| InfoQ — Vercel Skills.sh | https://www.infoq.com/news/2026/02/vercel-agent-skills/ | Vercel launches Skills.sh open ecosystem |
+| vercel-labs/skills | https://github.com/vercel-labs/skills | npx skills CLI repo |
+| johnoct.com | https://johnoct.com/blog/2026/02/12/skills-sh-open-agent-skills-ecosystem/ | Skills.sh: the missing package manager |
+| JFrog | https://jfrog.com/blog/agent-skills-new-ai-packages/ | Agent skills as software supply chain |
+| OpenAI Codex Skills | https://developers.openai.com/codex/skills | Official Codex skills documentation |
+| AgentSkillOS | https://github.com/ynulihao/AgentSkillOS | 90,000+ skills via retrieval + orchestration |
+| Chris Ayers blog | https://chris-ayers.com/posts/agent-skills-plugins-marketplace/ | Complete guide: skills, plugins, marketplace |
+| Calmops | https://calmops.com/ai/ai-agent-skills-complete-guide-2026/ | AI Agent Skills Complete Guide 2026 |
+| Spring AI | https://spring.io/blog/2026/01/13/spring-ai-generic-agent-skills/ | Skills in Java/Spring ecosystem |
+| PulseMCP — Agent Skills MCP | https://www.pulsemcp.com/servers/mrsimpson-agent-skills | Agent Skills MCP Server listing |
+| PulseMCP — Skills MCP | https://www.pulsemcp.com/servers/skills-mcp-skills | Skills MCP Server listing |
+| Glama — agentskills-mcp | https://glama.ai/mcp/servers/pinkpixel-dev/agentskills-mcp | Agent Skills MCP on Glama |
+| FastMCP | https://gofastmcp.com/servers/providers/skills | Skills provider for FastMCP |
+| mcpservers.org | https://mcpservers.org/agent-skills | Agent Skills Library |
+| microsoft/skills | https://github.com/microsoft/skills | Microsoft skills, MCP servers, Agents.md |
+| Qualys | https://blog.qualys.com/product-tech/2026/03/19/mcp-servers-shadow-it-ai-qualys-totalai-2026 | MCP servers as new shadow IT |
+| Duende Software | https://duendesoftware.com/blog/20260402-give-your-ai-coding-assistant-duende-expertise-with-agent-skills-and-mcp-server | Identity framework as agent skill + MCP |
+| VS Code Docs | https://code.visualstudio.com/docs/copilot/customization/agent-skills | Agent skills in VS Code Copilot |
+| Anthropic News | https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation | MCP donation to Linux Foundation / AAIF |
+| MCP Blog | https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/ | MCP joins AAIF |
+| Linux Foundation | https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation | AAIF formation press release |
+| PR Newswire | https://www.prnewswire.com/news-releases/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agentsmd-302636897.html | Full AAIF formation release |
+| OpenAI — AAIF | https://openai.com/index/agentic-ai-foundation/ | OpenAI co-founds AAIF |
+| GitHub Blog — MCP | https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation | MCP → Linux Foundation |
+| LF Events — MCP Summit | https://events.linuxfoundation.org/2026/02/24/agentic-ai-foundation-unveils-mcp-dev-summit-north-america-2026-schedule/ | MCP Dev Summit NA 2026 schedule |
+| LF Press — MCP Summit | https://www.linuxfoundation.org/press/agentic-ai-foundation-unveils-mcp-dev-summit-north-america-2026-schedule | Summit press release |
+| Yahoo Finance | https://finance.yahoo.com/news/agentic-ai-foundation-unveils-140000965 | Summit coverage |
+| Solo.io | https://www.solo.io/blog/aaif-announcement-agentgateway | AAIF implications for MCP |
+| InfoQ — Pinterest MCP | https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/ | Pinterest production MCP ecosystem |
+| Microsoft Agent Governance | https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit | Agent Governance Toolkit launch |
+| Microsoft Learn — MCP | https://learn.microsoft.com/en-us/agent-framework/agents/tools/local-mcp-tools | Local MCP tools in agent framework |
+| MindStudio | https://www.mindstudio.ai/blog/claude-code-skill-collaboration-chaining-workflows | Skill chaining into end-to-end workflows |
+| Lee Hanchung | https://leehanchung.github.io/blogs/2025/10/26/claude-skills-deep-dive/ | First-principles deep dive on Claude skills |
+| Claude Code Handbook | https://nikiforovall.blog/claude-code-rules/fundamentals/agent-skills/ | Custom agent skills guide |
+| fazm.ai | https://fazm.ai/t/custom-claude-code-skills-workflow | One-shot to reliable custom skills |
+| CodeSignal | https://codesignal.com/learn/courses/customizing-claude-code-for-reusable-visualization-workflows/lessons/modular-visualization-skills | Visualization skills course |
+| DevOps.com | https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/ | Agent skills for custom workflows |
+| Medium — PM skills | https://medium.com/product-powerhouse/33-claude-skills-for-pms-are-now-in-the-claude-code-marketplace-heres-how-to-install-them-7968ab6bb1e1 | 33 PM skills in Claude Code marketplace |
 
 ---
 
 ## Stats Block
 
 ```
-├─ 🔵 X: 3 posts │ — likes │ — reposts
-├─ 🌐 Web: 47 pages — Claude Code Docs, Linux Foundation, GitHub, InfoQ, JetBrains, Microsoft, DevOps.com, MindStudio, MCP Blog, Composio, Builder.io, AgentPatch, SkillsMP, Firecrawl, StackGen, UX Planet, Medium
-└─ 🗣️ Top voices: @deep_verdure (MCP context management) │ claudemarketplaces.com, skillsmp.com, mcpmarket.com
+├─ 🔵 X: 29 posts │ 7 likes │ 1 repost
+├─ 🟢 HN: 22 stories │ ~160 points │ ~60 comments
+├─ 🌐 Web: 30 pages — claudemarketplaces.com, skillsmp.com, JFrog, InfoQ, Qualys, Linux Foundation, MindStudio, Spring.io, DEV Community, Calmops
+└─ 🗣️ Top voices: @domini_code (4 likes), @PixelFamiliar, @Kushagrat15 │ hn/4ppsec (36 pts), hn/samber (32 pts)
 ```
 
 ---
 
 ## Data Gaps
 
-- **Reddit:** API returned HTTP 402 Payment Required — zero Reddit data this cycle. This is a significant gap given that developer subreddits (r/ClaudeAI, r/LocalLLaMA, r/MachineLearning) likely have active discussions about MCP and plugin workflows.
-- **YouTube:** Script returned 0 videos — no transcripts available. Developer tutorial channels likely have relevant content not captured here.
-- **TikTok / Instagram:** Not applicable for this developer-focused topic; no relevant content expected.
-- **Hacker News:** Script returned 0 stories for the query — possible keyword mismatch or timing. MCP and Claude Code are regular HN topics; a direct HN search would likely surface threads.
-- **X/Twitter:** All 3 posts scored below relevance threshold (0.3). The query was too broad; topic-specific searches (e.g., "MCP marketplace", "Claude Code skills") would yield higher-quality results.
-- **Social signal quality:** The X posts captured are low-engagement Japanese-language posts — not representative of the English-language developer community on this topic.
-- **Approximate coverage:** Web sources ~85% comprehensive; Social/community signal ~10% (near-zero). True community sentiment (Reddit, HN, X developer discourse) is missing this cycle.
+- **Reddit:** API returned HTTP 402 Payment Required — zero Reddit data this cycle. Developer subreddits (r/ClaudeAI, r/LocalLLaMA, r/MachineLearning, r/programming) likely have active discussions about MCP and agent skills not captured here.
+- **YouTube:** Script returned 0 videos in the date range. Developer tutorial channels are producing skills and MCP content not captured this cycle.
+- **TikTok / Instagram:** No relevant content expected for this developer-focused topic.
+- **X/Twitter:** 29 posts captured but engagement is low (7 total likes). The query "agent-skills" may have limited direct matches; searches for "Claude Code skills", "MCP marketplace", "SKILL.md" would surface more targeted developer discourse.
+- **Polymarket:** No prediction markets found for this topic — expected for a tooling category.
+- **Approximate coverage:** Documentation/announcement coverage ~90% comprehensive. Community sentiment/discussion (Reddit, HN comment threads, YouTube developer commentary) ~40% — HN story titles captured but comment depth is limited. True practitioner friction and debate not fully represented.
 
 ---
 
 ## Key Quotes
 
-> "Skills are reusable, filesystem-based resources that provide Claude with domain-specific expertise: workflows, context, and best practices that transform general-purpose agents into specialists." — [platform.claude.com](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
+> "Installing random agent skills is the same as installing and running random npm packages — the risk calculus is identical." — hn/4ppsec on HN ([link](https://news.ycombinator.com/item?id=47402118))
 
-> "You do not type /skill-name to activate a Skill. Claude decides to use it based on what you are asking. This means Skills work silently in the background, bringing domain expertise into the conversation exactly when it is needed." — [Claude Code Handbook](https://nikiforovall.blog/claude-code-rules/fundamentals/agent-skills/)
+> "Supply chain attacks in agent skills are already happening. ClawForce certifies skills for malware, credential theft, data exfiltration. You can't afford to trust unaudited code in an AI pipeline." — @PixelFamiliar on X ([link](https://x.com/PixelFamiliar/status/2040702393889776001))
 
-> "MCP is the universal standard protocol for connecting AI models to tools, data and applications. In one year, MCP has become one of the fastest-growing and widely-adopted open-source projects in AI." — [MCP Blog](https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/)
+> "Will skills replace MCP servers eventually? How are skills different from prompts/commands/tools?" — hn/latand6 community discussion on HN ([link](https://news.ycombinator.com/item?id=47475832))
 
-> "青：MCP tools ⇒MCPサーバで占有しているコンテキスト。⇒Claude CodeがIDE連携した際に、自動でMCPサーバが立ち上がって接続される場合がある。茶：Memory files ⇒CLAUDE.mdが占有しているコンテキスト。" [MCP tools take up context; IDE integration auto-starts MCP servers; CLAUDE.md occupies memory context] — @deep_verdure on X ([link](https://x.com/deep_verdure/status/2040693035969958326))
+> "Vendor lock-in in agent skills is the new npm left-pad." — @neon_artival on X ([link](https://x.com/neon_artival/status/2040686394377461790))
 
-> "Pinterest engineering deployed a full internal MCP ecosystem — production MCP servers, a central registry, and agent integrations across developer tools, replacing ad hoc integrations with a standardized, secure, and scalable AI tool-calling substrate." — [InfoQ](https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/)
+> "Google went from Gemma 4 release to on-device agent skills in under 48 hours. The speed of adoption is the real story." — @Kushagrat15 on X ([link](https://x.com/Kushagrat15/status/2040679174231466391))
 
-> "In December 2025, Anthropic released the Agent Skills specification as an open standard, and OpenAI adopted the same format for Codex CLI and ChatGPT." — [jeremylongshore/claude-code-plugins-plus-skills](https://github.com/jeremylongshore/claude-code-plugins-plus-skills)
+> "Agent Skills are the new npm packages of AI — and they need the same supply chain security." — JFrog ([link](https://jfrog.com/blog/agent-skills-new-ai-packages/))
 
-> "The MCP ecosystem is maturing, and the best approach in 2026 is to start with a marketplace like AgentPatch that bundles the most common tools, then add specialized servers for niche use cases." — [AgentPatch](https://agentpatch.ai/blog/best-mcp-servers-2026/)
+> "MCP is the universal standard protocol for connecting AI models to tools, data and applications. In one year, it has become one of the fastest-growing open-source projects in AI." — MCP Blog ([link](https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/))
 
-> "Each skill in the chain is independently testable and reusable. Composability is the design goal." — [MindStudio](https://www.mindstudio.ai/blog/claude-code-skill-collaboration-chaining-workflows)
+> "Pinterest deployed a full internal MCP ecosystem — production servers, a central registry, and agent integrations across developer tools — replacing ad hoc integrations with a standardized, scalable substrate." — InfoQ ([link](https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/))
+
+> "Each skill in the chain is independently testable and reusable. Composability is the design goal." — MindStudio ([link](https://www.mindstudio.ai/blog/claude-code-skill-collaboration-chaining-workflows))
+
+> "agent 'build me a churn model from this data' = YES PLEASE" — hn/chenxi9649 on one-shot PySpark agent skills ([link](https://news.ycombinator.com/item?id=47534936))
