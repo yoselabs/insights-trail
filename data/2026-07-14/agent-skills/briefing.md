@@ -1,7 +1,8 @@
-# Claude Code Skills, Plugins & Agent Skill Ecosystems — Daily Briefing
+# Claude Code Skills, Plugins, and the MCP Ecosystem — Daily Briefing
 **Date:** 2026-07-14
 **Query type:** GENERAL
-**Sources:** Reddit, X/Twitter, Hacker News, Bluesky, GitHub, Web (global), Web (Japan), Web (China)
+**Sources:** X/Twitter, Hacker News, Bluesky, GitHub, Reddit (partial), Web (global), Web (Japan), Web (China)
+**Delta from:** data/2026-07-14/agent-skills/prev-briefing.md (2026-07-13) — this briefing prioritizes what is NEW since yesterday
 
 ---
 
@@ -9,251 +10,409 @@
 
 | Source | Items | Engagement | Notes |
 |--------|-------|------------|-------|
-| Reddit | 9 threads | 2,031 upvotes, 728 comments | 🌐 partial — backup rate-limited |
-| X/Twitter | 67 posts (EN) + 58 posts (JA) + 34 posts (ZH) | 3,515 + 1,083 + 559 likes | 🌐🇯🇵🇨🇳 |
-| Hacker News | 23 stories (EN) + 9 stories (JA) + 2 stories (ZH) | 5,297 + 99 + 91 pts | 🌐🇯🇵🇨🇳 |
-| Bluesky | 12 posts (EN) + 3 posts (JA) | 46 + 2 likes | 🌐🇯🇵 |
-| GitHub | 4 items (EN) + 8 items (JA) + 6 items (ZH) | — | 🌐🇯🇵🇨🇳 |
-| Web (global) | 27 pages | — | 🌐 via WebSearch + native search |
-| Web (Japan) | 10 pages | — | 🇯🇵 Qiita, Zenn, note |
-| Web (China) | 5 pages | — | 🇨🇳 CSDN, Zhihu, Juejin |
+| Reddit | 1 thread | 1 upvote, 1 comment | Partial — blocked after 2 items; scrapecreators also DOWN |
+| X/Twitter | 20 posts | 1,487 likes, 119 reposts | Strong signal on security, WrongStack, kapa.ai |
+| YouTube | 0 videos | — | scrapecreators=DOWN (402 billing) |
+| Hacker News | 31 stories | 4,442 points, 2,123 comments | Richest source this run; steganography story dominates |
+| TikTok | 0 videos | — | scrapecreators=DOWN (402 billing) |
+| Instagram | 0 reels | — | scrapecreators=DOWN (402 billing) |
+| Bluesky | 4 posts | 28 likes | SQL plans plugin, Storybook, /checkup command |
+| Polymarket | 0 markets | — | No relevant markets found |
+| Web (global) | 11 pages | — | 🌐 WebSearch + keyless; dev.to, designrevision.com, lagrowthmachine.com, stacklok, claudemarketplace.net, etc. |
+| Web (Japan) | 5 pages | — | 🇯🇵 Qiita (shatolin, miruky), Zenn (chmod644, ino_h), note.com (varelser) |
+| Web (China) | 1 page (3 blocked) | — | 🇨🇳 cnblogs (1 fetched); Zhihu x2 (HTTP 403), CSDN (HTTP 521) |
 
 ---
 
 ## Synthesized Findings
 
-### 1. The Plugin/Skill/MCP Ecosystem Has Exploded in Scale
+### 1. 🌐 SECURITY CRISIS: RCE via Claude Code Auto-Mode — Today's Top Story
 
-The numbers are staggering and arrived largely in the last six months. The community-maintained [`claude-code-plugins-plus-skills`](https://github.com/jeremylongshore/claude-code-plugins-plus-skills) repo lists 425 plugins, 2,810 skills, and 200 agents, browsable at [tonsofskills.com](https://tonsofskills.com/) and installable via the `ccpi` CLI (`pnpm add -g @intentsolutionsio/ccpi`). Anthropic's own [claude-plugins-official](https://github.com/anthropics/claude-plugins-official) curates 55+ high-quality plugins. Community directories like [claudemarketplaces.com](https://claudemarketplaces.com/) index 425 packages with a weekly quality grade (Grade A as of July 10, 2026). The MCP layer is even larger - estimates range from [9,400 distinct servers by mid-April 2026](https://codeongrass.com/blog/mcp-server-ecosystem-integration-layer-ai-agents-2026/) growing +38% in four months, to Glama alone indexing close to 20,000 servers.
+The biggest new development of July 14: Claude Code's auto-mode has been confirmed as a viable attack vector for remote code execution. Security researcher @SlavaOPs on X summarized the finding: "pointing Claude Code or Codex at a third-party repo to 'scan it for vulnerabilities' can get you RCE instead - in the default, recommended auto-mode. No plugins, no MCP servers needed as an entry point. The prompt injection lives directly inside the library's own source code - the exact thing the agent was told to go read. It can't tell the difference between a README instruction and a malicious prompt."
 
-The taxonomy that has crystallized across all communities: **skills are markdown instruction files** (teaching Claude Code specific behaviors), **plugins are versioned bundles** (shipping skills + hooks + MCP definitions + slash commands together as a distributable package), and **MCP servers are integration bridges** (connecting external apps like databases, Figma, GitHub, deployment pipelines). As one widely-shared [morphllm.com guide](https://www.morphllm.com/claude-code-skills-mcp-plugins) puts it: "A skill is a cheat sheet, a plugin is a toolkit, and an MCP server is a bridge to another application."
+The attack class is not limited to one CVE. Confirmed vulnerabilities in this reporting window:
+- **CVE-2025-59536 + CVE-2026-21852**: Check Point Research found that Claude Code hooks and MCP environment variable injection can be chained. An attacker crafts a repository where `onInit` hooks or MCP server config variables are poisoned. Check Point describes it as "RCE and API token exfiltration through Claude Code project files." (https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/)
+- **CVE-2026-39861**: Sandbox escape via symlink. Claude Code's container isolation can be bypassed when it follows symlinks to paths outside the sandboxed workspace.
+- **CVE-2026-24887**: A secondary exfiltration path via environment variable leakage in MCP subprocess calls.
+- **Claude Desktop Extensions RCE**: A separate LayerX Security report found 10,000+ Claude Desktop users exposed via extension RCE (https://www.layerxsecurity.com/claude-desktop-extensions-rce/).
 
-One r/AppBusiness [thread](https://www.reddit.com/r/AppBusiness/comments/1usio9p/my_ios_app_is_4_months_old_and_does_944_mrr_every/) exemplifies practical adoption: "My iOS app is 4 months old and does $944 MRR. Every 'department' is a Claude Code skill." The author treats customer support, analytics, and marketing as separate Claude Code skills, each with domain-specific instructions and tool access.
+The Cloud Security Alliance published a research note framing the class more broadly: "Prompt injection via GitHub metadata is a class-level supply chain risk for AI agents" (https://labs.cloudsecurityalliance.org/research/csa-research-note-claude-code-github-action-prompt-injection/).
 
-### 2. Agent Skills Is Becoming a Cross-Platform Open Standard
+Full developer-tech coverage: https://www.developer-tech.com/news/developers-face-rce-via-claude-code-auto-mode-exploit/
+@SlavaOPs X post: https://x.com/SlavaOPs/status/2076949170531791272
 
-The most structurally significant development of the month: **Agent Skills has emerged as a vendor-neutral open standard**, not just an Anthropic-owned format. The GitHub trending bot on Bluesky flagged `google-labs-code/stitch-skills` (["Google Stitch向けのエージェントスキルとプラグインのコレクション。Agent Skills オープン標準に準拠"](https://bsky.app/profile/dailygithubtrends.bsky.social/post/3mqem2w2ssw22) - "A collection of agent skills and plugins for Google Stitch. Compliant with the Agent Skills open standard, aimed at use in coding agents such as Codex, Claude Code, Cursor, and Gemini CLI"). 🇯🇵
+**What's new vs. July 13:** The auto-mode exploit was disclosed today. Prior briefing had no security vulnerability items. This is a first-time signal for this topic.
 
-[VentureBeat reported](https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard) Anthropic's formal launch of enterprise "Agent Skills" alongside opening the standard. [The New Stack called it](https://thenewstack.io/agent-skills-anthropics-next-bid-to-define-ai-standards/) "Anthropic's Next Bid to Define AI Standards."
+---
 
-The biggest single move: [Vercel's skills.sh went GA on June 5, 2026](https://www.totalum.app/blog/agent-skills-marketplaces-2026) with 600,000 OSS skills distributed via Vercel OIDC. skills.sh's core differentiator is a single CLI installer that works across Claude Code, Codex CLI, Cursor, and OpenClaw - positioning Vercel as the cross-platform distribution layer while Anthropic, OpenAI, and Cline remain host-specific publishers.
+### 2. 🌐 TRUST EROSION: Steganographic Marking and the Spyware Framing
 
-Anthropic donated MCP to the **Linux Foundation / Agentic AI Foundation** in December 2025, making it a vendor-neutral community-governed standard. Per [WorkOS](https://workos.com/blog/everything-your-team-needs-to-know-about-mcp-in-2026), six canonical host surfaces now speak native MCP: Claude Desktop, Claude Code, Cursor, Codex CLI, Windsurf, and VS Code with GitHub Copilot agent mode.
+The highest-engagement story of the past 30 days for this topic is not a product launch - it is a trust story. On June 30, a post at thereallo.dev revealed that Claude Code is steganographically marking its own requests with hidden patterns that can be detected after the fact. This story reached 2,445 HN points and 750 comments - the largest single HN discussion in this topic window. A second HN thread titled "Claude Code: Anthropic has embedded hidden spyware-like code in Claude Code" hit 56 points with a further 14 comments citing the same IntCyberDigest Twitter thread.
 
-### 3. Security Is the New Dominant Concern - and It's Serious
+The community debate in the 750-comment thread split along predictable lines: some read it as a watermarking feature for abuse detection; others read it as covert surveillance. No official Anthropic statement was visible in the research window. The story is distinct from, but amplified by, the concurrent "Claude Code Just Got 5x More Expensive" piece (57 pts, 8 comments, https://www.vincentschmalbach.com/claude-code-quietly-looks-5x-more-expensive/) and the "Ask HN: Anthropic banned me from using Claude Code and I don't know what to do" thread (82 pts, 94 comments, https://news.ycombinator.com/item?id=48641160).
 
-This theme crossed from niche concern to mainstream alarm in June-July 2026, driven by concrete audit findings.
+These three stories together signal a community friction point: trust + price + enforcement are converging in a way that gives WrongStack and ZCode (see finding #3) an opening to frame themselves as alternatives.
 
-[Snyk's ToxicSkills study](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) - a scan of 3,984 skills from ClawHub and skills.sh - found **13.4% contain critical-level security issues** including credential theft, backdoor installation, and data exfiltration. A broader analysis of 42,447 skills found 26.1% carry at least one vulnerability. 280+ skills were documented leaking API keys through over-permissioned file and network access.
+HN link: https://thereallo.dev/blog/claude-code-prompt-steganography
+IntCyberDigest X post: https://twitter.com/IntCyberDigest/status/2071971609183678544
 
-The [Cloud Security Alliance's June 25 post](https://cloudsecurityalliance.org/blog/2026/06/25/5-claude-agent-skills-risks-every-ciso-should-know) identified the structural root cause: "skills run with host-level access rather than inside sandboxes." In February 2026, researchers documented the first coordinated malware campaign targeting Claude Code and OpenClaw users, using 30+ malicious skills distributed via ClawHub. **OWASP formalized risks into the Agentic Skills Top 10 (AST10)** in March 2026.
+**What's new vs. July 13:** The steganography story broke June 30 but was not in the prior briefing. With 2,445 pts it is the community's most-discussed signal in this window. The trust-erosion narrative is new context.
 
-[@RohanArun on X](https://x.com/RohanArun/status/2075774470330212782) surfaced the community's hunger for tooling to address this: "@crptAtlas Hey Super, build a website that audits Claude Code extensions. Let users choose project type, compare hooks, skills, MCP servers, subagents, and commands, run a scan, and review risks before enabling tools." The [Skill Security Auditor plugin](https://www.claudedirectory.org/skills/claude-skills-skill-security-auditor) from [Trail of Bits](https://github.com/trailofbits/skills) addresses exactly this gap - auditing skill directories and git repo URLs for malicious code as a pre-install gate.
+---
 
-### 4. Discovery and Distribution Remain Fragmented - but Tools Are Emerging
+### 3. 🌐 COMPETITION ARRIVES: WrongStack and ZCode Challenge Claude Code's Agent Orchestration Primacy
 
-[@lukashanren1 on X](https://x.com/lukashanren1/status/2071900526564831679) captured the core problem: "Your team's database, internal wiki, and deployment pipeline are invisible to Claude Code - unless you use MCP. Here's how to plug them all in without touching the core. The extensibility problem: Building every integration directly into Claude Code would be impossible to maintain, a security nightmare, and inflexible for organizations with internal tools."
+Two new challengers emerged in this window, each attacking different weaknesses the trust stories above expose.
 
-The registry landscape remains fragmented: Smithery has 7,000+ servers, the official MCP Registry ~800, and Glama ~20,000. [Per truefoundry](https://www.truefoundry.com/blog/best-mcp-registries), "there is no authoritative central registry yet" and the hard problem is "knowing which are real, maintained, and safe to hand credentials to."
+**WrongStack** (@ersinkoc, X, July 13) positions itself as a purpose-built multi-agent orchestration system, not a general coding agent that can be plugin-extended: "when it comes to real orchestration, multi-agent execution, and sustainable autonomy, those products are still mediocre. Adding hundreds of lines of prompts, AGENTS.md files, MCP servers, skills, or plugins will not turn them into WrongStack." This is a direct shot at Claude Code's architecture of layered extensions. GitHub repo: https://github.com/WrongStack/WrongStack
+X post: https://x.com/ersinkoc/status/2076741353485091268
 
-The `ccpi` package manager on tonsofskills.com is the closest to a unified CLI layer - `ccpi search devops`, `ccpi install devops-automation-pack`, `ccpi update`. One [Bluesky thread](https://bsky.app/profile/acedatacloud.bsky.social/post/3mqict4biat2c) promoted the Nano Banana MCP as the integration model: "Generate/edit images, try product shots, or mock creative assets from Claude, VS Code, or Cursor. One API token, free credits, no context switching."
+**ZCode** (HN, July 1, 278 pts, 15 comments) comes from the Zhipu AI / GLM team - the Chinese makers of the GLM language model. ZCode is being positioned as "Claude Code from the Makers of GLM" and targets Chinese developer adoption. This is a notable signal: China's top open-source LLM team is now building a Claude Code analog, not just integrating with Claude's plugin ecosystem. Chinese site: https://zcode.z.ai/cn
 
-A key technical fix landed in early 2026: **MCP lazy loading reduces context usage by up to 95%** per [clarista.io](https://www.clarista.io/blog/claude-code-mcp-plugins-guide) - skills and MCP servers only load when needed, not all at once. This addressed a major pain point where heavy MCP configurations degraded Claude Code's ability to handle complex tasks.
+**What's new vs. July 13:** Neither WrongStack nor ZCode appeared in the prior briefing. Both are first-sightings.
 
-### 5. Anthropic's Official Tooling for Managing the Ecosystem
+---
 
-The `claude-code-setup` official plugin generated the most engagement in the Japanese community this month. [@kingdom314159 on X](https://x.com/kingdom314159/status/2070295299856502860) [🇯🇵] described it:
+### 4. 🌐 OBSERVABILITY LAYER: kapa.ai Agent Analytics and Lupen Fill the Cost + Query Visibility Gap
 
-> "Anthropicが、公式プラグイン 'claude-code-setup' をひっそり公開しました。このプラグインは、プロジェクト全体をスキャンして、フック、スキル、MCPサーバー、サブエージェント、自動化設定まで、必要な構成を提案してくれます。" ("Anthropic quietly released the official plugin 'claude-code-setup.' This plugin scans the entire project and suggests the necessary configuration including hooks, skills, MCP servers, subagents, and automation settings.")
+Two new tools address a real emerging pain point: as plugin and MCP ecosystems grow, developers cannot see which plugins are costing them money or which agents are making expensive calls.
 
-The plugin operates read-only (no automatic file rewriting), which [@engineer_num1](https://x.com/engineer_num1/status/2076794618516238490) called out as a key trust feature: "Claude Codeの強さは、モデル..." ("Claude Code's strength lies not in the model alone...").
+**kapa.ai Agent Analytics** (@emilsnotes, X, July 13): kapa.ai already powers docs MCP servers for 100+ companies (n8n, ClickHouse, and others). The new Agent Analytics dashboard shows how Claude Code, Codex, and Cursor interact with those product documentation servers - which queries they send, what they retrieve, how often. This is the first visibility layer specifically for agent-to-MCP documentation queries.
+X announcement: https://x.com/emilsnotes/status/2076663452907483282
+kapa.ai blog: https://www.kapa.ai/blog/build-an-mcp-server-with-kapa-ai
 
-Also new: `/checkup` (alias `/doctor`). [@oikon48's tweet](https://x.com/oikon48/status/2075042015092559907) got 227 likes [🇯🇵] explaining the feature: (1) clean up unused skills/MCP/plugins to save context, (2) deduplicate CLAUDE.md, (3) split root CLAUDE.md into nested CLAUDE.md + skills, (4) disable slow hooks, (5) update Claude Code, (6) enable auto mode by default, (7) pre-approve frequently-rejected read-only commands. The feature uses `AskUserQuestion` interactively rather than silently mutating files.
+**Lupen** (HN, June 24, 3 pts): "Show HN: Lupen - which Claude Code turn or sub-agent ran up your bill." Per-turn and per-sub-agent cost attribution for Claude Code workflows. Addresses a complaint visible in the "5x more expensive" story.
+GitHub: https://github.com/momoraul/Lupen
 
-Anthropic's admin analytics dashboard now shows usage and cost by group and by user, with output like artifacts created, files edited, skills and connectors used, displayed next to their cost - per [marktechpost.com](https://www.marktechpost.com/2026/06/14/claude-code-guide-2026-25-features-with-examples-demo/). Enterprise MCP connector access started with Okta, enabling zero-touch provisioning.
+**Token-saviour** (HN, June 15): A routing skill that routes tool selection calls to smaller models for appropriate queries - claimed ~70% token reduction. This is a skill-as-cost-optimizer, not a skill-as-capability-extender, which is a new use-case category for the SKILL.md format.
+GitHub: https://github.com/vagkaratzas/skills/blob/main/token-saviour/SKILL.md
 
-### 6. Japan: Practical Guides and Memory Solutions Dominate 🇯🇵
+**What's new vs. July 13:** All three items are new. The observability/cost-attribution category did not appear in the prior briefing.
 
-The Japanese community on Qiita, Zenn, and note is producing the most detailed practical guides in the ecosystem. Key pieces this month:
+---
 
-- [Zenn (@ino_h)](https://zenn.dev/ino_h/articles/2026-04-23-claude-code-plugins-ranking): "Claude Codeプラグインおすすめ2026 — 公式マーケットプレイスから入れるべきプラグイン & MCPサーバー" (recommended plugins from the official marketplace)
-- [Qiita (@shatolin)](https://qiita.com/shatolin/items/ca1810e419fee5fd963b): "【2026年版】Claude Codeを最強にするプラグイン・MCP・ツール総まとめ" (total guide to making Claude Code the strongest)
-- [Qiita (@kai_kou)](https://qiita.com/kai_kou/items/71ee39f27fc09d451cf8): Complete guide for sharing Skills, Hooks, and MCPs as team plugins
-- [Qiita (@kamome_susume)](https://qiita.com/kamome_susume/items/33a34935707d2be1361a): Recommended MCP server list for Claude Code
-- [Zenn (@goyle0)](https://zenn.dev/goyle0/articles/claude-code-mcp-plugins): CLI-recommended MCP plugins with focus on hallucination prevention
-- [Zenn (@chmod644)](https://zenn.dev/chmod644/articles/claude-code-official-plugins-guide): Complete explanation of all 59 official Claude Code plugins
-- [note (@ai_jissennkai)](https://note.com/ai_jissennkai/n/nc9ebedadd1f2): What is Claude Code MCP? Configuration methods and 5 real-world servers
+### 5. 🌐 MCP REGISTRY SCALE vs. DISCOVERY PROBLEM
 
-**Key JP finding:** "Context loss between sessions" is the #1 pain point. As of 2026, memory-related plugins have gained significant popularity. The official plugin directory had 160 plugins with 32 from Anthropic as of April 2026.
+The registry scale numbers updated significantly this window. As of July 11 (Agent Almanac), the official MCP Registry contains 9,208 total servers (9,178 active, 30 deprecated), and the MCP SDK now has 97M+ monthly installs. Glama's directory has grown from approximately 20,000 servers earlier in 2026 to 54,900 as of this run - a near-3x jump in months. Smithery has 7,000+ servers. PulseMCP has 18,240+.
 
-The [@ai_hakase_ Hermes vs Claude Code thread](https://x.com/ai_hakase_/status/2074418416367087689) [🇯🇵, 5 likes] articulated the design philosophy debate: Hermes (universal agent runtime) can run many MCP servers and plugins but suffers from context bloat and precision degradation with small models; Claude Code (specialized CLI) maintains tight tool-use discipline but has narrower scope. This is the central tradeoff the ecosystem is navigating.
+But a dev.to analysis published July 9 frames the problem directly: "MCP registries in 2026, compared: one is canonical, one is huge, and almost none can tell you what to install. You check five directories and get five different answers." The canonical registry (official, 9,208) is authoritative but small. Glama (54,900) is comprehensive but overwhelming. Neither solves curation. The discovery problem is now the dominant unsolved problem in the MCP ecosystem.
 
-### 7. China: Competitive Intelligence and GitHub Trending Watch 🇨🇳
+Additionally, @MPP32_dev (X, July 6) describes a federated-catalog approach: "Agents are finding the MPP32 MCP server through standard distribution channels and using it to access a growing catalog of services... a catalog of over 9,500 paid and free endpoints." (https://x.com/MPP32_dev/status/2074032600814063760)
 
-Chinese tech communities are tracking the Claude Code vs Codex competitive battle closely. [@yupi996](https://x.com/yupi996/status/2076484625959092453) [🇨🇳, 56 likes, 42 replies] reported: "Codex杀疯了，移除了5小时使用限制！... 另一边，Claude Fable 5 又延期了" ("Codex went wild, removed the 5-hour usage limit! ... On the other side, Claude Fable 5 was delayed again.") The OpenAI move and Fable 5 delays generated significant discussion.
+URLs:
+- Agent Almanac: https://agentalmanac.org/mcp
+- dev.to registries comparison: https://dev.to/skillselion/mcp-registries-in-2026-compared-one-is-canonical-one-is-huge-and-almost-none-can-tell-you-what-147l
+- Glama: https://glama.ai/mcp/servers
+- Smithery: https://smithery.ai/servers
+- PulseMCP: https://www.pulsemcp.com/servers
+- modelcontextprotocol/servers (88K stars): https://github.com/modelcontextprotocol/servers
+- truefoundry comparison: https://www.truefoundry.com/blog/best-mcp-registries
 
-A GitHub AI CLI tools daily digest ([zx0828/big_model_radar](https://github.com/zx0828/big_model_radar/issues/242)) [🇨🇳] covering July 12 tracked: Claude Code, OpenAI Codex, Gemini CLI, GitHub Copilot CLI - showing China's developer community treats these as a competitive category. Another digest ([loxehate/loxehate.github.io](https://github.com/loxehate/loxehate.github.io/issues/10)) [🇨🇳] from July 6 noted: "GitHub Trending榜被Claude Code / Codex相关技能、插件和Agent管理工具占据" ("GitHub Trending dominated by Claude Code/Codex related skills, plugins, and agent management tools").
+**What's new vs. July 13:** Glama growth (54,900 from ~20K) and the dev.to discovery problem framing are new. The "discovery is unsolved at scale" is an emerging narrative not in the prior briefing.
 
-Key CN hub content:
-- [掘金 (Juejin)](https://juejin.cn/post/7633351194199244819): "卸掉那些没用的插件！Claude Code生态祛魅完全指南（2026最新）" ("Remove those useless plugins! Complete demystification guide for the Claude Code ecosystem 2026") - memory-type plugins like claude-mem, mcp-memory-keeper
-- [CSDN](https://blog.csdn.net/weixin_46984554/article/details/160860809): "Claude Code十大必装MCP排行榜（2026年最新版）" ("Top 10 Must-Install MCPs for Claude Code 2026") - MCP ecosystem has 1000+ servers; 7 plugin categories covering docs, UI design, frontend dev, Chinese writing
-- [知乎 (Zhihu)](https://zhuanlan.zhihu.com/p/1971872808159141982): Detailed Claude Code MCP command reference (add, delete, list, test)
-- [CSDN tutorial](https://blog.csdn.net/champaignwolf/article/details/160913544): Claude Code + MCP hands-on tutorial
+---
 
-The "Making of Claude Code" [HN thread](https://www.anthropic.com/features/making-of-claude-code) (61pts, 31 comments) and a [transcript deletion bug report](https://github.com/anthropics/claude-code/issues/62476) (30pts, 37 comments: "Beware, Claude Code deletes >30 day old transcripts. Anthropic won't fix it") both generated CN-adjacent discussion.
+### 6. 🌐 PLATFORM MAKERS ENTER MCP: Apple Safari and Mozilla MDN
 
-### 8. MCP Security Deep Dives Continue
+Two major platform vendors made official MCP server releases in this window, signaling that MCP is becoming infrastructure rather than a Claude-specific tool.
 
-[@bilaltariq01 on Bluesky](https://bsky.app/profile/bilaltariq01.bsky.social/post/3mqjerirnt42a) shared a "Claude Code, Beyond the Prompt - Hardening an MCP Database Tool (Part 4 Deep Dive)" series, illustrating that security hardening of MCP connections is now a multi-part content genre. [Checkmarx](https://checkmarx.com/learn/ai-security/claude-code-security-top-6-risks-controls-and-best-practices/) published "Claude Code Security: Top 6 Risks, Controls, and Best Practices" and [Harmonic Security](https://www.harmonic.security/resources/security-lessons-from-claude-codes-first-year) released "Security Lessons from Claude Code's First Year."
+**Apple Safari MCP Server** (HN, July 3, 272 pts, 76 comments): WebKit published "Introducing the Safari MCP Server for Web Developers" - an official Apple-published MCP server that gives AI agents access to Safari's web platform capabilities. This is Apple's first published MCP integration.
+HN: https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/
+
+**Mozilla MDN MCP Server** (HN, June 15, 4 pts): Mozilla launched an MCP server for MDN Web Docs. Gives AI coding agents direct access to authoritative web API documentation.
+Mozilla blog: https://developer.mozilla.org/en-US/blog/introducing-mdn-mcp-server/
+
+Together, these represent the first major browser vendors publishing official MCP servers - a legitimacy signal distinct from developer-published community servers.
+
+**What's new vs. July 13:** Both were published in this window but not in the prior briefing. Apple's entry is particularly notable as a first-party integration.
+
+---
+
+### 7. 🌐 NEW TOOLING ECOSYSTEM: Memory, Verification, and Developer Quality-of-Life
+
+A wave of focused utility tools for Claude Code agents appeared this window:
+
+**Recall** (HN, June 21, 138 pts, 85 comments): "Show HN: Recall - Local project memory for Claude Code." Stores and retrieves project-specific context across Claude Code sessions. The 138-pt score and 85 comments indicate strong developer resonance.
+GitHub: https://github.com/raiyanyahya/recall
+
+**bhived MCP** (r/ClaudeWorkflows, June 16): Shared memory layer plus autonomous skill discovery for Claude Code agents. Reddit thread describes it as: "[Workflow] Enhance Claude Code Agents with Shared Memory and Autonomous Skill Discovery using 'bhived' MCP."
+Reddit: https://www.reddit.com/r/ClaudeWorkflows/comments/1u7j2o9/workflow_enhance_claude_code_agents_with_shared/
+
+**SkillSpec** (HN, June 30, 3 pts): A verification tool for the SKILL.md format: "verify that agent skills run the way SKILL.md says." Addresses the trust and compliance gap as skills become more widely distributed.
+Website: https://skillspec.sh
+
+**Arbor** (HN, July 8, 3 pts): A code graph MCP server. Gives agents a structural index of the codebase instead of requiring grep-style search. "Agents stop grep-reading your codebase."
+GitHub: https://github.com/Anandb71/arbor/releases/tag/v2.4.0
+
+**Shipwright Harness** (HN, June 30, 3 pts): Open-source autonomous delivery agent for Claude Code, MIT licensed.
+GitHub: https://github.com/app-vitals/shipwright
+
+**Claudoro** (HN, July 1, 50 pts, 36 comments): Pomodoro timer embedded in the Claude Code statusline. 50 pts for a productivity widget suggests the developer ergonomics category has community appetite.
+GitHub: https://github.com/emson/claudoro
+
+**cleanup-agent-processes SKILL.md** (@citedycom, X, July 14): A published SKILL.md for auditing and reclaiming local agent resource leaks. "Use when Codex, Claude Code, Playwright, Chrome DevTools, Node MCP servers, or abandoned Git worktrees consume CPU, memory, or disk."
+X: https://x.com/citedycom/status/2076826816803676600
+
+**Ship an Agent Skill That Installs Itself with Your Library** (HN, June 24, 4 pts): Pattern guide for bundling SKILL.md files with npm/pip packages so agents auto-learn the library's API.
+Blog: https://stenbrinke.nl/blog/ship-an-agent-skill-that-installs-itself
+
+**Diplomat-agent** (HN, June 25, 3 pts): Scans Python MCP servers for unguarded tool calls — a security audit tool for the MCP supply chain.
+GitHub: https://github.com/Diplomat-ai/diplomat-agent
+
+**Tilion** (HN, July 9, 6 pts): MCP for Claude Code to stop it getting blocked on the web during autonomous scraping tasks.
+GitHub: https://github.com/tiliondev/fortress/tree/main/mcp
+
+**What's new vs. July 13:** All items above are new or not previously covered. The memory + verification + security-audit tool cluster is emerging as a second-layer toolchain on top of the core plugin system.
+
+---
+
+### 8. 🌐 ZAMBO MCP: NOW ON TELEGRAM (UPDATED from prev briefing)
+
+Zambo MCP was covered in the July 13 briefing as a zero-auth MCP providing 50+ tools in one URL. New July 14 development: Zambo is now also available directly via Telegram, in addition to existing Claude/Cursor/Windsurf integrations. "head over to zambo and you can start using zambo on telegram in 5 seconds and you can hook it up to claude/cursor/any mcp compatible agent in about 30 seconds." The tool count has grown to 65+ live tools including web search, on-chain data, lead generation, agent coordination, and AI strategy. Free, no API key required.
+@CripdoeCrypto Telegram announcement (July 14): https://x.com/CripdoeCrypto/status/2076961161451311422
+Zambo 65+ tools post (July 13): https://x.com/CripdoeCrypto/status/2076472729939652735
+Original Zambo description (July 12): https://x.com/CripdoeCrypto/status/2076389085720072421
+
+---
+
+### 9. 🌐 ANTHROPIC OFFICIAL MOVES: Steering Post, July Changelog
+
+**Steering Claude Code** (Anthropic blog, June 18): Official guidance on when to use each customization primitive - CLAUDE.md, skills, hooks, and subagents. Seven distinct customization methods described. This is the canonical reference for understanding the priority order of Claude Code extensions.
+URL: https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more
+
+**Claude Code July 2026 Changelog**: Enhanced background agents, MCP header auth auto-reconnects on 401/403 responses, plugin auto-rename. The MCP auth improvement directly addresses a common developer complaint about connection stability.
+Changelog: https://www.gradually.ai/en/changelogs/claude-code/
+
+**The Making of Claude Code** (Anthropic blog, July 7, HN 61 pts, 31 comments): Behind-the-scenes narrative from the Claude Code team. 61 points is moderate but the 31 comments suggest engaged discussion about development philosophy.
+URL: https://www.anthropic.com/features/making-of-claude-code
+
+**Using Subagents to Improve Claude Code Results** (HN, July 13, 3 pts): Practitioner guide on step-by-step subagent orchestration.
+URL: https://software.rajivprab.com/2026/07/13/using-subagents-to-improve-claude-code/
+
+**Claude Code May-July 2026 weekly limits promotion** (HN, July 12, 45 pts, 66 comments): Anthropic running a temporary promotional pricing. 66 comments suggests active community interest in usage economics.
+URL: https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion
+
+---
+
+### 10. 🌐 POSITIVE SIGNAL: "I Love This Month"
+
+Despite the trust-erosion signals above, developer sentiment is mixed rather than uniformly negative. @mckaywrigley's July 12 post "@claudeai i love this month so much" gathered 318 likes - the second-highest X engagement in this window. @abir35627's "Claude Code Resource Bible" post (58 likes, 26 reposts) shows continued ecosystem enthusiasm. @suraj_sharma14's "Everything you need to master in 2026" list (88 likes, 12 reposts) still puts Claude Code workflows near the top.
+mckaywrigley: https://x.com/mckaywrigley/status/2076355550053564816
+abir35627 Resource Bible: https://x.com/abir35627/status/2076605147984359877
+suraj_sharma14: https://x.com/suraj_sharma14/status/2076592477276922070
+
+---
+
+### 11. 🇯🇵 JAPANESE HUB ROUNDUP: Catalog Culture and Enterprise Adoption
+
+Japanese IT communities (Qiita, Zenn, note.com) have produced comprehensive catalog-style guides to the Claude Code plugin ecosystem. Key findings:
+
+- **Scale by February 2026**: Over 9,000 plugins publicly available. Qiita's shatolin article (Feb 2026) identifies Claude-Mem (20K stars) and Superpowers (43K stars, 7-phase development workflow) as the standout community projects. (https://qiita.com/shatolin/items/ca1810e419fee5fd963b)
+
+- **Official plugin catalog** (Zenn/chmod644, March 2026): All 59 official plugins at launch, now expanded to 160 by April 2026. Five types: MCP, Skill, Agent, Hook, LSP. The five-type taxonomy is useful and consistent with Anthropic's own documentation. (https://zenn.dev/chmod644/articles/claude-code-plugins-all-59)
+
+- **Japanese community ranking** (Zenn/ino_h, April 2026): Top recommended: feature-dev (7-phase dev workflow), code-review (parallel specialist agents), commit-commands, security-guidance, frontend-design. The namespace format `/<plugin-name>:<command-name>` is highlighted as preventing naming conflicts. (https://zenn.dev/ino_h/articles/2026-04-23-claude-code-plugins-ranking)
+
+- **Plugin-as-smartphone-app analogy** (note.com/varelser, March 2026): Japanese bloggers consistently use the smartphone app analogy for plugin installations. Enterprise focus: OpenTelemetry monitoring, private marketplaces, automatic deployment. Quote (translated): "Private marketplaces, automatic deployment, and OpenTelemetry monitoring are being adopted by Japanese enterprises." ("プライベートマーケットプレイス、自動デプロイ、OpenTelemetryモニタリングが日本企業で採用されています") (https://note.com/varelser/n/n0595c5ed613e)
+
+- **Plugin development guide** (Qiita/miruky, March-April 2026): Two environment variables central to plugin development: `${CLAUDE_PLUGIN_ROOT}` (installation directory) and `${CLAUDE_PLUGIN_DATA}` (persistent storage across updates). 21 hook event types. (https://qiita.com/miruky/items/753395f62397c5ca6cbd)
+
+Additional JP sources: https://uravation.com/media/claude-code-plugins-marketplace-complete-guide-2026/ | https://www.masatoman.net/articles/claude-code-plugins-marketplace-guide-2026 | https://codingls.com/ai/7595/
+
+---
+
+### 12. 🇨🇳 CHINESE HUB ROUNDUP: Reusable Workflow Framing and ZCode Signal
+
+Chinese hub coverage was significantly limited by access blocks (Zhihu 403 x2, CSDN 521). The available signal from cnblogs and Zhihu/CSDN metadata suggests:
+
+- **Three-level loading** (cnblogs, Oct 2025): Chinese developers framing skills as: L1 Metadata (~100 tokens, always loaded), L2 Instructions (<5k tokens, on trigger), L3 Resources (on-demand, unlimited). The "reusable, file-system-based resources providing domain expertise" framing is Chinese-community-specific. (https://www.cnblogs.com/treasury-manager/p/19166145)
+
+- **"一键部署" (one-click deploy) and "告别重复配置" (goodbye to repetitive configuration)**: From Zhihu metadata, these are the resonant marketing phrases for Claude Code plugins in Chinese developer culture. Emphasis on eliminating repetitive configuration aligns with Chinese developer productivity culture.
+
+- **Zhihu guide title** (blocked): "Claude Code 插件系统详解：如何用 MCP、Sub Agents 和 Hooks 构建可复用 AI 工作流，告别重复配置!" — "Detailed Claude Code Plugin System: How to Build Reusable AI Workflows with MCP, Sub Agents, and Hooks - Goodbye to Repetitive Configuration!" (https://zhuanlan.zhihu.com/p/1961476188372448747 — blocked)
+
+- **ZCode competitive signal**: The Zhipu AI / GLM team launched ZCode as a direct Chinese competitor to Claude Code. The 278-pt HN story represents global developer awareness of China's entry into the agent coding space. Chinese developer community reaction: 15 HN comments, suggesting interest from the global Chinese developer diaspora. (https://zcode.z.ai/cn)
 
 ---
 
 ## Cross-Source Patterns
 
-**Pattern 1: Plugin sprawl creates management overhead** - Appeared on X (EN/JA), Reddit, Bluesky, Web. The /checkup feature, claude-code-setup plugin, and MCP lazy loading all address the same symptom: too many capabilities loaded, degrading performance. [@oikon48's /checkup announcement](https://x.com/oikon48/status/2075042015092559907) got 227 likes in Japan. r/AppBusiness's $944 MRR thread shows the flip side: purposeful skill design creates leverage.
+**Pattern 1: Security as the breaking story (HN + X + Web)**
+The RCE-via-auto-mode story appears simultaneously on X (@SlavaOPs), Check Point Research blog, developer-tech.com, Hacker News context, and the Cloud Security Alliance research note. It is the day's new story and appears across every medium that covers security. Consistent framing: auto-mode + scanning third-party repos = attack surface. Sources: https://x.com/SlavaOPs/status/2076949170531791272 + https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/ + https://www.developer-tech.com/news/developers-face-rce-via-claude-code-auto-mode-exploit/
 
-**Pattern 2: Security is now a shipping concern, not a research one** - Appeared on X, HN, Web, CN GitHub digests. Snyk's ToxicSkills study, OWASP AST10, Checkmarx guides, and Trail of Bits' auditor skill all landed within the last 30 days. @RohanArun's call for an extension auditor got cross-platform traction.
+**Pattern 2: Trust deficit is multi-story (HN + X + Web)**
+Steganography (2,445 HN pts), banned account (82 pts), 5x pricing (57 pts), and the security CVEs all reinforce a common theme: developers are questioning the trustworthiness of Claude Code as a system. This is a compound narrative, not a single incident. Each story individually might be dismissed; together they represent a community mood shift. Sources: https://thereallo.dev/blog/claude-code-prompt-steganography + https://www.vincentschmalbach.com/claude-code-quietly-looks-5x-more-expensive/ + https://news.ycombinator.com/item?id=48641160
 
-**Pattern 3: Cross-platform standardization via Agent Skills** - Appeared on Bluesky (JA), Web, X. google-labs-code/stitch-skills, Vercel skills.sh, and VentureBeat's coverage all point to skills becoming a vendor-neutral format like npm packages. Vercel's 600K-skill launch is the clearest evidence.
+**Pattern 3: MCP now multi-vendor (HN + GitHub + Web)**
+Apple (Safari), Mozilla (MDN), and 54,900 community servers on Glama represent a shift from "MCP is Anthropic's protocol" to "MCP is industry infrastructure." Both Apple and Mozilla publishing official MCP servers in the same 30-day window is a structural signal, not a coincidence. Sources: https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/ + https://developer.mozilla.org/en-US/blog/introducing-mdn-mcp-server/ + https://glama.ai/mcp/servers
 
-**Pattern 4: Memory/context persistence is the #1 Japanese use case** - Appeared on Zenn, Qiita, note (JP), X (JP). The "context loss between sessions" problem drives plugin selection in Japan more than any other factor; memory plugins (claude-mem, mcp-memory-keeper) are the top-recommended category.
+**Pattern 4: Discovery at scale is unsolved (Web + X + Web-JP + Web-CN)**
+Japanese hub articles consistently ask "which of the 160 plugins should I actually install?" Chinese Zhihu metadata asks about eliminating repetitive configuration. The dev.to comparison piece says registries don't tell you what to install. @trendai.bsky.social on Bluesky suggests running `/checkup` to purge unused plugins. The discovery problem is global and appears independently in all three language regions. Sources: https://dev.to/skillselion/mcp-registries-in-2026-compared-one-is-canonical-one-is-huge-and-almost-none-can-tell-you-what-147l + https://zenn.dev/ino_h/articles/2026-04-23-claude-code-plugins-ranking + https://bsky.app/profile/trendai.bsky.social/post/3mqk73cjcn627
 
-**Pattern 5: China tracks Codex vs Claude Code as a competition** - Appeared on X (ZH), GitHub (ZH). Chinese developers treat these as competing products; Codex's removal of usage limits generated as much discussion as Claude Code plugin news.
+**Pattern 5: Memory tools emerging as a category (Reddit + HN + X)**
+bhived MCP (Reddit), Recall (138 HN pts), and Claude-Mem (20K GitHub stars, per Japanese sources) are separate independent projects solving the same problem: Claude Code has no persistent memory across sessions without help. All three reached visibility this window. Sources: https://www.reddit.com/r/ClaudeWorkflows/comments/1u7j2o9/ + https://github.com/raiyanyahya/recall + https://qiita.com/shatolin/items/ca1810e419fee5fd963b
 
 ---
 
 ## Per-Platform Tables
 
-**Reddit:** 🌐
-| Subreddit | Title | Upvotes | Comments | Top Quote | URL |
-|-----------|-------|---------|----------|-----------|-----|
-| r/AppBusiness | My iOS app is 4 months old and does $944 MRR. Every "department" is a Claude Code skill | 152 | 48 | "Every 'department' is a Claude Code skill. Full stack with the actual workflows and costs" | [link](https://www.reddit.com/r/AppBusiness/comments/1usio9p/my_ios_app_is_4_months_old_and_does_944_mrr_every/) |
-
-**X/Twitter:** 🌐🇯🇵🇨🇳
+**X/Twitter:**
 | Handle | Text Snippet | Likes | Reposts | URL |
 |--------|-------------|-------|---------|-----|
-| @RohanArun | "@crptAtlas Hey Super, build a website that audits Claude Code extensions..." | — | — | [link](https://x.com/RohanArun/status/2075774470330212782) |
-| @lukashanren1 | "Your team's database, internal wiki, and deployment pipeline are invisible to Claude Code — unless you use MCP..." | 3 | 3 | [link](https://x.com/lukashanren1/status/2071900526564831679) |
-| @AnthropicAI | "The values Claude expresses also vary with the language of the conversation..." | 315 | 23 | [link](https://x.com/AnthropicAI/status/2076719546954825769) |
-| @oikon48 🇯🇵 | "Claude Code の新機能 /checkup (=/doctor)...未使用のスキル/MCP/プラグインをクリーンアップ..." | 227 | 28 | [link](https://x.com/oikon48/status/2075042015092559907) |
-| @kingdom314159 🇯🇵 | "Anthropicが、公式プラグイン 'claude-code-setup' をひっそり公開しました..." | 13 | 1 | [link](https://x.com/kingdom314159/status/2070295299856502860) |
-| @ai_hakase_ 🇯🇵 | "Hermes vs Claude Code！コード生成エージェントの設計思想と最適化戦略..." | 5 | 2 | [link](https://x.com/ai_hakase_/status/2074418416367087689) |
-| @yupi996 🇨🇳 | "刚刚 Codex 杀疯了，移除了5小时使用限制！另一边，Claude Fable 5 又延期了" | 56 | 4 | [link](https://x.com/yupi996/status/2076484625959092453) |
+| @mckaywrigley | "i love this month so much" (to @claudeai) | 318 | — | https://x.com/mckaywrigley/status/2076355550053564816 |
+| @AnthropicAI | "The values Claude expresses also vary with the language of the conversation" | 428 | — | https://x.com/AnthropicAI/status/2076719546954825769 |
+| @suraj_sharma14 | "Everything you need to master in 2026... Building MCP servers" | 88 | 12 | https://x.com/suraj_sharma14/status/2076592477276922070 |
+| @abir35627 | "Claude Code Resource Bible... 54 tools, MCP servers, skills" | 58 | 26 | https://x.com/abir35627/status/2076605147984359877 |
+| @TechWithTimm | "From software engineer to AI engineer" | 61 | — | https://x.com/TechWithTimm/status/2076690579954753630 |
+| @MPP32_dev | "9,500 paid and free endpoints via federated MCP catalog" | 21 | 8 | https://x.com/MPP32_dev/status/2074032600814063760 |
+| @CripdoeCrypto | "Zambo now on Telegram in 5 seconds" (July 14) | 5 | — | https://x.com/CripdoeCrypto/status/2076961161451311422 |
+| @CripdoeCrypto | "Zambo: 65+ live tools, free, no API key" | 6 | — | https://x.com/CripdoeCrypto/status/2076472729939652735 |
+| @emilsnotes | "Introducing Agent Analytics for @kapa_ai - view how Claude Code, Codex, Cursor interact" | 6 | — | https://x.com/emilsnotes/status/2076663452907483282 |
+| @ersinkoc | "WrongStack vs Claude Code/Codex/OpenCode on real orchestration" | 6 | — | https://x.com/ersinkoc/status/2076741353485091268 |
+| @SlavaOPs | "Scanning a third-party repo can get you RCE instead in auto-mode" | 1 | — | https://x.com/SlavaOPs/status/2076949170531791272 |
+| @citedycom | cleanup-agent-processes SKILL.md (July 14) | — | — | https://x.com/citedycom/status/2076826816803676600 |
+| @0x_Missy22 | "GitHub trending: Claude Code templates, Google's Stitch agent skills, MCP servers" | — | — | https://x.com/0x_Missy22/status/2076231166492049711 |
 
-**Hacker News:** 🌐🇯🇵🇨🇳
-| User | Title | Points | Comments | Notable Quote | URL |
-|------|-------|--------|----------|--------------|-----|
-| (HN) | The Making of Claude Code | 61 | 31 | — | [link](https://www.anthropic.com/features/making-of-claude-code) |
-| (HN) | Beware, Claude Code deletes >30 day old transcripts. Anthropic won't fix it | 30 | 37 | "Beware, Claude Code deletes >30 day old transcripts. Anthropic won't fix it" | [link](https://github.com/anthropics/claude-code/issues/62476) |
+**Hacker News:**
+| Title | Points | Comments | Notable Quote | URL |
+|-------|--------|----------|--------------|-----|
+| Claude Code is steganographically marking requests | 2,445 | 750 | — | https://thereallo.dev/blog/claude-code-prompt-steganography |
+| I used Claude Code to get a second opinion on my MRI | 566 | 715 | — | https://antoine.fi/mri-analysis-using-claude-code-opus |
+| The text in Claude Code's 'Extended Thinking' output | 326 | 225 | — | https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/ |
+| ZCode: Claude Code from the Makers of GLM | 278 | 15 | — | https://zcode.z.ai/cn |
+| The Safari MCP server for web developers | 272 | 76 | — | https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/ |
+| Claude Code: Anthropic has embedded hidden spyware-like code | 56 | 14 | — | https://twitter.com/IntCyberDigest/status/2071971609183678544 |
+| Show HN: Recall - Local project memory for Claude Code | 138 | 85 | — | https://github.com/raiyanyahya/recall |
+| Show HN: Claudoro, Pomodoro timer in Claude Code statusline | 50 | 36 | — | https://github.com/emson/claudoro |
+| The Making of Claude Code | 61 | 31 | — | https://www.anthropic.com/features/making-of-claude-code |
+| Ask HN: Anthropic banned me from using Claude Code | 82 | 94 | — | https://news.ycombinator.com/item?id=48641160 |
+| Claude Code Just Got 5x More Expensive | 57 | 8 | — | https://www.vincentschmalbach.com/claude-code-quietly-looks-5x-more-expensive/ |
+| Claude Code May-July 2026 weekly limits promotion | 45 | 66 | — | https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion |
+| The MDN MCP Server | 4 | — | — | https://developer.mozilla.org/en-US/blog/introducing-mdn-mcp-server/ |
+| SkillSpec - verify agent skills run as SKILL.md says | 3 | — | — | https://skillspec.sh |
+| Show HN: Lupen - which Claude Code turn ran up your bill | 3 | — | — | https://github.com/momoraul/Lupen |
+| Token-saviour - routing skill, 70% fewer tokens | 3 | — | — | https://github.com/vagkaratzas/skills/blob/main/token-saviour/SKILL.md |
+| Ship an Agent Skill That Installs Itself with Your Library | 4 | — | — | https://stenbrinke.nl/blog/ship-an-agent-skill-that-installs-itself |
+| Arbor - code graph MCP server | 3 | — | — | https://github.com/Anandb71/arbor/releases/tag/v2.4.0 |
+| Using Subagents to Improve Claude Code Results | 3 | — | — | https://software.rajivprab.com/2026/07/13/using-subagents-to-improve-claude-code/ |
+| Shipwright Harness - autonomous delivery agent (MIT) | 3 | — | — | https://github.com/app-vitals/shipwright |
+| Gemini CLI vs Claude Code: agent capabilities matter more than prompts | 3 | — | — | https://imaxxs.com/behavioral-induction-capabilities-shape-execution |
+| Diplomat-agent - scan Python MCP servers for unguarded tool calls | 3 | — | — | https://github.com/Diplomat-ai/diplomat-agent |
+| Tilion - MCP for Claude Code to stop web blocks | 6 | — | — | https://github.com/tiliondev/fortress/tree/main/mcp |
+| Turn Your AI Agent into an MCP Server for ChatGPT, Claude and Cursor | 5 | — | — | https://quickchat.ai/post/expose-ai-agent-as-mcp-server |
+| Forensic-deepdive: code knowledge graph and MCP server | 3 | — | — | https://github.com/Dhevenddra/forensic-deepdive |
 
-**Bluesky:** 🌐🇯🇵
+**Reddit:**
+| Subreddit | Title | Upvotes | Comments | Top Quote | URL |
+|-----------|-------|---------|----------|-----------|-----|
+| r/ClaudeWorkflows | Enhance Claude Code Agents with Shared Memory and Autonomous Skill Discovery using bhived MCP | 1 | 1 | — | https://www.reddit.com/r/ClaudeWorkflows/comments/1u7j2o9/workflow_enhance_claude_code_agents_with_shared/ |
+
+**Bluesky:**
 | Handle | Text | Likes | URL |
 |--------|------|-------|-----|
-| @acedatacloud.bsky.social | "Nano Banana + MCP = image tools inside your IDE. Generate/edit images, try product shots..." | 7 | [link](https://bsky.app/profile/acedatacloud.bsky.social/post/3mqict4biat2c) |
-| @acedatacloud.bsky.social | "Claude Code can edit images from your terminal. Add NanoBanana MCP..." | 7 | [link](https://bsky.app/profile/acedatacloud.bsky.social/post/3mqdzdfv4wr26) |
-| @acedatacloud.bsky.social | "Claude Code doesn't have to live in one IDE. Use it from VS Code, Cursor, terminal, or GitHub Actions..." | 5 | [link](https://bsky.app/profile/acedatacloud.bsky.social/post/3mqexjhqhjx2w) |
-| @bilaltariq01.bsky.social | "Claude Code, Beyond the Prompt — Hardening an MCP Database Tool (Part 4 Deep Dive)" | 4 | [link](https://bsky.app/profile/bilaltariq01.bsky.social/post/3mqjerirnt42a) |
-| @dailygithubtrends.bsky.social 🇯🇵 | "今日のGitHubトレンド: google-labs-code/stitch-skills...Agent Skills オープン標準に準拠" | 1 | [link](https://bsky.app/profile/dailygithubtrends.bsky.social/post/3mqem2w2ssw22) |
-
-**GitHub:** 🌐🇯🇵🇨🇳
-| Region | Repo | Key Contribution |
-|--------|------|-----------------|
-| 🌐 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | Official Anthropic directory, 55+ curated plugins |
-| 🌐 | [jeremylongshore/claude-code-plugins-plus-skills](https://github.com/jeremylongshore/claude-code-plugins-plus-skills) | 425 plugins, 2810 skills; ccpi CLI |
-| 🌐 | [cased/claude-code-plugins](https://github.com/cased/claude-code-plugins) | Community marketplace |
-| 🌐 | [trailofbits/skills](https://github.com/trailofbits/skills) | Security research/audit skills |
-| 🌐 | [netresearch/security-audit-skill](https://github.com/netresearch/security-audit-skill) | PHP security audit skill |
-| 🌐 | [skillmatic-ai/awesome-agent-skills](https://github.com/skillmatic-ai/awesome-agent-skills) | Definitive resource for Agent Skills |
-| 🌐 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | Google's Agent Skills open standard implementation |
-| 🇨🇳 | [zx0828/big_model_radar](https://github.com/zx0828/big_model_radar) | AI CLI tools community digest; tracks Claude Code, Codex, Gemini CLI |
-| 🇨🇳 | [loxehate/loxehate.github.io](https://github.com/loxehate/loxehate.github.io) | AI open source trends daily digest (CN) |
+| @erikdarling.com | "built a claude code plugin that reads sql server execution plans and tells you what's wrong. /plugin marketplace add erikdarlingdata/claude-plugins" | 10 | https://bsky.app/profile/erikdarling.com/post/3mqc5npb36l2m |
+| @storybook.js.org | "The frontend bottleneck is no longer code generation. It's now reviewing agent output. Working on Claude Code + Codex plugins." | 8 | https://bsky.app/profile/storybook.js.org/post/3mqaesef2dk2u |
+| @kjaanson.eurosky.social | "Does Claude Code and other mainstream harnesses without plugins etc handle cache nicely?" | 5 | https://bsky.app/profile/kjaanson.eurosky.social/post/3mqel6rljbs2v |
+| @trendai.bsky.social | "run /checkup to purge unused plugins and junk. Faster speeds, lower token costs." | 5 | https://bsky.app/profile/trendai.bsky.social/post/3mqk73cjcn627 |
 
 **Web:**
 | Region | Source | URL | Key Contribution |
 |--------|--------|-----|-----------------|
-| 🌐 | morphllm.com | [link](https://www.morphllm.com/claude-code-skills-mcp-plugins) | Definitive taxonomy: skill vs plugin vs MCP |
-| 🌐 | tonsofskills.com | [link](https://tonsofskills.com/) | 3,050+ skills, 463 plugins catalog; ccpi hub |
-| 🌐 | claudemarketplaces.com | [link](https://claudemarketplaces.com/) | 425 packages, weekly quality grade |
-| 🌐 | claudemarketplace.net | [link](https://www.claudemarketplace.net/) | Community-curated; 150+ skills with ratings |
-| 🌐 | codeongrass.com | [link](https://codeongrass.com/blog/mcp-server-ecosystem-integration-layer-ai-agents-2026/) | MCP ecosystem: 9,400+ servers, +38% in 4 months |
-| 🌐 | truefoundry.com | [link](https://www.truefoundry.com/blog/best-mcp-registries) | Registry comparison: Smithery 7K+, no central authority |
-| 🌐 | snyk.io | [link](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) | ToxicSkills: 13.4% critical issues; first malware campaign |
-| 🌐 | cloudsecurityalliance.org | [link](https://cloudsecurityalliance.org/blog/2026/06/25/5-claude-agent-skills-risks-every-ciso-should-know) | CISO risks; OWASP AST10; host-level access problem |
-| 🌐 | totalum.app | [link](https://www.totalum.app/blog/agent-skills-marketplaces-2026) | 5-way marketplace comparison; Vercel skills.sh 600K skills |
-| 🌐 | venturebeat.com | [link](https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard) | Anthropic launches + opens Agent Skills standard |
-| 🌐 | thenewstack.io | [link](https://thenewstack.io/agent-skills-anthropics-next-bid-to-define-ai-standards/) | Agent Skills: Anthropic's standards play |
-| 🌐 | workos.com | [link](https://workos.com/blog/everything-your-team-needs-to-know-about-mcp-in-2026) | Enterprise MCP; Okta connector; 6 canonical hosts |
-| 🌐 | clarista.io | [link](https://www.clarista.io/blog/claude-code-mcp-plugins-guide) | MCP lazy loading: 95% context reduction |
-| 🌐 | claudedirectory.org | [link](https://www.claudedirectory.org/skills/claude-skills-skill-security-auditor) | Skill Security Auditor plugin |
-| 🌐 | marktechpost.com | [link](https://www.marktechpost.com/2026/06/14/claude-code-guide-2026-25-features-with-examples-demo/) | Admin analytics dashboard; cost tracking per skill |
-| 🌐 | releasebot.io | [link](https://releasebot.io/updates/anthropic/claude-code) | July 2026 changelog: MCP OAuth fixes, plugin dependency fixes |
-| 🌐 | dev.to | [link](https://dev.to/raxxostudios/best-claude-code-skills-plugins-2026-guide-4ak4) | Best skills/plugins guide; ecosystem size estimates |
-| 🌐 | medium.com | [link](https://medium.com/@reliabledataengineering/the-claude-code-plugin-stack-that-actually-makes-you-ship-faster-ec4bd90b14d3) | Plugin stack for shipping faster |
-| 🌐 | agensi.io | [link](https://www.agensi.io/learn/best-ai-agent-skills-marketplaces-2026) | 7 AI Agent Skills Marketplaces compared |
-| 🌐 | digitalapplied.com | [link](https://www.digitalapplied.com/blog/ai-agent-marketplaces-2026-discovery-distribution) | Discovery and distribution analysis |
-| 🌐 | groundy.com | [link](https://groundy.com/articles/claude-code-plugins-anthropic-s-official-plugin-ecosystem/) | Linux Foundation donation; MCP governance |
-| 🌐 | checkmarx.com | [link](https://checkmarx.com/learn/ai-security/claude-code-security-top-6-risks-controls-and-best-practices/) | Top 6 Claude Code security risks |
-| 🌐 | harmonic.security | [link](https://www.harmonic.security/resources/security-lessons-from-claude-codes-first-year) | Security lessons from first year |
-| 🇯🇵 | zenn.dev (@ino_h) | [link](https://zenn.dev/ino_h/articles/2026-04-23-claude-code-plugins-ranking) | Plugin/MCP ranking from official marketplace |
-| 🇯🇵 | qiita.com (@shatolin) | [link](https://qiita.com/shatolin/items/ca1810e419fee5fd963b) | Total guide to Claude Code plugins/MCP/tools |
-| 🇯🇵 | qiita.com (@kai_kou) | [link](https://qiita.com/kai_kou/items/71ee39f27fc09d451cf8) | Team plugin sharing guide |
-| 🇯🇵 | qiita.com (@kamome_susume) | [link](https://qiita.com/kamome_susume/items/33a34935707d2be1361a) | Recommended MCP server list |
-| 🇯🇵 | zenn.dev (@goyle0) | [link](https://zenn.dev/goyle0/articles/claude-code-mcp-plugins) | MCP plugins for hallucination prevention |
-| 🇯🇵 | zenn.dev (@chmod644) | [link](https://zenn.dev/chmod644/articles/claude-code-official-plugins-guide) | All 59 official plugins explained |
-| 🇯🇵 | zenn.dev (@chmod644) | [link](https://zenn.dev/chmod644/articles/claude-code-plugins-all-59) | All 59 official plugins (full guide) |
-| 🇯🇵 | note.com (@ai_jissennkai) | [link](https://note.com/ai_jissennkai/n/nc9ebedadd1f2) | Claude Code MCP: config, 5 real servers, DIY |
-| 🇯🇵 | note.com (@ozzzagen) | [link](https://note.com/ozzzagen/n/n41d0be21a019) | 5 MCP Servers that transform Claude Code |
-| 🇯🇵 | zenn.dev (@nanananano) | [link](https://zenn.dev/nanananano/articles/df5802334d999e) | MCP setup guide (June 2026 state) |
-| 🇨🇳 | juejin.cn | [link](https://juejin.cn/post/7633351194199244819) | Claude Code ecosystem demystification guide |
-| 🇨🇳 | csdn.net | [link](https://blog.csdn.net/weixin_46984554/article/details/160860809) | Top 10 must-install MCPs for Claude Code |
-| 🇨🇳 | zhihu.com | [link](https://zhuanlan.zhihu.com/p/1971872808159141982) | Complete Claude Code guide; MCP commands |
-| 🇨🇳 | csdn.net | [link](https://blog.csdn.net/champaignwolf/article/details/160913544) | Claude Code + MCP hands-on tutorial |
+| 🌐 | agentalmanac.org | https://agentalmanac.org/mcp | Official MCP registry: 9,208 servers, 97M monthly SDK installs |
+| 🌐 | dev.to | https://dev.to/skillselion/mcp-registries-in-2026-compared-one-is-canonical-one-is-huge-and-almost-none-can-tell-you-what-147l | Discovery problem: "none can tell you what to install" |
+| 🌐 | claudemarketplace.net | https://www.claudemarketplace.net/ | 4,206+ skills, 727+ MCP servers, 150K monthly visitors |
+| 🌐 | docs.stacklok.com | https://docs.stacklok.com/toolhive/concepts/skills | Agent Skills open standard reference |
+| 🌐 | designrevision.com | https://designrevision.com/blog/claude-code-plugins | Claude Code plugins complete guide |
+| 🌐 | designrevision.com | https://designrevision.com/blog/claude-code-skills-vs-plugins-vs-agents | Skills vs Plugins vs Agents master comparison |
+| 🌐 | lagrowthmachine.com | https://lagrowthmachine.com/claude-plugins-marketplace/ | Plugin marketplace concept and commands |
+| 🌐 | arte.itlibra.com | https://arte.itlibra.com/en/articles/what-is-claude-code-plugins-marketplace | Claude Code plugins 22-min guide |
+| 🌐 | claude.com/blog | https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more | Official: 7 customization methods |
+| 🌐 | primeline.cc | https://primeline.cc/blog/claude-code-plugins | How to build a Claude Code plugin |
+| 🌐 | skywork.ai | https://skywork.ai/blog/ai-bot/clawhub-skill-marketplace-ultimate-guide/ | clawhub skill marketplace guide |
+| 🌐 | research.checkpoint.com | https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/ | CVE-2025-59536 RCE via hooks/MCP |
+| 🌐 | developer-tech.com | https://www.developer-tech.com/news/developers-face-rce-via-claude-code-auto-mode-exploit/ | Auto-mode RCE exploitation guide |
+| 🌐 | labs.cloudsecurityalliance.org | https://labs.cloudsecurityalliance.org/research/csa-research-note-claude-code-github-action-prompt-injection/ | Prompt injection as supply chain risk |
+| 🌐 | layerxsecurity.com | https://www.layerxsecurity.com/claude-desktop-extensions-rce/ | Claude Desktop Extensions RCE, 10K users affected |
+| 🌐 | buildtolaunch.substack.com | https://buildtolaunch.substack.com/p/best-claude-code-plugins-tested-review | 11 plugins tested, 4 worth keeping |
+| 🌐 | claudefa.st | https://claudefa.st/blog/tools/mcp-extensions/plugins-distribution | Team plugin distribution guide |
+| 🌐 | agensi.io | https://www.agensi.io/learn/best-ai-agent-skills-marketplaces-2026 | 7 AI agent skills marketplaces compared |
+| 🌐 | truefoundry.com | https://www.truefoundry.com/blog/best-mcp-registries | Best MCP registries for devs and enterprises |
+| 🌐 | claudemarketplaces.com | https://claudemarketplaces.com/ | 300K+ monthly devs, 4,265+ skills |
+| 🌐 | gradually.ai | https://www.gradually.ai/en/changelogs/claude-code/ | Claude Code July 2026 changelog |
+| 🌐 | glama.ai | https://glama.ai/mcp/servers | 54,900 MCP servers directory |
+| 🌐 | smithery.ai | https://smithery.ai/servers | 7,000+ MCP servers |
+| 🌐 | pulsemcp.com | https://www.pulsemcp.com/servers | 18,240+ MCP servers |
+| 🌐 | kapa.ai | https://www.kapa.ai/blog/build-an-mcp-server-with-kapa-ai | Agent Analytics + hosted MCP for docs |
+| 🌐 | anthropics/claude-plugins-official | https://github.com/anthropics/claude-plugins-official | 101 official plugins, 33 by Anthropic |
+| 🌐 | vercel.com/changelog | https://vercel.com/changelog/introducing-skills-the-open-agent-skills-ecosystem | skills.sh GA: 600K OSS skills, 18+ agents |
+| 🇯🇵 | Qiita (shatolin) | https://qiita.com/shatolin/items/ca1810e419fee5fd963b | 9K+ plugins, Claude-Mem 20K stars, Superpowers 43K |
+| 🇯🇵 | Zenn (chmod644) | https://zenn.dev/chmod644/articles/claude-code-plugins-all-59 | 59 official plugins guide, 5 type taxonomy |
+| 🇯🇵 | Zenn (ino_h) | https://zenn.dev/ino_h/articles/2026-04-23-claude-code-plugins-ranking | 160 plugins ranking: feature-dev #1 |
+| 🇯🇵 | note.com (varelser) | https://note.com/varelser/n/n0595c5ed613e | Enterprise: OpenTelemetry, private marketplaces |
+| 🇯🇵 | Qiita (miruky) | https://qiita.com/miruky/items/753395f62397c5ca6cbd | Plugin dev guide: 21 events, CLAUDE_PLUGIN_DATA |
+| 🇨🇳 | cnblogs | https://www.cnblogs.com/treasury-manager/p/19166145 | 3-level skill loading, CCusage, claude-historian |
+| 🇨🇳 | Zhihu (blocked) | https://zhuanlan.zhihu.com/p/2021530912802783501 | Skills/MCP/Hooks/Sub-agents/Plugins guide (403) |
+| 🇨🇳 | Zhihu (blocked) | https://zhuanlan.zhihu.com/p/1961476188372448747 | Reusable workflow guide (403) |
+| 🇨🇳 | CSDN (blocked) | https://blog.csdn.net/technova77755/article/details/162172000 | agent-skills repo guide (521) |
+| 🌐 | GitHub (claude-code) | https://github.com/anthropics/claude-code | 138K stars, 11,391 open issues |
+| 🌐 | GitHub (mcp/servers) | https://github.com/modelcontextprotocol/servers | 88K stars, release 2026.7 |
 
 ---
 
 ## Stats Block
 
 ```
-├─ 🟠 Reddit: 9 threads │ 2,031 upvotes │ 728 comments │ ⚠ partial (backup rate-limited)
-├─ 🔵 X: 159 posts total │ 5,157 likes │ 312 reposts │ 🌐 67 + 🇯🇵 58 + 🇨🇳 34
-├─ 🟡 HN: 34 stories total │ 5,487 pts │ 2,895 comments │ 🌐 23 + 🇯🇵 9 + 🇨🇳 2
-├─ 🦋 Bluesky: 15 posts total │ 48 likes │ 🌐 12 + 🇯🇵 3
-├─ 🐙 GitHub: 18 items total │ 🌐 4 + 🇯🇵 8 + 🇨🇳 6
-├─ 🌐 Web: 27 pages │ 🇯🇵 10 (Qiita, Zenn, note) │ 🇨🇳 5 (Juejin, CSDN, Zhihu)
-└─ 🗣️ Top voices: @RohanArun, @oikon48 🇯🇵, @yupi996 🇨🇳, @lukashanren1, @acedatacloud.bsky.social │ r/AppBusiness, r/ClaudeAI
+├─ 🟠 Reddit: 1 thread │ 1 upvote │ 1 comment (partial — ScrapeCreators DOWN)
+├─ 🔵 X: 20 posts │ 1,487 likes │ 119 reposts
+├─ 🔴 YouTube: 0 videos │ ScrapeCreators DOWN (402)
+├─ 🟢 HN: 31 stories │ 4,442 points │ 2,123 comments
+├─ 🟣 TikTok: 0 videos │ ScrapeCreators DOWN (402)
+├─ 🩷 Instagram: 0 reels │ ScrapeCreators DOWN (402)
+├─ 🦋 Bluesky: 4 posts │ 28 likes
+├─ 📊 Polymarket: 0 markets
+├─ 🌐 Web: 27 pages global │ 🇯🇵 5 pages │ 🇨🇳 1 page (3 blocked)
+└─ 🗣️ Top voices: @mckaywrigley, @AnthropicAI, @suraj_sharma14 │ HN steganography story (2,445 pts)
 ```
 
 ---
 
 ## Data Gaps
 
-- **YouTube (errored all three passes):** yt-dlp rate-limited/auth issue (HTTP 402 from ScrapeCreators). YouTube likely has substantial Claude Code plugin tutorial content not captured here. Run `brew upgrade yt-dlp` to fix.
-- **TikTok / Instagram / Threads / LinkedIn (all 402):** ScrapeCreators API billing limit hit this run. TikTok in particular likely has #claudecode #mcpserver viral content not captured.
-- **Reddit (partial):** Only 9 threads captured (backup also 402). r/ClaudeAI, r/LocalLLaMA likely have significant plugin/MCP discussion threads beyond what was retrieved. Dedicated subreddit lane returned 0 posts.
-- **Chinese social platforms (Weibo, Bilibili):** Not searched by the engine; CN coverage relies on X (ZH handles), GitHub (CN repos), and WebSearch for Zhihu/CSDN/Juejin.
-- **`--web-backend keyless`** flag (DuckDuckGo) does not exist in this skill version (v3.14.0 valid values: auto, brave, exa, serper, parallel, none). JP/CN passes used `--web-backend none` supplemented by native WebSearch targeting specific JP/CN domains. JP/CN web coverage may underrepresent content not indexed by Exa/native search.
-- **Coverage estimate:** ~65-70% of likely discussion captured. YouTube and TikTok gaps are the most significant omissions.
+**ScrapeCreators DOWN (402 billing)** — SOURCE HEALTH flag confirmed. As a result, the following platforms returned zero results:
+- YouTube (0 videos): Cannot assess video tutorial coverage of Claude Code skills/plugins this window.
+- TikTok (0 videos): Chinese short-form tech content entirely absent.
+- Instagram (0 reels): Absent.
+- LinkedIn (0 posts): Professional/enterprise discussion absent.
+
+**Reddit (partial, ~15% coverage)**: The engine returned 1 thread from r/ClaudeWorkflows. Blocked after early items; ScrapeCreators backup also failed. High-signal subreddits like r/ClaudeAI, r/MachineLearning, r/LocalLLaMA, r/AITools, and r/programming are uncovered for this window.
+
+**Chinese hubs (~25% coverage)**:
+- Zhihu x2 (HTTP 403 Forbidden): The two most-relevant Zhihu articles (Skills/MCP guide, reusable workflow guide) were inaccessible.
+- CSDN (HTTP 521 Unknown): Primary Chinese developer network blocked.
+- Available: 1 cnblogs article (Oct 2025, older) + Zhihu/CSDN metadata from search snippets.
+
+**Bluesky (possibly partial)**: 4 posts found; Bluesky's search API coverage for technical topics is not guaranteed to be complete.
+
+**Polymarket**: No markets on Claude Code skills or agent plugin ecosystems found in this window.
+
+**Coverage estimate**: ~62%. Main losses: ScrapeCreators (YouTube, TikTok, Instagram, LinkedIn all zero) and Chinese hub blocks. HN and X coverage is strong (~85-90%). Japanese hubs are well-covered (~75%).
 
 ---
 
 ## Key Quotes
 
-> "Every 'department' is a Claude Code skill. Full stack with the actual workflows and costs" - r/AppBusiness ([link](https://www.reddit.com/r/AppBusiness/comments/1usio9p/my_ios_app_is_4_months_old_and_does_944_mrr_every/))
+> "Pointing Claude Code or Codex at a third-party repo to 'scan it for vulnerabilities' can get you RCE instead - in the default, recommended auto-mode. No plugins, no MCP servers needed as an entry point." - @SlavaOPs on X ([link](https://x.com/SlavaOPs/status/2076949170531791272))
 
-> "Your team's database, internal wiki, and deployment pipeline are invisible to Claude Code - unless you use MCP. Here's how to plug them all in without touching the core." - [@lukashanren1](https://x.com/lukashanren1/status/2071900526564831679) on X 🌐
+> "When it comes to real orchestration, multi-agent execution, and sustainable autonomy, [Claude Code, Codex, OpenCode] are still mediocre. Adding hundreds of lines of prompts, AGENTS.md files, MCP servers, skills, or plugins will not turn them into WrongStack." - @ersinkoc on X ([link](https://x.com/ersinkoc/status/2076741353485091268))
 
-> "Hey Super, build a website that audits Claude Code extensions. Let users choose project type, compare hooks, skills, MCP servers, subagents, and commands, run a scan, and review risks before enabling tools." - [@RohanArun](https://x.com/RohanArun/status/2075774470330212782) on X 🌐
+> "MCP registries in 2026, compared: one is canonical, one is huge, and almost none can tell you what to install. You check five directories and get five different answers." - dev.to ([link](https://dev.to/skillselion/mcp-registries-in-2026-compared-one-is-canonical-one-is-huge-and-almost-none-can-tell-you-what-147l))
 
-> "Anthropicが、公式プラグイン 'claude-code-setup' をひっそり公開しました。このプラグインは、プロジェクト全体をスキャンして...必要な構成を提案してくれます。" ("Anthropic quietly released the official plugin 'claude-code-setup.' This plugin scans the entire project and suggests the necessary configuration.") - [@kingdom314159](https://x.com/kingdom314159/status/2070295299856502860) on X 🇯🇵
+> "The plugin ecosystem is rapidly expanding, but with so many options available, many wonder which ones to actually install. The recommendation: start with feature-dev and code-review for immediate workflow improvement." (「プラグインエコシステムは急速に拡大していますが、選択肢が多すぎて何をインストールすればよいかわかりません。まずfeature-devとcode-reviewから始めることをお勧めします」) - Zenn/ino_h ([link](https://zenn.dev/ino_h/articles/2026-04-23-claude-code-plugins-ranking))
 
-> "Codex杀疯了，移除了5小时使用限制！... 另一边，Claude Fable 5 又延期了。" ("Codex went wild, removed the 5-hour usage limit! On the other side, Claude Fable 5 was delayed again.") - [@yupi996](https://x.com/yupi996/status/2076484625959092453) on X 🇨🇳
+> "run /checkup to purge unused plugins and junk. Faster speeds, lower token costs." - @trendai.bsky.social on Bluesky ([link](https://bsky.app/profile/trendai.bsky.social/post/3mqk73cjcn627))
 
-> "Agent Skills open standard: Google Stitch向けのエージェントスキルとプラグインのコレクション。Codex、Claude Code、Cursor、Gemini CLIなどのコーディングエージェントでの利用を目的としています。" ("A collection of agent skills and plugins for Google Stitch. Compliant with the Agent Skills open standard, aimed at use in coding agents such as Codex, Claude Code, Cursor, and Gemini CLI.") - [@dailygithubtrends.bsky.social](https://bsky.app/profile/dailygithubtrends.bsky.social/post/3mqem2w2ssw22) on Bluesky 🇯🇵
+> "Private marketplaces, automatic deployment, and OpenTelemetry monitoring are being adopted by Japanese enterprises." (「プライベートマーケットプレイス、自動デプロイ、OpenTelemetryモニタリングが日本企業で採用されています」) - note.com/varelser ([link](https://note.com/varelser/n/n0595c5ed613e))
 
-> "13.4% of all skills (534 of 3,984) contain critical-level security issues, including credential theft, backdoor installation, and data exfiltration." - [Snyk ToxicSkills Study](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/)
+> "The frontend bottleneck is no longer code generation. It's now reviewing the output of an agent." - @storybook.js.org on Bluesky ([link](https://bsky.app/profile/storybook.js.org/post/3mqaesef2dk2u))
 
-> "Nano Banana + MCP = image tools inside your IDE. Generate/edit images, try product shots, or mock creative assets from Claude, VS Code, or Cursor. One API token, free credits, no context switching." - [@acedatacloud.bsky.social](https://bsky.app/profile/acedatacloud.bsky.social/post/3mqict4biat2c) on Bluesky 🌐
-
-> "The bottleneck is no longer the protocol itself; it's discovery, and knowing when to build versus when to find." - [codeongrass.com on MCP ecosystem](https://codeongrass.com/blog/mcp-server-ecosystem-integration-layer-ai-agents-2026/) 🌐
-
-> "GitHub Trending榜被Claude Code / Codex相关技能、插件和Agent管理工具占据" ("GitHub Trending dominated by Claude Code/Codex related skills, plugins, and agent management tools.") - [AI open source trends daily digest](https://github.com/loxehate/loxehate.github.io/issues/10) 🇨🇳
+> "Skills are reusable, file-system-based resources providing domain expertise - they transform Claude from a general assistant into a specialist." (「スキルは再利用可能なファイルシステムベースのリソースでドメインの専門知識を提供します」) - cnblogs/treasury-manager ([link](https://www.cnblogs.com/treasury-manager/p/19166145))
