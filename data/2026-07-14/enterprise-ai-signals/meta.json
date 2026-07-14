@@ -1,0 +1,24 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-14",
+  "coverage_pct": 58,
+  "total_urls": 47,
+  "sources": {
+    "reddit": 2,
+    "x": 25,
+    "hackernews": 25,
+    "bluesky": 12,
+    "github": 10,
+    "web_global": 29,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "linkedin": 0,
+    "threads": 0,
+    "polymarket": 0,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["scrapecreators", "youtube", "tiktok", "instagram", "linkedin", "threads"],
+  "notes": "ScrapeCreators 402 (billing) took down TikTok, Instagram, LinkedIn, Threads, and YouTube comments. Reddit partial (2 threads only — ScrapeCreators backup also 402). YouTube yt-dlp errored independently. JP/CN passes skipped per topic instructions. Strong web supplement pass recovered Santander case study, Microsoft arXiv paper (2607.01418), Guggenheim N=150 survey, IBM IBV CAIO stat, Deloitte org design data, and enterprise AI cost pullback reporting. Coverage estimate 58%: solid on hard signals and survey data; blind spot on LinkedIn executive discourse, YouTube analyst content, and Reddit community depth."
+}
