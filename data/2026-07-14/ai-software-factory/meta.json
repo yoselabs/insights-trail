@@ -1,0 +1,30 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-14",
+  "coverage_pct": 65,
+  "total_urls": 68,
+  "sources": {
+    "x_twitter": 20,
+    "hackernews": 17,
+    "reddit": 3,
+    "bluesky": 6,
+    "github": 7,
+    "web_global": 22,
+    "web_jp": 5,
+    "web_cn": 8,
+    "tiktok": 0,
+    "instagram": 0,
+    "youtube": 0,
+    "linkedin": 0,
+    "threads": 0
+  },
+  "failed_sources": [
+    "tiktok",
+    "instagram",
+    "youtube",
+    "linkedin",
+    "threads",
+    "reddit_backup"
+  ],
+  "notes": "ScrapeCreators 402 billing down — TikTok, Instagram, YouTube (SC fallback), LinkedIn, Threads all failed. Reddit returned 3 items via public API; SC backup also 402'd. Zhihu pages 403; CSDN article 521 — Chinese content derived from search result summaries. JP/ZH DuckDuckGo+WebSearch passes completed successfully. Bluesky OK (6 posts). HN and X healthy. Coverage estimate 65%: strong on methodology/SDLC/security themes (X, HN, Web), weak on community discussion (Reddit partial) and zero video/short-form content (YouTube/TikTok)."
+}
