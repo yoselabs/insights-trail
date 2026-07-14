@@ -1,0 +1,24 @@
+{
+  "topic": "ai-leadership",
+  "date": "2026-07-14",
+  "coverage_pct": 62,
+  "total_urls": 47,
+  "sources": {
+    "reddit": 1,
+    "x": 52,
+    "hackernews": 23,
+    "bluesky": 9,
+    "github": 6,
+    "web_global": 17,
+    "web_jp": 8,
+    "web_cn": 7,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "linkedin": 0,
+    "threads": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "linkedin", "threads", "scrapecreators"],
+  "notes": "ScrapeCreators 402 billing (tiktok/instagram/linkedin/threads/youtube-comments all down). Reddit partial after 1 item (HTTP 403). JP pass: 8 pages from Zenn, note.com, Qiita, Tabelog Tech Blog — strong signal on spending≠mastery gap and senior/junior divergence. CN pass: 7 pages from aihrlab, CSDN, IBM China, Aliyun — strong signal on Chinese big tech radical org restructuring. Key new developments vs prev-briefing (2026-07-13): Microsoft Frontier Co. ($2.5B, 6000 engineers); KPMG Q2 2026 (7% established ROI, CEO accountability 4x factor); Battery Ventures (49% deploying agents, 94% lack ROI framework); AI engineer identity problem; Big Tech flip on AI jobs; EU governance hiring gap 7:1; Fortune 500 centralized AI teams + CAIO role."
+}
