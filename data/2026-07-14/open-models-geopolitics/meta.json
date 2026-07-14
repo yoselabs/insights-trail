@@ -1,0 +1,31 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-14",
+  "coverage_pct": 68,
+  "total_urls": 54,
+  "sources": {
+    "reddit": 14,
+    "x": 37,
+    "hackernews": 44,
+    "bluesky": 2,
+    "github": 2,
+    "polymarket": 2,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "linkedin": 0,
+    "threads": 0,
+    "web_global": 31,
+    "web_jp": 10,
+    "web_cn": 12
+  },
+  "failed_sources": [
+    "scrapecreators",
+    "youtube",
+    "tiktok",
+    "instagram",
+    "linkedin",
+    "threads"
+  ],
+  "notes": "ScrapeCreators 402 billing (confirmed DOWN per SOURCE HEALTH). Killed TikTok, Instagram, YouTube, LinkedIn, Threads. Reddit partial (14 threads, backup failed). Strong coverage on X (37 posts/bird), HN (44 stories), and Web. JP pass: 10 pages from Qiita, NOB DATA, note.com, labmemo, DevelopersIO. CN pass: 12 pages from CSDN, Zhihu (403 paywalled), ofox.ai, ITbear, Volcano Engine, Cnblogs. Top story: GLM-5.2 on Huawei Ascend, released same day as Fable 5 ban, MIT license. Second story: China MOFCOM 'silicon curtain' talks (Reuters July 7). Polymarket shows 78-83% odds on some form of government AI restriction."
+}
