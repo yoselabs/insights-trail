@@ -1,0 +1,24 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-07-14",
+  "coverage_pct": 65,
+  "total_urls": 52,
+  "sources": {
+    "reddit": 11,
+    "x": 49,
+    "hackernews": 23,
+    "bluesky": 11,
+    "github": 3,
+    "web_global": 18,
+    "web_jp": 8,
+    "web_cn": 10,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "linkedin": 0,
+    "threads": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "linkedin", "threads", "scrapecreators"],
+  "notes": "ScrapeCreators 402 billing error — YouTube, TikTok, Instagram, LinkedIn, Threads all failed. Reddit partial after 11 items (HTTP 403 block). JP/CN passes completed via DuckDuckGo HTML + WebSearch (free keyless). Strong HN, X, Bluesky, GitHub, and web coverage. Key findings: SKILL.md standard at ~40 clients with 1.9M community skills; OpenCode at 186K stars with oh-my-opencode extension ecosystem; Microsoft Agent Framework 1.0 Agent Harness + CodeAct (52.4% latency reduction); ZeroClaw Rust-native runtime; meta-harnesses Omnigent/Flue/Minotauris; security Friendly Fire vulnerability."
+}
