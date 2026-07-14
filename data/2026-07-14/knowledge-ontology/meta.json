@@ -1,0 +1,24 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-14",
+  "coverage_pct": 60,
+  "total_urls": 38,
+  "sources": {
+    "reddit": 2,
+    "x": 21,
+    "hackernews": 12,
+    "bluesky": 2,
+    "github": 24,
+    "web_global": 24,
+    "web_jp": 4,
+    "web_cn": 4,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "linkedin": 0,
+    "threads": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["scrapecreators", "youtube", "tiktok", "instagram", "linkedin", "threads"],
+  "notes": "ScrapeCreators 402 billing — TikTok/Instagram/LinkedIn/Threads all down. YouTube also down (SC 402 + yt-dlp error). Reddit partial after 2 items (HTTP 403 block). JP pass good: Zenn/note.com/Qiita fetched successfully. CN pass partial: Juejin JS-blocked, Zhihu HTTP 403 — content approximated from mirrors and search snippets. Core English web+X+HN+GitHub coverage solid. Key findings: Google OKF v0.1 (June 2026), Nous arXiv paper (knowledge-as-prediction), Mem0 April 2026 algorithm update, Zep/Graphiti 20K stars, Memory MCP server category emergence, context engineering formalized as production discipline."
+}
