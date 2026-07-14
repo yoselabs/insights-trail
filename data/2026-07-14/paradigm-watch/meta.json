@@ -1,0 +1,34 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-07-14",
+  "coverage_pct": 72,
+  "total_urls": 47,
+  "sources": {
+    "hackernews": 13,
+    "reddit": 5,
+    "x": 13,
+    "github": 13,
+    "web_global": 16,
+    "web_jp": 7,
+    "web_cn": 9,
+    "huggingface_papers": 17,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "youtube": 0,
+    "linkedin": 0,
+    "threads": 0,
+    "techmeme": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["tiktok", "instagram", "youtube", "linkedin", "threads", "scrapecreators"],
+  "degraded_sources": ["reddit"],
+  "paradigm_items_found": 4,
+  "paradigm_items": [
+    "world-models-post-llm",
+    "diffusion-language-models-iclr2026",
+    "post-transformer-architectures",
+    "steeraf-inference-time-steering"
+  ],
+  "notes": "ScrapeCreators 402 billing error per SOURCE HEALTH: TikTok, Instagram, YouTube, LinkedIn, Threads all down. Reddit partial (HTTP 403 after 5 items). r/MachineLearning WebFetch also 403. Compensated with HF Papers sweep (17 papers, 500+ upvotes combined), multi-source web research, and JP/CN hub coverage. Bluesky OK but 0 relevant results. Key findings: World Models now institutionalized with $1B+ bets (AMI Labs, Genie 3, Cosmos 3); Diffusion LMs reached ICLR 2026 publication; Post-Transformer architectures gaining IBM/Digg/lab signals; SteerAF inference-time steering in structural biology."
+}
