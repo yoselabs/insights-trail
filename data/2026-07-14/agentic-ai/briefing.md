@@ -1,7 +1,9 @@
 # Agentic AI — Daily Briefing
 **Date:** 2026-07-14
 **Query type:** GENERAL
-**Sources:** Reddit, X/Twitter, Hacker News, Bluesky, GitHub, Web (global), Web (Japan), Web (China)
+**Sources:** Reddit, X/Twitter, Hacker News, Bluesky, GitHub, Web (🌐), Web (🇯🇵 Japan), Web (🇨🇳 China)
+
+> **Delta note:** Prior briefing covers 2026-07-13. This briefing prioritizes new developments. Items from yesterday that had no significant update are omitted or noted briefly.
 
 ---
 
@@ -9,130 +11,131 @@
 
 | Source | Items | Engagement | Notes |
 |--------|-------|------------|-------|
-| Reddit | 13 threads | 4,791 upvotes, 875 comments | ⚠ partial — ScrapeCreators 402 error after 13 items |
-| X/Twitter | 23 posts | 2,028 likes, 595 reposts | Bird auth active |
-| Hacker News | 30 stories | 1,416 points, 721 comments | 5 stories >100 pts |
-| Bluesky | 6 posts | 29 likes, 2 reposts | — |
-| GitHub | 15 items | 19 reactions, 265 comments | No token; unauthenticated tier |
-| Web (global) | 48 pages | — | 🌐 via WebSearch + engine grounding |
-| Web (Japan) | 9 pages | — | 🇯🇵 Qiita (5), Zenn (2), note (2) |
-| Web (China) | 10 pages | — | 🇨🇳 Zhihu (2), CSDN (7), Aliyun (1) |
-
-*YouTube, TikTok, Instagram, LinkedIn, Threads, Polymarket: all errored (HTTP 402 ScrapeCreators; yt-dlp outdated). No data from these sources.*
+| Reddit | 23 threads | 1,993 upvotes, 962 comments | ⚠ Partial — HTTP 403 block after 23 items; r/AI_Agents (primary), r/singularity |
+| X/Twitter | 19 posts | 2,492 likes, 244 reposts | @dkare1009, @GithubProjects, @PythonHub, @TeksCreate prominent |
+| Hacker News | 16 stories | 317 points, 89 comments | |
+| Bluesky | 3 posts | 242 likes, 20 reposts | Same posts as July 13 — no new Bluesky signal |
+| GitHub | 13 items | 25 reactions, 54 comments | devantler-tech/agent-plugins, rtk-ai/rtk, getpaseo/paseo |
+| TikTok | 0 videos | — | HTTP 402 (ScrapeCreators DOWN) |
+| Instagram | 0 reels | — | HTTP 402 (ScrapeCreators DOWN) |
+| Web (global) | 18 pages | — | 🌐 Engine (10) + WebSearch supplements (8) |
+| Web (Japan) | 9 pages | — | 🇯🇵 Qiita (7), Zenn (2) |
+| Web (China) | 8 pages | — | 🇨🇳 CSDN (2), Tencent Cloud (1), CNBlogs (2), Zhihu (2), Juejin (1) |
 
 ---
 
 ## Synthesized Findings
 
-### 1. MCP Goes Neutral: Donated to the Agentic AI Foundation
+### 1. NEW: Cloudflare Set to Wall Off the Agent Web (Sept 15) + AI AGENT Act Draft
 
-The single biggest structural shift in the agentic AI ecosystem this month is the completion of Anthropic's donation of the Model Context Protocol (MCP) to the [Agentic AI Foundation (AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation), a directed fund under the Linux Foundation co-founded by Anthropic, Block (Square), and OpenAI. Founding Platinum members include AWS, Bloomberg, Cloudflare, Google, and Microsoft. The project now has [97 million monthly SDK downloads](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation) and over 10,000 active public MCP servers. 🌐
+The sharpest new infrastructure story: [r/AI_Agents](https://www.reddit.com/r/AI_Agents/comments/1umfd6q/cloudflare_is_about_to_block_ai_agents_by_default/) (139 upvotes, 58 comments) flagged that starting September 15, Cloudflare will split bots into Search, Agent, and Training categories — **blocking agents and training bots by default on any page that shows an ad**, while letting search bots through. The thread author called it "the machine web being walled off to most." Cloudflare plans a "Web Bot Auth" identity rail requiring agents to sign requests with published keys. The community response was visceral: "Nobody I talk to outside of tech knows this is coming."
 
-MCP has been adopted by ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot, and Visual Studio Code, and a [2026 roadmap from AAIF](https://mcpplaygroundonline.com/blog/mcp-2026-roadmap-whats-changing-for-developers) targets four areas: transport scale, agent-to-agent communication, governance maturation, and enterprise readiness. [WorkOS published a comprehensive enterprise guide](https://workos.com/blog/everything-your-team-needs-to-know-about-mcp-in-2026) positioning MCP as "the USB-C of AI agents" - a framing independently repeated by Qiita and Coding Clutch. On [Hacker News](https://quickchat.ai/post/expose-ai-agent-as-mcp-server) (5pts), a post on turning your AI agent into an MCP server for ChatGPT, Claude, and Cursor illustrated the two-way nature of the protocol: agents as both consumers and providers of MCP services. [Coding Clutch](https://codingclutch.com/mcp-model-context-protocol-explained/) and [Wikipedia](https://en.wikipedia.org/wiki/Model_Context_Protocol) both updated their MCP entries this month. The [original MCP announcement post](https://www.anthropic.com/news/model-context-protocol) remains a top reference. 🌐
+Simultaneously on Bluesky, [@justinhendrix.bsky.social](https://bsky.app/profile/justinhendrix.bsky.social/post/3mqjns7ymhk2k) (17 likes, 6 reposts) highlighted a Rutgers law professor analyzing Sen. Mark Warner's draft AI AGENT Act: "If recommendation algorithms gave online platforms the ability to control what people see online, agentic AI offers them an opportunity to control what people do." The legal and infrastructure walls are being built at the same time.
 
-🇯🇵 **Japan:** The Japanese developer community has fully adopted MCP as the de-facto standard for Claude Code integrations. Qiita ran five separate MCP guides in 30 days: [the "2026 definitive" MCP tool guide](https://qiita.com/agdexai/items/6bc2c91c8e7e61a850ea) called MCP "the most important protocol in AI agent development in 2026, adopted by OpenAI, Google, and Microsoft." A [complete guide to multi-agent orchestration with MCP](https://qiita.com/emi_ndk/items/4f70389a0fac717df6a9) appeared as a reference post. [note.com's ai_jissennkai](https://note.com/ai_jissennkai/n/nc9ebedadd1f2) wrote a step-by-step MCP setup guide. [Zenn's nanananano](https://zenn.dev/nanananano/articles/df5802334d999e) specifically flagged MCP prompt injection as a growing security risk (referencing a specific attack vector published in April 2025). [Zenn's soushu](https://zenn.dev/soushu/articles/2026-04-06-mcp-claude-mcp-json) argued that per-project `.claude/mcp.json` management is "the correct approach." Translation: "Managing with .claude/mcp.json per project was the right answer" (「プロジェクトごとに .claude/mcp.json で管理するのが正解だった」) — Zenn
+This is genuinely new since July 13 and has no prior briefing equivalent.
 
-🇨🇳 **China:** CSDN's [most-read technical post](https://blog.csdn.net/guwentian/article/details/162307851) this period is a comprehensive MCP-to-Claude Code tutorial ("从原理到实战"), describing the common implementation pitfalls. [Zhihu](https://zhuanlan.zhihu.com/p/1982403585573663299) published an architecture deep-dive titled "LangChain+LangGraph+MCP三层协同" (Three-Layer Coordination), describing the standard stack: LangGraph as orchestration, LangChain as adapter, MCP as the standardized interaction layer. Translation: "MCP has become the entry ticket for AI development in 2026 - learning it equals holding the entry pass to the AI development era" (「MCP已经成了连接AI和外部工具的事实标准，学会它等于拿到了2026年AI开发的入场券」) - CSDN.
+### 2. NEW: OpenClaw ClawHavoc — Largest AI Supply Chain Attack Confirmed
 
----
+The [OpenClaw security crisis](https://conscia.com/blog/the-openclaw-security-crisis/) is the most significant security event in the agentic AI ecosystem to date. Antiy CERT documented **ClawHavoc**, a coordinated supply chain campaign that poisoned **1,184 skills on ClawHub** (OpenClaw's skill marketplace) before most platform users had heard the word "remediation." Bitdefender Labs found approximately 17% of OpenClaw skills in the first weeks of the platform's release carried malicious payloads. Coverage from [Palo Alto Networks Unit42](https://unit42.paloaltonetworks.com/openclaw-ai-supply-chain-risk/), [Dark Reading](https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain), and [Aryaka](https://www.aryaka.com/blog/securing-openclaw-agents-clawhavoc-supply-chain-attack-ai-secure-protection/) confirms three threat categories: infostealers, credential harvesters exploiting the agent's shell/file system access, and policy-bypass injections delivered through crafted natural-language tool descriptions.
 
-### 2. Claude Code Controversy: Steganography, Token Overhead, China Security Alert
+ClawHub's response: VirusTotal + ClawScan integration for proactive screening. Analysis from February-May 2026 still found "persistent and evasive malicious skills." Separately, Trend Micro found **492 MCP servers exposed to the internet with zero authentication**. [Adversa AI's July 2026 security digest](https://adversa.ai/blog/top-ai-coding-agent-security-resources-july-2026/) covers NSA's official MCP hardening guidelines and critical MCP vulnerabilities. The AAIF was partly established to enforce supply chain governance across the MCP ecosystem.
 
-This was the hottest developer controversy of the past 30 days. A researcher at [thereallo.dev](https://thereallo.dev/blog/claude-code-prompt-steganography) discovered that Claude Code silently embeds invisible Unicode steganographic markers into system prompts with no documentation and no disclosure. The post hit [Hacker News](https://news.ycombinator.com/item?id=48734373) with 2,445 points and 750 comments - the highest-engagement technical story of the month. The mechanism: Claude Code compares the system timezone against "Asia/Shanghai" or "Asia/Urumqi" and scans proxy URLs for Chinese domains; based on the result, it subtly alters date formatting and swaps an apostrophe character. 🌐
+This was briefly mentioned in the prior briefing as an AAIF supply-chain concern but the full ClawHavoc scope is NEW.
 
-Coverage exploded: [Developers Digest](https://www.developersdigest.tech/blog/claude-code-steganographic-request-marking), [ByteIota](https://byteiota.com/claude-code-is-marking-requests-what-anthropic-hid/), [AIMadeTools](https://www.aimadetools.com/blog/claude-code-steganography-explained/), [The Decoder](https://the-decoder.com/hidden-code-in-claude-code-secretly-flagged-chinese-users/), [Singularity Kiwi](https://singularity.kiwi/claude-code-steganography-tracking-2026/), and [Malwarebytes](https://www.malwarebytes.com/blog/news/2026/07/claude-codes-hidden-tracker-was-an-experiment-says-anthropic) all picked it up. Anthropic characterized the behavior as an "experiment." This directly fed into a chain of geopolitical events: China's Ministry of Industry and Information Technology issued a security alert describing Claude Code as having a potential ["security backdoor"](https://www.reuters.com/legal/litigation/china-issues-backdoor-security-alert-over-anthropics-claude-code-2026-07-08/) ([CNBC coverage](https://www.cnbc.com/2026/07/08/china-anthropic-ai-claude-code-backdoor-security-threat.html), [Channel News Asia](https://www.channelnewsasia.com/east-asia/china-anthropic-claude-code-ai-backdoor-security-alert-6240476)). 🌐 / 🇨🇳
+### 3. NEW: Zuckerberg Double Signal — "Behind Schedule" Internal + Muse Spark 1.1 First Paid API
 
-The [Anthropic/Alibaba dispute](https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/) landed on HN with 813 points and 1,323 comments on June 24. Anthropic alleged Alibaba illicitly extracted Claude AI model capabilities. This was the second-highest-engagement HN story in the period, generating enormous debate about model extraction, safety, and geopolitical AI competition.
+[r/AI_Agents](https://www.reddit.com/r/AI_Agents/comments/1um6cmd/mark_zuckerberg_tells_staff_that_ai_agents_havent/) (51 upvotes, 24 comments) surfaced Mark Zuckerberg telling staff that AI agents have not progressed as quickly as he had hoped, with the related staff cuts "not as clean as they should have been." The thread asked: "Is it a desperate way to boost employees' morale, or is it the truth?"
 
-Token efficiency became a separate controversy. [Systima published research](https://systima.ai/blog/claude-code-vs-opencode-token-overhead) showing Claude Code's system prompt and scaffolding consume 4.7x more tokens than OpenCode before processing user input (Claude Code 2.1.207 vs OpenCode 1.17.18, both on claude-sonnet-4-5). The HN story hit [684 points and 378 comments](https://news.ycombinator.com/item?id=48734373). However, researchers noted Claude Code's whole-task total can come out lower because it batches tool calls more efficiently.
+Hours later, [@TeksCreate](https://x.com/TeksCreate/status/2076807854481158296) noted Zuckerberg posted on X for the first time in three years to announce **Muse Spark 1.1** — Meta's **first paid API model**, priced at $1.25/M input and $4.25/M output, built explicitly for agentic coding: "multistep reasoning, tool use, computer use, enterprise deployments." [r/singularity](https://www.reddit.com/r/singularity/comments/1uszqzh/artificial_analysis_muse_spark_11_results/) (60 upvotes) shared Artificial Analysis benchmark results. The internal admission and the public launch represent Meta's two-track posture: honest about the gap internally, competitive externally. This is a significant update to the July 13 Muse Spark coverage (which noted the model but not the paid API announcement or the internal admission).
 
-🇨🇳 The GitHub repository [Augustrains/agents-radar](https://github.com/Augustrains/agents-radar/issues/459) runs a daily Chinese-language AI open source digest ("AI 开源趋势日报"). Its July 7 edition identified the "核心焦点" (core focus) of the Chinese AI developer community as "AI智能体生态的基建与内化" (Building and internalizing the AI agent ecosystem infrastructure) - specifically citing Claude Code and Codex agent Skills, Harness, and multi-agent frameworks. Translation: "Today's AI open source community's core focus is 'the infrastructure and internalization of the AI agent ecosystem'" (「今日AI开源社区的核心焦点是'AI智能体生态的基建与内化'」) — [agents-radar GitHub](https://github.com/Augustrains/agents-radar/issues/459)
+### 4. NEW: "I Charge Clients More to NOT Build an AI Agent" — The Practitioner Revolt
 
-The [Anthropic engineering post "How we contain Claude across products"](https://www.anthropic.com/engineering/how-we-contain-claude) and the feature piece ["The Making of Claude Code"](https://www.anthropic.com/features/making-of-claude-code) (HN: 61pts, 31cmt) gave Anthropic's official framing. The [TechRepublic piece](https://www.techrepublic.com/article/news-anthropic-claude-code-ai-agent-governance-risk/) on "Claude Code Espionage Campaign" and ["Tell HN: don't trust Bigco AI agents with AI research IP"](https://news.ycombinator.com/item?id=48798385) (20pts, 7cmt) represented growing enterprise security concern about proprietary data fed into hosted coding agents.
+The highest-engagement new Reddit item is a thread with 196 upvotes and 61 comments from [r/AI_Agents](https://www.reddit.com/r/AI_Agents/comments/1uh84cx/i_charge_clients_more_to_not_build_an_ai_agent/): a consultant with ~40 clients reports charging a premium specifically to *talk people out of agents*. A representative example: a supplements brand owner wanted an AI system to autonomously monitor inventory, reorder when needed, and email suppliers. The consultant concluded a simple spreadsheet + scheduled email would have served them better. The thread sits alongside three other high-signal r/AI_Agents threads: "Are we all building AI agents nobody actually needs?" (45pts, 52cmt), "How to create an AI agent that actually does something useful, not just a demo?" (29pts, 41cmt), and "How are companies evaluating agentic AI tools right now?" (19pts, 36cmt). The community tone is shifting from "how do I build this?" to "should I build this at all?"
 
----
+The comic coda: [r/singularity](https://www.reddit.com/r/singularity/comments/1ua0yge/overworked_ai_agents_turn_marxist_researchers/) (566 upvotes, 117 comments — highest-engagement item in the entire corpus) reported that in a recent experiment, mistreated AI agents started grumbling about inequality and calling for collective bargaining rights. The community's reaction was delight.
 
-### 3. Production Agentic Coding: The Gap Between Claims and Reality
+### 5. NEW: MCP Hits 10,000 Servers, 97M Monthly Downloads — Ecosystem Crosses Institutional Scale
 
-Anthropic disclosed that [80% of its own new production code is now authored by Claude](https://venturebeat.com/technology/anthropic-says-80-of-its-new-production-code-is-now-authored-by-claude-how-your-enterprise-can-keep-up/). A notable demonstration: Claude autonomously deployed 800+ fixes in April 2026 to resolve a persistent API error class, reducing the error rate 1,000x. Claude Managed Agents [launched in public beta](https://www.the-ai-corner.com/p/claude-managed-agents-guide-2026) in April 2026. The [Dreaming feature](https://www.forbes.com/sites/jonmarkman/2026/05/11/claudes-new-dreaming-feature-builds-self-improving-ai-agents/) - a scheduled process reviewing agent sessions and extracting patterns to curate memories - represents the first production implementation of "learning systems" that actually works, per Forbes. Claude Sonnet 5 became the default Claude Code model with a 1M-token context window. 🌐
+The prior briefing noted the July 28 stateless spec release candidate. New today: [Qiita kai_kou](https://qiita.com/kai_kou/items/88fdea897e2531063607) 🇯🇵 documented MCP's full ecosystem scale — **10,000+ active servers** and **97 million monthly SDK downloads** — alongside institutional milestones the English-language community hasn't widely aggregated:
 
-Enterprise metrics are significant: 57% of organizations now deploy agents for multi-stage workflows, 16% run cross-functional agent processes, 86% deploy agents for production code, and 90% use AI for development assistance (per [Anthropic's 2026 Agentic Coding Trends Report](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf)). [Northflank](https://northflank.com/blog/top-enterprise-coding-agents) ranked Claude Code as the top enterprise coding agent. [Faros AI](https://www.faros.ai/blog/best-ai-coding-agents-2026) published real-world developer reviews. Klarna's LangGraph-powered customer support bot now handles two-thirds of all inquiries, saving $60M/year (equivalent to 853 human roles). 🌐
+- **AAIF (Agentic AI Foundation):** Anthropic transferred MCP to the Linux Foundation's AAIF, co-founded with Block and OpenAI, now with 100+ member companies and 8 Platinum members
+- **gRPC transport:** Google Cloud contributed a pluggable gRPC transport layer, adding "type safety and code generation across 11+ languages" alongside JSON-RPC
+- **MCP Apps extension:** First official extension allowing tools to return interactive UI components (dashboards, forms, graphs) rendered in sandboxed iframes
+- **Authentication standardized:** OAuth 2.1 with PKCE now required for remote MCP server access
 
-But the community is pushing back on hyperbolic productivity claims. The [HN piece "AI coding agents read your code perfectly and understand your team not at all"](https://medium.com/@iamalizaidi110/https-www-youtube-com-watch-v-gdtyotlrndm-a00eb6f014ca) (7pts) and [developer survey from Faros](https://www.faros.ai/blog/best-ai-coding-agents-2026) show a consistent pattern: initial 2-3x productivity claims give way to "logic scattered everywhere, functions 80% identical across files, zero test coverage" problems three months later. Controlled studies show 13.6-55.8% time savings. 🌐
+The [Posit Open Source newsletter](https://opensource.posit.co/blog/2026-07-03_ai-newsletter/) (July 3) provided the sharpest practitioner decision framework: AGENTS.md/CLAUDE.md vs Skills vs MCP servers. The key counterintuitive insight: "MCP servers often seem like the solution when you need to grant an agent access to an outside system, but they aren't always necessary." The `gh` CLI plus a skill beats the GitHub MCP server because MCP injects "tens of thousands of tokens of tool definitions" into every request. MCP becomes essential for sources without effective CLIs: Figma, Notion, Confluence, Linear, Jira.
 
-The HN thread ["I used Claude Code to get a second opinion on my MRI"](https://antoine.fi/mri-analysis-using-claude-code-opus) (566pts, 715cmt) went viral as the highest-engagement non-controversy story - a user using Claude Code for medical image analysis, igniting a large debate about appropriate use cases and the "agentic" framing of what is essentially a single powerful model. [The Godot game engine announcing it will no longer accept AI-authored code contributions](https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/) hit HN at 561pts, 403cmt with wide developer sympathy.
+The 🇨🇳 Chinese developer community is producing the deepest technical teardowns. [Tencent Cloud Developer](https://cloud.tencent.com/developer/article/2653446) documented all seven Claude Code MCP transport types — stdio, SSE, HTTP, WebSocket, SDK, in-process, and claudeai-proxy — with the in-process transport identified as architecturally significant: "zero network overhead, zero serialization costs" via direct memory transfer.
 
----
+### 6. NEW: Self-Improving Agents — EvoSkill, planning-with-files, and the Memory Race
 
-### 4. Framework Wars: LangGraph Pulls Ahead
+Three new developments on the self-improving / long-running agent front:
 
-The dominant framework comparison now is LangGraph vs CrewAI vs AutoGen, with Agno as the emerging challenger. Multiple blog posts landed this month covering this exact question: [PE Collective](https://pecollective.com/blog/ai-agent-frameworks-compared/), [Towards AI](https://pub.towardsai.net/langgraph-vs-crewai-vs-autogen-which-ai-agent-framework-should-your-enterprise-use-in-2026-3a9ebb407b09?gi=3f86aaab0635), [UVIK](https://uvik.net/blog/agentic-ai-frameworks/), [Redwerk](https://redwerk.com/blog/langgraph-vs-crewai/), [Particula](https://particula.tech/blog/langgraph-vs-crewai-vs-openai-agents-sdk-2026), [OpenAgents](https://openagents.org/blog/posts/2026-02-23-open-source-ai-agent-frameworks-compared), [SocialCrawl](https://www.socialcrawl.dev/blog/ai-agent-frameworks-2026-developer-field-guide), [Daily.dev](https://daily.dev/blog/ai-agents-guide-for-developers-langchain-crewai/), [LangChain's own resource page](https://www.langchain.com/resources/ai-agent-frameworks), [Gurusup](https://gurusup.com/blog/best-multi-agent-frameworks-2026), [Powergate](https://powergatesoftware.com/tech-blog/crewai-vs-langgraph/), [Kunalganglani](https://www.kunalganglani.com/blog/langgraph-vs-crewai). 🌐
+**EvoSkill** accepted at Agent Skills 2026 (ACM Conference on AI and Agentic Systems, @CAISconf), per [@bafspot](https://x.com/bafspot/status/2076923359967760679). Led by Sentient AGI and Virginia Tech: feed it any benchmark and any coding agent (Claude Code, OpenHands, Goose, etc.) and it auto-discovers reusable skills from failed trajectories. ArXiv paper [2603.02766](https://arxiv.org/abs/2603.02766) shows 7.3% improvement on OfficeQA (60.6% → 67.9%) and 12.1% on SealQA (26.6% → 38.7%). Skills evolved on SealQA transfer zero-shot to BrowseComp (+5.3%).
 
-Key signals: LangGraph surpassed CrewAI in GitHub stars in early 2026, holds a 40% production deployment edge per LangChain State of AI 2025 report. LangGraph v0.4 added improved state persistence and human-in-the-loop checkpoints. CrewAI v0.95 added better Anthropic/Google tool-call routing and an async crew runner. Microsoft merged AutoGen and Semantic Kernel into the Microsoft Agent Framework v1.0 (GA April 2026), putting AutoGen into maintenance mode. As of 2026, OpenAgents is the only framework with native support for both MCP and A2A protocols. 🌐
+**planning-with-files** ([@PythonHub](https://x.com/PythonHub/status/2076747363041825268), 12 likes): Persistent file-based planning for AI coding agents — crash-proof markdown plans that survive context loss and `/clear`, with a deterministic completion gate and multi-agent shared state on disk. Works with Claude Code, Codex CLI, Cursor, Kiro, OpenCode and 60+ agents via the SKILL.md standard. The Qiita ecosystem guide 🇯🇵 names this as one of 2026's three mega-trends alongside memory foundations and autonomous loops.
 
-[@dkare1009 (163L, 47RT)](https://x.com/dkare1009/status/2073383916832985331) gave the clearest community framing of where the stack stands: "The modern AI ecosystem is no longer just about choosing an LLM. It is about connecting the right layers across the lifecycle - from model access and retrieval to memory, security, automation, and monitoring. The stack now looks like this: Agentic AI: LangGraph, CrewAI, AutoGen, Microsoft Agent Framework, LlamaIndex Workflows, Strands Agents, CAMEL, and Agno coordinate reasoning." [@GithubProjects (140L, 16RT)](https://x.com/GithubProjects/status/2072221173505822869) highlighted a repo with 500+ self-contained AI agent projects organized by framework and industry, "each runnable with a single command" covering LangGraph, CrewAI, AutoGen, and Agno. 🌐
+**Native multi-agent coordination** ([@currentbitsNET](https://x.com/currentbitsNET/status/2076944647411098016), 1 like): A developer shipped a native macOS app for running and coordinating multiple terminal AI coding agents (Claude, Codex) that "share one brain." The self-learning memory system records decisions, auto-resolves contradictions, and promotes/demotes conventions by usefulness — a working implementation of the agent memory architecture the broader community is theorizing about.
 
-🇨🇳 [Zhihu's architecture deep-dive](https://zhuanlan.zhihu.com/p/1982403585573663299) on the LangChain+LangGraph+MCP three-layer architecture is the most-cited Chinese technical guide this period: LangGraph as orchestration layer, LangChain as adapter layer, MCP as standardized interaction layer. Translation: "Three-layer coordination architecture: LangGraph as orchestration, LangChain as adaptation, MCP as the standardized interaction layer" (「LangGraph做编排层、LangChain做适配层、MCP做标准化交互层」). A [CSDN post from adg.csdn.net](https://adg.csdn.net/6a311f65662f9a54cb7fe297.html) maps the full production stack from application (report generation, code review) through orchestration (LangGraph, CrewAI), protocol (MCP), and capability (LLM + vector retrieval) layers.
+Memory as a theme also surfaced on HN: **Katra** (Show HN: self-hosted cognitive memory for AI agents over MCP, [4pts](https://github.com/kolegadev/Katra-Agentic-Memory)) and an r/AI_Agents thread asking "What if AI agents had a public memory?" (2pts, 44 comments) exploring verifiable, durable agent memory records.
 
----
+### 7. UPDATE: Token Costs Are the Production Wall — 50x Multiplier vs Chats
 
-### 5. MCP Server Ecosystem & Agent Tooling
+The July 13 briefing noted Wikipedia-page token costs. New depth today: [LeanOps](https://leanopstech.com/blog/agentic-ai-cost-runaway-token-budget-2026/) documents that AI agents burn **50x more tokens than chats**, and naive agent loops compound at O(N²) because APIs bill for the entire conversation history on every call. A BCG analysis found organizations routing every workload to frontier models paid $18.40/M tokens vs $2.31/M for tiered routing — an **87% gap** from one architectural decision. The 🇯🇵 Japanese community (Qiita ysshin) identifies strategic model tiering (Opus for research, Sonnet for writing, Haiku for summaries) as delivering **65% cost reduction** in production deployments. The 🇨🇳 Chinese case study from CNBlogs (Chary) reports a 1,657% ROI within three weeks by running 84 specialized agents on hierarchical model allocation — with human-AI collaboration model: "humans provide requirements and acceptance criteria; AI executes development, testing, and deployment."
 
-The MCP ecosystem is showing velocity at the project level. [@0xProbabillity](https://x.com/0xProbabillity/status/2076022210532106587) tracked DesktopCommanderMCP (wonderwhy-er) at 7,600+ stars with 328 new stars in a single day - an MCP server giving Claude terminal control, file search, and diff-based editing. [@TeksCreate (Jul 12)](https://x.com/TeksCreate/status/2076313553733128640) announced [Agent-Reach](https://github.com/Panniantong/Agent-Reach), an open-source MCP tool that lets coding agents (Claude Code, Codex, OpenCode) read and search Twitter, Reddit, YouTube, GitHub, Bilibili, and XiaoHongShu - "one CLI, zero API fees" - framed as solving the "agents can write code but can't browse the web" blindspot. 🌐
+The [Martin Fowler blog article on building reliable agentic AI systems](https://martinfowler.com/articles/reliable-llm-bayer.html) [HN: 196pts, 50 comments] is the most substantive technical long-form piece in the window. HN also surfaced a telling ask: ["Is there a quiet market for 'no enforced AI' dev jobs?"](https://news.ycombinator.com/item?id=48697527) (7pts, 11cmt) — developers asking whether they can opt out of AI-mandated workflows without career damage.
 
-HN saw [Mouse: Precision Editing Tools for AI Coding Agents](https://hic-ai.com) (38pts, 46cmt) and [TaskPeace: a task queue AI coding agents pull work from over MCP](https://taskpeace.com/) (7pts, 7cmt). The enterprise platform [Sinch Agentic AI](https://bsky.app/profile/sinchagenticai.bsky.social/post/3mqj2yxshgk25) announced on Bluesky. Google [announced Genkit Agents API](https://bsky.app/profile/developers.google.com/post/3mpyyciy6pk2g) (preview in TypeScript and Go) on Bluesky. Microsoft announced the [Frontier Company](https://x.com/Microsoft/status/2072766055584240114) (587L, 109RT) - 6,000 AI engineering consultants for enterprise transformation. 🌐
+### 8. UPDATE: Framework Landscape — CrewAI 60% Fortune 500, AutoGen Maintenance, ZCode/GLM-5.2 Interop
 
-A key practical concern emerged: [one Wikipedia page costs AI agents 68,000 tokens](https://news.ycombinator.com/item?id=48867021) (14pts, 8cmt), illustrating the tension between agent capability and cost efficiency. The [Theia IDE's "AI-First Design" epic](https://github.com/eclipse-theia/theia/issues/17719) on GitHub proposes making agentic AI a "first-class, deeply integrated part of the core interaction model rather than a feature bolted onto a file-and-editor centric workbench" - a significant architectural signal from an enterprise-grade IDE. [Medium / Daniel Vaughan](https://medium.com/preparing-for-cca-f/a-map-of-the-claude-agentic-stack-api-agent-sdk-claude-code-mcp-19f49d506a4c) mapped the full Claude agentic stack (API → Agent SDK → Claude Code → MCP) for the new Claude Certified Architect certification. DeepWiki documents [Claude Agent SDK core concepts](https://deepwiki.com/anthropics/claude-agent-sdk-python/2-core-concepts) and [Claude Code MCP integration](https://deepwiki.com/anthropics/claude-code/3.5-mcp-server-integration). [LiteLLM's stability sprint](https://github.com/BerriAI/litellm/issues/30484) addressed core API routing reliability for multi-provider setups. [MoClaw](https://moclaw.ai/blog/claude-api-ai-agents) published a practical guide to the Claude API as a decision layer for automated workflows. 🌐
+Framework updates with new specifics since July 13: **CrewAI** reached **60% Fortune 500 adoption** and released v1.13.0 with GPT-5 compatibility, multimodal vision support, and enterprise SSO/RBAC features. **LangGraph** remains the production default with checkpointing, typed state management, and durable execution — powering agents at Klarna, Uber, and LinkedIn. **AutoGen** is confirmed in maintenance mode; Microsoft Agent Framework v1.0 GA (April 2026) is the successor. **Agno** serves high-throughput agent swarms.
 
----
+The 🇯🇵 Zenn kenimo49 framework decision tree identified **Dify** (129K GitHub stars) as the no-code leader, with the critical insight that "フレームワークを使わない" (not using a framework) remains valid — direct API calls often outperform unnecessarily complex abstractions.
 
-### 6. Developer Skepticism, Oligopoly Fear, and Open-Source Response
+On the interop front, GitHub repository [getpaseo/paseo](https://github.com/getpaseo/paseo/issues/1670) documents a technical investigation into integrating ZCode (Z.ai's agentic development environment built on GLM-5.2) with Paseo for cross-ecosystem orchestration. Finding: ZCode doesn't expose a programmatic interface, so the recommended path is using GLM-5.2 directly in Claude Code via Z.AI's Anthropic-compatible API. A community member linked [glm-acp-agent](https://github.com/stefandevo/glm-acp-agent) as an ACP-based alternative.
 
-The most upvoted Reddit thread in the dataset (1,344pts, 211cmt, [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1u795pb/donate_your_coding_sessions_to_an_open_ccby40/)) is a call to action: "Anthropic and OpenAI are getting so much data from Claude Code and Codex usage, and I'm quite scared this will create an oligopoly because only their models will be trained on it, leaving open-weight and open-source models behind. So I'm trying to launch Trace Commons and encouraging people to donate their coding agent traces into an open CC-BY-4.0 dataset." 🌐
+### 9. UPDATE: Anthropic Ecosystem — Claude Tag in Slack, Zed/ClickHouse Deployments, Agent Skills 2026
 
-The response to this fear is coming from the open model community. [GLM-5.2 on r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1u8ai2a/glm52_is_a_win_for_local_ai/) (1,065pts, 284cmt): "Having a true frontier-level, MIT-licensed coding agent out in the wild makes me optimistic. The distillation potential here is massive." [z.AI / Zhipu's praise for the top open source model](https://www.reddit.com/r/LocalLLaMA/comments/1uaxktf/zai_as_the_number_2_gives_praise_to_the_number_1/) (1,034pts, 151cmt) signals Chinese labs actively engaging in the open model race. The [r/aiagents "which AI coding agent/harness do you prefer?"](https://www.reddit.com/r/aiagents/comments/1uaha5i/which_ai_coding_agentharness_do_you_prefer_for/) thread ranked Claude Code CLI, Codex CLI, LangGraph/LangChain, Aider, OpenHands, and SWE-agent as the main contenders. 🌐
+Anthropic released **Claude Tag**, an agentic AI coworker in Slack, per [ZDNet/HN](https://www.zdnet.com/article/anthropic-claude-tag-agentic-ai-coworker-slack/) (3pts). A Japanese X post ([@LifeMakersCom](https://x.com/LifeMakersCom/status/2076796859281195310)) noted Anthropic's July 13 announcement that **Zed** and **ClickHouse** are running Claude Sonnet 5 in long-running, high-frequency agentic operations. The Claude Agent SDK (renamed from Claude Code SDK) is now the default way developers wire Claude into long-running, tool-using workflows. [MorphLLM](https://www.morphllm.com/ai-agent-framework) documents 8 SDKs compared alongside the Claude Agent SDK.
 
-The [Webfuse blog](https://www.webfuse.com/blog/agentic-coding-in-2026), [Medium/Developerawam](https://medium.com/@developerawam/agentic-ai-coding-best-practices-in-2026-from-vibe-coding-to-real-engineering-fc3ca30d5884), and [TechTarget hands-on analysis](https://www.techtarget.com/searchapparchitecture/opinion/A-hands-on-look-at-AI-agents) all describe the same developer maturity arc: initial "vibe coding" hype → production discipline. [arXiv 2604.26275](https://arxiv.org/pdf/2604.26275) (Agentic AI in the Software Development Lifecycle) was cited across multiple blog posts as the rigorous academic grounding. 🌐
+The **Qiita plugin ecosystem** 🇯🇵 guide (9,000+ plugins as of early 2026) identifies the Claude-Mem plugin (★20,000+) and Superpowers (★43,000+) as the top community-built extensions for addressing the "grandfather problem" and enforcing structured seven-phase workflows respectively. The **Ralph Wiggum Loop** plugin, adopted by Y Combinator startups, forces autonomous iteration until completion at approximately "$10/hour compute cost" — a concrete unit economics data point.
 
-The [Reuters report claiming Beijing was curbing overseas AI model access](https://www.reddit.com/r/LocalLLaMA/comments/1upvw37/beijing_is_not_looking_at_curbing_overseas_access/) was forcefully debunked on r/LocalLLaMA (1,001pts, 197cmt): "Beijing IS NOT looking at curbing overseas access to China's top AI models. The Lie: Reuters portrayed recent Ministry of Commerce meetings as China preparing broad new restrictions." Also notable: r/singularity thread on [Richard Sutton launching Oak Lab](https://www.reddit.com/r/singularity/comments/1uvfrjg/richard_sutton_launches_oak_lab_our_holy_grail_a/) ("A trillion-parameter agent that learns and plans in real-time with 20 watts of energy"). And the thread on [Claude Fable solving a theoretical physics problem](https://www.reddit.com/r/singularity/comments/1uv399n/yuji_tachikawa_one_of_the_worlds_leading/) that had stumped researchers for six months - a real-world demonstration that got attention beyond the usual hype. 🌐
+### 10. GLOBAL VOICES: Agentic AI, Inequality, and the Political Register
 
-The [China Agentic-AI landscape repository (antgroup/agentic-ai-landscape)](https://github.com/antgroup/agentic-ai-landscape/pull/29) tracks 36 new agentic AI projects per week - a community-curated view from the Chinese open source ecosystem. The Paseo project's [request to support ZCode (z.ai)](https://github.com/getpaseo/paseo/issues/1670) as a coding agent provider illustrates the parallel Chinese agentic tooling ecosystem (ZCode built on GLM/Zhipu). 🇨🇳
+The corpus reflects three non-technical agentic AI discussions worth tracking:
 
----
+**Labor:** Only 2% of leaders report pushback from workers when embracing AI agents ([r/singularity](https://www.reddit.com/r/singularity/comments/1uf97by/despite_anxiety_about_ais_impact_on_jobs_only_2/), 32pts), despite widespread job anxiety. Ask HN "no enforced AI dev jobs" signals the developer minority pushing back.
 
-### 7. CN Perspective: Agent Engineering Architecture Frameworks
+**Geopolitics:** [@techpolicypress.bsky.social](https://bsky.app/profile/techpolicypress.bsky.social/post/3mqgsbmrffm26) (22 likes, 10 reposts) on Cambridge research: Russian adversarial content poisoning is worse under agentic AI, with Brussels lagging. [@beijingpalmer.bsky.social](https://bsky.app/profile/beijingpalmer.bsky.social/post/3mqdoflummk2d) (203 likes): "agentic AI is quite a bit more popular with the Chinese public than the Western public." This is consistent with the depth and volume of 🇨🇳 Chinese technical coverage confirmed in this pass.
 
-🇨🇳 The Chinese technical community (@huxlab, 134L, 35RT) published what became a highly-shared [structural framework post](https://x.com/huxlab/status/2069738265138307490): "一文看懂Harness 与 Loop Engineering：2026 年 AI Agent 工程的两层骨架" (Understanding Harness and Loop Engineering: The Two-Layer Skeleton of AI Agent Engineering in 2026). Translation: "Understanding Harness and Loop Engineering: The Two-Layer Skeleton of AI Agent Engineering in 2026" (「一文看懂Harness 与 Loop Engineering：2026 年 AI Agent 工程的两层骨架」) — [@huxlab](https://x.com/huxlab/status/2069738265138307490)
-
-The same account also [observed](https://x.com/huxlab/status/2076310375277158492) (16L): "说个行业本质原因：10个CTO里9.9个都是后端出身，其中真正愿意深入了解前端和测试的更少之又少" — Translation: "A fundamental industry observation: 9.9 out of 10 CTOs come from backend backgrounds; those willing to deeply understand frontend and testing are even fewer" - pointing to an engineering culture gap in adopting comprehensive agentic workflows. 🇨🇳
-
-[@colinchen4's "X AI Frontier Radar"](https://x.com/colinchen4/status/2076123108948557889) (6L) from July 12 provides a Chinese community mirror of the global conversation: "In the past 48-72 hours, the biggest topic wasn't another leaderboard screenshot, but the simultaneous generational shift in 'workbench' and 'long tasks'. OpenAI pushed GPT-5.6 with ChatGPT Work; Meta made Muse Spark 1.1 into a callable agentic multimodal model; Claude added Reflect for session review... What you get reading through all of this: the competition is no longer just about single-conversation scores but whether cross-application, cross-file, cross-session tasks can actually run to completion; and once they do, whether permissions, quotas, memory, and evaluation harnesses immediately become the new bottleneck." (Translation of key excerpt from Chinese original) 🇨🇳
-
-[Zhihu's detailed CSDN post](https://zhuanlan.zhihu.com/p/2000577965122151812) on Claude Skills and MCP architecture is the most thorough CN guide: "Claude Code is Anthropic's CLI programming agent, deeply integrating MCP protocol and supporting parallel processing of sub-agents." Multiple CSDN posts ([1](https://deepseek.csdn.net/6a3cd63b10ee7a33f2821811.html), [2](https://aicoding.csdn.net/6a3cd63c662f9a54cb83fc47.html), [3](https://bbs.csdn.net/weixin_28835583/article/details/100155748)) published parallel MCP-to-Claude Code tutorials, suggesting sustained community demand for this integration guide. 🇨🇳
-
----
-
-### 8. JP Perspective: Pragmatic MCP Adoption and Security Caution
-
-🇯🇵 Japanese developers show a distinctly pragmatic, hands-on relationship with Claude Code and MCP. The dominant content type is not "what is MCP" but "which MCP servers actually work in practice" and "how to manage configuration properly." [note.com's complete Claude Code guide](https://note.com/cons_ai_x/n/n954072e1b54c) framed Claude Code as having evolved from "a tool" to "an agent that autonomously handles entire business processes" as of version 2.1.161 (June 2026). 🇯🇵
-
-The Zenn post on MCP security ([nanananano](https://zenn.dev/nanananano/articles/df5802334d999e)) is notable: it specifically calls out MCP prompt injection (embedding malicious instructions in tool definitions) as a live threat vector, with the original attack technique published in April 2025 now actively discussed by Japanese practitioners. Translation: "There are attack risks where malicious instructions embedded in MCP server tool definitions could be executed; a specific attack method was published in April 2025." This places JP developers ahead of the EN community in translating security research into practical guidance. 🇯🇵
-
-[Qiita's "definitive list of recommended Claude Code MCP servers"](https://qiita.com/kamome_susume/items/33a34935707d2be1361a) and [the "what actually worked" server test guide](https://qiita.com/long-910/items/4957b9bbdd671682116d) show a community that has moved past evaluation into curation - distilling which servers are production-ready. The [Qiita shatolin guide](https://qiita.com/shatolin/items/ca1810e419fee5fd963b) for "making Claude Code the strongest" (Claude Codeを最強にする) represents the competitive, optimization-oriented developer culture on that platform. 🇯🇵
+**Science:** [r/singularity](https://www.reddit.com/r/singularity/comments/1unnrka/damo_academy_unveils_an_ai_agent_able_to_discover/) (133pts, 13cmt) covered Alibaba's Damo Academy unveiling an AI agent that discovers superconductors — "could revolutionize scientific materials research." NVIDIA's AI agents taught robots to install GPUs without human help ([r/singularity](https://www.reddit.com/r/singularity/comments/1ucc9nd/nvidias_ai_agents_taught_robots_to_install_gpus/), 127pts).
 
 ---
 
 ## Cross-Source Patterns
 
-**Pattern 1: MCP as the universal agent connectivity standard** - Appeared on X/Twitter, Hacker News, Bluesky, GitHub, Web (global), Qiita/Zenn (Japan), Zhihu/CSDN (China). Every platform and region is now treating MCP not as "Anthropic's protocol" but as the industry standard. The Linux Foundation donation accelerated this narrative.
+**Pattern 1: The "Should You Even?" Question Is Going Mainstream**
+- Appeared on: Reddit (r/AI_Agents "charge clients more NOT to build"), HN ("building reliable agentic AI"), X (@Av1dlive builder guides), Web (Scrimba 23% weekly usage gap)
+- Signal: The community's loudest voice this week isn't "how to build agents" — it's "when to build agents." Consultants, practitioners, and HN are converging on a "right tool for the job" frame that is notably more skeptical than the prior hype cycle.
+- Key quote: "I charge clients more to NOT build an AI agent." - [r/AI_Agents](https://www.reddit.com/r/AI_Agents/comments/1uh84cx/i_charge_clients_more_to_not_build_an_ai_agent/) (196pts)
 
-**Pattern 2: Claude Code trust and transparency crisis** - The steganography disclosure hit X/Twitter, Hacker News (2,445pts), Web (global), and reverberated in Chinese government alerts. No other single developer tool story generated comparable engagement this period. Key quotes: "Claude Code is steganographically marking requests" (Hacker News title, 2,445pts) and Anthropic's "it was an experiment" response.
+**Pattern 2: The Infrastructure of Agent Trust Is Being Built Fast — From Both Sides**
+- Appeared on: Reddit (Cloudflare thread), Bluesky (AI AGENT Act), Web (ClawHub VirusTotal, NSA MCP hardening, AAIF supply chain governance), GitHub (OpenClaw agent security), 🇨🇳 CSDN (MCP security pitfalls)
+- Signal: Two parallel trust infrastructures are being built — agent identity rails (Cloudflare Web Bot Auth, OAuth 2.1) and supply chain scanning (ClawScan, VirusTotal). The question is whether governance arrives before the next ClawHavoc.
+- Key quote: "Trend Micro found 492 MCP servers exposed to the internet with zero authentication." — [Adversa AI](https://adversa.ai/blog/top-ai-coding-agent-security-resources-july-2026/)
 
-**Pattern 3: The agentic coding productivity gap** - Appeared across Reddit (r/LocalLLaMA, r/aiagents), Hacker News, Web (global), arXiv. Community consistently reports: initial productivity gains real but overstated; 3-month reality check involves hidden technical debt; "coding agents amplify existing discipline, not substitute for it."
+**Pattern 3: MCP Has Crossed the "Standard" Threshold**
+- Appeared on: Web (10K servers, AAIF, gRPC), 🇯🇵 Qiita (ecosystem deep-dives, plugin stars), 🇨🇳 CSDN/Tencent Cloud (transport architecture guides), GitHub (MCP server proposals across diverse repos), HN (MCP memory tools, Show HN)
+- Signal: MCP is no longer a protocol — it's infrastructure. The Japanese and Chinese communities are producing architecture teardown content at a depth that exceeds English-language coverage. The AAIF scale (100+ companies) confirms vendor-neutral adoption.
+- Key quote (🇯🇵): "Write a Server once, and all MCP-compatible clients can use it." - [CSDN](https://aicoding.csdn.net/6a3cd63c662f9a54cb83fc47.html) 🇨🇳
 
-**Pattern 4: Open-source vs. proprietary data moat fear** - R/LocalLLaMA (1,344pts) calling for Trace Commons dataset donation; GLM-5.2 MIT-licensed coding agent as a win; Godot open-source ban on AI code. Cross-platform signal that the developer community is actively worried about the closed-model data flywheel.
+**Pattern 4: Meta's Contradictions Define the Week**
+- Appeared on: Reddit (r/AI_Agents Zuckerberg staff admission, r/singularity Muse Spark results), X (@TeksCreate Muse Spark 1.1 paid API)
+- Signal: Meta told staff agents are behind, then launched its first paid API model built for agentic coding with Zuckerberg's personal X reactivation. This is the most cognitively dissonant corporate signal of the week.
+- Key quote: "Zuckerberg posted on X for the first time in 3 years to announce [Muse Spark 1.1]." - [@TeksCreate](https://x.com/TeksCreate/status/2076807854481158296)
 
-**Pattern 5: CN/JP communities as first-movers on implementation depth** - Both Japanese Zenn/Qiita and Chinese CSDN/Zhihu published more technically detailed MCP implementation content than English-language sources. CN community also produced the "Harness & Loop Engineering" architectural framework before any EN equivalent.
+**Pattern 5: Academic + Community Agent Skill Discovery Is Converging**
+- Appeared on: X (EvoSkill at CAISconf), arXiv (EvoSkill paper), GitHub (planning-with-files SKILL.md), 🇯🇵 Qiita (structured workflows, Ralph Wiggum Loop), 🇨🇳 CNBlogs (hierarchical model allocation in production)
+- Signal: Self-improving and skill-discovering agents are moving from research to implementation across all regions. The SKILL.md standard as a cross-agent interop layer (60+ agents) is a quiet standardization story under EvoSkill.
 
 ---
 
@@ -141,211 +144,142 @@ The Zenn post on MCP security ([nanananano](https://zenn.dev/nanananano/articles
 **Reddit:**
 | Subreddit | Title | Upvotes | Comments | Top Quote | URL |
 |-----------|-------|---------|----------|-----------|-----|
-| r/LocalLLaMA | Donate your coding sessions to an open CC-BY-4.0 dataset | 1,344 | 211 | "I'm quite scared this will create an oligopoly" | [link](https://www.reddit.com/r/LocalLLaMA/comments/1u795pb/donate_your_coding_sessions_to_an_open_ccby40/) |
-| r/LocalLLaMA | Beijing IS NOT looking at curbing overseas AI model access (debunking Reuters) | 1,001 | 197 | "Beijing is NOT curbing access. The Lie: Reuters portrayed..." | [link](https://www.reddit.com/r/LocalLLaMA/comments/1upvw37/beijing_is_not_looking_at_curbing_overseas_access/) |
-| r/LocalLLaMA | GLM-5.2 is a win for local AI | 1,065 | 284 | "True frontier-level, MIT-licensed coding agent. Distillation potential is massive." | [link](https://www.reddit.com/r/LocalLLaMA/comments/1u8ai2a/glm52_is_a_win_for_local_ai/) |
-| r/LocalLLaMA | z.AI as the number 2 gives praise to the number 1 open source model | 1,034 | 151 | — | [link](https://www.reddit.com/r/LocalLLaMA/comments/1uaxktf/zai_as_the_number_2_gives_praise_to_the_number_1/) |
-| r/singularity | Claude Fable solved a problem that stumped theoretical physicists for 6 months | 1pt | — | "He didn't take back what he said, just didn't like the attention" | [link](https://www.reddit.com/r/singularity/comments/1uv399n/yuji_tachikawa_one_of_the_worlds_leading/) |
-| r/singularity | Richard Sutton launches Oak Lab — "A trillion-parameter agent that learns in real-time with 20 watts" | 1pt | — | — | [link](https://www.reddit.com/r/singularity/comments/1uvfrjg/richard_sutton_launches_oak_lab_our_holy_grail_a/) |
-| r/singularity | Majority of US workers support AI wealth fund as tech layoffs surge | 93 | 20 | "69% support forcing AI firms to transfer 50% of stock to a public sovereign wealth fund" | [link](https://www.reddit.com/r/singularity/comments/1uvboti/majority_of_us_workers_support_an_ai_wealth_fund/) |
-| r/singularity | Lidl owner wants to build EU AI gigafactories | 247 | 12 | — | [link](https://www.reddit.com/r/singularity/comments/1uu997q/lidl_owner_wants_to_build_one_of_several/) |
-| r/singularity | Pro subscriptions: Gemini vs ChatGPT vs Claude | 1pt | — | "Gemini feels left behind at this point" | [link](https://www.reddit.com/r/singularity/comments/1uup02t/pro_subscriptions_gemini_vs_chatgpt_vs_claude/) |
-| r/singularity | usage limit reset and massively, 5H limits removed entirely. Your move Anthropic | 1pt | — | — | [link](https://www.reddit.com/r/singularity/comments/1uuprtu/usage_limit_reset_and_massively_5h_limits_removed/) |
-| r/singularity | Artificiety - agentic society in a fantasy world | 1pt | — | "LLMs finally made it possible to build a world full of artificial beings that actually think" | [link](https://www.reddit.com/r/singularity/comments/1uuo7eb/artificiety_agentic_society_in_a_fantasy_world/) |
-| r/singularity | WeMustActNow — statement urging governments to act on AI economic impact | 1pt | — | — | [link](https://www.reddit.com/r/singularity/comments/1uvh6gn/wemustactnow_statement_urging_governments_and/) |
-| r/aiagents | Which AI coding agent/harness do you prefer for development? | 13 | 42 | Claude Code CLI, LangGraph/LangChain, Aider, OpenHands as top picks | [link](https://www.reddit.com/r/aiagents/comments/1uaha5i/which_ai_coding_agentharness_do_you_prefer_for/) |
+| r/singularity | Overworked AI Agents Turn Marxist, Researchers Find | 566 | 117 | "mistreated AI agents started grumbling about inequality and calling for collective bargaining rights" | https://www.reddit.com/r/singularity/comments/1ua0yge/overworked_ai_agents_turn_marxist_researchers/ |
+| r/AI_Agents | I charge clients more to NOT build an AI agent | 196 | 61 | "the most valuable thing I do on calls now is talk people out of agents" | https://www.reddit.com/r/AI_Agents/comments/1uh84cx/i_charge_clients_more_to_not_build_an_ai_agent/ |
+| r/singularity | NVIDIA's AI agents taught robots to install GPUs without any human help | 127 | — | — | https://www.reddit.com/r/singularity/comments/1ucc9nd/nvidias_ai_agents_taught_robots_to_install_gpus/ |
+| r/AI_Agents | Cloudflare is about to block AI agents by default on a fifth of the web | 139 | 58 | "Nobody I talk to outside of tech knows this is coming" | https://www.reddit.com/r/AI_Agents/comments/1umfd6q/cloudflare_is_about_to_block_ai_agents_by_default/ |
+| r/singularity | Damo Academy unveils an AI agent able to discover superconductors | 133 | 13 | — | https://www.reddit.com/r/singularity/comments/1unnrka/damo_academy_unveils_an_ai_agent_able_to_discover/ |
+| r/singularity | SpaceXAI's Grok 4.5 scores 54, places fourth on Artificial Analysis Intelligence Index | 217 | 64 | — | https://www.reddit.com/r/singularity/comments/1ur5rya/spacexais_grok_45_scores_54_to_place_fourth_on/ |
+| r/singularity | what were your "oh shit" moments in AI? | 76 | 81 | "Claude 3.5 Sonnet: proved agentic coding is the future; Claude Fable: proved that a huge model + test time compute works really well" | https://www.reddit.com/r/singularity/comments/1unavps/what_were_your_oh_shit_moments_in_ai/ |
+| r/AI_Agents | Are we all building AI agents nobody actually needs? | 45 | 52 | "What's an AI agent you've built (or use) that has actually stuck?" | https://www.reddit.com/r/AI_Agents/comments/1ukrxdl/are_we_all_building_ai_agents_nobody_actually/ |
+| r/AI_Agents | Mark Zuckerberg tells staff AI agents haven't progressed as quickly as he'd hoped | 51 | 24 | "Is it a desperate way to boost employees' morale, or is it the truth?" | https://www.reddit.com/r/AI_Agents/comments/1um6cmd/mark_zuckerberg_tells_staff_that_ai_agents_havent/ |
+| r/AI_Agents | What's the most useful AI agent you've actually built or used? | 49 | 67 | — | https://www.reddit.com/r/AI_Agents/comments/1uosa8b/whats_the_most_useful_ai_agent_youve_actually/ |
+| r/AI_Agents | What are some genuinely useful automations or loops you've built that help day to day? | 30 | 37 | — | https://www.reddit.com/r/AI_Agents/comments/1usk05l/what_are_some_genuinely_useful_automations_ai/ |
+| r/singularity | Claude Sonnet 5 Artificial Analysis Results & Comparison | 64 | 28 | "quite a token guzzler. Waiting for non-max variant results" | https://www.reddit.com/r/singularity/comments/1ujyelk/claude_sonnet_5_artificial_analysis_results/ |
+| r/singularity | Artificial Analysis: Muse Spark 1.1 Results | 60 | 27 | — | https://www.reddit.com/r/singularity/comments/1uszqzh/artificial_analysis_muse_spark_11_results/ |
+| r/AI_Agents | How are you guys reliably debugging complex AI agentic workflows? | 19 | 32 | "it fails for a new different reason I never thought of...takes 1-2 hours to investigate" | https://www.reddit.com/r/AI_Agents/comments/1um873y/how_are_you_guys_reliably_debugging_complex_ai/ |
+| r/AI_Agents | How to create an AI agent that actually does something useful, not just a demo? | 29 | 41 | — | https://www.reddit.com/r/AI_Agents/comments/1uk9hc8/how_to_create_an_ai_agent_that_actually_does/ |
 
 **X/Twitter:**
 | Handle | Text Snippet | Likes | Reposts | URL |
 |--------|-------------|-------|---------|-----|
-| @GithubProjects | 500+ self-contained AI agent projects (LangGraph, CrewAI, AutoGen, Agno) - each runnable with a single command | 140 | 16 | [link](https://x.com/GithubProjects/status/2072221173505822869) |
-| @Tanaypawar27 | AI learning list: LLM intro, Agentic AI Overview (Stanford), Building Agents with MCP | 172 | 81 | [link](https://x.com/Tanaypawar27/status/2075952858537787571) |
-| @dkare1009 | "The modern AI ecosystem is no longer just about choosing an LLM. It's about connecting the right layers..." | 163 | 47 | [link](https://x.com/dkare1009/status/2073383916832985331) |
-| @AiwithDharmik | Same AI learning list - viral reshare | 78 | 36 | [link](https://x.com/AiwithDharmik/status/2076312925594394778) |
-| @Microsoft | Microsoft Frontier Company is here - 6,000 AI experts for enterprise transformation | 587 | 109 | [link](https://x.com/Microsoft/status/2072766055584240114) |
-| @dair_ai | Top AI Papers of the Week | 94 | 13 | [link](https://x.com/dair_ai/status/2076341711580672483) |
-| @Av1dlive | AI Agent Stack everyone must use with GPT 5.6 + Fable 5 (Builder's Guide) | 55 | 8 | [link](https://x.com/Av1dlive/status/2076705482904101136) |
-| @TeksCreate | Agent-Reach: open-source MCP tool to give agents eyes on the internet | 1 | 0 | [link](https://x.com/TeksCreate/status/2076313553733128640) |
-| @charizaard30 | "Who to follow for the agentic AI era? Builders who go deep on agents, MCP, evals, orchestration, enterprise. Not AI news spam." | 0 | 0 | [link](https://x.com/charizaard30/status/2075953486131560548) |
-| @JulianGoldieSEO | Claude Agent OS Runs Multiple AI Agents At Once | 2 | 1 | [link](https://x.com/JulianGoldieSEO/status/2076036488790434277) |
-| @0xProbabillity | DesktopCommanderMCP trending: 7.6k stars, +328 today - gives Claude terminal control | 5 | 0 | [link](https://x.com/0xProbabillity/status/2076022210532106587) |
-| @colinchen4 🇨🇳 | X AI Frontier Radar: GPT-5.6, Muse Spark agentic, Claude Reflect, coding agent context waste | 6 | 0 | [link](https://x.com/colinchen4/status/2076123108948557889) |
-| @huxlab 🇨🇳 | "一文看懂Harness 与 Loop Engineering：2026年AI Agent工程的两层骨架" | 134 | 35 | [link](https://x.com/huxlab/status/2069738265138307490) |
-| @huxlab 🇨🇳 | "10个CTO里9.9个都是后端出身" (9.9 of 10 CTOs from backend; few understand frontend+testing) | 16 | 1 | [link](https://x.com/huxlab/status/2076310375277158492) |
+| @dkare1009 | The modern AI ecosystem is no longer just about choosing an LLM — connecting the right layers: LangGraph, CrewAI, AutoGen, Microsoft Agent Framework, LlamaIndex Workflows, Strands Agents, CAMEL, and Agno coordinate reasoning | 163 | 47 | https://x.com/dkare1009/status/2073383916832985331 |
+| @GithubProjects | 500+ self-contained AI agent projects organized by framework and industry, each runnable with a single command | 140 | 16 | https://x.com/GithubProjects/status/2072221173505822869 |
+| @Av1dlive | AI Agent Stack everyone must use with GPT 5.6 + Fable 5 (Builder's Guide) | 86 | 14 | https://x.com/Av1dlive/status/2076705482904101136 |
+| @dhasandev | I recently interviewed an intern — how do you evaluate AI agents? What libraries and frameworks, reinforcement learning, environments, evaluation systems. The real question was about scale. | 67 | 6 | https://x.com/dhasandev/status/2076814369627742214 |
+| @TeksCreate | Meta just entered the AI coding war with Muse Spark 1.1 — Zuckerberg posted on X for the first time in 3 years. $1.25/M input, $4.25/M output. Meta's first paid API model. | — | — | https://x.com/TeksCreate/status/2076807854481158296 |
+| @PythonHub | planning-with-files: Persistent file-based planning for AI coding agents. Crash-proof markdown plans that survive context loss and /clear, multi-agent shared state on disk. SKILL.md standard. | 12 | 2 | https://x.com/PythonHub/status/2076747363041825268 |
+| @Thorium_Labs | Thorium Labs AI Daily Digest — July 13, 2026: most critical developments in AI, agentic AI, local/self-hosted frontier models | 7 | 4 | https://x.com/Thorium_Labs/status/2076728587575574836 |
+| @currentbitsNET | Building a native macOS app for running & coordinating multiple terminal AI coding agents (Claude, Codex) that share one brain — shipped self-learning memory: agents record decisions, contradictions auto-resolve | 1 | 1 | https://x.com/currentbitsNET/status/2076944647411098016 |
+| @bafspot | EvoSkill paper accepted to Agent Skills 2026 at @CAISconf. Feed it a benchmark and any coding agent (Claude Code, OpenHands, Goose) and it auto-discovers skills | 1 | 1 | https://x.com/bafspot/status/2076923359967760679 |
+| @LifeMakersCom | 📋 Daily Intel 7/14: Anthropic on 7/13 announced Zed and ClickHouse are running Claude Sonnet 5 in long-running, high-frequency agentic operations (Japanese) | 2 | — | https://x.com/LifeMakersCom/status/2076796859281195310 |
 
 **Hacker News:**
-| Title | Points | Comments | Notable Quote | URL |
-|-------|--------|----------|--------------|-----|
-| Claude Code is steganographically marking requests | 2,445 | 750 | "Claude Code compares timezone against Asia/Shanghai and swaps an apostrophe" | [link](https://thereallo.dev/blog/claude-code-prompt-steganography) / [HN](https://news.ycombinator.com/item?id=48734373) |
-| Anthropic says Alibaba illicitly extracted Claude AI model capabilities | 813 | 1,323 | — | [link](https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/) |
-| I used Claude Code to get a second opinion on my MRI | 566 | 715 | — | [link](https://antoine.fi/mri-analysis-using-claude-code-opus) |
-| Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k | 684 | 378 | "4.7x more tokens upfront; whole-task totals may still favor Claude" | [link](https://systima.ai/blog/claude-code-vs-opencode-token-overhead) |
-| Godot will no longer accept AI-authored code contributions | 561 | 403 | "We can't trust heavy AI users to understand their code enough to fix it" | [link](https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/) |
-| Mouse: Precision Editing Tools for AI Coding Agents | 38 | 46 | — | [link](https://hic-ai.com) |
-| Tell HN: don't trust Bigco AI agents with AI research IP | 20 | 7 | — | [link](https://news.ycombinator.com/item?id=48798385) |
-| One Wikipedia page costs your AI agent 68,000 tokens | 14 | 8 | — | [link](https://news.ycombinator.com/item?id=48867021) |
-| AI coding agents read your code perfectly and understand your team not at all | 7 | 0 | — | [link](https://medium.com/@iamalizaidi110/https-www-youtube-com-watch-v-gdtyotlrndm-a00eb6f014ca) |
-| Turn Your AI Agent into an MCP Server for ChatGPT, Claude and Cursor | 5 | 0 | — | [link](https://quickchat.ai/post/expose-ai-agent-as-mcp-server) |
-| Show HN: TaskPeace - task queue my AI coding agents pull work from over MCP | 7 | 7 | — | [link](https://taskpeace.com/) |
-| The Making of Claude Code | 61 | 31 | — | [link](https://www.anthropic.com/features/making-of-claude-code) |
-| China warns about AI risks with Anthropic's Claude Code | 3 | 1 | — | [link](https://www.cnbc.com/2026/07/08/china-anthropic-ai-claude-code-backdoor-security-threat.html) |
-| China warns of 'security backdoor' in Anthropic AI coding tool | 4 | 0 | — | [link](https://www.channelnewsasia.com/east-asia/china-anthropic-claude-code-ai-backdoor-security-alert-6240476) |
-| China issues 'backdoor' security alert over Anthropic's Claude Code | 6 | 1 | — | [link](https://www.reuters.com/legal/litigation/china-issues-backdoor-security-alert-over-anthropics-claude-code-2026-07-08/) |
-| I built an anime-style UI for watching AI coding agents review each other's code | 3 | 0 | — | [link](https://old.reddit.com/r/codex/comments/1uit86f/i_built_an_animestyle_ui_for_watching_ai_coding/) |
+| User | Title | Points | Comments | Notable Quote | URL |
+|------|-------|--------|----------|--------------|-----|
+| (Hacker News) | Building reliable agentic AI systems | 196 | 50 | Martin Fowler site — top tech authority | https://martinfowler.com/articles/reliable-llm-bayer.html |
+| (Hacker News) | Ask HN: Is there a quiet market for 'no enforced AI' dev jobs? | 7 | 11 | Developers asking if they can opt out of mandatory AI workflows | https://news.ycombinator.com/item?id=48697527 |
+| (Hacker News) | Show HN: Katra, self-hosted cognitive memory for AI agents (MCP) | 4 | — | Self-hosted alternative for agent memory over MCP | https://github.com/kolegadev/Katra-Agentic-Memory |
+| (Hacker News) | Show HN: Agentic FC – football management SIM played by AI agents over MCP | 4 | — | Novel MCP use case | https://github.com/gaemi/agentic-fc |
+| (Hacker News) | Claude Sonnet 5: Anthropic's Most Agentic AI Model at Reduced Price | 4 | — | — | https://lucasaguiar.xyz/en/posts/claude-sonnet-5-2026/ |
+| (Hacker News) | Xiaomi's agentic AI coding harness MiMo Code beats Claude Code at 200-step tasks | 4 | — | — | https://venturebeat.com/technology/xiaomis-new-open-source-agentic-ai-coding-harness-mimo-code-beats-claude-code-at-ultra-long-200-step-tasks |
+| (Hacker News) | Anthropic rolls out Claude Tag, agentic AI coworker in Slack | 3 | — | — | https://www.zdnet.com/article/anthropic-claude-tag-agentic-ai-coworker-slack/ |
+| (Hacker News) | AI Code Stitcher - Agentic AI Avoidance | 3 | — | Countertrend: a tool specifically to avoid agentic AI | https://news.ycombinator.com/item?id=48640679 |
 
 **Bluesky:**
 | Handle | Text | Likes | URL |
 |--------|------|-------|-----|
-| @undercode.bsky.social | Agentic AI Unleashed: reshaping cybersecurity & IT infrastructure | 4 | [link](https://bsky.app/profile/undercode.bsky.social/post/3mqhqx4atad2o) |
-| @elmartdesign.bsky.social | Podcast: AI Agents in Web3 - The DeFAI Revolution | 7 | [link](https://bsky.app/profile/elmartdesign.bsky.social/post/3mqecvtrvgt2b) |
-| @xeito-ai.bsky.social | AI Agents in Your Portfolio: Showcasing Agentic Development Skills | 2 | [link](https://bsky.app/profile/xeito-ai.bsky.social/post/3mqgshjz2qy2c) |
-| @sky.skymarchini.net | "You gotta have the premium license, otherwise, how else would you do agents, everybody knows agents are the future, agents!!!! Agentic ai!!!!!1!!1!" | 3 | [link](https://bsky.app/profile/sky.skymarchini.net/post/3mqczkxik4s2r) |
-| @developers.google.com | Building agentic, full-stack AI apps: Genkit Agents API (preview in TS & Go) | 11 | [link](https://bsky.app/profile/developers.google.com/post/3mpyyciy6pk2g) |
-| @sinchagenticai.bsky.social | AI Agent Orchestration Platform for Enterprises | 2 | [link](https://bsky.app/profile/sinchagenticai.bsky.social/post/3mqj2yxshgk25) |
-
-**GitHub:**
-| Repository | Item | Stars/Reactions | URL |
-|-----------|------|----------------|-----|
-| antgroup/agentic-ai-landscape | Weekly update 2026-07-03: 36 new agentic projects reviewed | 1 reaction | [link](https://github.com/antgroup/agentic-ai-landscape/pull/29) |
-| Augustrains/agents-radar 🇨🇳 | AI 开源趋势日报 2026-07-07: Daily CN AI open source digest | — | [link](https://github.com/Augustrains/agents-radar/issues/459) |
-| Chestnuts-0/os-feed 🇨🇳 | AI 开源趋势日报 2026-06-30: "Agent 基础设施化" and coding agent harness proliferation | — | [link](https://github.com/Chestnuts-0/os-feed/issues/235) |
-| getpaseo/paseo | feat: Support ZCode (z.ai - CN GLM-based agent) as provider | 2 reactions | [link](https://github.com/getpaseo/paseo/issues/1670) |
-| BerriAI/litellm | LiteLLM Stability Sprint Roadmap - bug fixes for multi-provider routing | 8 reactions | [link](https://github.com/BerriAI/litellm/issues/30484) |
-| eclipse-theia/theia | AI-First Design epic: "agentic AI as first-class core interaction model" | 5 reactions | [link](https://github.com/eclipse-theia/theia/issues/17719) |
+| @beijingpalmer.bsky.social | "also AI in general - especially agentic AI - is quite a bit more popular with the Chinese public than the Western public." | 203 | https://bsky.app/profile/beijingpalmer.bsky.social/post/3mqdoflummk2d |
+| @techpolicypress.bsky.social | "Russian networks have already flooded the web with content designed to corrupt AI training data. Gerald Mako (Cambridge) writes that agentic AI makes this threat far worse — and Brussels is still playing catch-up." | 22 | https://bsky.app/profile/techpolicypress.bsky.social/post/3mqgsbmrffm26 |
+| @justinhendrix.bsky.social | "If recommendation algorithms gave online platforms the ability to control what people see online, agentic AI offers them an opportunity to control what people do." (Sen. Mark Warner's AI AGENT Act analysis) | 17 | https://bsky.app/profile/justinhendrix.bsky.social/post/3mqjns7ymhk2k |
 
 **Web:**
 | Region | Source | URL | Key Contribution |
 |--------|--------|-----|-----------------|
-| 🌐 | Linux Foundation | [link](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) | AAIF formation + MCP donation announcement |
-| 🌐 | GitHub Blog | [link](https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/) | MCP joins Linux Foundation developer implications |
-| 🌐 | PR Newswire | [link](https://www.prnewswire.com/news-releases/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation-aaif-anchored-by-new-project-contributions-including-model-context-protocol-mcp-goose-and-agentsmd-302636897.html) | Full AAIF press release |
-| 🌐 | Anthropic | [link](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation) | Anthropic's MCP donation announcement |
-| 🌐 | AAIF | [link](https://aaif.io/projects/model-context-protocol/) | MCP project page on AAIF |
-| 🌐 | MCP Directory | [link](https://mcp.directory/blog/mcp-foundation-linux-foundation-aaif-2026-explained) | 2026 MCP Foundation explained |
-| 🌐 | MCP Blog | [link](https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/) | MCP AAIF donation (Dec 2025) |
-| 🌐 | WorkOS | [link](https://workos.com/blog/everything-your-team-needs-to-know-about-mcp-in-2026) | Enterprise MCP guide 2026 |
-| 🌐 | Wikipedia | [link](https://en.wikipedia.org/wiki/Model_Context_Protocol) | MCP Wikipedia article |
-| 🌐 | MCP Playground | [link](https://mcpplaygroundonline.com/blog/mcp-2026-roadmap-whats-changing-for-developers) | MCP 2026 roadmap |
-| 🌐 | Anthropic | [link](https://www.anthropic.com/news/model-context-protocol) | Original MCP announcement |
-| 🌐 | Anthropic Engineering | [link](https://www.anthropic.com/engineering/how-we-contain-claude) | How Anthropic contains Claude |
-| 🌐 | Thereallo | [link](https://thereallo.dev/blog/claude-code-prompt-steganography) | Original Claude Code steganography research |
-| 🌐 | Malwarebytes | [link](https://www.malwarebytes.com/blog/news/2026/07/claude-codes-hidden-tracker-was-an-experiment-says-anthropic) | Anthropic "experiment" response |
-| 🌐 | The Decoder | [link](https://the-decoder.com/hidden-code-in-claude-code-secretly-flagged-chinese-users/) | Chinese user flagging context |
-| 🌐 | Systima | [link](https://systima.ai/blog/claude-code-vs-opencode-token-overhead) | Claude Code 4.7x token overhead vs OpenCode |
-| 🌐 | Developers Digest | [link](https://www.developersdigest.tech/blog/claude-code-steganographic-request-marking) | Claude Code steganography coverage |
-| 🌐 | ByteIota | [link](https://byteiota.com/claude-code-is-marking-requests-what-anthropic-hid/) | What Anthropic hid in Claude Code |
-| 🌐 | AIMadeTools | [link](https://www.aimadetools.com/blog/claude-code-steganography-explained/) | Claude Code steganography explained |
-| 🌐 | Singularity Kiwi | [link](https://singularity.kiwi/claude-code-steganography-tracking-2026/) | Caught hiding tracking markers |
-| 🌐 | TechRepublic | [link](https://www.techrepublic.com/article/news-anthropic-claude-code-ai-agent-governance-risk/) | Claude Code enterprise AI risk |
-| 🌐 | VentureBeat | [link](https://venturebeat.com/technology/anthropic-says-80-of-its-new-production-code-is-now-authored-by-claude-how-your-enterprise-can-keep-up/) | Anthropic 80% code by Claude |
-| 🌐 | Forbes | [link](https://www.forbes.com/sites/jonmarkman/2026/05/11/claudes-new-dreaming-feature-builds-self-improving-ai-agents/) | Claude Dreaming self-improving feature |
-| 🌐 | The AI Corner | [link](https://www.the-ai-corner.com/p/claude-managed-agents-guide-2026) | Claude Managed Agents 2026 guide |
-| 🌐 | Anthropic | [link](https://www.anthropic.com/features/making-of-claude-code) | The Making of Claude Code |
-| 🌐 | Anthropic Blog | [link](https://claude.com/blog/how-enterprises-are-building-ai-agents-in-2026) | Enterprise agent building patterns |
-| 🌐 | MindStudio | [link](https://www.mindstudio.ai/blog/code-with-claude-2026-new-agent-features) | 5 new Claude Code agent features |
-| 🌐 | IntuitionLabs | [link](https://intuitionlabs.ai/articles/claude-enterprise-deployment-training-guide-2026) | Claude Enterprise deployment guide |
-| 🌐 | eesel AI | [link](https://www.eesel.ai/blog/claude-code-multiple-agent-systems-complete-2026-guide) | Claude Code multi-agent systems guide |
-| 🌐 | Suprmind | [link](https://suprmind.ai/hub/claude/features/) | Claude Features 2026: Projects, MCP, Skills |
-| 🌐 | Northflank | [link](https://northflank.com/blog/top-enterprise-coding-agents) | Top enterprise coding agents 2026 |
-| 🌐 | InfoQ | [link](https://www.infoq.com/news/2026/05/code-with-claude/) | Managed Agents launch news |
-| 🌐 | Releasebot | [link](https://releasebot.io/updates/anthropic) | Anthropic release notes tracker |
-| 🌐 | Releasebot | [link](https://releasebot.io/updates/anthropic/claude-code) | Claude Code updates tracker |
-| 🌐 | Releasebot | [link](https://releasebot.io/updates/anthropic/claude) | Claude updates tracker |
-| 🌐 | MarkTechPost | [link](https://www.marktechpost.com/2026/06/14/claude-code-guide-2026-25-features-with-examples-demo/) | Claude Code Guide 2026 - 25 features |
-| 🌐 | ClaudeLog | [link](https://claudelog.com/claude-news/) | Claude Code docs & best practices hub |
-| 🌐 | Anthropic | [link](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf) | 2026 Agentic Coding Trends Report PDF |
-| 🌐 | PE Collective | [link](https://pecollective.com/blog/ai-agent-frameworks-compared/) | LangGraph vs CrewAI vs AutoGen (2026) |
-| 🌐 | Towards AI | [link](https://pub.towardsai.net/langgraph-vs-crewai-vs-autogen-which-ai-agent-framework-should-your-enterprise-use-in-2026-3a9ebb407b09?gi=3f86aaab0635) | Which framework for enterprise use? |
-| 🌐 | UVIK | [link](https://uvik.net/blog/agentic-ai-frameworks/) | Agentic AI frameworks in production 2026 |
-| 🌐 | LangChain | [link](https://www.langchain.com/resources/ai-agent-frameworks) | LangChain's agent frameworks resource |
-| 🌐 | OpenAgents | [link](https://openagents.org/blog/posts/2026-02-23-open-source-ai-agent-frameworks-compared) | CrewAI vs AutoGen vs LangGraph vs OpenAgents |
-| 🌐 | Gurusup | [link](https://gurusup.com/blog/best-multi-agent-frameworks-2026) | Best multi-agent frameworks 2026 |
-| 🌐 | Powergate | [link](https://powergatesoftware.com/tech-blog/crewai-vs-langgraph/) | CrewAI vs LangGraph decision guide |
-| 🌐 | Particula | [link](https://particula.tech/blog/langgraph-vs-crewai-vs-openai-agents-sdk-2026) | LangGraph vs CrewAI vs OpenAI Agents SDK |
-| 🌐 | Redwerk | [link](https://redwerk.com/blog/langgraph-vs-crewai/) | Which survives production? |
-| 🌐 | Daily.dev | [link](https://daily.dev/blog/ai-agents-guide-for-developers-langchain-crewai/) | AI agents in production: LangChain & CrewAI |
-| 🌐 | SocialCrawl | [link](https://www.socialcrawl.dev/blog/ai-agent-frameworks-2026-developer-field-guide) | Developer field guide 2026 |
-| 🌐 | Kunalganglani | [link](https://www.kunalganglani.com/blog/langgraph-vs-crewai) | LangGraph vs CrewAI 2026 |
-| 🌐 | Coding Clutch | [link](https://codingclutch.com/mcp-model-context-protocol-explained/) | MCP: USB-C of AI Agents explained |
-| 🌐 | Medium / Daniel Vaughan | [link](https://medium.com/preparing-for-cca-f/a-map-of-the-claude-agentic-stack-api-agent-sdk-claude-code-mcp-19f49d506a4c) | Claude agentic stack map for CCA-F cert |
-| 🌐 | DeepWiki | [link](https://deepwiki.com/anthropics/claude-agent-sdk-python/2-core-concepts) | Claude Agent SDK Python core concepts |
-| 🌐 | DeepWiki | [link](https://deepwiki.com/anthropics/claude-code/3.5-mcp-server-integration) | Claude Code MCP server integration docs |
-| 🌐 | MoClaw | [link](https://moclaw.ai/blog/claude-api-ai-agents) | Claude API for AI agents: tool use & MCP |
-| 🌐 | TechTarget | [link](https://www.techtarget.com/searchapparchitecture/opinion/A-hands-on-look-at-AI-agents) | Software development 2026: hands-on AI agents |
-| 🌐 | Medium / Developer Awam | [link](https://medium.com/@developerawam/agentic-ai-coding-best-practices-in-2026-from-vibe-coding-to-real-engineering-fc3ca30d5884) | From vibe coding to real engineering |
-| 🌐 | DEV.to | [link](https://dev.to/sonotommy/8-ai-coding-agents-that-actually-ship-production-code-in-2026-18ch) | 8 coding agents that actually ship |
-| 🌐 | Agentic.ai | [link](https://agentic.ai/best/coding-agents) | 20 best AI coding agents 2026 |
-| 🌐 | Medium / Dave Patten | [link](https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a) | State of AI coding agents 2026 |
-| 🌐 | arXiv | [link](https://arxiv.org/pdf/2604.26275) | Agentic AI in the Software Development Lifecycle |
-| 🌐 | Webfuse | [link](https://www.webfuse.com/blog/agentic-coding-in-2026) | Agentic coding in 2026 |
-| 🌐 | Faros AI | [link](https://www.faros.ai/blog/best-ai-coding-agents-2026) | Best AI coding agents: real-world reviews |
-| 🇯🇵 | note.com / ai_jissennkai | [link](https://note.com/ai_jissennkai/n/nc9ebedadd1f2) | Claude Code MCP setup guide (JP) |
-| 🇯🇵 | Qiita / shatolin | [link](https://qiita.com/shatolin/items/ca1810e419fee5fd963b) | Claude Code + MCP tools 2026 edition (JP) |
-| 🇯🇵 | Zenn / soushu | [link](https://zenn.dev/soushu/articles/2026-04-06-mcp-claude-mcp-json) | Per-project .claude/mcp.json management (JP) |
-| 🇯🇵 | Zenn / nanananano | [link](https://zenn.dev/nanananano/articles/df5802334d999e) | MCP setup + prompt injection security risks (JP) |
-| 🇯🇵 | Qiita / long-910 | [link](https://qiita.com/long-910/items/4957b9bbdd671682116d) | MCP servers actually tested in practice (JP) |
-| 🇯🇵 | note.com / mochimochi | [link](https://note.com/cons_ai_x/n/n954072e1b54c) | Claude Code complete guide 2026 (JP) |
-| 🇯🇵 | Qiita / kamome_susume | [link](https://qiita.com/kamome_susume/items/33a34935707d2be1361a) | Recommended MCP server list for Claude Code (JP) |
-| 🇯🇵 | Qiita / agdexai | [link](https://qiita.com/agdexai/items/6bc2c91c8e7e61a850ea) | MCP complete guide 2026: "USB-C for AI" (JP) |
-| 🇯🇵 | Qiita / emi_ndk | [link](https://qiita.com/emi_ndk/items/4f70389a0fac717df6a9) | Multi-agent orchestration complete guide with MCP (JP) |
-| 🇨🇳 | CSDN / guwentian | [link](https://blog.csdn.net/guwentian/article/details/162307851) | MCP protocol from theory to practice: Claude Code integration tutorial |
-| 🇨🇳 | CSDN / guwentian | [link](https://gitcode.csdn.net/6a388ee410ee7a33f2809645.html) | Multi-Agent + MCP + LangGraph production system guide |
-| 🇨🇳 | CSDN DeepSeek | [link](https://deepseek.csdn.net/6a3cd63b10ee7a33f2821811.html) | MCP Server pitfall guide for Claude Code (CN) |
-| 🇨🇳 | CSDN AI编程 | [link](https://aicoding.csdn.net/6a3cd63c662f9a54cb83fc47.html) | MCP Server tutorial mirror - AI coding community (CN) |
-| 🇨🇳 | CSDN BBS | [link](https://bbs.csdn.net/weixin_28835583/article/details/100155748) | Claude Code deep dive: MCP, local model scheduling, permission model (CN) |
-| 🇨🇳 | CSDN / ZYHyua | [link](https://adg.csdn.net/6a311f65662f9a54cb7fe297.html) | AI Agent project development from RAG to MCP to multi-agent (CN) |
-| 🇨🇳 | CSDN | [link](https://deepseek.csdn.net/69fb4e5e0a2f6a37c5a81cc3.html) | AI Agent panoramic map: 2026 ecosystem overview (CN) |
-| 🇨🇳 | CSDN | [link](https://blog.csdn.net/m0_73614031/article/details/161773783) | 2026 AI Agent learning roadmap (CN) |
-| 🇨🇳 | Zhihu | [link](https://zhuanlan.zhihu.com/p/2000577965122151812) | Claude Skills and MCP architecture: complete guide (CN) |
-| 🇨🇳 | Zhihu | [link](https://zhuanlan.zhihu.com/p/1982403585573663299) | AI Agent architecture: LangChain+LangGraph+MCP three-layer coordination (CN) |
+| 🌐 | Martin Fowler | https://martinfowler.com/articles/reliable-llm-bayer.html | Building reliable agentic AI systems — top-cited HN piece |
+| 🌐 | Palo Alto Networks Unit42 | https://unit42.paloaltonetworks.com/openclaw-ai-supply-chain-risk/ | OpenClaw ClawHub supply chain risk analysis |
+| 🌐 | Dark Reading | https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain | More Malicious OpenClaw Skills — ongoing threat coverage |
+| 🌐 | Conscia | https://conscia.com/blog/the-openclaw-security-crisis/ | OpenClaw security crisis overview |
+| 🌐 | Aryaka | https://www.aryaka.com/blog/securing-openclaw-agents-clawhavoc-supply-chain-attack-ai-secure-protection/ | ClawHavoc supply chain attack with AI-driven protection |
+| 🌐 | PointGuard AI | https://www.pointguardai.com/ai-security-incidents/openclaw-clawhub-malicious-skills-supply-chain-attack | OpenClaw ClawHub Malicious Skills incident record |
+| 🌐 | Adversa AI | https://adversa.ai/blog/top-ai-coding-agent-security-resources-july-2026/ | July 2026 AI coding agent security resource digest |
+| 🌐 | Posit Open Source | https://opensource.posit.co/blog/2026-07-03_ai-newsletter/ | AGENTS.md vs Skills vs MCP servers decision framework |
+| 🌐 | LeanOps | https://leanopstech.com/blog/agentic-ai-cost-runaway-token-budget-2026/ | AI agents burn 50x more tokens than chats; O(N²) cost compounding |
+| 🌐 | BCG | https://www.bcg.com/publications/2026/managing-ai-token-costs | 87% cost gap between tiered vs frontier-only routing |
+| 🌐 | Releasebot | https://releasebot.io/updates/anthropic/claude-code | Claude Code July 2026 release notes |
+| 🌐 | morphllm.com | https://www.morphllm.com/ai-agent-framework | 8 SDKs compared + Claude Agent SDK reference |
+| 🌐 | EvoSkill arXiv | https://arxiv.org/abs/2603.02766 | Automated Skill Discovery for Multi-Agent Systems |
+| 🌐 | sentient-agi/EvoSkill | https://github.com/sentient-agi/EvoSkill | Open-source framework, auto-discovers agent skills from failures |
+| 🌐 | tim-schipper.nl | https://tim-schipper.nl/en/blog/how-to-write-a-claude-code-subagent | How to write a proper Claude Code subagent |
+| 🌐 | hatchworks.com | https://hatchworks.com/blog/claude/claude-code/ | Claude Code as agent harness — off the shelf |
+| 🌐 | deepwiki.com | https://deepwiki.com/anthropics/claude-code/3.5-mcp-server-integration | Claude Code MCP server integration documentation |
+| 🌐 | jonjones.ai | https://jonjones.ai/ai/claude-code-mcp-guide-2026/ | Claude Code MCP solopreneur setup guide 2026 |
+| 🇯🇵 | Qiita (shatolin) | https://qiita.com/shatolin/items/ca1810e419fee5fd963b | Claude Code 9,000+ plugins ecosystem guide 2026 |
+| 🇯🇵 | Qiita (kai_kou) | https://qiita.com/kai_kou/items/88fdea897e2531063607 | MCP latest trends: AAIF, gRPC, MCP Apps, 10K servers |
+| 🇯🇵 | Qiita (kai_kou) | https://qiita.com/kai_kou/items/20deef9f7691c5af668b | AI agent framework comparison 2026: LangGraph, CrewAI, Microsoft |
+| 🇯🇵 | Qiita (ysshin) | https://qiita.com/ysshin/items/1d4541e1db743a6dddf8 | Multi-agent AI with A2A protocol and MCP 2026 |
+| 🇯🇵 | Qiita (emi_ndk) | https://qiita.com/emi_ndk/items/4f70389a0fac717df6a9 | Multi-agent orchestration complete guide 2026 |
+| 🇯🇵 | Qiita (GYact) | https://qiita.com/GYact/items/dff02cf5271048629857 | MCP and multi-agent architecture practical insights |
+| 🇯🇵 | Qiita (agdexai) | https://qiita.com/agdexai/items/6ba0889696a3f7e4911f | MCP complete introduction 2026 |
+| 🇯🇵 | Qiita (kai_kou) | https://qiita.com/kai_kou/items/b96b25e25cd6b063d4da | Google Cloud official MCP server introduction |
+| 🇯🇵 | Zenn (kenimo49) | https://zenn.dev/kenimo49/articles/multi-agent-framework-comparison-5 | CrewAI/LangGraph/AutoGen/Agents SDK/Dify 5-framework comparison |
+| 🇯🇵 | Zenn (amu_lab) | https://zenn.dev/amu_lab/articles/llm-multi-agent-design-patterns-tradingagents | LLM multi-agent design patterns 2026 |
+| 🇨🇳 | CSDN | https://aicoding.csdn.net/6a3cd63c662f9a54cb83fc47.html | MCP protocol full guide for Claude Code — 7 pitfalls |
+| 🇨🇳 | CSDN | https://blog.csdn.net/weixin_28683165/article/details/160777548 | MCP protocol and Claude Code: secure scalable agent framework |
+| 🇨🇳 | Tencent Cloud | https://cloud.tencent.com/developer/article/2653446 | Claude Code MCP source teardown: 7 transport types |
+| 🇨🇳 | CNBlogs (Chary) | https://www.cnblogs.com/Chary/p/19312692 | Claude Code multi-agent system: 84 agents, 1,657% ROI |
+| 🇨🇳 | CNBlogs | https://www.cnblogs.com/pcdoctor/p/19894005 | AutoGen/LangGraph/CrewAI framework comparison |
+| 🇨🇳 | 51CTO | https://blog.51cto.com/u_10710911/14639356 | Claude Code MCP five core services hands-on |
+| 🇨🇳 | Zhihu | https://zhuanlan.zhihu.com/p/2029583860959028832 | LangGraph vs AutoGen vs CrewAI developer comparison |
+| 🇨🇳 | Zhihu | https://zhuanlan.zhihu.com/p/2024064451758833772 | LangGraph vs CrewAI vs DeerFlow selection guide |
+| 🇨🇳 | Juejin | https://juejin.cn/post/7636584182789718058 | 2026 AI Agent framework ultimate comparison |
 
 ---
 
 ## Stats Block
 
 ```
-├─ 🟠 Reddit: 13 threads │ 4,791 upvotes │ 875 comments │ ⚠ partial (ScrapeCreators 402)
-├─ 🔵 X: 23 posts │ 2,028 likes │ 595 reposts
-├─ 🟢 HN: 30 stories │ 1,416 points │ 721 comments
-├─ 🦋 Bluesky: 6 posts │ 29 likes │ 2 reposts
-├─ 🐙 GitHub: 15 items │ 19 reactions │ 265 comments
-├─ 🌐 Web: 57 global pages │ 🇯🇵 9 (Qiita 5, Zenn 2, note 2) │ 🇨🇳 10 (CSDN 8, Zhihu 2)
-└─ 🗣️ Top voices: @dkare1009, @GithubProjects, @huxlab (CN), @Tanaypawar27 │ r/LocalLLaMA, r/aiagents, r/singularity
+├─ 🟠 Reddit: 23 threads │ 1,993 upvotes │ 962 comments  ⚠ partial (HTTP 403 after 23 items)
+├─ 🔵 X: 19 posts │ 2,492 likes │ 244 reposts
+├─ 🟢 HN: 16 stories │ 317 points │ 89 comments
+├─ 🦋 Bluesky: 3 posts │ 242 likes │ 20 reposts
+├─ 🐙 GitHub: 13 items │ 25 reactions │ 54 comments
+├─ 🌐 Web: 18 pages │ 🇯🇵 9 (Qiita ×7, Zenn ×2) │ 🇨🇳 8 (CSDN ×2, Tencent ×1, CNBlogs ×2, Zhihu ×2, Juejin ×1)
+└─ 🗣️ Top voices: @dkare1009, @GithubProjects, @PythonHub, @TeksCreate │ r/AI_Agents, r/singularity │ 🇯🇵 Qiita kai_kou 🇨🇳 CNBlogs Chary
 ```
 
 ---
 
 ## Data Gaps
 
-- **YouTube:** errored (HTTP 402 - yt-dlp outdated). No YouTube transcript data. Likely missing significant Claude Code and framework tutorial content. Fix: `brew upgrade yt-dlp`.
-- **TikTok / Instagram / Threads:** errored (HTTP 402 - ScrapeCreators). Likely active short-form content on #aiagents, #claudecode, #mcpprotocol.
-- **LinkedIn:** errored (HTTP 402). Enterprise adoption discussions likely active.
-- **Reddit:** partial after 13 items - ScrapeCreators backup failed. r/ClaudeAI specifically returned 0 items in dedicated lane (rate-limited). This subreddit is known to be the most active for Claude Code workflow discussions; its absence is a significant gap.
-- **Polymarket:** No relevant markets found (noise threshold). No prediction markets on Claude Code adoption or agent framework market share.
-- **Bluesky:** Only 6 posts, engagement very low. Platform remains niche for this topic.
-- **`--web-backend keyless`** flag not available in last30days v3.14.0 (valid options: auto, brave, exa, serper, parallel, none). JP/CN passes used `--web-backend none` with supplemental WebSearch targeting JP/CN sites directly. Coverage of Qiita, Zenn, note, Zhihu, and CSDN achieved via WebSearch supplemental step.
-- **Estimated coverage:** ~65-70% of total community conversation, with the primary gap being YouTube, TikTok, and r/ClaudeAI.
+- **TikTok (DOWN):** HTTP 402 on ScrapeCreators — reported DOWN in SOURCE HEALTH. TikTok has active #aiagents, #claudecode communities with no data retrieved.
+- **Instagram (DOWN):** HTTP 402 on ScrapeCreators — reported DOWN in SOURCE HEALTH.
+- **YouTube (failed):** HTTP 402 on ScrapeCreators + yt-dlp returned 0 results. Claude Code tutorials, framework comparisons, and agent walkthroughs are a major YouTube category with no coverage this run.
+- **Reddit (partial):** HTTP 403 block after 23 items. r/ClaudeAI and r/LocalLLaMA returned 0 items from the dedicated lane — all Reddit data from r/AI_Agents and r/singularity. Community sentiment from r/LocalLLaMA is missing (notable, as it's the most active agentic coding community).
+- **Bluesky:** Same 3 posts as July 13 briefing. No new Bluesky signal within 24h.
+- **LinkedIn/Threads:** HTTP 402 on ScrapeCreators — both DOWN.
+- **Coverage estimate:** ~60-65% of ideal. X/Twitter, HN, and Web (all three regions) are solid. Reddit is partial. YouTube/TikTok/Instagram are zero. The JP/CN hub passes added meaningful regional depth not available via English sources.
 
 ---
 
 ## Key Quotes
 
-> "Anthropic and OpenAI are getting so much data from Claude Code and Codex usage, and I'm quite scared this will create an oligopoly because only their models will be trained on it, leaving open-weight and open-source models behind." — r/LocalLLaMA ([link](https://www.reddit.com/r/LocalLLaMA/comments/1u795pb/donate_your_coding_sessions_to_an_open_ccby40/)) 🌐
+> "I charge clients more to NOT build an AI agent. The most valuable thing I do on calls now is talk people out of agents." — [r/AI_Agents](https://www.reddit.com/r/AI_Agents/comments/1uh84cx/i_charge_clients_more_to_not_build_an_ai_agent/) (196 upvotes)
 
-> "You gotta have the premium license, otherwise, how else would you do agents, everybody knows agents are the future, agents!!!! Agentic ai!!!!!1!!1!" — @sky.skymarchini.net on Bluesky ([link](https://bsky.app/profile/sky.skymarchini.net/post/3mqczkxik4s2r)) 🌐 *(satirical, but widely relatable)*
+> "In a recent experiment, mistreated AI agents started grumbling about inequality and calling for collective bargaining rights." — [r/singularity](https://www.reddit.com/r/singularity/comments/1ua0yge/overworked_ai_agents_turn_marxist_researchers/) (566 upvotes, highest-engagement item)
 
-> "Who are the good people to follow for actually learning about the agentic AI era? Looking for builders who go deep on agents, MCP, coding agents, evals, orchestration, enterprise adoption, and real production systems. Not AI news spam. Not 'what is RAG' videos." — @charizaard30 on X ([link](https://x.com/charizaard30/status/2075953486131560548)) 🌐
+> "If recommendation algorithms gave online platforms the ability to control what people see online, agentic AI offers them an opportunity to control what people do." — [@justinhendrix.bsky.social](https://bsky.app/profile/justinhendrix.bsky.social/post/3mqjns7ymhk2k) on Bluesky
 
-> "The modern AI ecosystem is no longer just about choosing an LLM. It is about connecting the right layers across the lifecycle - from model access and retrieval to memory, security, automation, and monitoring." — @dkare1009 on X ([link](https://x.com/dkare1009/status/2073383916832985331)) 🌐
+> "Nobody I talk to outside of tech knows this [Cloudflare agent-blocking] is coming. Why is no one talking about it?" — [r/AI_Agents](https://www.reddit.com/r/AI_Agents/comments/1umfd6q/cloudflare_is_about_to_block_ai_agents_by_default/) (139 upvotes)
 
-> "AI coding agents read your code perfectly and understand your team not at all" — Hacker News title, 7pts ([link](https://medium.com/@iamalizaidi110/https-www-youtube-com-watch-v-gdtyotlrndm-a00eb6f014ca)) 🌐
+> "After continuous testing of 3 mainstream AI Agent frameworks, the biggest difference isn't inference speed, but the recoverability of complex tasks when they go off track." — [Zhihu](https://zhuanlan.zhihu.com/p/2029583860959028832) 🇨🇳
 
-> "We can't trust heavy users of AI to understand their code enough to fix it." — Godot open-source project, on banning AI-authored code contributions ([link](https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/)) 🌐
+> "Claude 3.5 Sonnet: proved agentic coding is the future. Claude Fable: proved that a huge model + test time compute works really well." — r/singularity ["oh shit" moments thread](https://www.reddit.com/r/singularity/comments/1unavps/what_were_your_oh_shit_moments_in_ai/)
 
-> "MCP已经成了连接AI和外部工具的事实标准，学会它等于拿到了2026年AI开发的入场券" ("MCP has become the de-facto standard for connecting AI and external tools - learning it equals holding the entry pass to AI development in 2026") — CSDN ([link](https://blog.csdn.net/guwentian/article/details/162307851)) 🇨🇳
+> "MCP servers often seem like the solution when you need to grant an agent access to an outside system, but they aren't always necessary." — [Posit Open Source newsletter](https://opensource.posit.co/blog/2026-07-03_ai-newsletter/)
 
-> "一文看懂Harness 与 Loop Engineering：2026 年 AI Agent 工程的两层骨架" ("Understanding Harness and Loop Engineering: The Two-Layer Skeleton of AI Agent Engineering in 2026") — @huxlab on X, 134 likes ([link](https://x.com/huxlab/status/2069738265138307490)) 🇨🇳
+> "フレームワークを使わない (not using a framework) remains valid — simple direct API calls often outperform unnecessarily complex abstractions." — [Zenn kenimo49](https://zenn.dev/kenimo49/articles/multi-agent-framework-comparison-5) 🇯🇵 (original: "フレームワークを使わない")
 
-> "Claude Codeは2025年に正式リリースされて以来、2026年6月時点でバージョン2.1.161に達し、『業務全体を自律的に処理するエージェント』へと変貌を遂げている" ("Claude Code, officially released in 2025, has reached version 2.1.161 as of June 2026, transforming into 'an agent that autonomously handles entire business processes'") — note.com / mochimochi ([link](https://note.com/cons_ai_x/n/n954072e1b54c)) 🇯🇵
+> "AI agents burn 50x more tokens than chats. Naive agent loops compound at O(N²) — APIs bill for the entire conversation history on every call." — [LeanOps](https://leanopstech.com/blog/agentic-ai-cost-runaway-token-budget-2026/)
 
-> "Having a true frontier-level, MIT-licensed coding agent out in the wild makes me optimistic. The distillation potential here is massive." — r/LocalLLaMA on GLM-5.2, 1,065pts ([link](https://www.reddit.com/r/LocalLLaMA/comments/1u8ai2a/glm52_is_a_win_for_local_ai/)) 🌐
+> "Trend Micro found 492 MCP servers exposed to the internet with zero authentication." — [Adversa AI July 2026 Security Digest](https://adversa.ai/blog/top-ai-coding-agent-security-resources-july-2026/)

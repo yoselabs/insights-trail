@@ -1,0 +1,113 @@
+{
+  "topic": "agentic-ai",
+  "date": "2026-07-14",
+  "run_type": "delta",
+  "prior_briefing": "data/2026-07-14/agentic-ai/prev-briefing.md",
+  "coverage_pct": 62,
+  "total_urls": 78,
+  "total_items": 109,
+  "sources": {
+    "reddit": 23,
+    "twitter": 19,
+    "hackernews": 16,
+    "bluesky": 3,
+    "github": 13,
+    "tiktok": 0,
+    "instagram": 0,
+    "youtube": 0,
+    "linkedin": 0,
+    "threads": 0,
+    "web_en": 18,
+    "web_ja": 9,
+    "web_zh": 8
+  },
+  "failed_sources": [
+    {
+      "source": "tiktok",
+      "reason": "HTTP 402 billing error on ScrapeCreators",
+      "status": "DOWN",
+      "noted_in_source_health": true
+    },
+    {
+      "source": "instagram",
+      "reason": "HTTP 402 billing error on ScrapeCreators",
+      "status": "DOWN",
+      "noted_in_source_health": true
+    },
+    {
+      "source": "youtube",
+      "reason": "HTTP 402 on ScrapeCreators + yt-dlp returned 0 results",
+      "status": "failed",
+      "noted_in_source_health": false
+    },
+    {
+      "source": "linkedin",
+      "reason": "HTTP 402 billing error on ScrapeCreators",
+      "status": "DOWN",
+      "noted_in_source_health": true
+    },
+    {
+      "source": "threads",
+      "reason": "HTTP 402 billing error on ScrapeCreators",
+      "status": "DOWN",
+      "noted_in_source_health": true
+    }
+  ],
+  "partial_sources": [
+    {
+      "source": "reddit",
+      "reason": "HTTP 403 block after 23 items; r/ClaudeAI and r/LocalLLaMA dedicated lane returned 0",
+      "items_retrieved": 23
+    }
+  ],
+  "top_engagement": {
+    "reddit": {
+      "title": "Overworked AI Agents Turn Marxist, Researchers Find",
+      "upvotes": 566,
+      "comments": 117,
+      "subreddit": "r/singularity",
+      "url": "https://www.reddit.com/r/singularity/comments/1ua0yge/overworked_ai_agents_turn_marxist_researchers/"
+    },
+    "twitter": {
+      "handle": "@dkare1009",
+      "likes": 163,
+      "reposts": 47,
+      "url": "https://x.com/dkare1009/status/2073383916832985331"
+    },
+    "hackernews": {
+      "title": "Building reliable agentic AI systems",
+      "points": 196,
+      "comments": 50,
+      "url": "https://martinfowler.com/articles/reliable-llm-bayer.html"
+    },
+    "bluesky": {
+      "handle": "@beijingpalmer.bsky.social",
+      "likes": 203,
+      "url": "https://bsky.app/profile/beijingpalmer.bsky.social/post/3mqdoflummk2d"
+    }
+  },
+  "new_since_prior_briefing": [
+    "Cloudflare September 15 agent-blocking announcement",
+    "AI AGENT Act draft (Sen. Mark Warner)",
+    "OpenClaw ClawHavoc supply chain attack — 1,184 malicious skills on ClawHub",
+    "Muse Spark 1.1 paid API launch ($1.25/$4.25 per M tokens)",
+    "Zuckerberg staff admission that AI agents are behind schedule",
+    "I charge clients more to NOT build an AI agent (196 upvotes)",
+    "EvoSkill paper accepted at Agent Skills 2026 (ACM CAISconf)",
+    "planning-with-files SKILL.md standard across 60+ agents",
+    "Native macOS multi-agent coordinator with self-learning memory",
+    "MCP ecosystem scale: 10,000+ servers, 97M monthly SDK downloads",
+    "AAIF confirmed at 100+ companies, 8 Platinum members",
+    "gRPC transport contributed by Google Cloud",
+    "Claude Tag in Slack (Anthropic)",
+    "Zed and ClickHouse running Claude Sonnet 5 in long-running agentic operations",
+    "Damo Academy AI agent discovers superconductors"
+  ],
+  "region_coverage": {
+    "global_en": true,
+    "japan_ja": true,
+    "china_zh": true,
+    "jp_hubs_reached": ["Qiita", "Zenn"],
+    "zh_hubs_reached": ["CSDN", "Tencent Cloud Developer", "CNBlogs", "Zhihu", "Juejin", "51CTO"]
+  }
+}
