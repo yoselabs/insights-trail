@@ -1,0 +1,22 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-15",
+  "coverage_pct": 62,
+  "total_urls": 38,
+  "sources": {
+    "x": 28,
+    "hackernews": 12,
+    "bluesky": 11,
+    "web_global": 22,
+    "github": 2,
+    "reddit": 1,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "linkedin", "polymarket"],
+  "notes": "Reddit partial (HTTP 403 after 1 item). YouTube zero results across all query variants. JP/CN sweeps skipped per topic instructions. Strong web supplement coverage for Microsoft/Uber token-cost stories and M&A data (Crunchbase, Forbes, CNBC). Prior briefing delta: 7 findings tagged [new]/[update], rest collapsed to Still-true. Key new signals: Microsoft $2.5B implementation unit + Claude Code license cancellations; SpaceX/Cursor $60B acquisition; Uber $3.4B budget / COO skepticism; IBM 99% workforce reduction expectation; 108% YoY AI cost surge."
+}
