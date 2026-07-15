@@ -1,0 +1,60 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-15",
+  "run_completed": true,
+  "coverage_pct": 72,
+  "total_urls": 97,
+  "source_counts": {
+    "reddit": 7,
+    "x_twitter": 38,
+    "hackernews": 34,
+    "polymarket": 2,
+    "github": 0,
+    "web_global": 19,
+    "web_jp": 10,
+    "web_cn": 12,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0
+  },
+  "failed_sources": [
+    "reddit_partial",
+    "youtube",
+    "bluesky",
+    "tiktok",
+    "instagram"
+  ],
+  "partial_sources": {
+    "reddit": "HTTP 403 after 7 items; expected 30+",
+    "web_cn": "Zhihu paywalled (HTTP 403); content recovered via DDG snippets"
+  },
+  "delta_summary": {
+    "new_findings": 13,
+    "update_findings": 3,
+    "ongoing_findings": 5
+  },
+  "top_signals": [
+    "DeepSeek raising $1.5B at $71B valuation; planning China IPO",
+    "DeepSeek developing own inference chip (Reuters confirmed, ~1 year project)",
+    "CXMT IPO at $9.8B — US HBM export controls built the business case",
+    "Anthropic-Alibaba distillation war: 28.8M interactions, 25K fake accounts; ban July 10",
+    "Xi Jinping WAIC 2026 keynote (July 17-20) — open-source AI as Chinese foreign policy",
+    "BIS Kessler: H200 shipments to China 'trivial'; Nvidia halved Asia buyer list",
+    "arXiv 2606.15999: US export controls unintentionally accelerated Chinese open AI ecosystems",
+    "Chinese LLMs led OpenRouter 11 consecutive weeks (61% peak token share)",
+    "Proton LUMO 2.0 switches from Mistral to Qwen/GLM",
+    "New CAC anthropomorphic AI rules effective July 15; ByteDance+Alibaba disable features"
+  ],
+  "polymarket_odds": {
+    "us_removes_chinese_ai_access_2026": 0.78,
+    "us_bans_open_source_model_2026": 0.76
+  },
+  "prior_briefing": "data/2026-07-15/open-models-geopolitics/prev-briefing.md",
+  "raw_files": [
+    "data/2026-07-15/open-models-geopolitics/raw.md",
+    "data/2026-07-15/open-models-geopolitics/raw.ja.md",
+    "data/2026-07-15/open-models-geopolitics/raw.zh.md"
+  ],
+  "notes": "YouTube returned 0 results across all retry attempts. Bluesky returned 0 posts (SOURCE HEALTH listed bluesky=OK; genuine thin coverage for this topic). Reddit hit HTTP 403 after 7 threads — approximately 23+ expected threads missing. Zhihu's primary mid-year report returned HTTP 403; content recovered via DuckDuckGo snippet summaries. XenoSpectrum Japanese article also 403. TikTok/Instagram not configured (ScrapeCreators absent). Chinese hub research (Zhihu, CSDN, OFOX, Guancha, EET-China) was the strongest non-English pass."
+}
