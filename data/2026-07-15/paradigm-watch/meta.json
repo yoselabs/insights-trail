@@ -1,0 +1,22 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-07-15",
+  "coverage_pct": 78,
+  "total_urls": 47,
+  "sources": {
+    "reddit": 1,
+    "x": 51,
+    "hackernews": 16,
+    "bluesky": 5,
+    "github": 18,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_global": 18,
+    "web_jp": 7,
+    "web_cn": 6
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram"],
+  "notes": "Reddit partial (HTTP 403 after 1 item; r/MachineLearning missed). YouTube returned 0 results for research architecture terms. TikTok/Instagram: ScrapeCreators not configured. Ars Technica and AP News URLs confirmed but direct fetch blocked; content validated via supplementary searches. CSDN article HTTP 521. JP pass: 7 pages from Zenn/Hatena via DDG HTML + WebSearch JP. CN pass: 6 pages from Juejin/Zhihu/Paper.cn via DDG HTML + WebSearch CN. Key new findings: ICML 2026 both Outstanding Papers on diffusion models; NVIDIA Fast-dLLM 27.6x speedup; Mercury 2 commercial dLLM; World Labs Marble commercial product; MIT-IBM PaTH NC1-complete architecture; CoFrGeNets confirmed at ICML 2026 Seoul."
+}
