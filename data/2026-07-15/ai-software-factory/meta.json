@@ -1,0 +1,22 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-15",
+  "coverage_pct": 70,
+  "total_urls": 58,
+  "sources": {
+    "reddit": 7,
+    "x_twitter": 19,
+    "hackernews": 24,
+    "github": 24,
+    "web_global": 18,
+    "web_jp": 5,
+    "web_cn": 6,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram"],
+  "notes": "Reddit partial (HTTP 403 after 7 items); YouTube returned 0 results; Bluesky returned 0 on-topic results; TikTok/Instagram not configured (no ScrapeCreators key); Zhihu direct fetch 403 on 2 articles (content from snippets); CSDN redirect on 1 article. GitHub items mostly noise (issue #2026 collision across unrelated repos). JP pass: Zenn, Qiita, note.com, CodeRabbit JP, ST-Hakky all successfully fetched. CN pass: Zhihu and CSDN via DuckDuckGo HTML + WebSearch. bluesky=OK per SOURCE HEALTH but no on-topic results found."
+}
