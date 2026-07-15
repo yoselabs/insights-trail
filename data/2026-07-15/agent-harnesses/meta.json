@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-07-15",
+  "coverage_pct": 68,
+  "total_urls": 52,
+  "sources": {
+    "reddit": 13,
+    "x": 15,
+    "hackernews": 34,
+    "bluesky": 11,
+    "github": 2,
+    "web_global": 22,
+    "web_jp": 10,
+    "web_cn": 10,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "Reddit partial after 13 items (HTTP 403). YouTube returned 0 results (yt-dlp no matches). ScrapeCreators not configured (TikTok/Instagram unavailable). Polymarket 0 markets. Several CN pages blocked (CSDN 521, Zhihu 403, lushbinary 403). Key new finds: Mozilla Otari (July 6 launch), Grok Build (May 2026), OpenHarness (HKUDS 14.8K stars), AutoHarness (governance framework), Warp Oz multi-harness orchestration, Google Antigravity 2.0, agent pricing crisis (60x cost gap). JP/CN hub passes via DuckDuckGo HTML + WebFetch — 10 JP pages (Qiita, note, ai-native.jp, claudelab.jp, funnel-ai.jp) and 10 CN pages (CSDN, Zhihu, Tencent Cloud, AWS China, ai-bot.cn). bluesky=OK per SOURCE HEALTH."
+}
