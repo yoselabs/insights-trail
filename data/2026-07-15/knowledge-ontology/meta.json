@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-15",
+  "coverage_pct": 65,
+  "total_urls": 45,
+  "sources": {
+    "reddit": 17,
+    "x": 16,
+    "hackernews": 12,
+    "bluesky": 3,
+    "github": 5,
+    "web_global": 22,
+    "web_jp": 10,
+    "web_cn": 8,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram"],
+  "notes": "ScrapeCreators 402 (billing) — TikTok/Instagram/LinkedIn zero. YouTube returned 0 results despite yt-dlp available. Reddit partial after 17 items (HTTP 403). Bluesky backend OK but thin yield (3 posts). CN Zhihu direct fetch returned 403; content reconstructed from snippets. Key new findings: Microsoft Memora (ICML 2026, new SOTA), LangChain Wiki Memory, Huawei JiuwenMemory, AgentPrizm enterprise governance launch. JP/CN passes ran via WebFetch DuckDuckGo HTML + WebSearch."
+}
