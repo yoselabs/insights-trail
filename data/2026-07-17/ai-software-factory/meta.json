@@ -1,0 +1,23 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-17",
+  "coverage_pct": 68,
+  "total_urls": 52,
+  "sources": {
+    "web_global": 38,
+    "web_jp": 4,
+    "web_cn": 4,
+    "hackernews": 6,
+    "arxiv": 8,
+    "github": 3,
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "bluesky"],
+  "notes": "last30days skill not registered in environment; research manual via WebSearch+WebFetch. HN rate-limited (429) — stories sourced via secondary coverage. Reddit user-agent blocked (400). Zhihu 403 on 2 new articles; Mizuho DX 403; Reinforz.co.jp connection refused. Strong coverage: AIEWF 2026 Docker/Latent.Space posts, NSA MCP CSI, ShareLock/Agentjacking/AmazonQ CVEs, Microsoft Conductor, Bernstein, McKinsey SDD, CN market data from Juejin+CSDN. JP: 2 new note.com fetches (AWS Summit JP, AIEWF JP report). Bluesky=OK per SOURCE HEALTH but no topic-relevant results found."
+}
