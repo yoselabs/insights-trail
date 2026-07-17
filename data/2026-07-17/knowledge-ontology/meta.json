@@ -1,0 +1,27 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-17",
+  "coverage_pct": 60,
+  "total_urls": 57,
+  "sources": {
+    "hackernews": 3,
+    "twitter": 1,
+    "bluesky": 0,
+    "reddit": 0,
+    "web_global": 38,
+    "web_jp": 7,
+    "web_cn": 9,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": [
+    "reddit",
+    "tiktok",
+    "instagram",
+    "youtube",
+    "bluesky_thin"
+  ],
+  "notes": "last30days skill unavailable; research via WebSearch+WebFetch. Reddit blocked (400 - domain not accessible). HN rate-limited (429) - snippets only. Zhihu/Substack/HN direct fetches returned 403. Bluesky=OK per SOURCE HEALTH but 0 new posts identified since July 15. ScrapeCreators 402 (billing) for TikTok/Instagram. Eywa, MemDelta, LongMemEval-V2, ZenBrain, POLE+O, Memory-as-Ontology are the main [new] findings. Zep enterprise compliance and MCP memory gap are [update] findings. Prior briefing delta discipline applied throughout."
+}
