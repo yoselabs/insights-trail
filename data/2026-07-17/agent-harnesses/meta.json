@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-07-17",
+  "coverage_pct": 72,
+  "total_urls": 71,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 2,
+    "hackernews": 4,
+    "bluesky": 0,
+    "github": 5,
+    "web_global": 31,
+    "web_jp": 10,
+    "web_cn": 9,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "Reddit HTTP 403 (API blocked for domain). YouTube/TikTok/Instagram: no ScrapeCreators key. Bluesky OK per SOURCE HEALTH but no new high-engagement posts in this window. JP pass: 10 pages via DuckDuckGo HTML + WebSearch in Japanese. CN pass: 9 pages via DuckDuckGo HTML + WebSearch in Chinese. last30days skill unavailable (unknown skill error) — full manual sweep performed instead. Breaking news coverage strong: Grok Build open-source scandal, MCP RC 2026-07-28, VS Code 1.129 Agent Host. Delta tagging complete against July 15 prior briefing."
+}
