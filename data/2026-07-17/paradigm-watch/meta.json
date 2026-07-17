@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-07-17",
+  "coverage_pct": 75,
+  "total_urls": 57,
+  "sources": {
+    "hackernews": 24,
+    "github_trending": 8,
+    "huggingface_models": 5,
+    "huggingface_papers": 26,
+    "techmeme": 8,
+    "web_global": 21,
+    "web_jp": 14,
+    "web_cn": 8,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "bluesky", "youtube"],
+  "notes": "last30days skill not registered; full manual sweep performed. DuckDuckGo HTML returned CAPTCHA for complex queries; switched to native WebSearch in JP/CN. HN SubQ thread rate-limited (HTTP 429). CSDN direct access blocked on one URL (HTTP 521). Reddit blocked. Bluesky not swept in manual run. Three new paradigm findings: SubQ (subquadratic attention), Fujitsu PHOTON (hierarchical processing, ACL 2026), PrismML Ternary Bonsai 27B (1.58-bit weights). World models: 4 new HF trending papers. No new dLLM milestone. All bluesky=OK from SOURCE HEALTH; gap is manual-run limitation not backend failure."
+}
