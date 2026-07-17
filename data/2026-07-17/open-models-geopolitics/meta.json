@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-17",
+  "coverage_pct": 68,
+  "total_urls": 62,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "hackernews": 6,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 2,
+    "web_global": 43,
+    "web_jp": 4,
+    "web_cn": 8
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky"],
+  "notes": "last30days skill unavailable; manual WebSearch+WebFetch sweep. Reddit and X not accessed this cycle — major gap vs prior briefing's 38 X posts and 7 Reddit threads. Bluesky returned 0 results (SOURCE HEALTH: OK but topic is X-concentrated). Two Zhihu articles returned HTTP 403; content recovered via DDG snippets only. Two CSDN article bodies returned server errors. Tom's Hardware Atlas SuperPods story paywalled. Kimi K3 (2.8T, released July 16-17) is the dominant new story; WAICO formation (29 nations, July 16) is the institutional geopolitics story. Three Chinese open-weight models released in 10 days: Hy3 (July 7), DeepSeek V4 official (mid-July), Kimi K3 (July 16-17). JP hubs covered via Qiita, note.com, ebisuda.net, ai-revolution.co.jp. CN hubs covered via CSDN, Zhihu snippets, aitoollab.cn, 10100.com, Global Times."
+}
