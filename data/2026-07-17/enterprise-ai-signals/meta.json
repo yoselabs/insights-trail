@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-17",
+  "coverage_pct": 55,
+  "total_urls": 40,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 40,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "reddit", "x_twitter", "hackernews", "bluesky", "youtube"],
+  "notes": "last30days skill unavailable (Unknown skill error) — social platform sweep not performed. JP/CN passes skipped per topic instructions. 3 WebFetch 403s: qz.com, blackstone.com, writer.com/blog. Bluesky=OK per SOURCE HEALTH but not queried due to skill unavailability. 40+ web pages fetched via direct WebSearch + WebFetch. Strong primary source coverage for all new findings (Ode $1.5B, Tesla cap, Gartner $234B, Revolut PRAGMA, Fireworks $1.5B Series D, Deloitte N=3235, Writer N=2400, JPMorgan Bloomberg). Coverage gap is social platforms only — core hard signals unaffected."
+}
