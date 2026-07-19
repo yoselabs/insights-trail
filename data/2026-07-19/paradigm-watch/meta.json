@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-07-19",
+  "coverage_pct": 80,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 30,
+    "github_trending": 8,
+    "huggingface_models": 5,
+    "huggingface_papers": 15,
+    "techmeme": 5,
+    "web_global": 18,
+    "web_jp": 9,
+    "web_cn": 10,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "bluesky"],
+  "notes": "/last30days skill not registered (same as prior run); manual sweep. Bluesky=OK per source health but not swept (no auth endpoint for trending without skill). Reddit blocked HTTP. Zhihu hot list HTTP 403; Juejin JS wall; CSDN HTTP 521 — compensated via WebSearch in CN. DuckDuckGo HTML partially CAPTCHA-blocked for JP/CN queries — switched to native-language WebSearch (equivalent coverage). HN CDC thread rate-limited. 2 new paradigm findings: GPT-5.6 math proofs [new] + From Pixels to States world model paper [update]; ongoing: Ternary Bonsai, SubQ, PHOTON, world model research velocity."
+}
