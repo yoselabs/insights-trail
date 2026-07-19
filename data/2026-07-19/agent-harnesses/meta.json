@@ -1,0 +1,21 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-07-19",
+  "coverage_pct": 68,
+  "total_urls": 62,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 1,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "github": 5,
+    "web_global": 38,
+    "web_jp": 12,
+    "web_cn": 11
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "last30days skill unavailable — manual WebSearch+WebFetch sweep conducted. Reddit HTTP 403 persistent. HN July 18-19 front page HTTP 429 rate-limited. YouTube/TikTok/Instagram not scanned (no ScrapeCreators key). Bluesky OK per SOURCE HEALTH but no new high-engagement posts. Zhihu HTTP 403 for deep pages; DDG snippets used. Juejin dynamic JS pages returned placeholder. Coverage strong on GitHub/web/JP/CN harness engineering articles; gaps from social media, YouTube tutorials."
+}
