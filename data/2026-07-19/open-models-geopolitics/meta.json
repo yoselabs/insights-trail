@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-19",
+  "coverage_pct": 72,
+  "total_urls": 78,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 7,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_global": 43,
+    "web_jp": 10,
+    "web_cn": 15
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky_no_results"],
+  "notes": "last30days skill unavailable; direct WebSearch+WebFetch used. Reddit/X/YouTube not accessed this cycle — significant gap for community reaction to K3 distillation story and WAIC. Zhihu/Juejin/CSDN returned anti-scrape (403/521) for article bodies; content from DuckDuckGo snippets + aggregators. Polymarket US-ban market current odds unverifiable (header error on direct fetch). JP: Qiita articles found via site: search; Zenn/Hatena/note.com not found in this cycle (prior briefing note.com source retained). CN: Juejin titles available but full article bodies blocked. KEY NEW FINDINGS: Kimi K3 Claude self-ID incident; Huawei Atlas 950 SuperPoD full specs; Inkling (Thinking Machines, 975B, Apache 2.0) as leading US open-weight; DeepSeek chip targets Huawei independence; MiniMax M3 Pro (2.7T, Q3); EU AI Act enforcement August 2; Alibaba closes Qwen flagships. bluesky=OK per SOURCE HEALTH but returned no substantive topic results."
+}
