@@ -1,0 +1,24 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-19",
+  "coverage_pct": 70,
+  "total_urls": 71,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 3,
+    "web_global": 55,
+    "web_jp": 9,
+    "web_cn": 9,
+    "arxiv": 2,
+    "github": 1,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "x_twitter": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "partial_sources": ["hackernews", "bluesky"],
+  "notes": "last30days skill not registered; research via WebSearch + WebFetch. Reddit blocked (HTTP 400). X/Twitter excluded per instructions. HN direct fetch 429 rate-limited; only March-April 2026 threads found, no July threads on topic. Bluesky OK per SOURCE HEALTH but no on-topic bsky.app posts found. Anthropic PDF binary (reconstructed via secondary summaries). HCLTech page timed out. Zhihu article HTTP 403. JP pass: Zenn (long910 review-time inversion), note.com (yoichiro_shiba SDLC), Google Cloud Japan hackathon, Uravation observability guide. CN pass: AWS China CI&T AIDLC, Beijing Agent Summit GitHub, heyuan110 methodology comparison, Tencent Cloud observability stats, 36kr/Qbit snippets. Key new findings: Anthropic 2026 Agentic Coding Trends Report (8 trends, delegation gap), BCG Platinion factory benchmarks (Spotify 650 PRs/month, no code since Dec 2025), GuardFall (10/11 coding agents vulnerable to shell injection), Check Point Claude Code CVEs 2025-59536 + 2026-21852 (patched), MCP July 28 2026 RC going stateless, comprehensive MCP security stats (82% path traversal, 33% critical, 24k secrets), Microsoft Build 2026 (MDASH, MXC SDK, Azure SRE Agent GA), Vibe Coding reality check stats (8.25% correct+secure, 19% slower perception gap), CI&T AIDLC 4-stage maturity, 68% enterprise observability delay (Tencent Cloud CN)."
+}
