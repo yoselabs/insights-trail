@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-19",
+  "coverage_pct": 60,
+  "total_urls": 45,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 45,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "youtube", "tiktok", "instagram", "bluesky", "hackernews", "reddit"],
+  "notes": "last30days skill returned Unknown skill error (second consecutive run — July 17 and July 19). Social platform sweep (Reddit, X, HN, YouTube, Bluesky) not performed. Web-only run. New findings: Cisco 90K agent rollout + 4K layoffs; AI layoffs H1 tracker (101,743 AI-cited); SAP/Oxford N=2,600 Value of AI Report (July 15); Info-Tech N=551 (3x impact with formal strategy); Publicis Sapient N=1,550; McKinsey State of Orgs 2026 (72% genAI, up from 33%); Levelpath N=300 (AI procurement 2x longer); Microsoft 365 price increase July 1; Straiker $64M Series A; Harvey AI $200M at $11B. JP/CN sweeps skipped per topic instructions. bluesky=OK per SOURCE HEALTH but not queried due to skill unavailability."
+}
