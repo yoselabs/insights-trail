@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-19",
+  "coverage_pct": 70,
+  "total_urls": 69,
+  "sources": {
+    "x_twitter": 43,
+    "hackernews": 4,
+    "bluesky": 2,
+    "github": 12,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "web_global": 47,
+    "web_jp": 9,
+    "web_cn": 9,
+    "arxiv": 7
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "Reddit blocked (400); YouTube yt-dlp not configured; TikTok/Instagram ScrapeCreators 402 (billing); Zhihu direct fetch 403 (content from snippets); X/Twitter 43 posts found but only top 2 engagement-signals extracted; Bluesky=OK (thin yield, 2 posts); last30days engine ran successfully; JP/CN passes via free WebFetch/WebSearch (no paid backend); OKF is the dominant new signal — LangChain adoption (July 16) confirms spec-to-adoption in 34 days"
+}
