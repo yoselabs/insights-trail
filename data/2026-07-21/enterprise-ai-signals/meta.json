@@ -1,0 +1,29 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-21",
+  "coverage_pct": 62,
+  "total_urls": 48,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 48,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": [
+    "last30days_skill",
+    "youtube",
+    "hackernews",
+    "bluesky",
+    "tiktok",
+    "instagram",
+    "polymarket"
+  ],
+  "notes": "last30days skill unavailable (third consecutive run: 'Unknown skill: last30days'). Social platforms (Reddit/X/HN/YouTube/Bluesky) not covered — zero engagement metrics this run. Bluesky SOURCE HEALTH=OK but not queryable without skill. Coinbase blog (coinbase.com) and PwC AI Agent Survey (pwc.com) returned HTTP 403; content sourced from secondary reporting. JP/CN passes skipped per topic instructions. New primary findings: Coinbase AI-native org model (5 layers, one-person teams), Accenture Pulse of Change (N=3,650+3,350), PwC CEO Survey (N=4,454; 12% dual benefit), Together AI $800M Series C ($8.3B valuation, $1.15B annual bookings), Taktile $110M Series C (Goldman Sachs; 95% underwriting automation), Stanford Enterprise AI Playbook (N=51; 61% prior failure rate), Sprout Social -20% (260 jobs July 15), Thomson Reuters -500 engineering (July 13), OpenAI ChatGPT Work (July 9), Walmart super agents, WBD agentic advertising on AWS, Forrester 25% AI spend postponed to 2027, IDC $301B total AI spend 2026. 62% coverage estimate: primary-source rich on hard-number findings; zero social signal depth."
+}
