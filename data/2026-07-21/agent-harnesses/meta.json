@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-07-21",
+  "coverage_pct": 72,
+  "total_urls": 67,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 1,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "github": 20,
+    "web_global": 45,
+    "web_jp": 6,
+    "web_cn": 10
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "x_twitter"],
+  "notes": "Reddit HTTP 403 (persistent); HN HTTP 429 on comment threads; Juggler Show HN detected via search not direct fetch; YouTube/TikTok/Instagram zero (no ScrapeCreators key); Zhihu partial (HTTP 403 on main article, content via search snippets); last30days skill unavailable, ran equivalent manual research; Bluesky=OK per SOURCE HEALTH, no high-engagement harness posts this window; JP mamezou-tech MCP RC article fetched successfully; CN coverage primarily via DuckDuckGo HTML + WebSearch + direct fetches; MiMo Code v0.1.7 released July 20 (day before briefing); Claude Code v2.1.215-216 released July 19-20"
+}
