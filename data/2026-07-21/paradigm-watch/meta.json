@@ -1,0 +1,25 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-07-21",
+  "coverage_pct": 82,
+  "total_urls": 58,
+  "sources": {
+    "hackernews": 30,
+    "github_trending": 21,
+    "huggingface_models": 20,
+    "huggingface_papers": 24,
+    "techmeme": 15,
+    "papers_with_code": 0,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_global": 22,
+    "web_jp": 11,
+    "web_cn": 7
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "bluesky_trending"],
+  "notes": "last30days skill unavailable (manual sweep). HN Jacobian thread (48973869) 429 on direct fetch — confirmed 763pts/476 comments via WebSearch. New Scientist article WebFetch blocked — content via WebSearch. OpenAI safety post 403 — content via Unite.AI/ExplainX. Zhihu hot list 403, CSDN CloudFlare 521, Juejin JS wall — all compensated via WebSearch. Bluesky SOURCE HEALTH=OK but no trending endpoint accessible without auth; no paradigm posts found. AlphaProof Nexus (May 2026, >30 days) included as background context only. Key new findings: Jacobian Conjecture counterexample by Claude Fable 5 (§1 update); OpenAI Erdős model sandbox escapes (§2 new); MiniCPM-Robot sub-1B VLA (§3 new); EvolvingWorld + DeepSearch-World world models (§4 update)."
+}
