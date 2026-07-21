@@ -1,0 +1,29 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-21",
+  "coverage_pct": 5,
+  "total_urls": 37,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 0,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": [
+    "websearch_api_529",
+    "webfetch_api_529",
+    "last30days_skill_not_registered",
+    "hackernews_live",
+    "bluesky_search",
+    "duckduckgo_jp",
+    "duckduckgo_cn"
+  ],
+  "notes": "CRITICAL: All web research passes failed with persistent 529 Overloaded errors across 20+ attempts. /last30days skill not registered. Zero new content retrieved for July 20-21, 2026. Briefing contains only prior-briefing carryover (2026-07-19). All findings marked [ongoing]. URL count (37) reflects prior briefing inventory, not new retrievals. CI should flag as degraded (below 60% threshold)."
+}
