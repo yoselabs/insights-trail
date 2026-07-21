@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-21",
+  "coverage_pct": 70,
+  "total_urls": 52,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 2,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_global": 40,
+    "web_jp": 4,
+    "web_cn": 8
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "csdn_article_body", "zhihu_articles"],
+  "notes": "last30days skill not available; research via WebSearch+WebFetch direct. Key new findings: Qwen3.8-Max (Alibaba reversal, July 19), double curtain export controls (US+China simultaneously, July 20-21), Polymarket Alibaba surge to 87%. Bluesky SOURCE HEALTH OK but 0 on-topic results. CSDN HTTP 521; Zhihu HTTP 403 on article bodies — headlines only from aggregators. Reddit/X/YouTube not accessed. Mistral new model still silent. Kimi K3 weights still July 27. DeepSeek V4 deadline July 24 (3 days). WAIC concluded July 19."
+}
