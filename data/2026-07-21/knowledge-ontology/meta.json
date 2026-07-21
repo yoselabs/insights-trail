@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-21",
+  "coverage_pct": 68,
+  "total_urls": 72,
+  "sources": {
+    "hackernews": 4,
+    "bluesky": 0,
+    "twitter": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "web_global": 54,
+    "web_jp": 9,
+    "web_cn": 9,
+    "arxiv": 12,
+    "github": 8
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "last30days_skill"],
+  "notes": "last30days skill unavailable this run (Unknown skill error); English pass done via manual WebSearch+WebFetch. Reddit blocked (400). YouTube/TikTok/Instagram: ScrapeCreators 402 (billing) or yt-dlp not configured. X/Twitter: not collected without skill. Bluesky=OK per SOURCE HEALTH but 0 new topic posts found July 19-21. Zhihu 403 and CSDN 521 on direct fetch; content from search snippets. Key new findings: Microsoft Memora (ICML 2026), NapMem (arXiv:2607.05794), PLACEMEM (arXiv:2607.04089), AgentO (ESWC 2026), Always-On Agents survey, OntoBricks, Open Ontologies v1.0, Eticas AI Risk Taxonomy v2.0.0, EvoMemBench. All [new] vs. July 19 prior briefing. Mem0 v2.0 + July free-tier tripling marked [update]."
+}
