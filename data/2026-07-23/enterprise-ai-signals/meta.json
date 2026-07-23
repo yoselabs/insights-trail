@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-23",
+  "coverage_pct": 65,
+  "total_urls": 46,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 46,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "bluesky", "youtube", "hackernews", "tiktok", "instagram", "reddit", "x_twitter"],
+  "notes": "last30days skill returned Unknown skill error — 4th consecutive run; social platforms (Reddit, X/Twitter, HN, YouTube, Bluesky) not covered; JP/CN passes skipped per topic instructions; Bluesky SOURCE HEALTH=OK but skill unavailable to query; Intel Q2 2026 earnings (July 23) not captured pre-deadline; NVIDIA survey is sponsor-biased sample; Domino survey limited to 4 industries. New primary-source signals: Domino 5th Annual (N=639, July 21), OpenAI Presence launch (July 22), IREN $2.8B contracts (July 20), Axe Compute $1.3B (July 22), Salesforce Q4 FY2026 Agentforce $800M ARR, SpaceX/Cursor $60B acquisition, Meta 8K+7K AI reallocation, GitLab 14% infra rebuild, HSBC 20K plan, Intuit 17% cut, Intel DC layoffs, Crunchbase H1 $510B record."
+}
