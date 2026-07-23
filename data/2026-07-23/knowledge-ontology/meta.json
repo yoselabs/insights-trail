@@ -1,0 +1,23 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-23",
+  "coverage_pct": 62,
+  "total_urls": 71,
+  "sources": {
+    "hackernews": 2,
+    "bluesky": 0,
+    "twitter": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "arxiv": 3,
+    "github": 6,
+    "web_global": 41,
+    "web_jp": 9,
+    "web_cn": 7,
+    "polymarket": 0
+  },
+  "failed_sources": ["last30days_skill", "youtube", "tiktok", "instagram", "reddit"],
+  "notes": "last30days skill returned 'Unknown skill' error; full English pass done via manual WebSearch + WebFetch. ScrapeCreators 402 (billing) for TikTok/Instagram. Reddit blocked from crawling. Bluesky=OK per SOURCE HEALTH; no topic-relevant posts found July 21–23. HN item 47695403 rate-limited (429); Zhihu direct fetches 403-blocked; MS Fabric Blog 403-blocked. Key new findings: MemoryAgentBench (ICLR 2026), Apache Ossie (OSI incubated), Microsoft Fabric IQ Ontology MCP endpoints, Cognee v1.4.0, Letta Pro $20/mo, Zep CE retirement clarified. JP and CN passes completed via WebFetch DuckDuckGo HTML + WebSearch."
+}
