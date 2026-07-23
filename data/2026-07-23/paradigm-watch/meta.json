@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-07-23",
+  "coverage_pct": 83,
+  "total_urls": 63,
+  "sources": {
+    "hackernews": 6,
+    "github_trending": 16,
+    "huggingface_models": 20,
+    "huggingface_papers": 15,
+    "techmeme": 11,
+    "web_global": 24,
+    "web_jp": 15,
+    "web_cn": 9,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "last30days skill not registered (consistent with prior runs). Bluesky OK per SOURCE HEALTH but no paradigm posts found. Reddit likely blocked (persistent). HN Tao thread 429 on direct fetch; engagement confirmed via WebSearch. Zhihu HTTP 403; CSDN HTTP 521 — content via search snippets and mirrors. Key findings: [update] Jacobian/Tao blog + ChatGPT share (901 pts HN) + GPT-6 independent discovery; [update] OpenAI HF external breach (GPT-6 identified, 6-stage attack chain, evaluation infrastructure as attack surface); [new] RIPO non-Euclidean RL (ICML 2026, 60% > GRPO); [new] Microsoft Mage-Flow 4B image generation; [new] Cactus Hybrid hidden-state correctness probes; [new] Self Gradient Forcing video diffusion. JP pass: 15 pages via DuckDuckGo HTML + WebSearch + direct fetches (Gigazine, Yahoo Japan, Uravation, Qiita, Zenn, note.com). CN pass: 9 pages via DuckDuckGo HTML + WebSearch (Juejin, CSDN/Cnblogs, Zhihu, InfoQ)."
+}
