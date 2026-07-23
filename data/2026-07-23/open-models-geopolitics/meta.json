@@ -1,0 +1,29 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-23",
+  "coverage_pct": 72,
+  "total_urls": 78,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_global": 47,
+    "web_jp": 10,
+    "web_cn": 15
+  },
+  "failed_sources": [
+    "reddit",
+    "x_twitter",
+    "youtube",
+    "tiktok",
+    "instagram",
+    "zhihu_article_level",
+    "csdn_article_level"
+  ],
+  "notes": "last30days skill unavailable — full manual research sweep performed. Reddit/X/YouTube not accessed. Bluesky OK but 0 on-topic results. Zhihu 403 at article level; titles retrieved via DuckDuckGo, content reconstructed from aggregators and QQ News. CSDN DevPress subdomain accessible; blog.csdn.net article-level blocked. Major new finding today (July 23): US Treasury/White House publicly accused Moonshot AI of distilling Anthropic's Fable and smuggling Nvidia GB300 chips via Thailand — first named-company sanctions threat. Also new: Kimi K3 chip design demo (Synopsys -7.85%, Cadence -9.47%), K3 subscription GPU pause, Hugging Face used GLM-5.2 for cyberdefense after US guardrails blocked defense. Polymarket: Alibaba 78.8% (down from 87%), Moonshot 19.7% (up from 9%), $576K volume."
+}
