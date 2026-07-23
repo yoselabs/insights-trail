@@ -1,0 +1,21 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-23",
+  "coverage_pct": 72,
+  "total_urls": 63,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 4,
+    "polymarket": 0,
+    "web_global": 38,
+    "web_jp": 9,
+    "web_cn": 6
+  },
+  "failed_sources": ["last30days_skill", "youtube", "tiktok", "instagram", "reddit_excluded", "x_excluded"],
+  "notes": "last30days skill not registered (same as July 21 run). Manual WebSearch + WebFetch substituted — comprehensive English pass, JP pass (5 new articles from Qiita/Zenn), CN pass (3 new including Alibaba WAIC). Bluesky SOURCE HEALTH OK but limited extraction via WebFetch. PwC PDF and HackerNoon returned 403. Zhihu 403 on direct fetch. Major new findings: Trend AI Security 9,695-server MCP scan; ShareLock/MSTI/Agentjacking attacks; Alibaba Agent Native Cloud (WAIC July 18); LTM SDLC AI Radar; three arXiv papers on Agentic Engineer archetype; METR study invalidated by selection bias; AIDev 456K agent PRs study; AI-DLC Workflows 2.0 GA; Tencent AI-Infra-Guard V2. Prior briefing (July 21) was 5% coverage (all 529 failures); this run covers July 19-23 effectively."
+}
