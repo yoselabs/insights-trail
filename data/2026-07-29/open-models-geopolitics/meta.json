@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-29",
+  "coverage_pct": 60,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 2,
+    "web_global": 73,
+    "web_jp": 10,
+    "web_cn": 15
+  },
+  "failed_sources": ["reddit", "hackernews", "youtube", "x_twitter", "tiktok", "instagram", "bluesky"],
+  "notes": "last30days skill unavailable; all social/HN/YT passes skipped. Web passes (English, Japanese, Chinese) conducted manually via WebSearch + WebFetch. Chinese hub pass partial due to 403 errors on Zhihu/CSDN direct fetches; content inferred from DuckDuckGo snippets. No Juejin or V2EX results surfaced. Bluesky backend marked OK per SOURCE HEALTH but not reachable without skill. Coverage estimate 60% reflects strong English web pass, adequate JP pass, partial CN pass, and absent social media layer."
+}
