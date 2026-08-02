@@ -1,0 +1,21 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-07-31",
+  "coverage_pct": 75,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 2,
+    "hackernews": 6,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 62,
+    "web_jp": 12,
+    "web_cn": 8
+  },
+  "failed_sources": ["reddit", "x_twitter", "tiktok", "instagram"],
+  "notes": "last30days skill unavailable for this run; all research performed via manual WebSearch+WebFetch sweeps. Reddit/X/TikTok/Instagram not covered. Bluesky OK per SOURCE HEALTH but returned zero on-topic posts for agent harnesses. Juejin articles returned JS-rendered placeholder pages; content from search snippets only. JP/CN passes ran successfully via DuckDuckGo HTML + native-language WebSearch + WebFetch. Coverage estimate: ~75% — strong Web/HN/JP/CN signal; social platforms entirely absent."
+}
