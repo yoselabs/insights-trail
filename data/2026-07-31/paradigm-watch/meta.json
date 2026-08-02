@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-07-31",
+  "coverage_pct": 78,
+  "total_urls": 55,
+  "sources": {
+    "hackernews": 9,
+    "huggingface_papers": 25,
+    "techmeme": 3,
+    "github_trending": 8,
+    "web_global": 37,
+    "web_jp": 14,
+    "web_cn": 10,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket", "last30days_skill"],
+  "notes": "last30days skill not available (tool not found); full manual sweep of HN/HuggingFace/Techmeme/GitHub trending conducted instead. Reddit blocked by WebFetch. Bluesky SOURCE HEALTH=OK but no individual posts retrieved. Zhihu HTTP 403 on direct fetch. Coverage dominated by research papers (HuggingFace trending) and tech media. 5 new paradigm-watch threads identified: Orca BAAI (471 HF upvotes), PhiZero CASIA (145), TurboVLA (122), Gemini Robotics 2 (572 HN pts), INTACT (11). 1 update to world-model-race thread (new facts: $3B VC, WAIC 2026 debate, multiple new papers). JP/CN hub passes completed via DuckDuckGo HTML + WebSearch; no paid backend used."
+}
