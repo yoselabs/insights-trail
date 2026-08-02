@@ -1,0 +1,22 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-29",
+  "coverage_pct": 72,
+  "total_urls": 87,
+  "sources": {
+    "web_global": 78,
+    "web_jp": 5,
+    "web_cn": 4,
+    "arxiv": 16,
+    "reddit": 0,
+    "twitter": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["bluesky_no_results", "csdn_521", "zhihu_403", "juejin_js_render"],
+  "notes": "last30days skill unavailable; research conducted via WebSearch+WebFetch directly. Bluesky OK per SOURCE HEALTH but 0 topic-specific results found. CSDN returned HTTP 521. Zhihu returned HTTP 403. Juejin JS-rendered pages not extractable. Reddit/X/Twitter excluded per instructions. YouTube not searched. 4 new threads identified: loop-engineering-comprehension-debt, ade-prf-predictive-reliability, container-sandbox-escape-risk, ai-sdlc-process-framework-taxonomy. 2 threads updated: benchmark-landscape-2026 (Opus 5=96%, SWE-bench saturation+reliability crisis), software-quality-vs-ai-velocity (Year of Quality declared, new quantitative data)."
+}
