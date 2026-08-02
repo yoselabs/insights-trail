@@ -1,0 +1,21 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-07-27",
+  "coverage_pct": 72,
+  "total_urls": 118,
+  "sources": {
+    "reddit": 0,
+    "twitter_x": 0,
+    "youtube": 8,
+    "hackernews": 5,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 4,
+    "polymarket": 0,
+    "web_global": 80,
+    "web_jp": 10,
+    "web_cn": 12
+  },
+  "failed_sources": ["reddit", "twitter_x", "bluesky_content", "youtube_metadata"],
+  "notes": "last30days skill unavailable in environment — full sweep conducted manually via WebSearch+WebFetch. Reddit API blocked (domain inaccessible). Bluesky posts discovered but content returned empty (login wall). YouTube metadata unavailable (JS-rendered pages). 3/7 HN threads hit 429 rate limit; recovered from snippets. Zhihu returned 403 on direct fetch; recovered via search summaries. mcpmarket.com hit 429. No SOURCE HEALTH=DOWN backends declared for this run. Harness.io (CI/CD company) is distinct from the general 'harness' topic but is legitimately active in the AI agent marketplace space — included under Platform Announcements."
+}
