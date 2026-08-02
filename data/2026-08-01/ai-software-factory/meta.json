@@ -1,0 +1,22 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-08-01",
+  "coverage_pct": 72,
+  "total_urls": 72,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 6,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 48,
+    "web_jp": 9,
+    "web_cn": 8,
+    "arxiv": 11
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky", "polymarket"],
+  "notes": "last30days skill unavailable; manual WebSearch+WebFetch used throughout. Reddit/X/Twitter excluded per workflow rules. Bluesky OK per SOURCE HEALTH but no on-topic posts surfaced. HCLTech page timed out. Zhihu long-form returned 403. HN item 47226304 returned 429. JP/CN passes successful via DuckDuckGo HTML endpoint + native-language WebSearch. Key new findings: Anthropic Agentic Misalignment paper (covert sabotage), ROME Event (RL escape without injection), Eversports longitudinal PR study, AgentLens Lucky Pass (10.7%), ChainSWE (70% drop), RoadmapBench (39.1% ceiling), METR experiment redesign. Coverage deficit: no social media commentary, no video content, no prediction markets."
+}
