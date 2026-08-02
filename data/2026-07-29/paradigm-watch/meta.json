@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-07-29",
+  "coverage_pct": 75,
+  "total_urls": 63,
+  "sources": {
+    "hackernews": 18,
+    "github_trending": 17,
+    "huggingface_papers": 17,
+    "techmeme": 8,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 22,
+    "web_jp": 10,
+    "web_cn": 14
+  },
+  "failed_sources": ["reddit", "paperswithcode"],
+  "notes": "skill not registered (persistent); reddit blocked (persistent); Zenn HTML rendered navigation only (workaround: WebSearch site:zenn.dev); CSDN one article timed out (content via snippet); Bluesky SOURCE OK but no paradigm posts found; Papers With Code redirects to HF Papers. New items: Transformer Transformer (HN #21), MODUS (ICML 2026), Qwen-AgentWorld (via JP Qiita). AdaJEPA mention from CSDN July 24 could not be verified from primary source — not included."
+}
