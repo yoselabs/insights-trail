@@ -1,0 +1,21 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-08-01",
+  "coverage_pct": 72,
+  "total_urls": 113,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 3,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 75,
+    "web_jp": 8,
+    "web_cn": 10
+  },
+  "failed_sources": ["last30days_skill", "reddit", "x_twitter", "bluesky", "tiktok", "instagram", "polymarket"],
+  "notes": "last30days skill not available in environment; manual WebSearch+WebFetch used instead. Reddit/X/Bluesky/TikTok/Instagram/Polymarket not covered by manual pass. Several CN pages returned HTTP 403/521 (Cloudflare); content reconstructed from search snippets. Bluesky SOURCE HEALTH=OK but no Bluesky-specific posts retrieved. Web global, JP, and CN passes completed with WebFetch on DuckDuckGo HTML endpoints plus targeted WebSearch."
+}
