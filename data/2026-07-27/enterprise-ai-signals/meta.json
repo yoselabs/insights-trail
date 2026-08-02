@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-27",
+  "coverage_pct": 65,
+  "total_urls": 72,
+  "sources": {
+    "reddit": 0,
+    "twitter": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_global": 72,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "bluesky_skill", "hackernews_skill", "youtube", "tiktok", "instagram"],
+  "notes": "last30days skill unavailable (5th consecutive run: Unknown skill error). All research via WebSearch + WebFetch. Bluesky SOURCE HEALTH=OK but unqueryable without skill. JP/CN passes skipped per topic instructions. Major new findings: FDE Race ($13.5B committed across OpenAI $10B, Microsoft Frontier $2.5B, AWS $1B), Alphabet Q2 Cloud +82% YoY, Intel Q2 DCAI +59%, Salesforce Q1 FY2027 Agentforce $1.2B ARR +205%, Aligned $40B acquisition, Oracle 21K layoffs SEC attribution, Monday.com 630 AI org restructuring, Fireworks $1.5B Series D, Kyndryl N=1,100 workforce readiness report. Microsoft Q4 FY2026 + Amazon Q2 + Meta Q2 all due July 30 — not captured."
+}
