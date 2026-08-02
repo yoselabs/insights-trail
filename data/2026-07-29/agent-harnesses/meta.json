@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-07-29",
+  "coverage_pct": 82,
+  "total_urls": 97,
+  "sources": {
+    "hackernews": 5,
+    "github": 15,
+    "web_global": 55,
+    "web_jp": 10,
+    "web_cn": 8,
+    "youtube": 1,
+    "bluesky": 0,
+    "reddit": 0,
+    "twitter": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "twitter", "tiktok", "instagram", "polymarket"],
+  "notes": "Reddit/X/TikTok/Instagram excluded per instructions. Bluesky backend OK but no dedicated agent harness posts surfaced. HN direct fetch rate-limited (429) — context recovered via supplementary search. Several article fetches returned 403/521 — content recovered via WebSearch summaries. JP pass: DuckDuckGo HTML + WebSearch JP; reached Qiita (4), Zenn (5), CodeZine (1). CN pass: DuckDuckGo HTML + WebSearch ZH; reached CSDN (3), Zhihu (1), jishuzhan (1), others. last30days skill unavailable in this environment — full manual sweep performed instead. Major new finding: MCP 2026-07-28 final specification released yesterday (July 28) — stateless protocol, extensions framework, breaking changes."
+}
