@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-31",
+  "coverage_pct": 78,
+  "total_urls": 142,
+  "sources": {
+    "hackernews": 2,
+    "polymarket": 3,
+    "web_global": 82,
+    "web_jp": 20,
+    "web_cn": 42,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "x_twitter": 0
+  },
+  "failed_sources": ["reddit", "youtube", "bluesky", "tiktok", "instagram"],
+  "notes": "Reddit blocked by user agent. Bluesky/X excluded per scope or inaccessible. Several Juejin/Zhihu pages returned JS loading screens or HTTP 403. OSChina returned empty body. Core Chinese coverage obtained via DuckDuckGo HTML + WebSearch supplemented by CSDN/Zhihu/Juejin search results. JP pass strong: 20 pages from Zenn, Qiita, note.com, Nikkei xTECH. All stated SOURCE HEALTH backends OK. Polymarket 'Best Chinese AI Company end of July' resolves today (July 31 12:00 PM ET); Alibaba at 92.2%."
+}
