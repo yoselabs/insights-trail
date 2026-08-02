@@ -1,0 +1,30 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-29",
+  "coverage_pct": 65,
+  "total_urls": 87,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 4,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 62,
+    "web_jp": 13,
+    "web_cn": 7,
+    "arxiv": 12
+  },
+  "failed_sources": [
+    "reddit",
+    "x_twitter",
+    "youtube",
+    "tiktok",
+    "instagram",
+    "bluesky_posts",
+    "last30days_skill"
+  ],
+  "notes": "last30days skill unavailable; manual WebSearch+WebFetch. Reddit API domain blocked (403). X/Twitter excluded per instructions. YouTube not searched. Bluesky returned no on-topic posts. Most Zhihu/CSDN pages returned 403/521 — Chinese coverage inferred from search snippets. HN items 48996526/49053986 rate-limited (429). contextandchaos.substack.com blocked (403). New today: Exabase M-1 SOTA on BEAM+LME (Jul 28), OKF v0.2 (Jul 25), Apache Ossie → Apache Incubator (Jul 10), Databricks CE exam first administration (today). Strong coverage on arXiv papers, tooling releases, EN/JP web."
+}
