@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-31",
+  "coverage_pct": 80,
+  "total_urls": 42,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 40,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": [],
+  "notes": "JP/CN passes skipped per topic instructions. Social media not searched per topic focus on hard enterprise signals only. Microsoft Q4 AI ARR exact new figure not publicly confirmed in available sources (Q3 figure $37B remains latest cited). Gartner.com and some CNBC pages returned 403; secondary sources used. SemiAnalysis Anthropic profit piece paywalled. Key new signals: MSFT Q4 FY2026 Azure +43%/$100B milestone/30M Copilot seats, AWS Q2 +37% fastest in 18 quarters/AI+Chips each >$25B run rate, Anthropic $69B ARR (Yipit est.), D&B N=10,000 survey (6% data-ready), Schellman N=525 governance gap (74%/27%), IBM N=2,000 CAIO surge (76%), HCLTech $1.14B AI operating model contract, Gartner $234B SaaS agentic risk, Gartner IT spending raised to $6.37T. Bluesky: SOURCE HEALTH OK but no enterprise-specific posts surfaced."
+}
