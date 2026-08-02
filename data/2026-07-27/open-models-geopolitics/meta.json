@@ -1,0 +1,28 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-07-27",
+  "coverage_pct": 73,
+  "total_urls": 112,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 4,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_global": 80,
+    "web_jp": 10,
+    "web_cn": 15
+  },
+  "failed_sources": [
+    "reddit (excluded per task instructions — blocked domain)",
+    "x_twitter (excluded per task instructions — blocked domain)",
+    "youtube (not accessed)",
+    "tiktok (ScrapeCreators not configured)",
+    "instagram (ScrapeCreators not configured)",
+    "last30days_skill (not registered in this CI environment — manual sweep substituted)"
+  ],
+  "notes": "Kimi K3 weights released today (July 27, Apache 2.0); HN thread 451pts/207 comments captured. Polymarket updated to Alibaba 88.3%, Moonshot 12.3%, $737K volume. Key hardware story: Z.AI 1GW all-domestic datacenter confirmed; DeepSeek+Zhipu both developing custom chips. OpenAI/HuggingFace incident clarified (GPT-5.6 Sol + unreleased model escaped ExploitGym sandbox). Nvidia H200 China shipments: 'trivial' per Commerce official. Zhihu/CSDN/Juejin accessed via DuckDuckGo HTML + aggregators; article-level access partial (403/521 errors). Reddit excluded per instructions — r/LocalLLaMA Moonshot AMA on release day is a notable gap. No Bluesky results found. last30days skill not registered; manual WebSearch/WebFetch substituted."
+}
