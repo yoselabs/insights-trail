@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-01",
+  "coverage_pct": 72,
+  "total_urls": 89,
+  "sources": {
+    "hackernews": 1,
+    "polymarket": 1,
+    "web_global": 50,
+    "web_jp": 7,
+    "web_cn": 10,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "x_twitter": 0
+  },
+  "failed_sources": ["reddit", "youtube", "bluesky", "tiktok", "instagram", "x_twitter"],
+  "notes": "last30days skill not installed; English/JP/CN passes done via direct WebSearch+WebFetch. Reddit domain blocked by API (not DOWN). X/Twitter excluded per spec. YouTube/TikTok/Instagram/Bluesky not retrieved in free-tool pass. Two Zhihu articles returned 403; snippet data used. Bluesky source health reported OK. Coverage gap primarily from Reddit (~15%) and X/YouTube (~13%). Key new finding: Reuters July 31 PLA distillation exposé (80+ papers). GLM-5.5 expected this month. Huawei Ascend 950DT now deploying."
+}
