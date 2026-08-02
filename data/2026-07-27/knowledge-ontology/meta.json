@@ -1,0 +1,31 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-27",
+  "coverage_pct": 65,
+  "total_urls": 77,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "arxiv": 8,
+    "github": 8,
+    "web_global": 42,
+    "web_jp": 11,
+    "web_cn": 8
+  },
+  "failed_sources": [
+    "last30days_skill",
+    "reddit",
+    "x_twitter",
+    "youtube",
+    "tiktok",
+    "instagram",
+    "bluesky_post_content"
+  ],
+  "notes": "last30days skill unavailable (same as July 23 run); Reddit blocked; ScrapeCreators 402 for TikTok/Instagram; Bluesky accounts confirmed but post content not accessible via WebFetch; franksworld.com July 26 article confirmed but content not fetchable; several CSDN/Zhihu pages HTTP 521/403 — content from search snippets only. New findings: Engram (arXiv:2606.09900, +10.4pp LME_S), SAGE (arXiv:2605.30711, 3.4x write-cost reduction), TokenPilot (arXiv:2606.17016, 61-87% cache cost), AgenticSTS (arXiv:2607.02255, bounded-memory testbed), MemPalace (56K stars, 96.6% Recall@5), Ontology Dilution Problem named (Year of Graph Vol.31), Ontology WG confirmed in Apache Ossie, Snowflake Cortex GraphRAG+mappings 78.2%, Mem0 v2.0.7 shipped. JP: 4 new Qiita/Zenn/note articles. CN: CSDN LLMs-reshape-ontology survey new."
+}
