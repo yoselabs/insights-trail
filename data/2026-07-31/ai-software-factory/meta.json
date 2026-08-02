@@ -1,0 +1,22 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-31",
+  "coverage_pct": 55,
+  "total_urls": 89,
+  "sources": {
+    "hackernews": 7,
+    "bluesky": 3,
+    "arxiv": 14,
+    "web_global": 44,
+    "web_jp": 8,
+    "web_cn": 7,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "twitter", "youtube", "tiktok", "instagram", "polymarket", "csdn_roger_mm", "gartner_press_release_403"],
+  "notes": "/last30days skill unavailable; manual multi-source sweep performed. Reddit, X/Twitter, YouTube, TikTok, Instagram, Polymarket not accessible without the skill. Bluesky limited to web-indexed posts only. CSDN blog.csdn.net/ROGER_MM HTTP 521 (server down). Gartner press release HTTP 403 (access denied). JP pass: DuckDuckGo HTML + WebSearch in Japanese + WebFetch of top 8 Qiita/Zenn/note results. CN pass: DuckDuckGo HTML + WebSearch in Chinese + WebFetch of top 7 results (1 unavailable). HN and arXiv coverage solid. Coverage estimate 55% due to missing social platforms."
+}
