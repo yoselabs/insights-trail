@@ -1,0 +1,21 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-07-27",
+  "coverage_pct": 75,
+  "total_urls": 68,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 5,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 2,
+    "polymarket": 0,
+    "web_global": 52,
+    "web_jp": 9,
+    "web_cn": 7
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "last30days skill not registered; manual multi-platform sweep performed. Reddit/X/YouTube/TikTok/Instagram excluded per run instructions or not configured. Bluesky SOURCE HEALTH OK but limited extraction. HN July 26-27 pages returned 429; July 24-25 retrieved. VentureBeat Intuit/Amazon AGI behind paywall; content recovered via mirrors. Zhihu/CSDN behind 403/521; content from DuckDuckGo snippets. No DOWN backends reported in SOURCE HEALTH. JP pass: 4 new articles (Zenn ryo369, Qiita tai0921, Qiita cvusk, Zenn ko3a81). CN pass: 2 new primary sources (Tencent Cloud Vibe+Agents, lynolz). Top new findings: Anthropic 80% system prompt removal (context engineering paradigm shift), Intuit double architecture rebuild (orchestration dead end), SANDWORM_MODE npm worm targeting AI coding assistants, Amazon AGI reliability>capability framing, open-weight AI Kubernetes moment, FSE 2026 TAR trajectory evaluation standard, CSA MCP 4-level maturity model."
+}
