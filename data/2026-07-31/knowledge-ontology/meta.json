@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-07-31",
+  "coverage_pct": 52,
+  "total_urls": 113,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 2,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 31,
+    "web_jp": 18,
+    "web_cn": 17,
+    "arxiv": 15
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky", "polymarket", "last30days_skill"],
+  "notes": "/last30days skill unavailable (Unknown skill error); social media passes (Reddit, X, TikTok, Instagram, Bluesky) not executed; HN coverage partial (2 known threads only); bluesky=OK per SOURCE HEALTH but no results found via site:bsky.app search; CSDN article 157516283 fetch failed HTTP 521; HackerNoon and Zhihu article fetches failed HTTP 403; web/arXiv/JP/CN coverage strong; 8 new/update threads added this run"
+}
