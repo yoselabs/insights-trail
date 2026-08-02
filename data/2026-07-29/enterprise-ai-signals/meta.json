@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-07-29",
+  "coverage_pct": 72,
+  "total_urls": 62,
+  "sources": {
+    "hackernews": 2,
+    "reddit": 0,
+    "twitter": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_global": 60,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["reddit", "bluesky", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "last30days skill unavailable in environment; 18 WebSearch queries + targeted WebFetches substituted. Reddit domain blocked by search API. Bluesky backend OK per SOURCE HEALTH but no direct post retrieval without skill. JP/CN passes not applicable for this topic per prompt. Two major earnings reports pending (MSFT Q4 FY2026 + AWS Q2 2026) both due July 30 — will require update next cycle. No DOWN backends per SOURCE HEALTH."
+}
