@@ -1,0 +1,22 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-08-03",
+  "coverage_pct": 68,
+  "total_urls": 83,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 5,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 52,
+    "web_jp": 10,
+    "web_cn": 9,
+    "arxiv": 18
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky", "polymarket"],
+  "notes": "last30days skill unavailable; manual WebSearch+WebFetch substituted. Social platforms not swept. Bluesky=OK per SOURCE HEALTH but no on-topic posts surfaced. Zhihu 403 on direct fetch for one article. Loop Engineering Is Dead (Medium) paywalled. ICML 2026 orchestrator paper accessed via summary only. 6 new findings: Harness-Bench, governance gap (81% vs 14.4%), reward signal misalignment root cause, August 2026 new attack classes (ADI/FARMA/GhostWriter/Memory Heist/DeepJack), AI Engineer World's Fair eval framework, benchmark gaming saturation. Coverage estimate: core research (arXiv, practitioner blogs, JP/CN hubs, HN, key security resources) well covered; social platforms, video, and some paywalled content absent."
+}
