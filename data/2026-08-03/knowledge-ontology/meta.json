@@ -1,0 +1,21 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-08-03",
+  "coverage_pct": 68,
+  "total_urls": 84,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 2,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 62,
+    "web_jp": 12,
+    "web_cn": 10
+  },
+  "failed_sources": ["reddit", "x_twitter", "tiktok", "instagram", "polymarket", "bluesky"],
+  "notes": "last30days skill unavailable; all passes manual WebSearch+WebFetch. Bluesky SOURCE HEALTH=OK but no topic posts found. Several CN pages (CSDN, Zhihu) returned 403/Cloudflare blocks; content from snippets only. New findings: Databricks Genie Ontology (DAIS June 16, 2026), Mandol arXiv:2606.29778, TOKI arXiv:2606.06240, Agent-Native Memory audit arXiv:2606.24775, Cognee 1.0 pivot. Social platform absence (~32%) accounts for coverage gap."
+}
