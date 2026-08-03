@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-08-03",
+  "coverage_pct": 75,
+  "total_urls": 55,
+  "sources": {
+    "hackernews": 8,
+    "huggingface": 9,
+    "github_trending": 7,
+    "techmeme": 11,
+    "web_global": 20,
+    "web_jp": 10,
+    "web_cn": 15,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "Reddit blocked by WebFetch. /last30days skill unavailable (consistent with prior runs); full manual sweep conducted. Bluesky SOURCE HEALTH=OK but no paradigm-watch posts surfaced. FT paywalled for Olix article; covered via Electronics Weekly + Tech.eu + CryptoBriefing. CSDN HTTP 521 on direct fetch; covered via search snippets. DuckDuckGo CAPTCHA on second JP query; switched to WebSearch. 5 new threads: RLSVR/SpyRL, tactile-native embodied AI (N₀-TWAM+VTLA), ODEWorld, Meshy T2, Olix OTPU. 18 prior threads carried forward, all ongoing."
+}
