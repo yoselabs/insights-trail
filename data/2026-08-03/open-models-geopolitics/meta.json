@@ -1,0 +1,20 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-03",
+  "coverage_pct": 75,
+  "total_urls": 88,
+  "sources": {
+    "hackernews": 2,
+    "reddit": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "web_global": 57,
+    "web_jp": 9,
+    "web_cn": 15
+  },
+  "failed_sources": ["reddit", "bluesky_posts", "youtube", "hacker_news_full_content"],
+  "notes": "last30days skill not available in environment; full research done via direct WebSearch + WebFetch. HN rate-limited (429) — thread IDs found, snippet data only. Reddit domain blocked by API. Zhihu/CSDN/Huxiu direct fetch blocked (403/ECONNRESET) — search snippet data used. Bluesky source health OK but no on-topic 2026 posts indexed. Key new finding: Qwen3.8-Max broadly available Aug 3 (MarkTechPost/SCMP); open weights ~Aug 10. EU AI Act GPAI enforcement now active (Aug 2). AI manifesto war (Axios Aug 2): Pacing the Frontier petition (1200+ employees), Hassabis Standards Body. SiliconAngle Aug 2: drone-targeting detail added to military distillation thread."
+}
