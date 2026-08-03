@@ -1,0 +1,21 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-08-03",
+  "coverage_pct": 72,
+  "total_urls": 98,
+  "sources": {
+    "hackernews": 12,
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 75,
+    "web_jp": 11,
+    "web_cn": 10
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky"],
+  "notes": "Reddit/X/YouTube/TikTok/Instagram/Bluesky not accessed this run. Toutiao/VentureBeat pages returned 403 on direct fetch (covered via secondary sources). Bluesky OK per SOURCE HEALTH but direct post retrieval not performed. JP/CN DuckDuckGo HTML + WebSearch successful; several CN pages (Juejin, Toutiao) blocked on fetch. 9 new threads discovered, 4 updated, 43 carried forward. Agentjacking (June 2026 Sentry MCP attack) captured as update to mcp-security thread. ECC at 237k stars is the largest cross-harness infrastructure project found."
+}
