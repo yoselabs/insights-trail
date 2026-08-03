@@ -1,0 +1,25 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-08-03",
+  "coverage_pct": 78,
+  "total_urls": 122,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 122,
+    "web_jp": 0,
+    "web_cn": 0,
+    "layoffs_tracker": 1,
+    "sec_filings": 2,
+    "earnings_releases": 5,
+    "survey_data": 12
+  },
+  "failed_sources": ["last30days_skill"],
+  "notes": "/last30days skill unavailable (Unknown skill: last30days); all research via WebSearch+WebFetch direct passes. Social platforms (X, Reddit, Bluesky, YouTube, HN, TikTok, Instagram, Polymarket) not retrieved. JP/CN sweeps explicitly excluded per topic prompt. Salesforce Q2 FY2027 earnings newly disclosed (results out Aug 1-2, 2026 — earlier than 'late August' expected). EU AI Act Article 50 enforcement confirmed live August 2. BCG N=12,000 new survey not previously in threads.json. Meta Q2 2026: 1M weekly business agent users + Family of Apps Other $1B first time. ServiceNow layoffs confirmed at exactly 1,000."
+}
