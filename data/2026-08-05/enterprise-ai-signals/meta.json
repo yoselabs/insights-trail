@@ -1,0 +1,25 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-08-05",
+  "coverage_pct": 75,
+  "total_urls": 95,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 95,
+    "web_jp": 0,
+    "web_cn": 0,
+    "earnings_releases": 3,
+    "regulatory_filings": 1,
+    "layoffs_tracker": 1,
+    "survey_data": 12
+  },
+  "failed_sources": ["last30days_skill"],
+  "notes": "/last30days skill returned 'Unknown skill: last30days' for second consecutive run — social platforms (X, Reddit, Bluesky, YouTube, HN, TikTok) not reached. Parsers.substack weekly funding roundup returned HTTP 403. JP/CN sweeps excluded per topic prompt. Bluesky SOURCE HEALTH=OK but not queried via API. New findings: Anthropic $10B Volta compute deal (Aug 4), Equinix Q2 FY2026, Zeta Global Q2 2026, EU AI Act enforcement confirmed + 180+ Code of Practice signatories, Forrester trust tax / 49% security signal, Onyx $113M + Hush $30M + Harmony $34M agent infrastructure. No August layoff events recorded as of Aug 5."
+}
