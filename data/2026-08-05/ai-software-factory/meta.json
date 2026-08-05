@@ -1,0 +1,22 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-08-05",
+  "coverage_pct": 65,
+  "total_urls": 71,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 8,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 48,
+    "web_jp": 9,
+    "web_cn": 8,
+    "arxiv": 12
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky", "polymarket"],
+  "notes": "last30days skill not registered; manual WebSearch + WebFetch substituted. Reddit/X/Twitter excluded per workflow rules. Bluesky SOURCE HEALTH=OK but no on-topic posts surfaced. Zhihu direct fetch returned 403 Forbidden; content from cached mirrors. Key new findings: MOSAIC CLI composition attack (arXiv 2607.02857, 96.59% ASR), GhostApproval symlink attack (Wiz.io, 6 tools affected), HalluSquatting (100% skill installation hallucination), SkillGate defense (arXiv 2607.25619), OutSystems n=1900 governance survey (96%/12% gap), crawshaw longitudinal experiment (9/10 code AI-written), AI-BOM emerging standard, 210% supply chain attack increase H1 2026. JP/CN passes via DuckDuckGo HTML endpoint. Coverage estimate: ~65% of ideal full-source run."
+}
