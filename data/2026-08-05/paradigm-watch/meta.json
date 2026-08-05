@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-08-05",
+  "coverage_pct": 75,
+  "total_urls": 48,
+  "sources": {
+    "hackernews": 7,
+    "huggingface": 25,
+    "github_trending": 10,
+    "techmeme": 5,
+    "web_global": 27,
+    "web_jp": 4,
+    "web_cn": 8,
+    "reddit": 0,
+    "twitter": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "/last30days skill not available (consistent with prior runs); Reddit WebFetch blocked; Japanese DDG second query hit CAPTCHA (WebSearch fallback used); HN item page HTTP 429 for Maple-Preview; bluesky=OK per SOURCE HEALTH but no paradigm posts surfaced; 2 new threads added (diffusion-lm-scaling-wave, maple-preview-ternary-moe), 2 threads updated (olix-otpu-photonic-ai-inference, world-model-race), 21 threads carried forward as ongoing"
+}
