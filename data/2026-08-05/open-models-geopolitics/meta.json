@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-05",
+  "coverage_pct": 78,
+  "total_urls": 96,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 1,
+    "web_global": 45,
+    "web_jp": 8,
+    "web_cn": 12,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "x_twitter": 0
+  },
+  "failed_sources": ["reddit", "youtube", "bluesky"],
+  "notes": "Reddit domain blocked by API; YouTube not retrieved; Bluesky health OK but no on-topic 2026 posts indexed; Zhihu 403 on direct fetch (snippet-level only); some CSDN/Juejin pages returned 521 errors; X excluded per spec. Two major new findings: MiniMax H3 geo license exclusion (US/EU/UK/Korea) and DeepSeek autonomous cyberattack (Unit 42). Qwen3.8 open weights still pending as of Aug 5. Open weights letter grew to 270+ with OpenAI joining. GLM-5.5 and DeepSeek V4 Pro still pending mid-August."
+}
