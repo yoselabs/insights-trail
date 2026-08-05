@@ -1,0 +1,23 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-08-05",
+  "coverage_pct": 72,
+  "total_urls": 94,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 4,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 54,
+    "web_jp": 14,
+    "web_cn": 12,
+    "arxiv": 15,
+    "github": 8
+  },
+  "failed_sources": ["last30days_skill", "youtube", "tiktok", "instagram", "reddit", "x_twitter"],
+  "notes": "last30days skill unavailable; all research via manual WebSearch + WebFetch. Bluesky OK but zero topic-relevant posts. Several CN pages blocked (Zhihu 403, Juejin JS wall, 36kr Volcano security check). New findings: MemGraphRAG (KDD 2026), SAP Knowledge Graph (Sapphire), Experience Graphs/Trellis (Meta), Hindsight #1 on benchmark, LongMemEval-V2, Stardog+Bedrock AgentCore, AI-KM 6.6.1, ReaGAN. Updates: Cognee August 2026 (Neptune+n8n+self-improving graph), Databricks cert beta timeline corrected to mid-September."
+}
