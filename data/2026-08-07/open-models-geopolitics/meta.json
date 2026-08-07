@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-07",
+  "coverage_pct": 79,
+  "total_urls": 98,
+  "sources": {
+    "web_global": 51,
+    "web_jp": 7,
+    "web_cn": 9,
+    "polymarket": 3,
+    "hackernews": 1,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "x_twitter": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "Reddit domain blocked by API; YouTube not retrieved in free-tool pass; X/Twitter excluded per spec; Zhihu 403 on multiple articles (snippet-only); last30days skill unavailable — research conducted via direct WebSearch/WebFetch. Bluesky source health OK per prompt; zero on-topic posts indexed. New active Polymarket markets found (Aug + US-ban). Key new threads: Inkling-Small (Aug 2), Shieldstral (Aug 4), Polymarket August market, US-removal market. Key updates: DeepSeek V4 Flash MIT open-source, Harness beta recruitment, NVIDIA $4.5B write-off, OpenEuroLLM fall target."
+}
