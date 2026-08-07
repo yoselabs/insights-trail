@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-08-07",
+  "coverage_pct": 75,
+  "total_urls": 97,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 97,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "reddit", "x_twitter", "youtube", "hackernews", "tiktok", "instagram", "polymarket"],
+  "notes": "last30days skill unavailable (fourth consecutive run); social platforms not reached; JP/CN sweeps excluded per topic prompt; bluesky=OK per SOURCE HEALTH but low enterprise AI signal; web pass covered Q2 earnings (Palantir, AMD, EPAM, SoundHound), new funding (Horizon3 $250M, Norm AI $120M, 8090 $135M), M&A (Tricentis/Tabnine, Yellow.ai SPAC), new surveys (Plug and Play Fortune 500 pulse Aug 6, NVIDIA State of AI N=3200+), government procurement (DHS/Databricks $1B, federal AI $7.2B obligated), and Accenture Q3 update ($2.6B AI consulting H1)"
+}
