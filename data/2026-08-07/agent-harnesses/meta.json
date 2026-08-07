@@ -1,0 +1,21 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-08-07",
+  "coverage_pct": 72,
+  "total_urls": 82,
+  "sources": {
+    "hackernews": 10,
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 55,
+    "web_jp": 18,
+    "web_cn": 14
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky"],
+  "notes": "Bluesky=OK per SOURCE HEALTH but no on-topic posts retrieved. Reddit/X/YouTube not accessed. JP pass comprehensive (DDG + WebSearch + WebFetch of key pages). CN pass good (DDG + WebSearch; Zhihu 403 on direct fetch). Major new launches: Meta Muse Code (Aug 5), Prime Agent (Aug 5-6). Updates to 4 prior threads. 60+ prior threads carried forward."
+}
