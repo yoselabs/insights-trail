@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-08-11",
+  "coverage_pct": 80,
+  "total_urls": 55,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_papers": 13,
+    "github_trending": 6,
+    "techmeme": 10,
+    "web_global": 32,
+    "web_jp": 4,
+    "web_cn": 4,
+    "reddit": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "bluesky", "tiktok", "instagram", "polymarket"],
+  "partial_sources": ["web_cn"],
+  "notes": "Manual keyword-free sweep (last30days skill not available). HN full front page (30 stories), HF Papers (13), GitHub Trending (6), Techmeme (~10), WebSearch global + JP + CN. CSDN direct access HTTP 521; Zhihu HTTP 403 — content from search snippets only. Papers With Code redirects to HF Papers (covered). Bluesky=OK per source health but no paradigm-watch posts found. Paradigm-watch findings: 1 [update] (llm-lean-proof-automation / Riemann Zeta), 4 [new] (Needle2/SAN, LFM2.5 non-transformer, Steerling-8B interpretable diffusion LM, BDH-CQ recurrent latent reasoning). All 25 prior threads carried forward."
+}
