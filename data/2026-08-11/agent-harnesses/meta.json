@@ -1,0 +1,21 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-08-11",
+  "coverage_pct": 72,
+  "total_urls": 71,
+  "sources": {
+    "hackernews": 5,
+    "web_global": 55,
+    "web_jp": 17,
+    "web_cn": 20,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["last30days_skill", "reddit", "twitter", "youtube", "tiktok", "instagram", "bluesky"],
+  "notes": "last30days skill unavailable (unknown skill error); social platforms not accessed. HN + English web comprehensive. JP pass: DDG HTML + WebSearch, Qiita/Zenn/gihyo.jp coverage. CN pass: DDG HTML + WebSearch, Juejin/Zhihu/CSDN/Sina coverage. Bluesky=OK per SOURCE HEALTH but 0 on-topic posts found. Key new findings: Agent Plugins 1.0 (Anthropic absent), Cloudflare OS + Kitesurf, Ante Show HN (135 pts), TencentDB Agent Memory v2.0. Claude Code now v2.1.227."
+}
