@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-08-11",
+  "coverage_pct": 75,
+  "total_urls": 93,
+  "sources": {
+    "hackernews": 4,
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "arxiv": 9,
+    "web_global": 54,
+    "web_jp": 8,
+    "web_cn": 10
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "bluesky"],
+  "notes": "last30days skill unavailable in environment; research conducted manually via WebSearch + WebFetch. Reddit: API 400 error (not accessible to crawler). Bluesky: OK per SOURCE HEALTH but no on-topic posts found. Twitter/X excluded per spec. YouTube not searched. Some pages returned 403 (Zhihu, Context & Chaos Substack, Neo4j blog). KDD 2026 running in real time (Aug 9-13). TencentDB v2.0 (Aug 3/7) is primary post-Aug-5 new release."
+}
