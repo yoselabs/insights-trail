@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-11",
+  "coverage_pct": 78,
+  "total_urls": 112,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 6,
+    "web_global": 70,
+    "web_jp": 8,
+    "web_cn": 15
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "Reddit domain blocked by API; YouTube not retrieved in free-tool pass; X excluded per spec; Bluesky health OK but 0 on-topic posts; some Zhihu 403 authentication walls (snippet-only for several articles); JP/ZH passes ran via WebFetch DuckDuckGo HTML + native-language WebSearch; Polymarket fetched directly; 3 new Polymarket sub-markets discovered (2nd-best, 3rd-best, September, December); Qwen3.8 open weights still not dropped as of Aug 11 — ongoing watch item; DeepSeek V4 Pro API GA + Harness still in Aug 10-20 window; GLM-5.5 unreleased; Mistral frontier MoE day ~68"
+}
