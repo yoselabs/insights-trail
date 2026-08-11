@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-08-11",
+  "coverage_pct": 72,
+  "total_urls": 48,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 48,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "youtube", "tiktok", "instagram", "hackernews", "x_twitter", "reddit", "bluesky"],
+  "notes": "/last30days skill unavailable (5th consecutive run); social platforms not reached; JP/CN sweeps excluded per topic prompt; Cisco Q4 FY2026 results due Aug 12 after close — not included; McKinsey PDF timed out, stats from secondary summaries; Fundup.ai 403 Forbidden. New findings: McKinsey State of Orgs N=10000 (88% deploying/86% unprepared), Theseus Infrastructure JV Anthropic+Macquarie+GIC (Aug 10), Nscale/Anyscale $1.65B (Jul 30), Prometheus $12B at $41B (Jun 11), Baseten $1.5B Series F, Taktile $110M Goldman-led, OLIX $312M photonic chips."
+}
