@@ -1,0 +1,21 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-08-14",
+  "coverage_pct": 76,
+  "total_urls": 87,
+  "sources": {
+    "hackernews": 4,
+    "web_global": 62,
+    "web_jp": 9,
+    "web_cn": 12,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "twitter": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "twitter"],
+  "notes": "Reddit not accessible (400 error); X/Twitter excluded per spec; YouTube not searched. Bluesky=OK per SOURCE HEALTH but zero on-topic posts found. HN:49286073 returned 429 (engagement metrics unavailable). Some Zhihu articles 403. OKF at v0.2, no v0.3 found. last30days skill not available; full English sweep performed manually via WebSearch+WebFetch. New items: AWS COA (GA July 31), Hindsight v0.9.0 (Aug 6), CrystalMem arXiv:2608.00303, Shared Org Memory arXiv:2608.00122, MCP Memory OKF. Updates: Databricks Genie Ontology (Snippets all customers Aug 13), Neo4j TWIN4J Aug 7."
+}
