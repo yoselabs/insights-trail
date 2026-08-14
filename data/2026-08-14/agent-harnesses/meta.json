@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-08-14",
+  "coverage_pct": 75,
+  "total_urls": 89,
+  "sources": {
+    "hackernews": 5,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_global": 42,
+    "web_jp": 22,
+    "web_cn": 22,
+    "github": 8,
+    "product_hunt": 1
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "last30days_skill"],
+  "notes": "last30days skill unavailable; manual WebSearch+WebFetch substituted for all passes. Social layer (Reddit, X, TikTok, Instagram, YouTube) fully absent. Bluesky=OK but 0 on-topic posts. DeepSeek Harness v0.1 (Aug 13) is dominant story: 52.9k+ stars, HN 678 pts/276 comments; JP (22 pages) and CN (22 pages) had extensive same-day coverage. V4-Pro-0813 benchmarks vendor-reported only. PenguinHarness new find (LlamaFactory team, Product Hunt). Claude Code v2.1.232 and Kiro Crew are major updates."
+}
