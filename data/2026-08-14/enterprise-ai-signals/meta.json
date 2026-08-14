@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-08-14",
+  "coverage_pct": 75,
+  "total_urls": 62,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 62,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "reddit", "x_twitter", "youtube", "hackernews", "tiktok", "instagram", "bluesky", "polymarket"],
+  "notes": "/last30days skill unavailable (6th consecutive run; 'Unknown skill: last30days'); social platforms not reached; JP/CN excluded per topic prompt; 18 WebSearch queries + 5 WebFetch; Cisco Q4 FY2026 + CoreWeave Q2 2026 newly captured; 3 M&A deals (Autodesk/MaintainX $3.6B, Schneider/AiDASH $350M, Okta/Permiso ~$200M); 1 new funding (Atoms $1.7B); Oracle new August layoff round; Anthropic 1,000+ $1M customers; SkillSyncer as of Aug 14: 322 events, 0 August events"
+}
