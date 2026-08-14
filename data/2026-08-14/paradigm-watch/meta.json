@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-08-14",
+  "coverage_pct": 80,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_papers": 24,
+    "github_trending": 17,
+    "techmeme": 8,
+    "web_global": 32,
+    "web_jp": 4,
+    "web_cn": 6,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "bluesky", "last30days_skill"],
+  "notes": "last30days skill unavailable (consistent with all prior runs); manual keyword-free sweep. CSDN HTTP 521, Zhihu HTTP 403 on direct fetch — content accessible via search snippets only. HN front page (30), HF Papers (24), GitHub Trending (17), Techmeme (~8) all fully swept. JP hubs (Qiita, Zenn, note.com) covered; CN hubs (Zhihu, CSDN, Juejin) covered via snippets and DuckDuckGo HTML. Key paradigm signals today: GLM-5.3 emergent exploit-chain capabilities (573 HN pts), Cerebras+OpenAI GPT-5.6 Sol Ultrafast 750 tok/s (631 HN pts), DreamX-Phi 1.0 WorldArena 2.0 win + Alaya-EVOKE endless world, Full-bandwidth transformer (arXiv 2608.08888), Colibri/Lumabri P2P MoE swarm."
+}
