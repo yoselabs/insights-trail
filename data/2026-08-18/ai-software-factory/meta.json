@@ -1,0 +1,21 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-08-18",
+  "coverage_pct": 78,
+  "total_urls": 71,
+  "sources": {
+    "hackernews": 2,
+    "web_global": 37,
+    "web_jp": 14,
+    "web_cn": 10,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0
+  },
+  "failed_sources": [],
+  "notes": "DuckDuckGo HTML endpoint returned CAPTCHA challenges for both JP and CN passes; fell back to WebSearch in respective languages — adequate coverage achieved (14 JP, 10 CN pages). /last30days skill not available as named invocation; full manual sweep via WebSearch + WebFetch performed instead. X/Twitter and Reddit excluded per instructions. Bluesky returned no relevant content despite OK status. Key new findings: Cloudflare ADLC launch (Agents Week Aug 4-10), Anthropic RSI disclosure (80% code, 8x productivity), Slack 200-run agentic testing dead-end data, Pragmatic Engineer N=900+ three-archetype survey, Azure DevOps MCP confused deputy + AIP-Bench 33 agentic commerce vulns."
+}
