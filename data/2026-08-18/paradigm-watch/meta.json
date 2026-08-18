@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-08-18",
+  "coverage_pct": 75,
+  "total_urls": 42,
+  "sources": {
+    "hackernews": 30,
+    "huggingface": 35,
+    "github_trending": 13,
+    "techmeme": 9,
+    "web_global": 16,
+    "web_jp": 5,
+    "web_cn": 6,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "paperswithcode": 0
+  },
+  "failed_sources": ["reddit", "paperswithcode_direct", "duckduckgo_html_jp", "duckduckgo_html_cn"],
+  "notes": "DuckDuckGo HTML endpoint CAPTCHA-blocked for JP/CN queries today; fell back to native-language WebSearch. Zhihu 403 on direct fetch (consistent with prior runs). Reddit WebFetch blocked. Papers With Code redirects to HF Papers. HN front page had zero paradigm-watch items today. Main paradigm finding: arXiv 2608.16884 (AlphaEvolve + Adam/JAX improvement to matrix multiplication exponent ω from 2.371339 to 2.371177; 5 HF upvotes). Quiet paradigm-watch day overall."
+}
