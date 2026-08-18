@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-08-18",
+  "coverage_pct": 72,
+  "total_urls": 98,
+  "sources": {
+    "hackernews": 2,
+    "bluesky": 0,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_global": 60,
+    "web_jp": 12,
+    "web_cn": 16,
+    "github": 8
+  },
+  "failed_sources": ["reddit", "twitter", "youtube", "tiktok", "instagram", "last30days_skill"],
+  "notes": "last30days skill unavailable (tool not loaded); DuckDuckGo HTML endpoint returned CAPTCHA for JP/CN — WebSearch used as substitute; bluesky=OK but 0 on-topic posts found; social layer (Reddit, X, TikTok, Instagram, YouTube) fully absent; Copilot Autofix/Snowflake HN 381 pts, Bullet HN 117 pts; DeepSeek Harness ecosystem at 131k stars, ~6k community plugins; Cursor Origin launched Aug 17 during GitHub outage; SpaceX acquisition of Cursor closed Aug 14"
+}
