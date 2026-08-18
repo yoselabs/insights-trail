@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-08-18",
+  "coverage_pct": 76,
+  "total_urls": 68,
+  "sources": {
+    "hackernews": 3,
+    "reddit": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "arxiv": 5,
+    "web_global": 37,
+    "web_jp": 8,
+    "web_cn": 12,
+    "x_twitter": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket", "x_twitter", "bluesky_signal"],
+  "notes": "Reddit 400/403 inaccessible; YouTube not searched; Bluesky=OK but no on-topic signal; Zhihu 403 on direct fetches — content from search snippets; Neo4j TWIN4J Aug 11/18 not found; DuckDuckGo HTML endpoint hit CAPTCHA — JP/CN pass via WebSearch in native language instead. New this run: MemoraX AI Seed++ (CN, Aug 12), MemTools arXiv:2607.21404 (CAS/BAAI), arXiv:2607.26520 (Neo4j bitemporal), MemTool ECIR 2026, Letta Agents SDK August, Graphiti v0.29.3, 3 new HN threads."
+}
