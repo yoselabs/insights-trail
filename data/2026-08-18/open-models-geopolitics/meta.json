@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-18",
+  "coverage_pct": 82,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_global": 65,
+    "web_jp": 7,
+    "web_cn": 13
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "bluesky_no_posts", "duckduckgo_html_captcha"],
+  "notes": "Bluesky health OK but 0 on-topic posts. DuckDuckGo HTML endpoint returned CAPTCHA for both JP and CN queries; substituted WebSearch in JP/CN languages. Zhihu returned 403 on several direct article URLs; content captured via snippets. GLM-5.3 open weights still pending (targeting ~Aug 28); BenchLM score pending. EU AI Act GPAI fine corrected from prior briefing: €15M/3% for GPAI providers (not €35M/7% which is prohibited practices tier). Primary new finding: Qwen3.8-27B released Aug 14 (Apache 2.0, multimodal); Mistral hosting GLM-5.2 on EU Regional Endpoints (Aug 11). DeepSeek Harness grew from 64K to 141K+ stars Aug 14-17."
+}
