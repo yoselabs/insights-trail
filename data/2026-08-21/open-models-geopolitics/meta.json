@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-21",
+  "coverage_pct": 83,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 1,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_global": 65,
+    "web_jp": 11,
+    "web_cn": 19
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram"],
+  "notes": "DuckDuckGo HTML CAPTCHA (same as Aug 18); switched to native-language WebSearch for JP/ZH passes — comparable coverage. GLM-5.3 weights still not released (pending ~Aug 28); all GLM-5.3 benchmarks vendor-reported only. Trivium China and AccessNewsWire URLs returned 403. Bluesky health OK; 0 on-topic posts indexed. New models this cycle: dots3-note Preview (Rednote, Aug 14, Apache 2.0) and Ornith-1.5 (Aug 19-20, MIT). Moonshot IPO denial confirmed via The Standard HK. Chip market TrendForce forecast (90%) via Tencent News Aug 19."
+}
