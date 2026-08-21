@@ -1,0 +1,23 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-08-21",
+  "coverage_pct": 74,
+  "total_urls": 112,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 1,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 70,
+    "web_jp": 11,
+    "web_cn": 12,
+    "github": 15,
+    "last30days_skill": 0
+  },
+  "failed_sources": ["reddit", "x_twitter", "tiktok", "instagram", "last30days_skill", "duckduckgo_html_jp", "duckduckgo_html_cn"],
+  "notes": "last30days skill unavailable — fell back to WebSearch + WebFetch for all passes. DuckDuckGo HTML endpoint returned CAPTCHA for both JP and CN queries; WebSearch substituted (reaches Qiita/Zenn/Zhihu via indexed results but lower coverage than DDG HTML browse). Bluesky OK, 0 on-topic posts. HarnessRouter HN post (item 49335595) returned 429; details sourced from AI Journal + YC launch. Social layer (Reddit, X, TikTok, Instagram) not collected — estimated ~26% gap. claudemarketplaces.com shows 23,600+ skills (5.4x growth from Aug 4 data)."
+}
