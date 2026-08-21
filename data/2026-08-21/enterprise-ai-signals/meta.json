@@ -1,0 +1,22 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-08-21",
+  "coverage_pct": 75,
+  "total_urls": 55,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 55,
+    "web_jp": 0,
+    "web_cn": 0,
+    "last30days_skill": 0
+  },
+  "failed_sources": ["last30days_skill"],
+  "notes": "/last30days skill unavailable (8th consecutive run); social platforms not reached; JP/CN passes excluded per topic prompt; bluesky SOURCE HEALTH=OK but not queried; NVIDIA $500B platform MoUs under final agreement execution; Fractile $600M round in talks not closed; Oracle August layoff headcount unconfirmed; Anthropic public S-1 not yet filed"
+}
