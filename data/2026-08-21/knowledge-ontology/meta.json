@@ -1,0 +1,21 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-08-21",
+  "coverage_pct": 74,
+  "total_urls": 108,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 4,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 80,
+    "web_jp": 10,
+    "web_cn": 14,
+    "arxiv": 7
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "duckduckgo_html_jp", "duckduckgo_html_cn"],
+  "notes": "DuckDuckGo HTML endpoint returned CAPTCHA for both JP and CN passes; fell back to WebSearch with native-language queries. Reddit 400/403. YouTube not searched. TWIN4J Aug 18-21 edition blocked (403). CSDN Aug 19 article returned 521. Graphiti still at v0.29.3 (no new stable release). Bluesky OK but no on-topic signal. 4 new threads: Semantica v0.6.0, Starling UCA, Neo4j Labs agent-memory NAMS, OntoCast v0.3.0. 3 updates: MemoraX+Huawei Cloud, Cognee v1.5.0.dev5, Mem0 editor plugin v0.2.11."
+}
