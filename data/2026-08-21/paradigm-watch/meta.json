@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-08-21",
+  "coverage_pct": 75,
+  "total_urls": 54,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_papers": 17,
+    "github_trending": 17,
+    "techmeme": 15,
+    "web_global": 35,
+    "web_jp": 5,
+    "web_cn": 6,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "paperswithcode": 0
+  },
+  "failed_sources": ["reddit", "bluesky_paradigm_posts", "youtube", "tiktok", "instagram", "polymarket", "duckduckgo_jp_captcha", "duckduckgo_cn_captcha", "zhihu_direct_403", "juejin_js_required"],
+  "notes": "last30days skill unavailable (consistent with prior runs); DuckDuckGo HTML CAPTCHA-blocked for JP/CN (consistent); Zhihu 403 (consistent); Juejin JS-rendered (consistent). Manual keyword-free sweep: HN (30), HF Papers (17), GitHub Trending (17), Techmeme (~15), WebSearch/WebFetch (~35 global, 5 JP, 6 CN). Two [new] findings: Stop Anthropomorphizing (ICML 2026 poster, 250 HN pts) + ANT asynchronous neural Turing networks (Nature Comm June 2026, not previously captured). One [update]: DiffusionGemma added to diffusion-lm-scaling-wave thread. Quiet day overall — HF Papers dominated by Scope 1 agent harnesses."
+}
