@@ -1,0 +1,22 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-25",
+  "coverage_pct": 82,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 2,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_global": 44,
+    "web_jp": 11,
+    "web_cn": 17,
+    "last30days_skill": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "reddit", "x_twitter", "last30days_skill"],
+  "notes": "last30days skill unavailable (Unknown skill error); English pass done via WebSearch+WebFetch; DuckDuckGo HTML endpoints returned CAPTCHA for JP/ZH — switched to native-language WebSearch; HN threads found but engagement numbers not retrieved (429 rate limit); Bluesky source health OK but 0 posts indexed; GLM-5.3 weights not yet released (confirmed no HuggingFace repo as of Aug 22 check); coverage strong on new releases (DeepSeek-V4-Flash-Vision-Exp, Meta Muse Glimmer, Apodex 1.1 paper), download share update, and GLM-5.3 vulnerability detail"
+}
