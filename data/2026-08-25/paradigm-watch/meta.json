@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-08-25",
+  "coverage_pct": 78,
+  "total_urls": 65,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_papers": 14,
+    "github_trending": 12,
+    "techmeme": 13,
+    "web_global": 45,
+    "web_jp": 7,
+    "web_cn": 9,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "papers_with_code": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket", "last30days_skill"],
+  "notes": "last30days skill unavailable (consistent). DuckDuckGo CAPTCHA-blocked for JP/CN queries (consistent); mitigated via native-language WebSearch. Reddit WebFetch blocked (consistent). Zhihu HTTP 403; Juejin JS-required. Papers With Code 302 → HuggingFace Papers. Bluesky=OK per SOURCE HEALTH, no paradigm-watch posts. Two updates (world-model-race: EchoWM 1,880 HF upvotes + Cosmos 3; diffusion-lm-scaling-wave: Nemotron tri-mode + LLaDA MoE v2 + Sander Dieleman + ELYZA JP). Two new threads (nvidia-groq3-lpx-hardware-disaggregation; llm-inference-engine-exploit-escape). Strong HF Papers signal day for world models."
+}
