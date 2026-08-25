@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-08-25",
+  "coverage_pct": 75,
+  "total_urls": 57,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 57,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill"],
+  "notes": "/last30days skill unavailable (9th consecutive run); social platforms (X, Reddit, HN, YouTube, TikTok, Bluesky, Polymarket) not reached; JP/CN sweeps excluded per topic prompt; bluesky SOURCE HEALTH=OK but not queried; Oracle Aug layoffs unconfirmed; Anthropic public S-1 not yet filed as of Aug 25; Salesforce Q2 FY2027 earnings releasing Aug 26 (not yet available)"
+}
