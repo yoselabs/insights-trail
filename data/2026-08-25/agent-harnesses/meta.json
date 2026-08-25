@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-08-25",
+  "coverage_pct": 77,
+  "total_urls": 118,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 1,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 6,
+    "polymarket": 0,
+    "web_global": 68,
+    "web_jp": 14,
+    "web_cn": 12,
+    "github": 14
+  },
+  "failed_sources": ["reddit", "x_twitter", "tiktok", "instagram", "last30days_skill"],
+  "notes": "last30days skill unavailable; replaced with multi-pass WebSearch+WebFetch. DuckDuckGo HTML returned CAPTCHA for JP/CN queries (same as Aug 21); native-language WebSearch used as substitute. Bluesky=OK but no on-topic Aug 25 posts found. Two HN threads (49396937, 49383353) returned 429. Social layer absent; ~23% coverage gap from missing social platforms."
+}
