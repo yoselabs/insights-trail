@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-08-28",
+  "coverage_pct": 82,
+  "total_urls": 82,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 2,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 55,
+    "web_jp": 7,
+    "web_cn": 14,
+    "arxiv": 4
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "reddit", "x_twitter", "bluesky_posts"],
+  "notes": "last30days skill unavailable; full WebSearch sweep used instead. DuckDuckGo HTML endpoint returned CAPTCHA for JP/CN passes; switched to native-language WebSearch — full JP/CN coverage maintained. CSDN/Juejin direct fetch blocked (HTTP 521/403); content captured via search snippets and CN news mirrors. Bluesky backend OK per SOURCE HEALTH but no topical posts surfaced. Key new items: AML leaderboard launch (Jul 29 by 30+ institutions), MemoraX AML #1 (Aug 17), Palantir SuperRepo beta (Aug 3), OzBrain Show HN (Aug 21), Onton Ontology 1 (Jul 29/Aug 2), Hindsight+DeepSeek Harness (Aug 14), Cognee v1.5.0 (Aug 15), Apache Ossie Kyvos (Aug 12), Databricks Genie Code as Lakeflow task, neo4j meta-knowledge-graph GitHub."
+}
