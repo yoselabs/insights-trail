@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-08-28",
+  "coverage_pct": 60,
+  "total_urls": 54,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 54,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "youtube", "hackernews", "tiktok", "instagram", "bluesky", "polymarket"],
+  "notes": "/last30days skill unavailable (Unknown skill error, 10th consecutive run). All research via manual WebSearch + WebFetch. Social platforms (Reddit/X excluded per scope; YouTube/HN/TikTok/Instagram/Bluesky/Polymarket unreachable without skill). JP/CN sweeps excluded per topic prompt. Salesforce and CNBC direct fetch returned 403 — content recovered via Yahoo Finance + Investing.com. Anthropic public S-1 not yet filed as of Aug 28. Bluesky reported OK in SOURCE HEALTH but unreachable without skill."
+}
