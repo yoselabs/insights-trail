@@ -1,0 +1,21 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-08-28",
+  "coverage_pct": 78,
+  "total_urls": 62,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 35,
+    "web_jp": 14,
+    "web_cn": 10
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "last30days_skill", "duckduckgo_html"],
+  "notes": "/last30days skill unavailable; replaced with multi-pass WebSearch + WebFetch. DuckDuckGo HTML endpoint returned CAPTCHA for JP/CN queries — WebSearch in native language used as substitute. HN rate-limited (429) on 2 threads; details from snippets only. Social layer (Reddit/X/TikTok/Instagram) not accessed. Bluesky=OK but no on-topic Aug 28 posts found. Main new findings: Orca ADE (56k stars, YC W22); Ponytail 115k-star skill; TrueForge MIT harness (30-75% cheaper); VSCode 1.135 external agent sessions + Rubber Duck; CC v2.1.246-251 (restricted mode, hook events); Hermes v0.20.6; Kiro Crew open-sourced; HiddenLayer Agent Harness Security; Harness.io agent-ready SCM; DSH RC.8 multimodal + sub-agent integration."
+}
