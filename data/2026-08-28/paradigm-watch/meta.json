@@ -1,0 +1,25 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-08-28",
+  "coverage_pct": 80,
+  "total_urls": 55,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_papers_daily": 21,
+    "huggingface_papers_trending": 28,
+    "github_trending": 20,
+    "techmeme": 12,
+    "web_global": 28,
+    "web_jp": 10,
+    "web_cn": 10,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "papers_with_code": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "Reddit WebFetch blocked (consistent). DuckDuckGo HTML CAPTCHA-blocked for JP/CN (consistent); fell back to native-language WebSearch. Zhihu 403 (snippets only). Juejin JS-required. Bluesky OK but no paradigm-watch posts. Papers With Code 302 → HF Trending captured. ben3d.ca 404 on initial URL, correct URL succeeded. VideoCardz 402 on direct fetch, content sourced via WebSearch. /last30days skill unavailable. Three new threads (samsung-lpddr5x-pim, dlss5-neural-rendering, rockAI-yan-native-memory); seven updates; 31 ongoing threads."
+}
