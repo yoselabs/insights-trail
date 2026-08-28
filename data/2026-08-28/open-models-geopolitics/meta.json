@@ -1,0 +1,22 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-08-28",
+  "coverage_pct": 85,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 1,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 2,
+    "web_global": 55,
+    "web_jp": 8,
+    "web_cn": 20,
+    "benchlm": 2
+  },
+  "failed_sources": ["reddit_excluded", "x_excluded", "youtube_not_retrieved", "bluesky_no_results", "hn_rate_limited_429", "zhihu_direct_403", "linux_do_403", "duckduckgo_html_captcha"],
+  "notes": "DuckDuckGo HTML CAPTCHA for both JP and ZH passes (consistent with Aug 25); switched to native-language WebSearch — comparable coverage. HN 429 rate limit on GLM-5.3-Flash thread. Multiple Zhihu/forum pages returned 403 Forbidden. /last30days skill unavailable — research conducted via direct WebSearch + WebFetch. Key new developments: Tencent Hy4 preview (770B, Apache 2.0, ties BenchLM #1); GLM-5.3 weights released (744B, conditional license, AI Analysis Index 60); GLM-5.3-Flash (320B MIT, 62T tokens on Chinese chips — parity with NVIDIA); Qwen3.8-Flash-Next (Qwen4 preview, qwen-community-1.0); MiniMax H1 2026 results ($116.6M revenue, ARR >$800M). Bluesky source health OK but 0 on-topic posts."
+}
