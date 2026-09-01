@@ -1,0 +1,21 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-09-01",
+  "coverage_pct": 80,
+  "total_urls": 55,
+  "sources": {
+    "hackernews": 2,
+    "web_en": 29,
+    "web_jp": 5,
+    "web_cn": 8,
+    "bluesky": 0,
+    "youtube": 0,
+    "reddit": 0,
+    "twitter": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": [],
+  "notes": "DuckDuckGo HTML CAPTCHA blocked; JP/CN passes via native-language WebSearch instead. Bluesky OK but no topical posts. AML second cycle (Sep 20) and Databricks cert results (mid-Sep) not yet available. EKAW 2026 (Sep 29) program not yet published. Key new items: Graphwise+Oakley Capital (Aug 19), Jedify benchmark (Aug 26), MemVerge MemoryBox WAIC 2026, Graphon AI $8.3M seed, Neo4j create-context-graph, HN shared-memory experiment, LayerX memory scaling empirical data."
+}
