@@ -1,0 +1,25 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-09-01",
+  "coverage_pct": 75,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_daily": 36,
+    "huggingface_trending": 27,
+    "github_trending": 15,
+    "techmeme": 9,
+    "web_global": 20,
+    "web_jp": 10,
+    "web_cn": 10,
+    "reddit": 0,
+    "twitter": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket", "duckduckgo_html_captcha"],
+  "notes": "last30days skill unavailable (consistent). DuckDuckGo HTML CAPTCHA-blocked for JP/CN (consistent) — mitigated by WebSearch in JP/CN. Reddit blocked (consistent). Today relatively quiet: Tim Cook retirement dominated Techmeme; HN sparse on paradigm-watch items. 1 new thread (ARC-AGI-1 67 cents), 2 updates (DLSS 5 launch date, Matrix-Game 3.5 world model). bluesky=OK, no posts surfaced."
+}
