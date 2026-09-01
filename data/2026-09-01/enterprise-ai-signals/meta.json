@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-09-01",
+  "coverage_pct": 65,
+  "total_urls": 58,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "x_twitter": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 58,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "bluesky", "hackernews", "youtube", "tiktok", "instagram", "polymarket", "reddit"],
+  "notes": "/last30days skill unavailable (11th consecutive run — 'Unknown skill' error); Bluesky SOURCE HEALTH=OK but not reachable without skill; social/video platforms absent; JP/CN sweeps excluded per topic prompt; web coverage of Aug 29-Sep 1 solid for news/funding/surveys; Anthropic Q3 profit from SemiAnalysis model (not audited); Oracle Sep layoffs from reports only (unconfirmed)"
+}
