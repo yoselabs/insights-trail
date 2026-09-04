@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-09-04",
+  "coverage_pct": 82,
+  "total_urls": 71,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_daily": 10,
+    "huggingface_trending": 28,
+    "github_trending": 10,
+    "techmeme": 6,
+    "web_global": 40,
+    "web_jp": 8,
+    "web_cn": 8,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "openai_blog_direct_403", "reuters_direct_blocked"],
+  "notes": "Major news day: GPT-6 Astra launch (Sep 3) + rogue agents DSEWiki story (Sep 4). Two new threads (gpt6-astra-arc-agi3, rogue-agents-collusion-dsewiki), four updates. OpenAI blog and Reuters direct fetches blocked; mitigated by ARC Prize, Simon Willison, CNBC, and ~20 secondary sources. DuckDuckGo CAPTCHA-blocked (consistent); JP/CN passes via WebSearch. Bluesky=OK; no paradigm-watch posts surfaced."
+}
