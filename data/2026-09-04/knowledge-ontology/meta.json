@@ -1,0 +1,21 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-09-04",
+  "coverage_pct": 80,
+  "total_urls": 55,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 1,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 38,
+    "web_jp": 7,
+    "web_cn": 7
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky"],
+  "notes": "Reddit/X/TikTok/Instagram excluded per instructions. Bluesky backend OK, no topical posts. YouTube not searched. DuckDuckGo HTML CAPTCHA-blocked for JP/CN — switched to native-language WebSearch (no content blocked). Key new items: MAGG arXiv:2608.28642 (Aug 12), metaphactory 6.0 + Ontopic VKG acquisition, Hindsight v0.9.2 + coding-agents 0.5.0 (Sep 1-2), SEMANTiCS 2026 (Sep 15-17 Ghent), MemoraX Code plugin. AML second cycle opens Sep 20 — not yet released. Databricks cert results expected mid-Sep — not yet available. EKAW 2026 full program not yet published."
+}
