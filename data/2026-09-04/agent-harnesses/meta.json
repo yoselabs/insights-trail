@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-09-04",
+  "coverage_pct": 82,
+  "total_urls": 78,
+  "sources": {
+    "hackernews": 6,
+    "github": 8,
+    "releasebot": 4,
+    "web_global": 37,
+    "web_jp": 13,
+    "web_cn": 10,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": [],
+  "notes": "last30days skill unavailable; replaced with WebSearch+WebFetch multi-pass. DDG HTML endpoint CAPTCHA-blocked (4th consecutive run); JP/CN passes used native-language WebSearch. HN rate-limiting (429) for items #49409092 and #48921077. Bluesky=OK per SOURCE HEALTH, no on-topic posts found. AURA Show HN very early (17 pts at access time). Key new items: Munder Difflin (303 HN pts), JetStream Clearance ($34M seed), Tenable CyberAgents AI Inspector, VSCode 1.136 Agent Merge, Claude Code v2.1.257-260 quad-release, Skills Over MCP WG SEP-2640, DevSpace 3.5k stars, Sonar Vortex."
+}
