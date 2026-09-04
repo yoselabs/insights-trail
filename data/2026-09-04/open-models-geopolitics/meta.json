@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-09-04",
+  "coverage_pct": 82,
+  "total_urls": 81,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "x_twitter": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 5,
+    "web_global": 58,
+    "web_jp": 9,
+    "web_cn": 14
+  },
+  "failed_sources": [],
+  "notes": "No bluesky posts found on topic (Bluesky=OK per SOURCE HEALTH but sparse for this topic Sep 1-4). No HN threads for K2 Horizon or Moonshot IPO found as of 09:00 UTC Sep 4. DuckDuckGo HTML endpoint blocked with CAPTCHA; JP/CN covered via WebSearch in native language instead. Mistral frontier MoE remains in partner early access with no public data (structural gap). BenchLM recalibration: scores changed from Sep 1 briefing (Hy4 preview 79.9→78.2, Qwen3.8 Max 79.4→78.2); reason unclear, likely methodology change. Key new finding: IFM/MBZUAI K2 Horizon (Sep 3) — six fully open models 0.9B-375B Apache 2.0 from UAE. Moonshot confidential HKEX IPO filing Sep 3 confirmed. Qwen3.8-Max-0902 coding update Sep 2 confirmed."
+}
