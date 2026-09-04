@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-09-04",
+  "coverage_pct": 68,
+  "total_urls": 71,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 71,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "reddit", "hackernews", "youtube", "tiktok", "instagram", "bluesky", "polymarket"],
+  "notes": "/last30days skill UNAVAILABLE 12th consecutive run; JP/CN excluded per topic prompt; bluesky SOURCE HEALTH=OK but unreachable without skill; all research via direct WebSearch (10 passes) + WebFetch (8 calls); coverage strong on Sep 1-4 enterprise news, funding, product launches; social/video signal entirely absent"
+}
