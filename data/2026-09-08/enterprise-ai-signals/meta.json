@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-09-08",
+  "coverage_pct": 67,
+  "total_urls": 72,
+  "sources": {
+    "web_global": 65,
+    "web_jp": 0,
+    "web_cn": 0,
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "ai_agent_store": 1
+  },
+  "failed_sources": ["last30days_skill", "bluesky"],
+  "notes": "/last30days skill unavailable (13th consecutive run — 'Unknown skill' error). Bluesky SOURCE HEALTH=OK but unreachable without skill. Social engagement signals (HN, Reddit, YouTube, TikTok, Instagram, Polymarket) absent. JP/CN sweeps excluded per topic prompt. Strong coverage of Sep 5-8 funding/M&A (Nvidia/HF $12.93B, Nscale pre-IPO $3.5B + $45B Anthropic deal, Wonderful $550M), layoffs (Uber 3,300, Oracle Sep 15 expected), agent safety (OpenAI DseWiki EU investigation), and Gartner AI layoffs/ROI study. 70+ prior-state threads carried forward."
+}
