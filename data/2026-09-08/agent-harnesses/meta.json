@@ -1,0 +1,21 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-09-08",
+  "coverage_pct": 83,
+  "total_urls": 94,
+  "sources": {
+    "hackernews": 1,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 65,
+    "web_jp": 12,
+    "web_cn": 9,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0
+  },
+  "failed_sources": [],
+  "notes": "last30days skill unavailable (unknown skill error); replaced with WebSearch+WebFetch multi-pass. DuckDuckGo HTML CAPTCHA-blocked (4th consecutive run); JP/CN via native-language WebSearch. Bluesky=OK per SOURCE HEALTH; no on-topic posts found. YouTube not accessed. Key new findings: OpenClaw v2026.9.1 (Mermaid, personal skill libraries, Android), Hermes v0.21.1 (Sep 7 patch), Claude Code v2.1.261 (Sep 5: /skill-doctor, 128K output), GPT-6 Astra Provider Adapter harness (62.7%->99.9% ARC-AGI-3 same model), GitHub Copilot Studio Harness GA (billing Sep 1), 8 new harnesses discovered (gstack 132k, Graphify 115k, atlas 3.3k, nodeterm 1.8k, Paseo 16k, OpenChamber HN 190pts, magnitude 3.3k, OpenCode v2 beta), openclaude 32.7k, ruflo meta-harness, context-mode."
+}
