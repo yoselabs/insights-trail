@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-09-08",
+  "coverage_pct": 80,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_daily": 8,
+    "huggingface_trending": 27,
+    "github_trending": 16,
+    "techmeme": 10,
+    "web_global": 35,
+    "web_jp": 8,
+    "web_cn": 4,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "bluesky_no_results"],
+  "notes": "DuckDuckGo HTML endpoint CAPTCHA-blocked for JP/CN (consistent); fell back to native-language WebSearch. Zhihu direct fetches 403 (consistent). Juejin JS-required. NYT WeWorm paywalled but mitigated via Help Net Security, Hacker News, Security Boulevard. Reddit r/MachineLearning consistently blocked. bluesky=OK per SOURCE HEALTH but zero paradigm-watch posts surfaced. Papers With Code 302-redirects to HF Papers. 3 new paradigm-watch threads found: WeatherNext 3 (AI weather model bypassing NWP data assimilation), WeWorm (AI-accelerated zero-click worm development), Uno (discrete diffusion AR speedup). Paradigm-watch GitHub Trending items: 0 (4th consecutive sweep with 0 items; all repos are Scope 1-2 agent/SDLC tooling)."
+}
