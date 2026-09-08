@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-09-08",
+  "coverage_pct": 82,
+  "total_urls": 72,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 5,
+    "web_global": 52,
+    "web_jp": 6,
+    "web_cn": 14
+  },
+  "failed_sources": ["duckduckgo_html_jp", "duckduckgo_html_cn"],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked for JP+CN passes; fell back to WebSearch with native-language queries — Zenn/note/Juejin/Aliyun may be underrepresented. Bluesky=OK per SOURCE HEALTH but no qualifying posts found. HN: no qualifying threads Sep 5-8. Primary new story: DeepSeek 160K Huawei Ascend 950DT order ($2.56B, Bloomberg Sep 4). BenchLM underwent second recalibration Sep 5-8: Hy4 preview dropped from #1 (78.2) to #13 (61.04); Qwen3.8 Max now #1 at 71.62. WAICO confirmed at 37 members. Kimi K3 US cloud 30% revenue-share talks active but no deal."
+}
