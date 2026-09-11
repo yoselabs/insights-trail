@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-09-11",
+  "coverage_pct": 78,
+  "total_urls": 64,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_daily": 19,
+    "huggingface_trending": 26,
+    "github_trending": 16,
+    "techmeme": 6,
+    "web_global": 35,
+    "web_jp": 6,
+    "web_cn": 8,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "last30days skill unavailable; manual sweep via WebFetch+WebSearch. DuckDuckGo HTML CAPTCHA-blocked for JP/CN (consistent); fell back to native-language WebSearch. Reddit blocked (consistent). 2 new threads: NCP-ArchPreview (126 HF daily upvotes), SMELT (HN 512pts via Raschka). 4 updates: Navier-Stokes AI proof (HN 840pts), SenseNova-U1.5, Programmable World Model, Anthropic threat intel. No retirements. bluesky=OK."
+}
