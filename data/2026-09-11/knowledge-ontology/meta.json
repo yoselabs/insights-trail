@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-09-11",
+  "coverage_pct": 75,
+  "total_urls": 62,
+  "sources": {
+    "reddit": 6,
+    "x": 15,
+    "hackernews": 6,
+    "bluesky": 3,
+    "github": 7,
+    "web_global": 22,
+    "web_jp": 7,
+    "web_cn": 8,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "reddit_partial"],
+  "notes": "Reddit HTTP 403 after 6 items; YouTube/TikTok/Instagram not configured; DuckDuckGo HTML CAPTCHA blocked, switched to native WebSearch for JP/CN; Graphiti/Zep no Sep release; OKF still v0.2; AML cycle 2 opens Sep 20 (pending); Databricks cert beta results pending mid-Sep"
+}
