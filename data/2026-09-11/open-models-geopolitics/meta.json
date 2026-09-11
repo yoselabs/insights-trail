@@ -1,0 +1,33 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-09-11",
+  "coverage_pct": 84,
+  "total_urls": 81,
+  "sources": {
+    "reddit": { "items": 0, "note": "excluded per scope" },
+    "x_twitter": { "items": 0, "note": "excluded per scope" },
+    "youtube": { "items": 1, "region": "JP" },
+    "hacker_news": { "items": 1, "points": 976, "comments": 557 },
+    "tiktok": { "items": 0 },
+    "instagram": { "items": 0 },
+    "bluesky": { "items": 0, "status": "OK", "note": "No qualifying posts Sep 9-11" },
+    "polymarket": { "items": 3, "volume_usd": 2847000 },
+    "web_global": { "items": 58, "urls": 58 },
+    "web_japan": { "items": 9, "urls": 9, "hubs": ["GIGAZINE", "note.com", "NOVAIST", "tek.jp", "AIエージェントナビ", "mihata.jp", "XenoSpectrum", "Zenn", "Yahoo Japan"] },
+    "web_china": { "items": 14, "urls": 14, "hubs": ["CLS", "Tencent News", "163.com", "Sina News", "Chinatimes(TW)", "Zhihu(titles)", "Juejin(title)", "CSDN", "LINUX DO", "Baidu Baike", "MeetCoding", "Fudan FDDI", "53AI", "21jingji"] }
+  },
+  "findings": {
+    "new": 4,
+    "update": 3,
+    "ongoing": 55
+  },
+  "failed_sources": [
+    { "source": "duckduckgo_html_jp", "reason": "CAPTCHA-blocked", "fallback": "Japanese WebSearch" },
+    { "source": "duckduckgo_html_cn", "reason": "CAPTCHA-blocked", "fallback": "Chinese WebSearch" },
+    { "source": "zhihu_pages", "reason": "HTTP 403 Forbidden on all direct fetches", "fallback": "titles and snippets from search results" },
+    { "source": "juejin_pages", "reason": "JavaScript-rendered — WebFetch returned waiting screen", "fallback": "search result summaries" },
+    { "source": "last30days_skill", "reason": "Skill unavailable (Unknown skill: last30days)", "fallback": "manual WebSearch + WebFetch across all topic dimensions" },
+    { "source": "bluesky", "reason": "No qualifying posts found Sep 9-11 (source health OK)", "fallback": "none needed" }
+  ],
+  "notes": "DeepSeek V4.1 Flash and IPO news dominated all platforms. DuckDuckGo HTML CAPTCHA-blocked for JP/CN passes; native-language WebSearch fallback used (same as prior run). Zhihu and Juejin 403 are persistent per-run; content captured via search snippets. last30days skill unavailable; manual multi-source research performed. BenchLM V4.1 Flash score not yet listed (same-day release). Coverage_pct 84: strong on model releases, IPO, geopolitics, JP/CN hub; gap in Zhihu/Juejin full text and live V4.1 Flash independent benchmark."
+}
