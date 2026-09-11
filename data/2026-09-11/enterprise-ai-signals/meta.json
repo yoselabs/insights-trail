@@ -1,0 +1,29 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-09-11",
+  "coverage_pct": 72,
+  "total_urls": 78,
+  "sources": {
+    "web_global": 78,
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": [
+    "last30days_skill",
+    "reddit",
+    "hackernews",
+    "youtube",
+    "tiktok",
+    "instagram",
+    "bluesky",
+    "polymarket"
+  ],
+  "notes": "/last30days skill unavailable (14th consecutive run — 'Unknown skill' error on all invocation attempts); all research conducted via WebSearch and WebFetch. Bluesky SOURCE HEALTH=OK per prompt but unreachable without skill. JP/CN sweeps excluded per topic prompt. Social signals (Reddit, HN, YouTube, TikTok, Instagram, Bluesky, Polymarket, X/Twitter) entirely absent. Oracle Sep 15 layoffs anticipated but not confirmed as of Sep 11. Anthropic public S-1 expected this week but not confirmed filed on EDGAR as of Sep 11. WebFetch 403 on The Neuron Sep 10 digest — mitigated by AI Agent Store + alternative WebSearch sources. Coverage pct: 72% reflects web-only research without social/community platform signals."
+}
