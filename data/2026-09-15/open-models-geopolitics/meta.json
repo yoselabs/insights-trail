@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-09-15",
+  "coverage_pct": 83,
+  "total_urls": 99,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_global": 75,
+    "web_jp": 7,
+    "web_cn": 17
+  },
+  "failed_sources": ["bluesky_qualifying_posts"],
+  "notes": "/last30days skill unavailable; manual multi-query WebSearch sweep used instead. DuckDuckGo HTML endpoint CAPTCHA-blocked for both JP and CN passes; fell back to native-language WebSearch. Zhihu direct pages 403. Juejin accessible via snippets. RealClearDefense Sep 12 + The Neuron Sep 14 digest 403 blocked. DeepSeek V4.1 Flash BenchLM not yet ranked. Bluesky OK but zero qualifying posts. Key new items: Anthropic 154-page distillation threat report (Sep 10, 200M exchanges named), BenchLM Sep 14 update (Kimi K2.6 #6, GLM-5.1 #10), DeepSeek V4 Pro retirement reversed, DeepSeek revenue disclosed ($70.7M Jan-Jul 2026 = 10x YoY), Moonshot cloud deal expanded to MS/Amazon/Google all three, China issued preconditions for US-China AI safety talks, BIS formal rescission + replacement due Sep 30."
+}
