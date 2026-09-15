@@ -1,0 +1,22 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-09-15",
+  "coverage_pct": 72,
+  "total_urls": 54,
+  "sources": {
+    "web_en": 48,
+    "web_jp": 14,
+    "web_cn": 12,
+    "arxiv": 6,
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["bluesky", "youtube", "hackernews", "tiktok", "instagram", "polymarket"],
+  "notes": "last30days skill unavailable; agent-direct research pass. DuckDuckGo HTML endpoint returned CAPTCHA for JP/CN queries — fell back to native-language WebSearch (coverage maintained). Zhihu HTTP 403. Reddit/X excluded per topic instructions. Bluesky SOURCE HEALTH=OK but not reached directly this pass. Strong signal on GhostJacking, METR 1200-agent coordination, Microsoft Humanist AI CoC, OWASP Agentic Skills Top 10, Black Hat multi-vendor CVEs (all new since Aug 21). Japanese and Chinese hub passes successful via WebSearch fallback."
+}
