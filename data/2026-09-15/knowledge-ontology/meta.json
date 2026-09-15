@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-09-15",
+  "coverage_pct": 72,
+  "total_urls": 47,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 2,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 29,
+    "web_jp": 7,
+    "web_cn": 8,
+    "github": 3
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "Reddit HTTP 403 blocked all subreddits; YouTube/TikTok/Instagram not configured; DuckDuckGo HTML CAPTCHA-blocked (used WebSearch for JP/CN passes); Juejin JS-rendered (could not extract); note.com tech_news_next HTTP 429; Bluesky=OK per SOURCE HEALTH but 0 relevant posts found; SEMANTiCS 2026 live today (proceedings not yet available); AML cycle 2 opens Sep 20 (no results yet)"
+}
