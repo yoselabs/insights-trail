@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-09-18",
+  "coverage_pct": 72,
+  "total_urls": 47,
+  "sources": {
+    "hackernews": 4,
+    "huggingface": 2,
+    "github_trending": 0,
+    "techmeme": 2,
+    "web_global": 25,
+    "web_jp": 10,
+    "web_cn": 4,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "bluesky", "duckduckgo_html_jp", "duckduckgo_html_cn", "zenn_trending", "zhihu_direct", "juejin_direct"],
+  "notes": "Reddit blocked (Claude Code cannot fetch reddit.com). Bluesky OK per source health but no paradigm posts surfaced. DuckDuckGo HTML endpoint returned CAPTCHA for both JP and ZH passes; WebSearch + direct hub fetches used as fallback. Zhihu/Juejin/CSDN direct article fetches returned 403/521; Chinese pass relies on search snippets. GitHub Trending had zero paradigm-relevant repos today (all agent harnesses and coding tools). 4 new threads found; 2 updates to existing threads. No threads retired (all within 30-day window)."
+}
