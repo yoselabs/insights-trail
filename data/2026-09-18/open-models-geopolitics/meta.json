@@ -1,0 +1,23 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-09-18",
+  "coverage_pct": 83,
+  "total_urls": 112,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 3,
+    "web_en": 73,
+    "web_jp": 9,
+    "web_cn": 17,
+    "benchlm": 4,
+    "releasebot": 2
+  },
+  "failed_sources": [],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked for JP/CN passes (consistent with all prior runs); fell back to native-language WebSearch. Zhihu direct pages 403 Forbidden. CNN Sep 16 AI exec meeting article HTTP 451; content from syndicated mirrors. Bluesky SOURCE HEALTH OK but zero qualifying posts. Polymarket not re-verified Sep 18 (prior state used). No frontier model releases Sep 15-18. BIS interim final rule still unpublished (12 days to Sep 30 deadline). GLM-5.5 confirmed not released; next: GLM-5.4 Oct-Nov window."
+}
