@@ -1,0 +1,23 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-09-22",
+  "coverage_pct": 85,
+  "total_urls": 118,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 2,
+    "web_global": 50,
+    "web_jp": 19,
+    "web_cn": 29,
+    "benchlm": 2,
+    "releasebot": 1
+  },
+  "failed_sources": ["duckduckgo_html_jp", "duckduckgo_html_cn"],
+  "notes": "last30days skill unavailable (unknown skill error); manual sweep via WebSearch+WebFetch. DuckDuckGo HTML CAPTCHA-blocked JP+CN (consistent with all prior runs); JP/CN passes via native-language WebSearch. Zhihu direct fetches 403 Forbidden. Polymarket 'best Chinese AI' market not re-checked (prior state used). DeepSeek V4.1 Pro 2T figure from CN media leaks, not official DeepSeek. Qwen 4 specs not published. Bluesky OK but zero qualifying posts. BIS rule not published as of Sep 22."
+}
