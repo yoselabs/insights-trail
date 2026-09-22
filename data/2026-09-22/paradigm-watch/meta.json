@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-09-22",
+  "coverage_pct": 72,
+  "total_urls": 35,
+  "sources": {
+    "hackernews": 14,
+    "huggingface": 9,
+    "github_trending": 5,
+    "techmeme": 5,
+    "web_global": 25,
+    "web_jp": 5,
+    "web_cn": 4,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "x_twitter": 0
+  },
+  "failed_sources": ["reddit", "bluesky_content", "duckduckgo_html_jp", "duckduckgo_html_cn", "zhihu_direct", "csdn_direct"],
+  "notes": "Reddit blocked; Bluesky OK but no paradigm content surfaced; DuckDuckGo HTML CAPTCHA on both JP/CN passes; Zhihu/CSDN direct fetches 403; Zenn trending returned only agent/software content; Papers With Code redirects to HuggingFace. New: GziPT (HN 299), Mini-AGI (HN 268), HuRo (CoRL 2026, HF 37). Updates: Kev open-source Jev ecosystem (HN 444), WorldCrafter 3D world model (HF 194)."
+}
