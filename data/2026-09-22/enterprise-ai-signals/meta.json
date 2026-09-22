@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-09-22",
+  "coverage_pct": 78,
+  "total_urls": 64,
+  "sources": {
+    "bluesky": 6,
+    "hackernews": 7,
+    "x": 12,
+    "github": 10,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "web_global": 36,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "Reddit: keyless tier returned 0 results (likely rate-limited). YouTube: yt-dlp not installed. TikTok/Instagram: no ScrapeCreators key (not material for this enterprise-signals topic). JP/CN web sweeps not needed per topic prompt. 18 supplementary WebSearch passes run. Anthropic public S-1 not yet on EDGAR as of Sep 22 — financials still confidential."
+}
