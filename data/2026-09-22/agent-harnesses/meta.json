@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-09-22",
+  "coverage_pct": 75,
+  "total_urls": 62,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 2,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 45,
+    "web_jp": 6,
+    "web_cn": 8,
+    "github_trending": 1
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky", "polymarket", "last30days_skill", "duckduckgo_html"],
+  "notes": "/last30days skill unavailable (unknown skill error) — replaced with direct WebSearch + WebFetch multi-platform sweep. DuckDuckGo HTML endpoint served CAPTCHA for JP/CN queries — switched to WebSearch in native languages. HN direct fetch rate-limited (429); HN data from search results only, no engagement counts. Reddit/X/Bluesky/YouTube excluded per protocol or unavailable. Core harness updates (Claude Code v2.1.270-278, OpenClaw v2026.9.5, Hermes v0.21.4, VS Code 1.138, Codex CLI 0.155, Cursor Projects) fully covered. Major news (AWS Strands Harness, Copilot Rust rewrite, SEP-2640 final, OpenAI Agents API, Claude Code Projects redesign, Claude Code Mods) fully covered."
+}
