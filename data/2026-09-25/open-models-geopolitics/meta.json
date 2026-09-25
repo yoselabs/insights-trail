@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-09-25",
+  "coverage_pct": 82,
+  "total_urls": 94,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 2,
+    "web_en": 57,
+    "web_jp": 12,
+    "web_cn": 22,
+    "x_twitter": 0
+  },
+  "failed_sources": [],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked on both JP and CN passes (consistent with prior runs); native-language WebSearch used as fallback. Zhihu direct fetches HTTP 403. CNBC tech download Sep 25 HTTP 403. CSDN Sep 18 article HTTP 521. /last30days skill not available in environment — research conducted directly via WebSearch+WebFetch. Two items missed in prior briefing (Sep 22) captured as [new] threads: Xi BRICS AI open-source zone (Sep 13) and Qwen-Image-2.1 (Sep 20). Key new facts Sep 22-25: Trump-Xi summit produced first formal US-China AI Dialogue session but no formal safety agreement; trade truce extended to Jan 10 2027; chip export controls NOT on AI dialogue agenda; BenchLM BenchAlign v5.7 deployed Sep 24 with major rescoring; Ascend 'ecosystem inflection point' declared Sep 19; BIS replacement rule still unpublished 5 days before Sep 30 deadline; Polymarket CN AI ban ticked to 16% post-summit."
+}
