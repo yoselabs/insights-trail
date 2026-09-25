@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-09-25",
+  "coverage_pct": 72,
+  "total_urls": 42,
+  "sources": {
+    "web_global": 42,
+    "reddit": 0,
+    "hackernews": 0,
+    "x_twitter": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["reddit", "youtube", "hackernews_new_window", "bluesky_new_window"],
+  "notes": "last30days skill unavailable; research via direct WebSearch/WebFetch. JP/CN sweeps not needed per topic prompt. Reddit keyless unavailable. No new HN threads or Bluesky posts found in Sep 23-25 window. Oracle Sep 15 layoff confirmed at ~2,500 (not 5-8K estimate). Anthropic IPO: Q2 projected $559M operating profit on $10.9B revenue — first quarterly profit. Cyera $400M + Snorkel $350M both announced Sep 22. DocuSign MCP GA Sep 30 imminent. VA EAISS 540K-user contract solicitation due Oct 2026."
+}
