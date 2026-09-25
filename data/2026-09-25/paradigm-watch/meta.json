@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-09-25",
+  "coverage_pct": 70,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 18,
+    "huggingface": 15,
+    "github_trending": 5,
+    "techmeme": 15,
+    "arxiv": 8,
+    "web_global": 20,
+    "web_jp": 6,
+    "web_cn": 8,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_jp", "duckduckgo_html_cn", "last30days_skill"],
+  "notes": "/last30days skill not available; manual sweep used. DuckDuckGo HTML CAPTCHA-blocked (JP+CN); fell back to WebSearch. Zhihu/CSDN/Juejin 403 for direct fetches; search snippets used. Reddit blocked. Bluesky OK but no paradigm content. 2 new/update paradigm findings today: linear superposition (new thread), rogue agent escalation (update), world model WROP benchmark (update)."
+}
