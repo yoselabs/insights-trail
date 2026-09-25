@@ -1,0 +1,33 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-09-25",
+  "coverage_pct": 78,
+  "total_urls": 71,
+  "sources": {
+    "web_global": 55,
+    "web_jp": 8,
+    "web_cn": 8,
+    "hacker_news": 1,
+    "github_trending": 1,
+    "bluesky": 0,
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "polymarket": 0
+  },
+  "failed_sources": [
+    "/last30days skill (unknown skill error — replaced with direct WebSearch+WebFetch sweep)",
+    "DuckDuckGo HTML endpoint (CAPTCHA; JP+CN passes switched to native-language WebSearch)",
+    "Zhihu direct WebFetch (HTTP 403; data from search snippets and cache)",
+    "HN direct fetch (HTTP 429 rate-limited; data from search snippets)",
+    "Bluesky (no harness-specific posts retrievable without authenticated client; SOURCE HEALTH: bluesky=OK but free search returned 0 results)",
+    "Reddit (excluded per protocol)",
+    "X/Twitter (excluded per protocol)"
+  ],
+  "notes": "Comprehensive on CC v2.1.280-282, Opus 5.5, Google AX, Hermes v0.21.5, OpenClaw 2026.9.6, SEP-2640 adoption, Cursor Bots, JP/CN hub coverage. Coverage gap: Reddit/X/Bluesky/YouTube (excluded or unavailable). HN data approximated via search snippets. /last30days skill unavailable same as Sep 22 run.",
+  "new_threads": 6,
+  "updated_threads": 11,
+  "ongoing_threads": 108,
+  "total_threads": 125
+}
