@@ -1,0 +1,21 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-09-29",
+  "coverage_pct": 78,
+  "total_urls": 62,
+  "sources": {
+    "hackernews": 4,
+    "web_global": 45,
+    "web_jp": 18,
+    "web_cn": 17,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "twitter", "youtube", "tiktok", "instagram", "duckduckgo_html_captcha"],
+  "notes": "last30days skill unavailable; research done via direct WebSearch + WebFetch. DuckDuckGo HTML endpoint blocked by CAPTCHA for both JP and CN passes; fell back to WebSearch in Japanese/Chinese which successfully reached Zenn, Qiita, Zhihu, CSDN, Juejin. Some CN pages (Juejin, Zhihu) returned loading placeholder on direct fetch; summaries from search context used. Bluesky SOURCE HEALTH=OK but not searched (skill unavailable). Strong arXiv coverage (2609.04630, 2609.11030, 2608.20341, 2609.00252, 2608.30572, 2608.02786, 2608.10153, 2608.25174). Major new finding: Uber public software factory blog post. Coverage estimate 78%."
+}
