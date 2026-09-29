@@ -1,0 +1,20 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-09-29",
+  "coverage_pct": 72,
+  "total_urls": 48,
+  "sources": {
+    "web_global": 48,
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill", "reddit", "youtube", "hackernews"],
+  "notes": "last30days skill unavailable ('Unknown skill'). Research via direct WebSearch (16 queries) + WebFetch (6 pages). JP/CN passes skipped per topic prompt. Reddit keyless unavailable. YouTube yt-dlp not installed. Bluesky OK per SOURCE HEALTH but not queried. Coverage 72% — primary enterprise signals (funding, earnings, surveys, layoffs, procurement, product launches) well covered; social/practitioner discussion and full OpenAI DevDay transcript are main gaps. Key new findings: Salesforce 7B AWUs Q2 FY2027, Nvidia-HF definitive $12.93B agreement, OpenAI DevDay Dot agent + ~$68B ARR, Gartner raised to $2.7T, Anthropic Claude Marketplace 2000+ connectors, Ema $77M Series B 1M+ enterprise users, Instinct $1B at $10B, Microsoft Work IQ Sep 30, Pentagon classified AI controversy."
+}
