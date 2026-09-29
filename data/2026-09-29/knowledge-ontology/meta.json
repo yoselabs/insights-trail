@@ -1,0 +1,21 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-09-29",
+  "coverage_pct": 65,
+  "total_urls": 71,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 1,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 1,
+    "polymarket": 0,
+    "web_global": 42,
+    "web_jp": 9,
+    "web_cn": 9,
+    "arxiv": 5
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "last30days_skill"],
+  "notes": "last30days skill unavailable; manual WebSearch+WebFetch sweep; social platform coverage (TikTok, Instagram, X/Twitter timelines) absent; Bluesky post content partially inaccessible; Reddit not directly crawled; Medium articles summarized only; EKAW 2026 just started (proceedings not yet available); no SOURCE HEALTH backends reported DOWN"
+}
