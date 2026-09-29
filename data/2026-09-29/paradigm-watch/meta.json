@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-09-29",
+  "coverage_pct": 72,
+  "total_urls": 47,
+  "sources": {
+    "hackernews": 5,
+    "huggingface_papers": 5,
+    "github_trending": 1,
+    "techmeme": 1,
+    "web_global": 17,
+    "web_jp": 12,
+    "web_cn": 10,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_jp", "duckduckgo_html_cn"],
+  "notes": "Reddit blocked; DuckDuckGo HTML CAPTCHA-blocked for JP/CN passes (fell back to WebSearch + direct fetches); Bluesky OK but no paradigm-relevant posts surfaced; /last30days skill unavailable, replaced by manual trending sweep; 4 new threads + 4 updates; 2 threads retired (samsung-lpddr5x-pim, rockAI-yan-native-memory, both >30 days)"
+}
