@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-09-29",
+  "coverage_pct": 82,
+  "total_urls": 58,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 2,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 40,
+    "web_jp": 11,
+    "web_cn": 10,
+    "github_trending": 2
+  },
+  "failed_sources": ["last30days_skill", "bluesky_authenticated", "youtube", "tiktok", "instagram", "reddit", "x_twitter", "duckduckgo_html_captcha"],
+  "notes": "/last30days skill unavailable (unknown skill error); replaced with full WebSearch+WebFetch sweep. DuckDuckGo HTML CAPTCHA on JP/CN queries; fallback to native WebSearch succeeded. Bluesky SOURCE HEALTH=OK but free search returned 0 harness posts. Zhihu/linux.do direct fetch 403; content from snippets. Major finding: Claude Sonnet 5.5 (Sep 28) Terminal-Bench 70.6% surpasses Opus 5.5; new harnesses openrig, jauvex; Salesforce Enterprise AI Harness Sep 10; Hindsight #1 GitHub trending."
+}
