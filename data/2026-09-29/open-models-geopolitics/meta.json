@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-09-29",
+  "coverage_pct": 83,
+  "total_urls": 66,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 1,
+    "web_global": 43,
+    "web_jp": 9,
+    "web_cn": 14
+  },
+  "failed_sources": [],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked (JP+CN passes); used native-language WebSearch + direct hub fetches as fallback. HN 429 rate-limited on direct fetch — engagement metrics unavailable. CNBC Sep 26, Eastern Herald Sep 25, CSDN MiMo: HTTP 403/521 — content from search snippets. Bluesky OK, 0 qualifying posts. BIS Sep 30 rule: no Federal Register entry as of Sep 29; deadline is today. Key new findings: Xiaomi MiMo-V2.6-Pro #1 BenchLM 74.7 (Sep 28 update); Huawei Ascend 950 cloud commercial launch Sep 30; DeepSeek IPO valuation $74-75B + $1B ARR. DeepSeek V4.1 Pro: still unreleased Sep 29."
+}
