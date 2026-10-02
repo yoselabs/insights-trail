@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-10-02",
+  "coverage_pct": 82,
+  "total_urls": 74,
+  "sources": {
+    "hackernews": 3,
+    "bluesky": 3,
+    "web_global": 52,
+    "web_jp": 11,
+    "web_cn": 9,
+    "github_trending": 5,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["last30days_skill", "youtube", "tiktok", "instagram", "reddit", "twitter"],
+  "notes": "last30days skill unavailable (unknown skill error); full manual WebSearch+WebFetch sweep. DuckDuckGo HTML CAPTCHA on JP+CN queries; fallback to native WebSearch worked. Bluesky fetch returned minimal post content (auth required for full data). Zhihu direct fetch 403. Major new finding: NVIDIA OpenShell (14.3k stars, 100+ firm coalition, Sep 28). Claude Mods (v2.1.287, Oct 1) major new CC extension surface. Weave Router 2.0 (HN 109pts), mattpocock/skills (135k stars). JP/CN coverage solid via search fallback."
+}
