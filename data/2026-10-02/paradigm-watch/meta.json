@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-02",
+  "coverage_pct": 73,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 7,
+    "huggingface": 7,
+    "github_trending": 0,
+    "techmeme": 6,
+    "web_global": 17,
+    "web_jp": 7,
+    "web_cn": 8,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "last30days_skill"],
+  "notes": "/last30days skill unavailable (unknown skill error); manual keyword-free sweep used. Reddit inaccessible. DuckDuckGo HTML CAPTCHA-blocked for JP/CN; fell back to WebSearch. Bluesky OK but no paradigm posts. HN thread 429-blocked for Janus item. frogandtoad.ai content not loadable."
+}
