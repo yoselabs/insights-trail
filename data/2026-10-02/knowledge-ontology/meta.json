@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-02",
+  "coverage_pct": 70,
+  "total_urls": 61,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 3,
+    "x_twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "arxiv": 1,
+    "web_global": 38,
+    "web_jp": 7,
+    "web_cn": 8
+  },
+  "failed_sources": [],
+  "notes": "/last30days skill unavailable this run; English sweep done manually via WebSearch+WebFetch; Reddit/TikTok/Instagram/X coverage absent; EKAW 2026 proceedings not yet published; AML Cycle 2 results pending (Oct 31 deadline); DuckDuckGo HTML endpoint returned CAPTCHA — JP/CN passes done via native WebSearch in Japanese/Chinese; bluesky=OK per SOURCE HEALTH but no substantive posts found"
+}
