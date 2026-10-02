@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-10-02",
+  "coverage_pct": 85,
+  "total_urls": 72,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 1,
+    "web_global": 48,
+    "web_jp": 8,
+    "web_cn": 16
+  },
+  "failed_sources": [],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked for JP/CN passes (consistent with all prior runs); native-language WebSearch + direct hub WebFetch fallback used. DeepSeek V4.1 Pro gray-scale testing active but not released as of 2026-10-02. BenchLM updated to v5.8. Sep 30 Ascend software stack + cloud launch confirmed as new major development. BIS FY2026 deadline passed without replacement rule. Bluesky OK no qualifying posts."
+}
