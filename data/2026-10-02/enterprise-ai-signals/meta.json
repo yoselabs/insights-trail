@@ -1,0 +1,20 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-10-02",
+  "coverage_pct": 78,
+  "total_urls": 48,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 48,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": [],
+  "notes": "skill unavailable (last30days); research via direct WebSearch/WebFetch. JP/CN passes not needed per topic. Bluesky OK but no enterprise AI signal posts found. PwC press release and OpenAI Presence official page both 403 Forbidden; covered via secondary sources. Q3 CY2026 hyperscaler earnings not yet reported. HN not queried."
+}
