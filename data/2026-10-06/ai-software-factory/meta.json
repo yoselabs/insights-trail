@@ -1,0 +1,21 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-10-06",
+  "coverage_pct": 72,
+  "total_urls": 103,
+  "sources": {
+    "hackernews": 7,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_en": 58,
+    "web_jp": 22,
+    "web_cn": 15
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "bluesky", "polymarket"],
+  "notes": "last30days skill unavailable — manual WebSearch+WebFetch sweep. DuckDuckGo HTML endpoint returned CAPTCHA; JP/CN hub discovery via native-language WebSearch instead. Zhihu article HTTP 403. arXiv 2609.04681 PDF binary (abstract only). Coverage strong on arXiv, EN web, JP Zenn/Qiita, CN Juejin/Tencent Cloud. Bluesky=OK per SOURCE HEALTH but no topic-relevant posts found."
+}
