@@ -1,0 +1,20 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-10-06",
+  "coverage_pct": 80,
+  "total_urls": 67,
+  "sources": {
+    "web_global": 67,
+    "bluesky": 0,
+    "hackernews": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["hackernews", "youtube", "reddit"],
+  "notes": "last30days skill unavailable; research via direct WebSearch/WebFetch (24 queries, 6 WebFetch pages). JP/CN passes not needed per topic prompt. Q3 CY2026 hyperscaler earnings not yet reported (ServiceNow Oct 28, Salesforce TBD). Bluesky=OK; no enterprise AI signal posts found. The Information paywall (Meta/MSFT Claude) accessed via cybersecurity summary. 5 new threads + 3 updated threads this run."
+}
