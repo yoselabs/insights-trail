@@ -1,0 +1,60 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-10-06",
+  "coverage_pct": 83,
+  "total_urls": 82,
+  "sources": {
+    "hacker_news": {
+      "status": "ok",
+      "items": 4,
+      "notes": "Pi 1.0 (1645pts/573c), Headlong (125/56), Offrun (78/66), Television (8/1)"
+    },
+    "web_global": {
+      "status": "ok",
+      "items": 54,
+      "notes": "WebSearch + WebFetch; full sweep across aicoder, alternativeto, explainx.ai, developersdigest, theregister, releasebot, claudeupdates, releases.sh, clawstat.us, mpost, arxiv, kenhuangus substack, github community issues"
+    },
+    "web_japan": {
+      "status": "partial",
+      "items": 9,
+      "notes": "DuckDuckGo HTML CAPTCHA; fallback to WebSearch in Japanese. Zenn (2 articles), Qiita (2 series), note.com (npaka), Gigazine, dev.classmethod.jp, syusodo.co.jp, pasqualepillitteri.it"
+    },
+    "web_china": {
+      "status": "partial",
+      "items": 8,
+      "notes": "DuckDuckGo HTML CAPTCHA; fallback to WebSearch in Chinese. Zhihu (snippets only, 403 on direct fetch), 80aj.com (2 articles), QQ News/Tencent, cnblogs.com, hubwiz.com, agents-radar CN forks (3)"
+    },
+    "github_trending": {
+      "status": "ok",
+      "items": 4,
+      "notes": "kouweizhu/agents-radar Oct 4-5, stevenko2002/agents-radar Oct 4+6, yaojiejia/agents-radar Oct 6"
+    },
+    "last30days_skill": {
+      "status": "unavailable",
+      "items": 0,
+      "notes": "Unknown skill: last30days — same failure as Oct 2 run; full manual sweep substituted"
+    },
+    "bluesky": {
+      "status": "not_queried",
+      "items": 0,
+      "notes": "SOURCE HEALTH bluesky=OK but not queried; low ROI in prior run"
+    },
+    "reddit": {
+      "status": "excluded",
+      "items": 0,
+      "notes": "Excluded per protocol"
+    },
+    "x_twitter": {
+      "status": "excluded",
+      "items": 0,
+      "notes": "Excluded per protocol"
+    }
+  },
+  "failed_sources": [
+    "last30days_skill",
+    "duckduckgo_html_jp",
+    "duckduckgo_html_cn",
+    "zhihu_direct"
+  ],
+  "notes": "Pi 1.0 was the dominant story this period (HN #1, 1645pts); strong multi-region coverage (JP: Gigazine/note.com/Zenn/Qiita; CN: 80aj.com/QQ News/Zhihu snippets/cnblogs). New harnesses: Headlong (125pts Show HN, Bash microharness), Offrun (78pts Show HN, multi-agent workspace), Television (8pts Show HN, GUI sidecar). Skill security crisis escalated: 157 confirmed malicious skills, STSS signing infrastructure emerging. CC v2.1.288-291 with agent.spawn and managed-agents onboarding. Coverage gap: Bluesky not queried; YouTube/TikTok not searched; Hermes v0.22 still unreleased; Cursor no new Oct changelog entries."
+}
