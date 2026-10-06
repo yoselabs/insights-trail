@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-06",
+  "coverage_pct": 76,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 6,
+    "huggingface_papers": 7,
+    "github_trending": 0,
+    "techmeme": 6,
+    "web_global": 26,
+    "web_jp": 8,
+    "web_cn": 7,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "last30days skill unavailable (same as Oct 2 run); DuckDuckGo HTML CAPTCHA-blocked for JP/CN (same as Oct 2); fell back to WebSearch for JP/CN; CSDN direct fetch HTTP 521, content from search snippet; Reddit blocked; Bluesky OK but no paradigm posts surfaced"
+}
