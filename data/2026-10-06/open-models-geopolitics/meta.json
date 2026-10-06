@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-10-06",
+  "coverage_pct": 78,
+  "total_urls": 50,
+  "sources": {
+    "reddit": 24,
+    "x": 18,
+    "youtube": 0,
+    "hackernews": 5,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 8,
+    "polymarket": 2,
+    "web_global": 25,
+    "web_jp": 6,
+    "web_cn": 10
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "reddit_partial_403", "duckduckgo_html_captcha", "cnbc_403", "zhihu_article_403"],
+  "notes": "Reddit 403 after 24 items (partial); DuckDuckGo HTML CAPTCHA-blocked for JP/CN (mitigated via native WebSearch); CNBC article 403 (content from other sources); Zhihu article bodies 403 (3 articles, content from search snippets); bluesky=OK per SOURCE HEALTH. Key stories: Mistral Large 4 launched Oct 6, DeepSeek $12B round, Tencent-Oracle $7B chip lease, Reflection AI Beam 501B."
+}
