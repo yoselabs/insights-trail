@@ -1,0 +1,23 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-06",
+  "coverage_pct": 72,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 1,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_en": 52,
+    "web_jp": 15,
+    "web_cn": 12,
+    "arxiv": 7,
+    "github_trends": 1
+  },
+  "failed_sources": [],
+  "notes": "/last30days skill unavailable; manual WebSearch+WebFetch sweep; social platforms (TikTok, Instagram, X, Reddit) uncovered; Bluesky=OK but no substantive on-topic posts found; EKAW 2026 proceedings still unpublished; Graphwise Summit detailed recap not yet published; AML Cycle 2 still open (Oct 31 deadline)"
+}
