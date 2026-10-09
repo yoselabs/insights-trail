@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-10-09",
+  "coverage_pct": 85,
+  "total_urls": 88,
+  "sources": {
+    "hackernews": 10,
+    "web_global": 65,
+    "web_jp": 10,
+    "web_cn": 12,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "github_trending": 5
+  },
+  "failed_sources": ["last30days_skill", "duckduckgo_html_jp", "duckduckgo_html_cn", "bluesky"],
+  "notes": "last30days skill unavailable; DuckDuckGo HTML CAPTCHA for JP/CN (consistent with prior run); fallback to native WebSearch complete; Bluesky not queried (SOURCE HEALTH bluesky=OK); Zhihu direct fetch HTTP 403; JP/CN coverage via WebSearch fallback; Haiku 5.5 dominant story (702 HN pts); 9 new threads (Haiku 5.5, nanoMuse, OpenHuman, Jotbus, cmux, agency-agents, trycua/cua, Docker Agent, Pinrail)"
+}
