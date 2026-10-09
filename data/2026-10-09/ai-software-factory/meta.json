@@ -1,0 +1,21 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-10-09",
+  "coverage_pct": 75,
+  "total_urls": 78,
+  "sources": {
+    "hackernews": 4,
+    "web_global": 52,
+    "web_jp": 14,
+    "web_cn": 14,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": [],
+  "notes": "Bluesky OK but no on-topic posts found; DuckDuckGo HTML endpoint blocked by CAPTCHA — substituted WebSearch in JP/CN directly; YouTube not searched; Reddit/X/TikTok/Instagram excluded per instructions. Strong arXiv + practitioner blog coverage. 19 findings: 16 [new], 2 [update], 1 still-true batch. Key new papers: VeriHarness (arXiv 2610.00972), MAGE (2608.25174), Loop Engineering empirical (2608.21884), Governance Methodology Layer (2609.04218), Overreliance on Test Agents (2607.17927). McKinsey Sep 2026: $61B H1 investment; only 25% meaningful acceleration. SmartBear new data: 47% accountability gap persists even with full audit tracking."
+}
