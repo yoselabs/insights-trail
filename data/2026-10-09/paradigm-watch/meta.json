@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-09",
+  "coverage_pct": 78,
+  "total_urls": 54,
+  "sources": {
+    "hackernews": 6,
+    "huggingface_papers": 7,
+    "github_trending": 0,
+    "techmeme": 0,
+    "web_global": 22,
+    "web_jp": 5,
+    "web_cn": 12,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_jp", "duckduckgo_html_cn", "zhihu_direct", "tech_insider_direct"],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked again (3rd consecutive run). Zhihu and tech-insider 403 on direct fetch; content from search snippets. Reddit inaccessible. Bluesky OK but no paradigm items. GitHub Trending all scope 1/2. Key finds: VisionHOPE [new], SGF+ [new], OpenAI 722 math [update to llm-lean-proof-automation], DiffuSpace $70M DLM funding [update to diffusion-lm-scaling-wave], Long-WAM/UniWAM [update to world-model-race]. Retired: weathernext3-fgn-raw-satellite, uno-diffusion-ar-speedup (both last_seen 2026-09-08, >30 days)."
+}
