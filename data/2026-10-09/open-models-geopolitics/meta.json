@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-10-09",
+  "coverage_pct": 62,
+  "total_urls": 67,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 1,
+    "web_global": 38,
+    "web_jp": 12,
+    "web_cn": 15
+  },
+  "failed_sources": ["last30days_skill", "reddit", "x_twitter", "youtube", "hackernews", "bluesky", "tiktok", "instagram", "duckduckgo_html_jp", "duckduckgo_html_cn"],
+  "notes": "/last30days skill unavailable (unknown skill error); full social media sweep (Reddit, X/Twitter, HN, YouTube, TikTok, Instagram, Bluesky) not executed; compensated with WebSearch + WebFetch. DuckDuckGo HTML endpoints CAPTCHA-blocked for JP and CN passes (consistent with prior runs); JP/CN coverage via native-language WebSearch. Bluesky=OK per SOURCE HEALTH but not queried. Coverage strong on web/blog/news passes, weak on social. Key finds: BenchLM Oct 9 reshuffle (GLM-5.3 #3, DS V4.1 Flash #4), Mistral Large 4 weights Oct 31 confirmed, Joe Tsai open-source sovereignty speech, Sakana Fugu Ultra v2 LiveCodeBench #1."
+}
