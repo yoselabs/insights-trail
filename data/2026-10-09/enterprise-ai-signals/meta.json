@@ -1,0 +1,20 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-10-09",
+  "coverage_pct": 82,
+  "total_urls": 62,
+  "sources": {
+    "web_global": 62,
+    "bluesky": 0,
+    "hackernews": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": [],
+  "notes": "last30days skill unavailable; research via direct WebSearch+WebFetch. yt-dlp not available (YouTube 0). Bluesky OK but no enterprise AI signal posts found. Q3 earnings season not yet reported (ServiceNow Oct 28, Salesforce/Microsoft later). JP/CN sweeps not needed per topic prompt. Coverage gap: Q3 earnings updates pending; The Information paywalled items accessed via secondary sources."
+}
