@@ -1,0 +1,23 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-09",
+  "coverage_pct": 73,
+  "total_urls": 82,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 1,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 60,
+    "web_jp": 12,
+    "web_cn": 11,
+    "arxiv": 5,
+    "github": 3
+  },
+  "failed_sources": ["reddit", "bluesky_posts"],
+  "notes": "DuckDuckGo HTML endpoint returned CAPTCHA for JP/CN passes — fell back to native-language WebSearch (Zenn/Qiita/53AI/Juejin still reached). Bluesky=OK per SOURCE HEALTH but minimal on-topic engagement found. EKAW 2026 proceedings still unpublished. Graphiti/Zep/Hindsight/MemoraX no new October releases found. CCKS 2026 ssl cert expired on official site. SLS Vienna Oct 14-15 upcoming (no content yet). Key new findings: Fabric IQ Ontology V2 now DEFAULT (old retires Jan 31 2027); Letta v0.34.0-v0.34.4 Memory Palace; IBM Research ISWC 2026 paper open-sourced; Inspired.org Oct 7 vibe-ontology critique; Atlan active ontology stats; Netflix E2E KG (JP Zenn); CCKS 2026 (CN); 53AI 3-phase ontology-KG-world-model path."
+}
