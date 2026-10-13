@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-13",
+  "coverage_pct": 78,
+  "total_urls": 61,
+  "sources": {
+    "hackernews": 4,
+    "huggingface_papers": 6,
+    "github_trending": 9,
+    "techmeme": 4,
+    "web_global": 25,
+    "web_jp": 8,
+    "web_cn": 10,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_jp", "duckduckgo_html_cn", "bluesky_paradigm"],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked (4th consecutive run). Reddit inaccessible. Bluesky OK but zero paradigm posts. Techmeme all Apple hardware today. GitHub Trending all scope 1/2/5. 3 updates (diffusion-lm-scaling-wave, world-model-race, frontis-ma1) + 3 new threads (thinking-inertia, msar-depth-attention, minions-distributed-gpu). 6 threads retired (>30 days). No breaking JP/CN content for today specifically."
+}
