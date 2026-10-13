@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-10-13",
+  "coverage_pct": 65,
+  "total_urls": 76,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 1,
+    "web_global": 52,
+    "web_jp": 9,
+    "web_cn": 15
+  },
+  "failed_sources": ["last30days_skill", "duckduckgo_html_jp", "duckduckgo_html_cn", "zhihu_direct", "linux_do", "csdn_rankings"],
+  "notes": "last30days skill unavailable ('Unknown skill'); compensated with WebSearch+WebFetch. DuckDuckGo HTML CAPTCHA-blocked (consistent pattern). Zhihu HTTP 403, LINUX DO HTTP 403, CSDN rankings HTTP 521. New findings: NVIDIA Nemotron 3.5 Bolt fully-open Oct 15; EU ENISA/JRC air-gapped Chinese AI testing (Oct 13); Chinese model wave forecast (7 models late Oct); GLM-5.3 on Amazon Bedrock GA. Bluesky OK per SOURCE HEALTH but not queried. Social platforms (Reddit, X, TikTok, Instagram) not queried."
+}
