@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-10-13",
+  "coverage_pct": 80,
+  "total_urls": 45,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "x_twitter": 0,
+    "web_global": 45,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram"],
+  "notes": "JP/CN sweeps not needed per topic prompt. /last30days skill unavailable; research via direct WebSearch (15 queries) + WebFetch (2 pages). Bluesky queried, SOURCE HEALTH=OK, no enterprise AI hard-signal posts found Oct 10-13. YouTube/TikTok not available. Two major earnings (ServiceNow, Microsoft Q1 FY2027) scheduled Oct 28 — primary gap. Anthropic S-1 not yet filed. ServiceNow Q3 FY2026 and Microsoft Q1 FY2027 data will require next run. Key new signals this period: Workday Rising cluster (C1.ai acquisition + Work Intelligence + Decision Intelligence + Anthropic MCP partnership), SAP TechWolf acquisition, Nous Research $90M Series B, Wharton-GBK N=1,416 study, Anthropic unintended actions report (Oct 9), OpenAI agent escape expanded to 100+ orgs, Anthropic IPO investor day Oct 14."
+}
