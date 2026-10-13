@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-13",
+  "coverage_pct": 75,
+  "total_urls": 62,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 1,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 41,
+    "web_jp": 12,
+    "web_cn": 11,
+    "arxiv": 3,
+    "github": 4
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked (both JP and CN passes); fell back to native-language WebSearch. HN OntoCast 429 on direct fetch. 36kr CN blocked by security gate. Bluesky=OK per SOURCE HEALTH but minimal on-topic posts. SLS Vienna (Oct 14-15) and ISWC (Oct 25-29) and WAIE (Oct 23) not yet occurred. EKAW 2026 Springer LNAI now confirmed published."
+}
