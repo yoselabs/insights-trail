@@ -1,0 +1,23 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-16",
+  "coverage_pct": 75,
+  "total_urls": 52,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "x_twitter": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 34,
+    "web_jp": 6,
+    "web_cn": 8,
+    "arxiv": 4,
+    "github": 4
+  },
+  "failed_sources": ["reddit", "hackernews_new_items", "bluesky_on_topic", "duckduckgo_html_captcha"],
+  "notes": "DDG HTML CAPTCHA-blocked (JP+CN); fell back to native-language WebSearch. Zep v4 + Graphiti v0.31 are major Oct 14-15 releases. Ansatz (arXiv:2610.02945, Terence Tao+) is landmark graph-memory paper. ISWC 2026 (Oct 25-29) and WAIE 2026 (Oct 23) not yet occurred. AML Cycle 2 deadline Oct 31. CSDN/OceanBase fetches failed. Bluesky health=OK but no on-topic posts found Oct 14-16."
+}
