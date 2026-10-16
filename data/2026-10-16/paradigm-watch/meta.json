@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-16",
+  "coverage_pct": 80,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 30,
+    "huggingface_papers": 40,
+    "github_trending": 13,
+    "techmeme": 7,
+    "web_global": 55,
+    "web_jp": 5,
+    "web_cn": 7,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_ddg_html_jp", "duckduckgo_ddg_html_cn"],
+  "notes": "DuckDuckGo HTML endpoint CAPTCHA-blocked 5th consecutive run; JP/CN done via WebSearch+WebFetch. Goodfire original article URL 404 — content confirmed via 5+ secondary sources. Reddit consistently blocked. Bluesky OK but no paradigm-specific posts found. Top story: Muse Spark Open 881 HN pts; Neural Networks Clean 763 HN pts."
+}
