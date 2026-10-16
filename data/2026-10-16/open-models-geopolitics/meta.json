@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-10-16",
+  "coverage_pct": 68,
+  "total_urls": 89,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 1,
+    "web_global": 58,
+    "web_jp": 8,
+    "web_cn": 12
+  },
+  "failed_sources": ["last30days_skill", "duckduckgo_html_jp", "duckduckgo_html_cn", "zhihu_direct"],
+  "notes": "/last30days skill unavailable (Unknown skill); DuckDuckGo HTML CAPTCHA on JP+CN passes (consistent with prior runs); Zhihu direct fetches 403; Bloomberg paywall 403; all compensated via WebSearch in JP/ZH + direct WebFetch of CN hub pages. Breaking story: China AI export controls draft published today (Oct 16). New BenchLM calibration with Step 5 Preview (StepFun #3) and Ling 3.1 Flash (Ant Group #4) entering top 5. Nemotron 3.5 Bolt released Oct 15 as planned."
+}
