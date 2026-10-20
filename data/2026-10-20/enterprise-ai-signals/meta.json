@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-10-20",
+  "coverage_pct": 82,
+  "total_urls": 54,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 5,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 47,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": [],
+  "notes": "JP/CN hub sweeps skipped per topic instructions. Reddit/X/YouTube/TikTok/Instagram not swept. Bluesky OK per SOURCE HEALTH but not separately swept (limited enterprise-AI-signals Bluesky content). ServiceNow Q3 and Microsoft Q1 FY2027 earnings both scheduled Oct 28 — not yet available. NVIDIA GTC Berlin keynote Oct 21 — not yet available. Several paywalled URLs (CNBC, Bloomberg) returned 403 on direct WebFetch; content recovered via aggregator sources. Qualcomm layoff scale undisclosed as of run time."
+}
