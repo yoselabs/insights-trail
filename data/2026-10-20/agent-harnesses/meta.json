@@ -1,0 +1,90 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-10-20",
+  "coverage_pct": 72,
+  "coverage_notes": "Strong: English web/HN/X/Bluesky/GitHub/security incidents. Moderate: Reddit (partial 403 after 14 items). Limited: CN-native (Zhihu 403), no YouTube/TikTok/Instagram. JP pass complete via WebSearch + direct hub fetches.",
+  "total_urls": 126,
+  "sources": {
+    "reddit": {
+      "items": 14,
+      "upvotes": 7913,
+      "comments": 1326,
+      "status": "partial",
+      "note": "HTTP 403 after 14 items; r/LocalLLaMA, r/AI_Agents, r/ChatGPTCoding returned 0 items"
+    },
+    "x_twitter": {
+      "items": 15,
+      "likes": 98,
+      "reposts": 23,
+      "status": "ok"
+    },
+    "hacker_news": {
+      "items": 24,
+      "points": 623,
+      "comments": 438,
+      "status": "ok"
+    },
+    "bluesky": {
+      "items": 12,
+      "likes": 13,
+      "reposts": 1,
+      "status": "ok",
+      "note": "Keyword search returned 0; fallback handle-specific searches found 12 posts"
+    },
+    "github": {
+      "items": 13,
+      "reactions": 15,
+      "comments": 103,
+      "status": "ok"
+    },
+    "web_global": {
+      "items": 48,
+      "status": "ok"
+    },
+    "web_japan": {
+      "items": 12,
+      "status": "ok",
+      "hubs": ["Zenn", "Qiita", "note.com", "Hatena"]
+    },
+    "web_china": {
+      "items": 14,
+      "status": "partial",
+      "note": "Zhihu HTTP 403 on all article fetches; content from search snippets only",
+      "hubs": ["Zhihu (snippets)", "CSDN", "AI Agent Radar (apiiskan)", "trendshift", "kucoin"]
+    },
+    "youtube": {
+      "items": 0,
+      "status": "unavailable",
+      "note": "yt-dlp not installed"
+    },
+    "tiktok": {
+      "items": 0,
+      "status": "unavailable"
+    },
+    "instagram": {
+      "items": 0,
+      "status": "unavailable"
+    }
+  },
+  "failed_sources": ["reddit_partial", "zhihu_403", "youtube", "tiktok", "instagram"],
+  "delta": {
+    "new_threads": 14,
+    "updated_threads": 17,
+    "ongoing_threads": 153,
+    "total_threads": 184
+  },
+  "top_findings": [
+    "google-harness2-recursive",
+    "reason-network-multi-pc-p2p",
+    "reticle-agent-self-verify",
+    "hy-memory-tencent-dual-system",
+    "opencode-console-breach",
+    "aoki-infostealer-coding-agent-creds",
+    "langflow-mcp-cve-stdio",
+    "leanrea-8kb-skill-replacement",
+    "skills-hub-v1-desktop-app",
+    "reason-agent-1-1-beats-codex"
+  ],
+  "skill_version": "last30days@3.14.0",
+  "run_type": "ci"
+}
