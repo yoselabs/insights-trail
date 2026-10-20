@@ -1,0 +1,31 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-10-20",
+  "coverage_pct": 72,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 1,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 1,
+    "web_global": 65,
+    "web_jp": 10,
+    "web_cn": 18,
+    "last30days_skill": 0
+  },
+  "failed_sources": [
+    "last30days_skill (unavailable: unknown skill)",
+    "duckduckgo_html_jp (CAPTCHA)",
+    "duckduckgo_html_cn (CAPTCHA)",
+    "zhihu_direct (HTTP 403)",
+    "huxiu_direct (HTTP 403)",
+    "bluesky_topic_search (login wall)"
+  ],
+  "new_threads": 4,
+  "updated_threads": 16,
+  "ongoing_threads": 54,
+  "notes": "Strong coverage on Oct 20 breaking events: DHS DeepSeek federal ban, DeepSeek DeepInfer open-source. MiniMax M3.1 Flash (Oct 19) fully covered. China export controls post-analysis complete. BenchLM Oct 19 calibration captured. JP/CN hub passes conducted via WebSearch (DDG HTML CAPTCHA-blocked as on all 2026 runs). No X/Reddit/Bluesky social sweep. Mistral Large 4 weights still pending as of writing."
+}
