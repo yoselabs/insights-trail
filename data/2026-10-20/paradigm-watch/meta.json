@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-20",
+  "coverage_pct": 80,
+  "total_urls": 67,
+  "sources": {
+    "hackernews": 4,
+    "huggingface_papers": 22,
+    "github_trending": 12,
+    "techmeme": 6,
+    "web_global": 23,
+    "web_jp": 9,
+    "web_cn": 7,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "bluesky_no_results", "duckduckgo_html_captcha"],
+  "notes": "last30days skill unavailable; manual sweep performed. DuckDuckGo HTML CAPTCHA-blocked 6th consecutive run (Oct 2, 6, 9, 13, 16, 20) — JP/CN via WebSearch+WebFetch. Reddit blocked all runs. Bluesky source health OK but no paradigm posts surfaced. Mercury 3 (Inception, Oct 19) is primary paradigm finding: diffusion LLM commercially competitive with frontier AR at 1068 tok/sec. 3 new threads added (NCM, fleet-learning, competing-learning-hybrid). 3 threads updated (diffusion-lm-scaling-wave, gpt6-astra, world-model-race). LINUX DO Mercury 3 post 403 Forbidden — title/framing recovered from search snippet only."
+}
