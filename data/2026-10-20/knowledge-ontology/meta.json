@@ -1,0 +1,48 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-20",
+  "coverage_pct": 78,
+  "total_urls": 89,
+  "sources": {
+    "web_global": 45,
+    "web_japan": 8,
+    "web_china": 7,
+    "arxiv": 4,
+    "github": 5,
+    "hn": 1,
+    "bluesky": 0,
+    "reddit": 0
+  },
+  "failed_sources": [
+    "duckduckgo_html_jp (CAPTCHA-blocked)",
+    "duckduckgo_html_cn (CAPTCHA-blocked)",
+    "csdn_article_163759631 (HTTP 521)",
+    "juejin_7656270771611140123 (loading page only)",
+    "zoominfo_ir (HTTP 403, covered via secondary sources)",
+    "last30days_skill (skill unavailable; manual multi-query substituted)"
+  ],
+  "new_threads": 9,
+  "updated_threads": 5,
+  "ongoing_threads": 76,
+  "delta_summary": {
+    "new": [
+      "neo4j-context-engine-launch",
+      "qemem-relevance-sufficiency-gap",
+      "dkgi-kg-as-files",
+      "past-dev-beam-dolphinbench",
+      "zoominfo-workbounce-semantic-kg",
+      "mem0-graph-memory-oss-removed",
+      "agentonto-enterprise-analytics",
+      "bm25-beats-commercial-memory",
+      "context-graph-convergence-enterprise"
+    ],
+    "updated": [
+      "letta-code-releases",
+      "cognee-releases",
+      "hindsight-50k-stars",
+      "nodes-2026-workshops",
+      "fabric-iq-ontology-mcp"
+    ]
+  },
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked for both JP and CN passes; fell back to native-language WebSearch. /last30days skill unavailable; manual 31-query research sweep substituted. Neo4j Context Engine launched same-day (Oct 20, 2026) — most significant new finding. ISWC 2026 (Oct 25-29) and AML Cycle 2 (Oct 31 deadline) upcoming. OKF confirmed still at v0.4.4 (no v0.5 found). Mem0 graph memory OSS removal was April 2026 event — first capture this run."
+}
