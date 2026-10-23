@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-23",
+  "coverage_pct": 77,
+  "total_urls": 57,
+  "sources": {
+    "reddit": 0,
+    "hackernews": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "web_global": 33,
+    "web_jp": 12,
+    "web_cn": 12,
+    "arxiv": 4,
+    "github": 3
+  },
+  "failed_sources": [],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked (both JP+CN); fell back to native-language WebSearch. No new HN threads Oct 20-23. Bluesky health=OK; no on-topic posts. ISWC 2026 (Oct 25-29) content pending. WAIE Oct 23 (today) no results yet. Last30days skill unavailable; full manual sweep performed. Major new item: NVIDIA Agent Knowledge Foundation (Oct 21, GTC Berlin). Hindsight v1.1.0 Oct 21. Letta Code v0.34.19+v0.34.21 Oct 20+22. Graphiti v0.31.2 security fix Oct 20. LangChain context rot blog Oct 14 (first capture)."
+}
