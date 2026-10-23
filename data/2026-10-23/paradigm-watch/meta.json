@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-23",
+  "coverage_pct": 82,
+  "total_urls": 67,
+  "sources": {
+    "hackernews": 4,
+    "github_trending": 8,
+    "huggingface_papers": 14,
+    "techmeme": 7,
+    "web_global": 19,
+    "web_jp": 9,
+    "web_cn": 9,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_captcha_jp", "duckduckgo_html_captcha_cn", "juejin_js_rendered"],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked 7th consecutive run (Oct 2,6,9,13,16,20,23); JP/CN via WebSearch+WebFetch. Reddit blocked persistent. 4 new threads (WorldTUI, Anthropic formal verification, Fable steganography, VoxCPM2). 3 updates (Decisions API GA, world-model-race LaLa+FCP, RSI gap NUS). 3 threads retired (gzip-lm, mini-agi, huro — last_seen 2026-09-22 >30 days)."
+}
