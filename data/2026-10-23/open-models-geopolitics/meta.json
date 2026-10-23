@@ -1,0 +1,36 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-10-23",
+  "coverage_pct": 73,
+  "total_urls": 94,
+  "per_source": {
+    "web_global": 58,
+    "web_japan": 12,
+    "web_china": 24,
+    "hacker_news": 2,
+    "polymarket": 1,
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "bluesky": 0,
+    "tiktok": 0,
+    "instagram": 0
+  },
+  "new_threads": 5,
+  "updated_threads": 13,
+  "ongoing_threads": 57,
+  "total_threads": 75,
+  "failed_sources": [
+    "last30days_skill: unavailable (UnknownSkill error); replaced by manual WebSearch+WebFetch sweep",
+    "duckduckgo_html_jp: CAPTCHA challenge; compensated with native-language WebSearch",
+    "duckduckgo_html_zh: CAPTCHA challenge; compensated with native-language WebSearch",
+    "zhihu_direct: HTTP 403 (consistent with prior runs); content from search snippets",
+    "juejin_direct: JavaScript-rendered pages return 'Please wait...'; content from search snippets",
+    "bruegel_direct: HTTP 403; key points from search snippets",
+    "scmp_direct: HTTP 403; key points from search snippets",
+    "chaitechjp_substack: HTTP 403 (authentication wall); title/framing only",
+    "guancha_direct: blank/403; content from search snippets",
+    "bluesky: bsky=OK per SOURCE HEALTH; no topic content extracted (login wall/search limitation)"
+  ],
+  "notes": "Chinese-source coverage matters most for this topic; CN pass prioritized. Oct 23 breaking: DeepSeek+MiniMax China export-control registration completed (Yuyuantantian/CCTV-affiliated); MiniMax M3.1 Flash weights released; Kimi K3.1 official teaser. Coverage weak on social platforms (no X/Reddit/Bluesky extracted). Polymarket odds 18-19% (slight uptick from 17% Oct 20). BenchLM 105 models (up from 103)."
+}
