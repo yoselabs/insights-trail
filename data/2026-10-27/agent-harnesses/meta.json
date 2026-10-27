@@ -1,0 +1,22 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-10-27",
+  "coverage_pct": 82,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 62,
+    "web_jp": 9,
+    "web_cn": 10,
+    "github_trending": 16
+  },
+  "failed_sources": ["bluesky_posts", "duckduckgo_html_jp", "duckduckgo_html_zh", "zhihu_direct_fetch", "csdn_163539691", "thenewstack_opencode2"],
+  "notes": "DuckDuckGo HTML endpoint returned CAPTCHA for both JP/ZH queries; fell back to native-language WebSearch + direct WebFetch on top hub pages. Bluesky SOURCE HEALTH OK but no agent-harness posts retrieved. Zhihu HTTP 403 on direct fetch; content from search summaries. Major new launches this week: OpenCode 2.0 (Oct 12-16), MCP Tasks+Elicitations CC v2.1.304 (Oct 19-23), Claude Duet (Oct 21), AAIF 4 new projects AGNTCon (Oct 22-23), T3 Code v0.1.1 (Oct 21), Hermes v0.22.5 (Oct 23), Agent Relay (Oct 23), Entire (Oct 26), cccskills JP marketplace (Oct 27), OpenVLHarness arXiv (Oct 19), ABOM governance tooling."
+}
