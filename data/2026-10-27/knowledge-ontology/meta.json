@@ -1,0 +1,23 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-27",
+  "coverage_pct": 80,
+  "total_urls": 76,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_en": 46,
+    "web_jp": 16,
+    "web_cn": 12,
+    "github": 4,
+    "arxiv": 1
+  },
+  "failed_sources": [],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked (3rd consecutive run); JP/CN via native WebSearch. Bluesky health=OK, no on-topic posts. ISWC 2026 main track Oct 26-29 partially captured (workshops done). FHNW MAKEathon results pending. AML Cycle 2 submissions open. New: AllegroGraph 9.1/GraphTalker 2.0 (Oct 16), Grafana KG GA (Oct 20), AgentKG v0.13.0 (Oct 21), OKF v0.7.1 today (7 releases in 30 days), arXiv:2610.32725 (Oct 23), Qiita Conference 2026 Autumn ontology session (Oct 29). Forrester Context Layer Landscape scoped Q4 2026."
+}
