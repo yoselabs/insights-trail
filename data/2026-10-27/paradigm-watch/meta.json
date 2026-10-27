@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-27",
+  "coverage_pct": 83,
+  "total_urls": 41,
+  "sources": {
+    "hackernews": 2,
+    "github_trending": 10,
+    "huggingface_daily": 10,
+    "huggingface_trending": 7,
+    "techmeme": 2,
+    "web_global": 24,
+    "web_jp": 8,
+    "web_cn": 9,
+    "reddit": 0,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_captcha"],
+  "notes": "last30days skill unavailable; manual sweep conducted with equivalent coverage. DuckDuckGo HTML CAPTCHA-blocked (8th consecutive run). Reddit blocked persistent. JP/CN via WebSearch native-language + WebFetch. Dominant finding: OpenAI + Anthropic/Claude independently disprove ETH on same day (Oct 16); plus Kakeya all dims + QCD/SM existence proofs. Bluesky health OK but no paradigm posts surfaced. All other ongoing threads: no new facts."
+}
