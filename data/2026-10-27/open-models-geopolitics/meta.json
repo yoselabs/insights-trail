@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-10-27",
+  "coverage_pct": 75,
+  "total_urls": 82,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 1,
+    "web_global": 50,
+    "web_jp": 9,
+    "web_cn": 22
+  },
+  "failed_sources": ["last30days_skill", "reddit", "x_twitter", "youtube", "tiktok", "instagram", "bluesky"],
+  "notes": "/last30days skill unavailable (Unknown skill); full social media sweep replaced by manual WebSearch+WebFetch. DuckDuckGo HTML: CAPTCHA on JP/CN passes (consistent with prior runs); compensated with native-language WebSearch. Bluesky: bsky=OK per SOURCE HEALTH; no content extracted. HN: no new threads found for Oct 24-27 window. GLM-5.5/DeepSeek V4.1 Pro/Hy-4 Pro/MiMo V2.7 Pro all still unreleased as of Oct 27. Mistral Large 4 weights missed Oct 27 target; now Oct 31. Kimi K3.1 Pro is the major new release this cycle."
+}
