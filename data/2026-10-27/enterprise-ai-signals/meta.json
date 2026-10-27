@@ -1,0 +1,21 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-10-27",
+  "coverage_pct": 75,
+  "total_urls": 68,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 65,
+    "web_jp": 0,
+    "web_cn": 0
+  },
+  "failed_sources": ["last30days_skill"],
+  "notes": "last30days skill unavailable; research conducted via WebSearch+WebFetch only. Reddit/X/YouTube/TikTok/Instagram/Bluesky platform scrapes not performed. HN found via WebSearch (3 stories). JP/CN sweeps explicitly excluded per topic instructions. Multiple URLs returned 403 (CNBC IPO live, Axios IPO, tech-insider, decodethefuture, winbuzzer). Anthropic S-1 (Oct 26) and Microsoft 60K buyout (Oct 26) are the dominant new signals. Q3 FY2027 earnings for Salesforce/ServiceNow/Microsoft/Alphabet all due Oct 28 — will appear in next run."
+}
