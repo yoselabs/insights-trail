@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-10-30",
+  "coverage_pct": 82,
+  "total_urls": 42,
+  "sources": {
+    "hackernews": 5,
+    "huggingface": 6,
+    "github_trending": 0,
+    "techmeme": 0,
+    "web_global": 19,
+    "web_jp": 3,
+    "web_cn": 7,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_jp", "duckduckgo_html_cn", "adafruit_blog_403", "oschina_403", "zhihu_403"],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked (9th consecutive run); JP/CN done via WebSearch + WebFetch. Reddit blocked persistent. last30days skill unavailable; manual sweep. 2 new paradigm threads: Qwenputer (HN 690pts) + JEPA theorem (LeCun+Balestriero arXiv:2610.39302). Retired: esp32s3-bitnet-distributed-cluster, massalloc-attention-compute-allocation (both last_seen 2026-09-29, >30 days)."
+}
