@@ -1,0 +1,22 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-10-30",
+  "coverage_pct": 80,
+  "total_urls": 85,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 80,
+    "web_jp": 0,
+    "web_cn": 0,
+    "sec_filings": 8
+  },
+  "failed_sources": ["last30days_skill"],
+  "notes": "last30days skill unavailable in this run environment. Research conducted via WebSearch + WebFetch across SEC filings, earnings calls (MSFT Q1 FY2027, GOOGL Q3, NOW Q3, AMZN Q3 all reported Oct 28-30), news sources, and survey publishers. JP/CN sweeps explicitly excluded for this topic per topic prompt. Bluesky OK but enterprise topic yields negligible social signal. Major new signals: 4 big tech earnings reports, Deloitte N=3500 survey, Cohere CAD $7B Series E, Upwind $400M, Meta liability terms effective, Anthropic IPO roadshow confirmed. Coverage limited on social discourse (Reddit/X) due to skill unavailability."
+}
