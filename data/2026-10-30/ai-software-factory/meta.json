@@ -1,0 +1,22 @@
+{
+  "topic": "ai-software-factory",
+  "date": "2026-10-30",
+  "coverage_pct": 78,
+  "total_urls": 89,
+  "sources": {
+    "hackernews": 3,
+    "reddit": 0,
+    "twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "web_global": 42,
+    "web_jp": 12,
+    "web_cn": 9,
+    "arxiv": 12
+  },
+  "failed_sources": ["duckduckgo_html_captcha", "zhihu_403", "csdn_logglow_521"],
+  "notes": "DuckDuckGo HTML endpoint returned CAPTCHA for both JP and CN queries; JP/CN coverage achieved via WebSearch in native languages + WebFetch of specific pages. Zhihu article 403 on direct fetch; CSDN LogicGlow article 521. No X/Twitter, Reddit, YouTube, Bluesky, TikTok, Instagram, or Polymarket. VibeCheck quantitative per-dimension scores inaccessible from abstract only. Strong coverage of EN/JP/CN web, arXiv, and practitioner blogs. Faros 2-year study, EPIC arXiv 2610.07534, Coforge ASF launch, and FrontierCode benchmark are the major new items this run."
+}
