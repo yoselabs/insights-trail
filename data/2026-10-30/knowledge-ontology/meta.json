@@ -1,0 +1,24 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-10-30",
+  "coverage_pct": 78,
+  "total_urls": 95,
+  "sources": {
+    "hackernews": 3,
+    "bluesky": 1,
+    "web_global": 52,
+    "web_jp": 12,
+    "web_cn": 11,
+    "github": 6,
+    "arxiv": 3,
+    "springer_lncs": 1,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0,
+    "x_twitter": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram"],
+  "notes": "DuckDuckGo HTML endpoint CAPTCHA-blocked for JP/CN (consistent with all Oct 2026 runs); used native-language WebSearch instead. ISWC 2026 concluded Oct 29 — proceedings published LNCS 17126-17128; full paper texts not scraped (paywall). FHNW MAKEathon results and AML Cycle 2 results both still pending. Bluesky health=OK; only RAGE-KG official account found. Reddit not accessible."
+}
