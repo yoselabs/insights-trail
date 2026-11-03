@@ -1,0 +1,23 @@
+{
+  "topic": "agent-harnesses",
+  "date": "2026-11-03",
+  "coverage_pct": 75,
+  "total_urls": 68,
+  "sources": {
+    "hackernews": 3,
+    "web_global": 43,
+    "web_jp": 6,
+    "web_cn": 5,
+    "github_trending": 8,
+    "security_feeds": 6,
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["duckduckgo_html_jp", "duckduckgo_html_cn", "eguweb_jp", "csdn_aidoudoulong", "juejin"],
+  "notes": "last30days skill not available; full English research done via WebSearch+WebFetch. DuckDuckGo HTML endpoint CAPTCHA-blocked for JP+CN; fell back to native-language WebSearch. eguweb.jp: HTTP 403. CSDN blog: ECONNRESET. Juejin: JS-rendered, content unavailable. Reddit/X/Bluesky/YouTube/TikTok/Instagram/Polymarket excluded per topic scope or no relevant results. bluesky=OK per SOURCE HEALTH but no agent-harness content surfaced this week."
+}
