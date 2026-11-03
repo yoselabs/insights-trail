@@ -1,0 +1,23 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-11-03",
+  "coverage_pct": 82,
+  "total_urls": 71,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 4,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 3,
+    "polymarket": 0,
+    "web_en": 24,
+    "web_jp": 11,
+    "web_cn": 12,
+    "github": 5,
+    "arxiv": 1
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "tiktok", "instagram", "polymarket"],
+  "notes": "Reddit/X/Twitter/YouTube/TikTok/Instagram excluded per instruction. DuckDuckGo HTML endpoint returned CAPTCHA for JP/CN; replaced with native WebSearch in JP/CN — equivalent coverage. Bluesky OK (SOURCE HEALTH). Key new releases: NVIDIA Auto Ontology (Nov 1, Apache 2.0, NVIDIA/auto-ontology), Hindsight v1.2.0 (Nov 3, hs-rerank-1+hs-decide-1-flash+hs-embed-1, 2.5x cheaper/2x faster), FalkorDB GraphRAG SDK v1.6.0 (Nov 2, agentic + 8-tool MCP server), Letta Code v0.34.37-39 (Nov 2, JSONL subagent logging), MemSkill NeurIPS 2026 accepted (arXiv:2602.02474, 70% token reduction). AML Cycle 2 in evaluation; NODES 2026 Nov 12 agenda live. IJCKG 2026 Nov 19-21 Bangkok upcoming."
+}
