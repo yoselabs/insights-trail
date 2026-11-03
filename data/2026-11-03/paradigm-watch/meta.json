@@ -1,0 +1,23 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-11-03",
+  "coverage_pct": 84,
+  "total_urls": 47,
+  "sources": {
+    "hackernews": 4,
+    "huggingface": 3,
+    "github_trending": 1,
+    "techmeme": 0,
+    "web_global": 25,
+    "web_jp": 4,
+    "web_cn": 8,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_endpoint"],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked 10th consecutive run; Reddit blocked persistent; last30days skill unavailable — manual sweep; DiffuSpace CSDN Oct 28 article HTTP 521 unreadable; WSP dominated coverage (both original ~1857-2100 HN pts + Honnibal debunking 716/166 HN pts); LoL low-engagement new thread; JP/CN via WebSearch + WebFetch"
+}
