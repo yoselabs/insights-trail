@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-11-06",
+  "coverage_pct": 82,
+  "total_urls": 52,
+  "sources": {
+    "reddit": 3,
+    "x": 21,
+    "hackernews": 9,
+    "bluesky": 11,
+    "github": 7,
+    "web_en": 28,
+    "web_jp": 12,
+    "web_cn": 10,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["youtube", "tiktok", "instagram", "reddit_partial"],
+  "notes": "Reddit partial (HTTP 403 after 3 items); DuckDuckGo HTML CAPTCHA blocked — JP/CN passes used native WebSearch; YouTube not searched; Bluesky OK; AML Cycle 2 eval closed Nov 4 but official results not yet published; NODES 2026 + CDL 2026 not yet held"
+}
