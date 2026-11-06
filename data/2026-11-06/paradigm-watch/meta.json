@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-11-06",
+  "coverage_pct": 76,
+  "total_urls": 58,
+  "sources": {
+    "hackernews": 0,
+    "huggingface_daily": 5,
+    "huggingface_trending": 1,
+    "github_trending": 0,
+    "techmeme": 11,
+    "web_global": 29,
+    "web_jp": 3,
+    "web_cn": 7,
+    "bluesky": 0,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "duckduckgo_html_captcha"],
+  "notes": "last30days skill unavailable — manual sweep. DuckDuckGo HTML endpoint CAPTCHA-blocked 11th consecutive run; JP/CN via WebSearch. Zhihu Nov 6 article 403 Forbidden. Bluesky OK but no paradigm posts. HN front page AI-free today (market selloff context). Key new items: VFlash (NVIDIA parallel spatial decoding, 79 HF upvotes), Muir (Google Research linear attention 1M token recall, 4 HF upvotes), Speculative Listening (5 HF upvotes). Updates: DreamFree (KAIST world action model without video generation), VibeVoice (ICLR 2026 diffusion speech, 183 HF trending)."
+}
