@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-11-06",
+  "coverage_pct": 78,
+  "total_urls": 96,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 3,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 1,
+    "web_global": 68,
+    "web_jp": 7,
+    "web_cn": 21
+  },
+  "failed_sources": ["reddit", "x_twitter", "youtube", "bluesky", "tiktok", "instagram"],
+  "notes": "Reddit/X/YouTube/TikTok/Instagram excluded per instructions or not searched. Bluesky OK per SOURCE HEALTH but not queried this run — coverage gap. DuckDuckGo HTML endpoint CAPTCHA-blocked (all JP/CN queries); fell back to WebSearch in native languages — strong Chinese coverage still achieved via IT之家, 腾讯新闻, 知乎 hits. Zhihu and Blackford.co.jp HTTP 403 on direct fetch; content via WebSearch summaries. EET China fetch timeout. Last30days skill unavailable; full manual sweep conducted."
+}
