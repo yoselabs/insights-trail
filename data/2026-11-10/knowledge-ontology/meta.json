@@ -1,0 +1,22 @@
+{
+  "topic": "knowledge-ontology",
+  "date": "2026-11-10",
+  "coverage_pct": 82,
+  "total_urls": 58,
+  "sources": {
+    "hackernews": 12,
+    "reddit": 3,
+    "x_twitter": 3,
+    "github": 12,
+    "web_global": 25,
+    "web_jp": 4,
+    "web_cn": 7,
+    "bluesky": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": [],
+  "notes": "Reddit partial (HTTP 403 after 3 items); DuckDuckGo HTML CAPTCHA blocked — JP/CN passes via native WebSearch; Bluesky 0 results this run (SOURCE HEALTH OK; timing gap); NODES 2026 session videos already published pre-event; AML Cycle 2 results pending mid-November; Letta Code no new Nov 7-10 releases; JitKnow Juejin page JavaScript-only, content from snippets"
+}
