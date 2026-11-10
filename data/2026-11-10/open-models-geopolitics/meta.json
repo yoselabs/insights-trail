@@ -1,0 +1,21 @@
+{
+  "topic": "open-models-geopolitics",
+  "date": "2026-11-10",
+  "coverage_pct": 78,
+  "total_urls": 98,
+  "sources": {
+    "reddit": 0,
+    "x_twitter": 0,
+    "youtube": 0,
+    "hackernews": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 2,
+    "web_global": 72,
+    "web_jp": 9,
+    "web_cn": 17
+  },
+  "failed_sources": ["bluesky_not_searched", "youtube_not_searched", "hackernews_not_searched", "duckduckgo_html_captcha_blocked"],
+  "notes": "DuckDuckGo HTML CAPTCHA-blocked (error 90d2) for JP/CN queries — same failure as Nov 6; fell back to native-language WebSearch. Bluesky OK per SOURCE HEALTH but not queried this run. HN not searched. Nvidia spy scandal (Nov 8-10) is dominant new development. Baidu ERNIE 5.5 open-source (Nov 5) is second new finding. Qwen4 GameFeel benchmark leak (Nov 7-8) updates Qwen4 thread. Baidu World 2026 conference (Nov 12) may surface post-trained ERNIE 5.5 and additional announcements — not captured. MOFCOM comment period closes Nov 15."
+}
