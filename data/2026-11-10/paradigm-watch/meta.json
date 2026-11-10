@@ -1,0 +1,24 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-11-10",
+  "coverage_pct": 78,
+  "total_urls": 71,
+  "sources": {
+    "hackernews": 2,
+    "huggingface_daily": 6,
+    "huggingface_trending": 2,
+    "github_trending": 0,
+    "techmeme": 0,
+    "bluesky": 0,
+    "web_global": 44,
+    "web_jp": 7,
+    "web_cn": 5,
+    "reddit": 0,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": ["reddit", "youtube", "tiktok", "instagram", "duckduckgo_html"],
+  "notes": "last30days skill unavailable — sweep manual. DuckDuckGo HTML CAPTCHA-blocked 12th consecutive run. Reddit blocked persistent. Bluesky OK but no paradigm posts. Zhihu 403 and Juejin JS-only reduced CN coverage. AlphaProof Code (HN 471/153) and Fable 5.2 (HN 837/960) are dominant signals today. 3 new threads (lingbot-touch, sage-taiyi, energy-tweedie), 4 updates (llm-lean-proof-automation, world-model-race, minions-distributed, frontis-ma1-rsi). 11 threads retired (last_seen >30 days). Coverage ~78%: strong on main findings, light on JP/CN specific-paper coverage and Energy-Tweedie engagement."
+}
