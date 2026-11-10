@@ -1,0 +1,22 @@
+{
+  "topic": "enterprise-ai-signals",
+  "date": "2026-11-10",
+  "coverage_pct": 72,
+  "total_urls": 51,
+  "sources": {
+    "web_global": 51,
+    "web_jp": 0,
+    "web_cn": 0,
+    "reddit": 0,
+    "hackernews": 0,
+    "youtube": 0,
+    "x_twitter": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "bluesky": 0,
+    "polymarket": 0,
+    "sec_edgar": 5
+  },
+  "failed_sources": ["last30days_skill", "reddit", "hackernews", "youtube", "x_twitter", "tiktok", "instagram", "bluesky_posts", "polymarket"],
+  "notes": "last30days skill unavailable (unknown skill error); full English web pass done manually via WebSearch+WebFetch. Social platforms (Reddit/HN/YT/X/TikTok/IG/Bluesky posts/Polymarket) not harvested — estimated 20-25% signal loss. JP/CN sweeps intentionally skipped per topic instructions. Bluesky backend reported OK but no post-level data captured without skill. Coverage estimate 72%."
+}
