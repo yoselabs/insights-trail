@@ -1,0 +1,77 @@
+{
+  "topic": "knowledge-ontology",
+  "run_date": "2026-11-13",
+  "coverage_pct": 82,
+  "total_urls": 44,
+  "sources": {
+    "web_global": {
+      "urls": 32,
+      "status": "ok"
+    },
+    "web_japan": {
+      "urls": 3,
+      "status": "ok",
+      "note": "DuckDuckGo HTML CAPTCHA blocked; replaced with WebSearch in Japanese"
+    },
+    "web_china": {
+      "urls": 4,
+      "status": "ok",
+      "note": "DuckDuckGo HTML CAPTCHA blocked; replaced with WebSearch in Chinese"
+    },
+    "hacker_news": {
+      "urls": 2,
+      "status": "ok"
+    },
+    "reddit": {
+      "urls": 0,
+      "status": "skipped",
+      "note": "Not searched this run; prior pass partial HTTP 403"
+    },
+    "x_twitter": {
+      "urls": 0,
+      "status": "skipped",
+      "note": "Not retrieved this run"
+    },
+    "bluesky": {
+      "urls": 0,
+      "status": "ok",
+      "note": "SOURCE HEALTH: OK; 0 results retrieved"
+    },
+    "youtube": {
+      "urls": 0,
+      "status": "skipped"
+    },
+    "tiktok": {
+      "urls": 0,
+      "status": "skipped"
+    }
+  },
+  "failed_sources": [],
+  "degraded_sources": [
+    "duckduckgo_html_jp",
+    "duckduckgo_html_zh"
+  ],
+  "new_threads": 4,
+  "updated_threads": 8,
+  "total_threads": 100,
+  "delta_summary": {
+    "new": 4,
+    "update": 8,
+    "ongoing": 88
+  },
+  "top_findings": [
+    "neo4j-relate-embedded-rust-db",
+    "netflix-operational-kg-quipudb-autorca",
+    "databricks-genie-ontology-ga-nov11",
+    "ragflow-v1-ga-agent-native-database",
+    "autoontic-arXiv-2611-15467",
+    "nodes-2026-concluded-andrew-ng",
+    "53ai-4layer-ontology-decision-nov10"
+  ],
+  "skill_used": "manual (last30days skill unavailable; research conducted directly with WebSearch/WebFetch)",
+  "notable_gaps": [
+    "AML Cycle 2 results pending (November 19)",
+    "IJCKG 2026 papers pending (November 19-21)",
+    "CN 1-3 day lag on Nov 11-12 releases expected Nov 14-16"
+  ]
+}
