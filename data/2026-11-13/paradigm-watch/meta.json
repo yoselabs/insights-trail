@@ -1,0 +1,34 @@
+{
+  "topic": "paradigm-watch",
+  "date": "2026-11-13",
+  "coverage_pct": 76,
+  "total_urls": 52,
+  "sources": {
+    "hackernews": 22,
+    "huggingface_papers": 29,
+    "huggingface_trending": 20,
+    "github_trending": 6,
+    "techmeme": 20,
+    "bluesky": 0,
+    "reddit": 0,
+    "web_global": 38,
+    "web_jp": 7,
+    "web_cn": 7,
+    "youtube": 0,
+    "tiktok": 0,
+    "instagram": 0,
+    "polymarket": 0
+  },
+  "failed_sources": [
+    "last30days_skill",
+    "duckduckgo_html_captcha",
+    "reddit",
+    "guardian_paywall",
+    "zhihu_403",
+    "youtube",
+    "tiktok",
+    "instagram",
+    "polymarket"
+  ],
+  "notes": "last30days skill unavailable — 13th consecutive manual sweep. DuckDuckGo HTML endpoint CAPTCHA-blocked (13th consecutive run). Reddit blocked persistent. Zhihu 403 on 2 key pages. Guardian paywall on Gödel story (sourced from superpowerdaily + mezha.net). JP/CN passes conducted via WebSearch + WebFetch directly against hub content. 5 new/updated paradigm threads today: [update] llm-lean-proof-automation (Gödel notebooks), [new] g-star-compressed-ar, [new] wicl-frozen-robot, [update] world-model-race (Duo+BirdDreams), [update] frontis-ma1-rsi (PhysLoop). Retired: thinking-inertia-reasoning-control, msar-depth-attention-residuals (both last_seen 2026-10-13, >30 days). SAM3 (Meta, 2.09M HF likes trending) not included — released Nov 2025, not a new finding today."
+}
